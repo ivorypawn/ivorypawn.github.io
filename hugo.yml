@@ -1,0 +1,46 @@
+theme: PaperMod
+baseURL: "https://ivorypawn.github.io"
+publishDir: "docs"
+
+languageCode: "ja-jp"
+defaultContentLanguage: "ja"
+hasCJKLanguage: true
+
+title: "Home"
+paginate: 5
+
+taxonomies:
+  tag: "tags"
+
+params:
+  defaultTheme: dark
+  DateFormat: "2006-01-02"
+
+  profileMode:
+    enabled: true
+    title: "HideMemo"
+    subtitle: "(Under Construction...)"
+    imageUrl: "profile.png"
+    imageWidth: 200
+    imageHeight: 200
+
+  socialIcons:
+    - name: twitter
+      url: "https://twitter.com/Ivory_Pawn"
+    - name: github
+      url: "https://github.com/ivorypawn/ivorypawn.github.io"
+
+menu:
+  main:
+    - identifier: posts
+      name: posts
+      url: posts/
+      weight: 5
+    - identifier: notes
+      name: notes
+      url: notes/
+      weight: 10
+    - identifier: tags
+      name: tags
+      url: tags/
+      weight: 15

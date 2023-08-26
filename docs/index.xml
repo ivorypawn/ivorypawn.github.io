@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Home</title>
+    <link>https://ivorypawn.github.io/</link>
+    <description>Recent content on Home</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Sat, 22 Jul 2023 06:11:56 +0900</lastBuildDate><atom:link href="https://ivorypawn.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Japan Chess Classic 2023 レポート</title>
+      <link>https://ivorypawn.github.io/posts/2023-07-22/</link>
+      <pubDate>Sat, 22 Jul 2023 06:11:56 +0900</pubDate>
+      
+      <guid>https://ivorypawn.github.io/posts/2023-07-22/</guid>
+      <description>三宮で開催された ジャパンチェスクラシック 2023 に参加しました。印象に残った局（おもに敗局）を振り返ります。 7/15 14:30 R3 Kojima, S (IM, JPN, 2335) - Takahashi, H (JPN, 1930) 1-0 2 連勝し、</description>
+    </item>
+    
+    <item>
+      <title>Intrinsic Triangulations</title>
+      <link>https://ivorypawn.github.io/notes/intrinsic-triangulations/</link>
+      <pubDate>Thu, 22 Jun 2023 01:44:48 +0900</pubDate>
+      
+      <guid>https://ivorypawn.github.io/notes/intrinsic-triangulations/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>KaTeX の挙動について</title>
+      <link>https://ivorypawn.github.io/posts/2023-06-21/02/</link>
+      <pubDate>Wed, 21 Jun 2023 06:42:43 +0900</pubDate>
+      
+      <guid>https://ivorypawn.github.io/posts/2023-06-21/02/</guid>
+      <description>PaperMod はデフォルトで数式を使えないため $\KaTeX$ を導入した。ヘッダに math: true を追加すれば使える。 KaTeXに対応させた話 それはいいのだが、一部コマンドは \ を</description>
+    </item>
+    
+    <item>
+      <title>備忘録開設</title>
+      <link>https://ivorypawn.github.io/posts/2023-06-21/01/</link>
+      <pubDate>Wed, 21 Jun 2023 03:53:32 +0900</pubDate>
+      
+      <guid>https://ivorypawn.github.io/posts/2023-06-21/01/</guid>
+      <description>引っ越しがようやく落ち着いたので、Hugo で備忘録のためのウェブサイトを生成した。Github Pages で公開予定。 おもな内容： C++, Python 形状処理 機械学習</description>
+    </item>
+    
+    <item>
+      <title>Diffusion Model</title>
+      <link>https://ivorypawn.github.io/notes/diffusion-model/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ivorypawn.github.io/notes/diffusion-model/</guid>
+      <description>画像に逐次的にノイズを付加しランダムな画像を生成するプロセスを考える 上記の逆過程を推定することで、ランダムな画像から何らかのそれっぽい画像を</description>
+    </item>
+    
+    <item>
+      <title>Monte Carlo Geometry Processing</title>
+      <link>https://ivorypawn.github.io/notes/monte-carlo-geometry-processing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ivorypawn.github.io/notes/monte-carlo-geometry-processing/</guid>
+      <description>資料 Sawhney, R., &amp;amp; Crane, K. (2020). Monte Carlo Geometry Processing: A Grid-Free Approach to PDE-Based Methods on Volumetric Domains. ACM Trans. Graph., 39(4). Sawhney, R., Seyb, D., Jarosz, W., &amp;amp; Crane, K. (2022). Grid-free Monte Carlo for PDEs with spatially varying coefficients. ACM Transactions on Graphics (Proceedings of SIGGRAPH), 41(4). Jacobson, A., Baran, I., Popović, J., &amp;amp; Sorkine, O. (2011). Bounded</description>
+    </item>
+    
+    <item>
+      <title>Wavelet Matrix</title>
+      <link>https://ivorypawn.github.io/notes/wavelet-matrix/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ivorypawn.github.io/notes/wavelet-matrix/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

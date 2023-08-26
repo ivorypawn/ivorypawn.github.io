@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>論文読み on Home</title>
+    <link>https://ivorypawn.github.io/tags/%E8%AB%96%E6%96%87%E8%AA%AD%E3%81%BF/</link>
+    <description>Recent content in 論文読み on Home</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language><atom:link href="https://ivorypawn.github.io/tags/%E8%AB%96%E6%96%87%E8%AA%AD%E3%81%BF/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Diffusion Model</title>
+      <link>https://ivorypawn.github.io/notes/diffusion-model/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ivorypawn.github.io/notes/diffusion-model/</guid>
+      <description>画像に逐次的にノイズを付加しランダムな画像を生成するプロセスを考える 上記の逆過程を推定することで、ランダムな画像から何らかのそれっぽい画像を</description>
+    </item>
+    
+    <item>
+      <title>Monte Carlo Geometry Processing</title>
+      <link>https://ivorypawn.github.io/notes/monte-carlo-geometry-processing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ivorypawn.github.io/notes/monte-carlo-geometry-processing/</guid>
+      <description>資料 Sawhney, R., &amp;amp; Crane, K. (2020). Monte Carlo Geometry Processing: A Grid-Free Approach to PDE-Based Methods on Volumetric Domains. ACM Trans. Graph., 39(4). Sawhney, R., Seyb, D., Jarosz, W., &amp;amp; Crane, K. (2022). Grid-free Monte Carlo for PDEs with spatially varying coefficients. ACM Transactions on Graphics (Proceedings of SIGGRAPH), 41(4). Jacobson, A., Baran, I., Popović, J., &amp;amp; Sorkine, O. (2011). Bounded</description>
+    </item>
+    
+  </channel>
+</rss>
