@@ -1,5 +1,5 @@
 theme: PaperMod
-baseURL: "https://ivorypawn.github.io"
+baseURL: "https://ivorypawn.github.io/"
 publishDir: "docs"
 
 languageCode: "ja-jp"
