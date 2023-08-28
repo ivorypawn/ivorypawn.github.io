@@ -1,4 +1,4 @@
-theme: PaperMod
+theme: "PaperMod"
 baseURL: "https://ivorypawn.github.io/"
 canonifyurls: true
 publishDir: "docs"
