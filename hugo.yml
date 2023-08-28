@@ -1,12 +1,13 @@
 theme: PaperMod
 baseURL: "https://ivorypawn.github.io/"
+canonifyurls: true
 publishDir: "docs"
 
 languageCode: "ja-jp"
 defaultContentLanguage: "ja"
 hasCJKLanguage: true
 
-title: "Home"
+title: "HideMemo"
 paginate: 5
 
 taxonomies:
