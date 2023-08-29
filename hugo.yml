@@ -7,7 +7,7 @@ languageCode: "ja-jp"
 defaultContentLanguage: "ja"
 hasCJKLanguage: true
 
-title: "HideMemo"
+title: "HideOut"
 paginate: 5
 
 taxonomies:
@@ -16,11 +16,12 @@ taxonomies:
 params:
   defaultTheme: dark
   DateFormat: "2006-01-02"
+  math: true
 
   profileMode:
     enabled: true
-    title: "HideMemo"
-    subtitle: "(Under Construction...)"
+    title: "HideOut"
+    subtitle: "TAKAHASHI, Hideaki (髙橋 英晃)"
     imageUrl: "profile.png"
     imageWidth: 200
     imageHeight: 200
