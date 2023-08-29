@@ -5,14 +5,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Monte Carlo Geometry Processing | Home</title>
+<title>Monte Carlo Geometry Processing | HideMemo</title>
 <meta name="keywords" content="論文読み, Geometry Processing">
 <meta name="description" content="資料 Sawhney, R., &amp; Crane, K. (2020). Monte Carlo Geometry Processing: A Grid-Free Approach to PDE-Based Methods on Volumetric Domains. ACM Trans. Graph., 39(4). Sawhney, R., Seyb, D., Jarosz, W., &amp; Crane, K. (2022). Grid-free Monte Carlo for PDEs with spatially varying coefficients. ACM Transactions on Graphics (Proceedings of SIGGRAPH), 41(4). Jacobson, A., Baran, I., Popović, J., &amp; Sorkine, O. (2011). Bounded">
 <meta name="author" content="">
 <link rel="canonical" href="https://ivorypawn.github.io/notes/monte-carlo-geometry-processing/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.bf5f9f73cf17311d52cedbcda82c922e91b2f566d88a85ad9f5b5a08b586bd5f.css" integrity="sha256-v1&#43;fc88XMR1SztvNqCySLpGy9WbYioWtn1taCLWGvV8=" rel="preload stylesheet" as="style">
-<script defer crossorigin="anonymous" src="/assets/js/highlight.acb54fd32bbc1982428b8850317e45d076b95012730a5936667e6bc21777692a.js" integrity="sha256-rLVP0yu8GYJCi4hQMX5F0Ha5UBJzClk2Zn5rwhd3aSo="
-    onload="hljs.initHighlightingOnLoad();"></script>
+<link crossorigin="anonymous" href="https://ivorypawn.github.io/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="https://ivorypawn.github.io/assets/js/highlight.js" onload="hljs.initHighlightingOnLoad();"></script>
 <link rel="icon" href="https://ivorypawn.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://ivorypawn.github.io/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://ivorypawn.github.io/favicon-32x32.png">
@@ -28,28 +27,7 @@
         }
 
     </style>
-</noscript>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css" integrity="sha384-KiWOvVjnN8qwAZbuQyWDIbfCLFhLXNETzBQjA/92pIowpC0d2O3nppDGQVgwd2nB" crossorigin="anonymous">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js" integrity="sha384-0fdwu/T/EQMsQlrHCCHoH10pkPLlKA1jL5dFyUOvB3lfeT2540/2g6YgSi2BL14p" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
-    onload="renderMathInElement(document.body);"></script>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        renderMathInElement(document.body, {
-          
-          
-          delimiters: [
-              {left: '$$', right: '$$', display: true},
-              {left: '$', right: '$', display: false},
-              {left: '\\(', right: '\\)', display: false},
-              {left: '\\[', right: '\\]', display: true}
-          ],
-          
-          throwOnError : false
-        });
-    });
-</script>
-<meta property="og:title" content="Monte Carlo Geometry Processing" />
+</noscript><meta property="og:title" content="Monte Carlo Geometry Processing" />
 <meta property="og:description" content="資料 Sawhney, R., &amp; Crane, K. (2020). Monte Carlo Geometry Processing: A Grid-Free Approach to PDE-Based Methods on Volumetric Domains. ACM Trans. Graph., 39(4). Sawhney, R., Seyb, D., Jarosz, W., &amp; Crane, K. (2022). Grid-free Monte Carlo for PDEs with spatially varying coefficients. ACM Transactions on Graphics (Proceedings of SIGGRAPH), 41(4). Jacobson, A., Baran, I., Popović, J., &amp; Sorkine, O. (2011). Bounded" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ivorypawn.github.io/notes/monte-carlo-geometry-processing/" /><meta property="article:section" content="notes" />
@@ -65,16 +43,16 @@
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
-  "itemListElement": [, 
+  "itemListElement": [
     {
       "@type": "ListItem",
-      "position":  2 ,
+      "position":  1 ,
       "name": "Notes",
       "item": "https://ivorypawn.github.io/notes/"
     }, 
     {
       "@type": "ListItem",
-      "position":  3 ,
+      "position":  2 ,
       "name": "Monte Carlo Geometry Processing",
       "item": "https://ivorypawn.github.io/notes/monte-carlo-geometry-processing/"
     }
@@ -102,7 +80,7 @@
   },
   "publisher": {
     "@type": "Organization",
-    "name": "Home",
+    "name": "HideMemo",
     "logo": {
       "@type": "ImageObject",
       "url": "https://ivorypawn.github.io/favicon.ico"
@@ -123,7 +101,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://ivorypawn.github.io" accesskey="h" title="Home (Alt + H)">Home</a>
+            <a href="https://ivorypawn.github.io/" accesskey="h" title="HideMemo (Alt + H)">HideMemo</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -371,7 +349,7 @@ $$
     </main>
     
 <footer class="footer">
-    <span>&copy; 2023 <a href="https://ivorypawn.github.io">Home</a></span>
+    <span>&copy; 2023 <a href="https://ivorypawn.github.io/">HideMemo</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
