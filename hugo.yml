@@ -21,7 +21,7 @@ params:
   profileMode:
     enabled: true
     title: "HideOut"
-    subtitle: "TAKAHASHI, Hideaki (髙橋 英晃)"
+    subtitle: "Memorandum by TAKAHASHI, Hideaki (髙橋 英晃)"
     imageUrl: "profile.png"
     imageWidth: 200
     imageHeight: 200
@@ -31,6 +31,9 @@ params:
       url: "https://twitter.com/Ivory_Pawn"
     - name: github
       url: "https://github.com/ivorypawn/ivorypawn.github.io"
+
+  assets:
+    disableFingerprinting: true
 
 menu:
   main:
