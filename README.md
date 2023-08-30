@@ -1,6 +1,4 @@
-# ivorypawn.github.io
-
-[HideOut](https://ivorypawn.github.io/)
+# [**HideOut**](https://ivorypawn.github.io/)
 
 - Profile
 - Blog
