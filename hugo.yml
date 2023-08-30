@@ -30,7 +30,7 @@ params:
     - name: twitter
       url: "https://twitter.com/Ivory_Pawn"
     - name: github
-      url: "https://github.com/ivorypawn/ivorypawn.github.io"
+      url: "https://github.com/ivorypawn"
 
   assets:
     disableFingerprinting: true
