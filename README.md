@@ -1,4 +1,11 @@
 # ivorypawn.github.io
 
-https://ivorypawn.github.io/
-(Under Construction)
+[HideOut](https://ivorypawn.github.io/)
+
+- Profile
+- Blog
+  - Chess / Shogi
+- Note
+  - 3D Programming / Machine Learning / Algorithm
+  - C++ / C# / Python
+- and other memoranda
