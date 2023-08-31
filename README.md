@@ -8,4 +8,4 @@ Powered by [Hugo](https://gohugo.io/) & [PaperMod](https://github.com/adityatela
 - Note
   - 3D Programming / Machine Learning / Algorithm
   - C++ / C# / Python
-- and other memoranda
+- and  Other Memoranda

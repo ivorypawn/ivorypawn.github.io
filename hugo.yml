@@ -14,8 +14,6 @@ taxonomies:
   tag: "tags"
 
 params:
-  title: HideOut
-  author: Hideaki Takahashi
   defaultTheme: dark
   DateFormat: "2006-01-02"
   math: true
