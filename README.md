@@ -10,5 +10,5 @@ Powered by [Hugo](https://gohugo.io/) & [PaperMod](https://github.com/adityatela
   - C++ / C# / Python
 - and Other Memoranda
 
-The following blog post was a great help in terms of layout and other overrides:
+The following blog post was a great help in layouts and other overrides:
 [Overview of Hugo/PaperMod, modifying PaperMod, and comparison to al-folio](https://jessewei.dev/blog/2023/papermod/)
