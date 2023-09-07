@@ -5,24 +5,23 @@
     <link>https://ivorypawn.github.io/notes/</link>
     <description>Recent content in Notes on HideOut</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ja-jp</language>
-    <lastBuildDate>Thu, 22 Jun 2023 01:44:48 +0900</lastBuildDate><atom:link href="https://ivorypawn.github.io/notes/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Intrinsic Triangulations</title>
-      <link>https://ivorypawn.github.io/notes/intrinsic-triangulations/</link>
-      <pubDate>Thu, 22 Jun 2023 01:44:48 +0900</pubDate>
-      
-      <guid>https://ivorypawn.github.io/notes/intrinsic-triangulations/</guid>
-      <description></description>
-    </item>
-    
+    <language>ja-jp</language><atom:link href="https://ivorypawn.github.io/notes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Diffusion Model</title>
       <link>https://ivorypawn.github.io/notes/diffusion-model/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ivorypawn.github.io/notes/diffusion-model/</guid>
-      <description>画像に逐次的にノイズを付加しランダムな画像を生成するプロセスを考える 上記の逆過程を推定することで、ランダムな画像から何らかのそれっぽい画像を</description>
+      <description>概要 画像に逐次的にノイズを付加しランダムな画像を生成するプロセスを考える 上記の逆過程を推定することで、ランダムな画像から何らかのそれっぽい画</description>
+    </item>
+    
+    <item>
+      <title>Intrinsic Triangulations</title>
+      <link>https://ivorypawn.github.io/notes/intrinsic-triangulations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ivorypawn.github.io/notes/intrinsic-triangulations/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -40,7 +39,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ivorypawn.github.io/notes/wavelet-matrix/</guid>
-      <description></description>
+      <description>class WaveletMatrix { private: vector&amp;lt;SuccinctBitVector&amp;gt; bit_arrays; vector&amp;lt;uint64_t&amp;gt; begin_one; // 各 bit に着目したときの 1 の開始位置 map&amp;lt;uint64_t, uint64_t&amp;gt; begin_alphabet; // 最後のソートされた配列で各文字の開始位置 const uint64_t size; // 与えられた配列のサイズ const uint64_t maximum_element; // 文字</description>
     </item>
     
   </channel>

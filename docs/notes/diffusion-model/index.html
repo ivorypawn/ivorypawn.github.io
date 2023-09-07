@@ -7,11 +7,10 @@
 <meta name="robots" content="index, follow">
 <title>Diffusion Model | HideOut</title>
 <meta name="keywords" content="論文読み, Machine Learning">
-<meta name="description" content="画像に逐次的にノイズを付加しランダムな画像を生成するプロセスを考える 上記の逆過程を推定することで、ランダムな画像から何らかのそれっぽい画像を">
+<meta name="description" content="概要 画像に逐次的にノイズを付加しランダムな画像を生成するプロセスを考える 上記の逆過程を推定することで、ランダムな画像から何らかのそれっぽい画">
 <meta name="author" content="">
 <link rel="canonical" href="https://ivorypawn.github.io/notes/diffusion-model/">
 <link crossorigin="anonymous" href="https://ivorypawn.github.io/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
-<script defer crossorigin="anonymous" src="https://ivorypawn.github.io/assets/js/highlight.js" onload="hljs.initHighlightingOnLoad();"></script>
 <link rel="icon" href="https://ivorypawn.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://ivorypawn.github.io/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://ivorypawn.github.io/favicon-32x32.png">
@@ -49,8 +48,31 @@
     });
 </script>
 
+
+
+
+<style>
+    @media screen and (min-width: 769px) {
+         
+        .post-content input[type="checkbox"]:checked ~ label > img {
+            transform: scale(1.6);
+            cursor: zoom-out;
+            position: relative;
+            z-index: 999;
+        }
+
+        .post-content img.zoomCheck {
+            transition: transform 0.15s ease;
+            z-index: 999;
+            cursor: zoom-in;
+        }
+    }
+</style>
+
+
+<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
 <meta property="og:title" content="Diffusion Model" />
-<meta property="og:description" content="画像に逐次的にノイズを付加しランダムな画像を生成するプロセスを考える 上記の逆過程を推定することで、ランダムな画像から何らかのそれっぽい画像を" />
+<meta property="og:description" content="概要 画像に逐次的にノイズを付加しランダムな画像を生成するプロセスを考える 上記の逆過程を推定することで、ランダムな画像から何らかのそれっぽい画" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ivorypawn.github.io/notes/diffusion-model/" /><meta property="article:section" content="notes" />
 
@@ -58,7 +80,7 @@
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Diffusion Model"/>
-<meta name="twitter:description" content="画像に逐次的にノイズを付加しランダムな画像を生成するプロセスを考える 上記の逆過程を推定することで、ランダムな画像から何らかのそれっぽい画像を"/>
+<meta name="twitter:description" content="概要 画像に逐次的にノイズを付加しランダムな画像を生成するプロセスを考える 上記の逆過程を推定することで、ランダムな画像から何らかのそれっぽい画"/>
 
 
 <script type="application/ld+json">
@@ -87,12 +109,12 @@
   "@type": "BlogPosting",
   "headline": "Diffusion Model",
   "name": "Diffusion Model",
-  "description": "画像に逐次的にノイズを付加しランダムな画像を生成するプロセスを考える 上記の逆過程を推定することで、ランダムな画像から何らかのそれっぽい画像を",
+  "description": "概要 画像に逐次的にノイズを付加しランダムな画像を生成するプロセスを考える 上記の逆過程を推定することで、ランダムな画像から何らかのそれっぽい画",
   "keywords": [
     "論文読み", "Machine Learning"
   ],
-  "articleBody": "\r画像に逐次的にノイズを付加しランダムな画像を生成するプロセスを考える 上記の逆過程を推定することで、ランダムな画像から何らかのそれっぽい画像を生成する （FYI: DALL-E や Imagen など最近話題の画像生成はだいたい拡散モデルベース）\n（脳のモデル？） 推測の域を出ない話だが、現時点では拡散モデルが脳内の学習/推論の中心的な仕組みの最有力候補と思っている。学習が観測をデノイズするだけで容易で局所的な更新で実現可能。推論時に複数候補を生成でき（エネルギーモデル同様）条件付を後付けでき複数の推論の統合もでき、局所解にはまらない https://twitter.com/hillbig/status/1557687263160836096\n資料 Ho, J., Jain, A., \u0026 Abbeel, P.. (2020). Denoising Diffusion Probabilistic Models. Weng, L. (2021). What are Diffusion Models?. lilianweng.github.io. 第 10 回全日本コンピュータビジョン勉強会「生成モデル論文縛り読み会」A Conditional Point Diffusion-Refinement Paradigm for 3D Point Cloud Completion 最近話題の\"Diffusion Model（拡散モデル）“について、簡潔にまとめてみた Shitong Luo, \u0026 Wei Hu (2021). Score-Based Point Cloud Denoising. In 2021 IEEE/CVF International Conference on Computer Vision (ICCV). IEEE. Awesome-Diffusion-Models（拡散モデルの応用研究をまとめたレポジトリ） Luo, C.. (2022). Understanding Diffusion Models: A Unified Perspective. 須山敦志 (2019)『ベイズ深層学習』講談社 基礎 表記 ステップ $t$ における確率変数：$\\mathbf{x}_t\\in\\mathbb{R}^D$ $t=0,1,\\ldots ,T$ たとえば画像なら $D=\\text{Height}\\times\\text{Width}\\times\\text{RGB}$ など $\\mathbf{x}_{0:T}:=\\mathbf{x}_0,\\mathbf{x}_1,\\ldots,\\mathbf{x}_T$ 変数 $\\mathbf{x},\\mathbf{y}$ の同時分布 (joint distribution) $p(\\mathbf{x},\\mathbf{y})$ に対する以下の操作を周辺化(marginalization) と呼び、得られる $p(\\mathbf{y})$ を $\\mathbf{y}$ の ‘‘周辺分布’’(marginal distribution) と呼ぶ。 $$ p(\\mathbf{y})=\\int p(\\mathbf{x},\\mathbf{y})d\\mathbf{x} $$\nまた同時分布 $p(\\mathbf{x},\\mathbf{y})$ に対して $\\mathbf{y}$ に特定の値を定めたときの $\\mathbf{x}$ の確率分布を ‘‘条件つき分布’’(conditional distribution) と呼び、以下で定義する： $$ p(\\mathbf{x} | \\mathbf{y}):=\\frac{p(\\mathbf{x}, \\mathbf{y})}{p(\\mathbf{y})} $$\n周辺分布と条件つき分布は確率分布の条件を満たす。\nベイズ推論による統計解析では、$\\mathbf{X}$ を観測データ集合、$\\mathbf{Z}$ をパラメータや潜在変数をまとめた集合とするとき、まず確率モデル $p(\\mathbf{X},\\mathbf{Z})$ を何らかの仮定の下に設計し、学習や予測を事後分布 $p(\\mathbf{Z}|\\mathbf{X})$ の計算によって実現する。\nニューラルネットワークなど実用的なモデルの多くは $p(\\mathbf{Z}|\\mathbf{X})$ を解析的に求められない。したがって問題を後述の情報量の最適化にシフトし、勾配などを用いて近似的に求める手法がしばしば使われる（e.g. 変分推論）。\n拡散過程 概要で述べたノイズを付加／除去する過程は以下のように定式化される。\n画像の ‘‘真の’’ 確率密度関数：$q(\\mathbf{x}_0)$ 拡散モデルによって推定される確率密度関数：$p_\\theta(\\mathbf{x}_0)$ $\\theta$ は拡散モデルのパラメータ ノイズを付加していく過程：Forward diffusion process $q( \\mathbf{x}_t | \\mathbf{x}_{t-1} )$ ノイズを除去していく過程：Reverse diffusion process $p_\\theta(\\mathbf{x}_{t-1} | \\mathbf{x}_t)$ 情報量 ある確率分布 $p(\\mathbf{x})$ に対し、関数 $f(\\mathbf{x})$ の期待値を以下で定義する。 $$ \\mathbb{E}_{p(\\mathbf{x})}[f(\\mathbf{x})]:=\\int f(\\mathbf{x})p(\\mathbf{x})d\\mathbf{x} $$\n確率分布 $p(\\mathbf{x}), q(\\mathbf{x})$ に対し、KL ダイバージェンス(Kullback-Leibler divergence) を以下で定義する。 $$ \\begin{align*} D_\\text{KL}[q(\\mathbf{x})||p(\\mathbf{x})] \u0026:= -\\int q(\\mathbf{x})\\log\\frac{p(\\mathbf{x})}{q(\\mathbf{x})}d\\mathbf{x} \\\\\\ \u0026= \\mathbb{E}_{q(\\mathbf{x})}[\\log q(\\mathbf{x})] - \\mathbb{E}_{q(\\mathbf{x})}[\\log p(\\mathbf{x})] \\end{align*} $$ KL ダイバージェンスは非負で、$p\\equiv q$ のときに限り $0$ になる。上界は存在しない。KL ダイバージェンスは $p,q$ の “近さ” のような概念だが、距離の公理などは満たさない。\n（参考） KL-divergence as an objective function 変分推論 事後分布を求めるために周辺尤度 $p(\\mathbf{X})=\\int p(\\mathbf{X},\\mathbf{Z})d\\mathbf{Z}$ を計算したいのだが、先述のとおり、モデルが複雑なときはこの積分を解析的に実行できない。\n変分推論法では、‘‘ELBO’’(Evidence Lower Bound; エビデンス下界) と呼ばれる対数周辺尤度 $\\log p(\\mathbf{X})$ の下界 $\\mathcal{L}(\\xi)$ を導入し、変分パラメータ $\\xi$（しばしば近似分布の平均や分散を表す）を最適化して ELBO を最大化することによって（対数）周辺尤度の近似解を得る。 $$ \\log p(\\mathbf{X})\\geq\\mathcal{L}(\\xi) $$\nよく使われる手法の一つは、事後分布 $p(\\mathbf{Z}|\\mathbf{X})$ のあるパラメータ $\\xi$ によって定まる分布 $q(\\mathbf{Z};\\xi)$ による近似であり、次の KL ダイバージェンスの最小化問題を解く。 $$ \\arg\\min_\\xi D_\\text{KL}[q(\\mathbf{Z};\\xi)||p(\\mathbf{Z}|\\mathbf{X})] $$ また対数周辺尤度は以下のように分解される。 $$ \\log p(\\mathbf{X})=\\mathcal{L}(\\xi)+D_\\text{KL}[q(\\mathbf{Z};\\xi)||p(\\mathbf{Z}|\\mathbf{X})], \\quad \\mathcal{L}(\\xi):=\\int q(\\mathbf{Z};\\xi)\\log\\frac{p(\\mathbf{X},\\mathbf{Z})}{q(\\mathbf{Z};\\xi)}d\\mathbf{Z} $$\n対数周辺尤度 $\\log p(\\mathbf{X})$ は $\\xi$ に依存しないため、この設定において ELBO の最大化は KL ダイバージェンスの最小化と等価になる。\n（余談） この界隈、ちょっと気に入らないのが何でもELBOの最大化から話を始める点ですね。KL divergenceの最小化と等価であることをまず抑えたほうが良いです。元々変分ベイズとして解こうとしていたのが無邪気に変なテク入れているうちにEMアルゴリズムになっちゃってたり色々残念な感じになりがちです。 (https://twitter.com/sammy_suyama/status/1563756088599920640 )\nガウス分布 特別な確率分布として、以下の $D$ 次元ガウス分布が頻出する： $$ \\mathcal{N}(\\mathbf{x}|\\mathbf{\\mu},\\mathbf{\\Sigma}):=\\frac{1}{\\sqrt{(2\\pi)^D|\\mathbf{\\Sigma}|}}\\exp\\left(-\\frac{1}{2}(\\mathbf{x}-\\mathbf{\\mu})^\\mathsf{T}\\mathbf{\\Sigma}^{-1}(\\mathbf{x}-\\mathbf{\\mu})\\right) $$ ここで $\\mathbf{\\mu}\\in\\mathbb{R}^D$ は平均、$\\mathbf{\\Sigma}\\in\\mathbb{R}^{D\\times D}$ は分散共分散行列。\nガウス分布の周辺分布や条件つき分布はガウス分布になる。ガウス分布は KL ダイバージェンスが解析的に求められるなど便利なため、論文でも多くの事前分布にガウス分布を仮定している。\n拡散モデル 元画像 $\\mathbf{x}_0$ にノイズを載せる処理を $T$ 回繰り返すことで、ランダムな画像 $\\mathbf{x}_T$ を生成することを考える。この逆過程を推定し、ランダムな画像 $\\mathbf{x}_T$ から意味のある画像 $\\mathbf{x}_0$ を生成することが目標である。\nForward diffusion process （書きかけ）\n",
-  "wordCount" : "2168",
+  "articleBody": "\r概要 画像に逐次的にノイズを付加しランダムな画像を生成するプロセスを考える 上記の逆過程を推定することで、ランダムな画像から何らかのそれっぽい画像を生成する DALL-E や Imagen などの画像生成は拡散モデルがベース\n（脳のモデル？） 推測の域を出ない話だが、現時点では拡散モデルが脳内の学習/推論の中心的な仕組みの最有力候補と思っている。学習が観測をデノイズするだけで容易で局所的な更新で実現可能。推論時に複数候補を生成でき（エネルギーモデル同様）条件付を後付けでき複数の推論の統合もでき、局所解にはまらない\n— Daisuke Okanohara / 岡野原 大輔 (@hillbig) August 11, 2022 岡野原さんの著書はいずれちゃんと読む。\n資料 Ho, J., Jain, A., \u0026 Abbeel, P.. (2020). Denoising Diffusion Probabilistic Models. Weng, L. (2021). What are Diffusion Models?. lilianweng.github.io. 第 10 回全日本コンピュータビジョン勉強会「生成モデル論文縛り読み会」A Conditional Point Diffusion-Refinement Paradigm for 3D Point Cloud Completion 最近話題の\"Diffusion Model（拡散モデル）“について、簡潔にまとめてみた Shitong Luo, \u0026 Wei Hu (2021). Score-Based Point Cloud Denoising. In 2021 IEEE/CVF International Conference on Computer Vision (ICCV). IEEE. Awesome-Diffusion-Models（拡散モデルの応用研究をまとめたレポジトリ） Luo, C.. (2022). Understanding Diffusion Models: A Unified Perspective. 須山敦志 (2019)『ベイズ深層学習』講談社 準備 表記 ステップ $t$ における確率変数：$\\mathbf{x}_t\\in\\mathbb{R}^D$ $t=0,1,\\ldots ,T$ たとえば画像なら $D=\\text{Height}\\times\\text{Width}\\times\\text{RGB}$ など $\\mathbf{x}_{0:T}:=\\mathbf{x}_0,\\mathbf{x}_1,\\ldots,\\mathbf{x}_T$ 変数 $\\mathbf{x},\\mathbf{y}$ の同時分布 (joint distribution) $p(\\mathbf{x},\\mathbf{y})$ に対する以下の操作を周辺化(marginalization) と呼び、得られる $p(\\mathbf{y})$ を $\\mathbf{y}$ の ‘‘周辺分布’’(marginal distribution) と呼ぶ。 $$ p(\\mathbf{y})=\\int p(\\mathbf{x},\\mathbf{y})d\\mathbf{x} $$\nまた同時分布 $p(\\mathbf{x},\\mathbf{y})$ に対して $\\mathbf{y}$ に特定の値を定めたときの $\\mathbf{x}$ の確率分布を ‘‘条件つき分布’’(conditional distribution) と呼び、以下で定義する： $$ p(\\mathbf{x} | \\mathbf{y}):=\\frac{p(\\mathbf{x}, \\mathbf{y})}{p(\\mathbf{y})} $$\n周辺分布と条件つき分布は確率分布の条件を満たす。\nベイズ推論による統計解析では、$\\mathbf{X}$ を観測データ集合、$\\mathbf{Z}$ をパラメータや潜在変数をまとめた集合とするとき、まず確率モデル $p(\\mathbf{X},\\mathbf{Z})$ を何らかの仮定の下に設計し、学習や予測を事後分布 $p(\\mathbf{Z}|\\mathbf{X})$ の計算によって実現する。\nニューラルネットワークなど実用的なモデルの多くは $p(\\mathbf{Z}|\\mathbf{X})$ を解析的に求められない。したがって問題を後述の情報量の最適化にシフトし、勾配などを用いて近似的に求める手法がしばしば使われる（e.g. 変分推論）。\n拡散過程 概要で述べたノイズを付加／除去する過程は以下のように定式化される。\n画像の ‘‘真の’’ 確率密度関数：$q(\\mathbf{x}_0)$ 拡散モデルによって推定される確率密度関数：$p_\\theta(\\mathbf{x}_0)$ $\\theta$ は拡散モデルのパラメータ ノイズを付加していく過程：Forward diffusion process $q( \\mathbf{x}_t | \\mathbf{x}_{t-1} )$ ノイズを除去していく過程：Reverse diffusion process $p_\\theta(\\mathbf{x}_{t-1} | \\mathbf{x}_t)$ 情報量 ある確率分布 $p(\\mathbf{x})$ に対し、関数 $f(\\mathbf{x})$ の期待値を以下で定義する。 $$ \\mathbb{E}_{p(\\mathbf{x})}[f(\\mathbf{x})]:=\\int f(\\mathbf{x})p(\\mathbf{x})d\\mathbf{x} $$\n確率分布 $p(\\mathbf{x}), q(\\mathbf{x})$ に対し、KL ダイバージェンス(Kullback-Leibler divergence) を以下で定義する。 $$ \\begin{align*} D_\\text{KL}[q(\\mathbf{x})||p(\\mathbf{x})] \u0026:= -\\int q(\\mathbf{x})\\log\\frac{p(\\mathbf{x})}{q(\\mathbf{x})}d\\mathbf{x} \\\\\\ \u0026= \\mathbb{E}_{q(\\mathbf{x})}[\\log q(\\mathbf{x})] - \\mathbb{E}_{q(\\mathbf{x})}[\\log p(\\mathbf{x})] \\end{align*} $$ KL ダイバージェンスは非負で、$p\\equiv q$ のときに限り $0$ になる。上界は存在しない。KL ダイバージェンスは $p,q$ の “近さ” のような概念だが、距離の公理などは満たさない。\n（参考） KL-divergence as an objective function 変分推論 事後分布を求めるために周辺尤度 $p(\\mathbf{X})=\\int p(\\mathbf{X},\\mathbf{Z})d\\mathbf{Z}$ を計算したいのだが、先述のとおり、モデルが複雑なときはこの積分を解析的に実行できない。\n変分推論法では、‘‘ELBO’’(Evidence Lower Bound; エビデンス下界) と呼ばれる対数周辺尤度 $\\log p(\\mathbf{X})$ の下界 $\\mathcal{L}(\\xi)$ を導入し、変分パラメータ $\\xi$（しばしば近似分布の平均や分散を表す）を最適化して ELBO を最大化することによって（対数）周辺尤度の近似解を得る。 $$ \\log p(\\mathbf{X})\\geq\\mathcal{L}(\\xi) $$\nよく使われる手法の一つは、事後分布 $p(\\mathbf{Z}|\\mathbf{X})$ のあるパラメータ $\\xi$ によって定まる分布 $q(\\mathbf{Z};\\xi)$ による近似であり、次の KL ダイバージェンスの最小化問題を解く。 $$ \\arg\\min_\\xi D_\\text{KL}[q(\\mathbf{Z};\\xi)||p(\\mathbf{Z}|\\mathbf{X})] $$ また対数周辺尤度は以下のように分解される。 $$ \\log p(\\mathbf{X})=\\mathcal{L}(\\xi)+D_\\text{KL}[q(\\mathbf{Z};\\xi)||p(\\mathbf{Z}|\\mathbf{X})], \\quad \\mathcal{L}(\\xi):=\\int q(\\mathbf{Z};\\xi)\\log\\frac{p(\\mathbf{X},\\mathbf{Z})}{q(\\mathbf{Z};\\xi)}d\\mathbf{Z} $$\n対数周辺尤度 $\\log p(\\mathbf{X})$ は $\\xi$ に依存しないため、この設定において ELBO の最大化は KL ダイバージェンスの最小化と等価になる。\n（余談） この界隈、ちょっと気に入らないのが何でもELBOの最大化から話を始める点ですね。KL divergenceの最小化と等価であることをまず抑えたほうが良いです。元々変分ベイズとして解こうとしていたのが無邪気に変なテク入れているうちにEMアルゴリズムになっちゃってたり色々残念な感じになりがちです。\n— 須山敦志 Suyama Atsushi (@sammy_suyama) August 28, 2022 ガウス分布 特別な確率分布として、以下の $D$ 次元ガウス分布が頻出する： $$ \\mathcal{N}(\\mathbf{x}|\\mathbf{\\mu},\\mathbf{\\Sigma}):=\\frac{1}{\\sqrt{(2\\pi)^D|\\mathbf{\\Sigma}|}}\\exp\\left(-\\frac{1}{2}(\\mathbf{x}-\\mathbf{\\mu})^\\mathsf{T}\\mathbf{\\Sigma}^{-1}(\\mathbf{x}-\\mathbf{\\mu})\\right) $$ ここで $\\mathbf{\\mu}\\in\\mathbb{R}^D$ は平均、$\\mathbf{\\Sigma}\\in\\mathbb{R}^{D\\times D}$ は分散共分散行列。\nガウス分布の周辺分布や条件つき分布はガウス分布になる。ガウス分布は KL ダイバージェンスが解析的に求められるなど便利なため、論文でも多くの事前分布にガウス分布を仮定している。\n拡散モデル 元画像 $\\mathbf{x}_0$ にノイズを載せる処理を $T$ 回繰り返すことで、ランダムな画像 $\\mathbf{x}_T$ を生成することを考える。この逆過程を推定し、ランダムな画像 $\\mathbf{x}_T$ から意味のある画像 $\\mathbf{x}_0$ を生成することが目標である。\nForward diffusion process (Under Construction)\n",
+  "wordCount" : "2193",
   "inLanguage": "ja",
   "datePublished": "0001-01-01T00:00:00Z",
   "dateModified": "0001-01-01T00:00:00Z",
@@ -177,19 +199,80 @@
     <div class="post-meta">
 
 </div>
-  </header> 
-  <div class="post-content"><p><img loading="lazy" src="00.png" alt=""  />
+  </header>
+
+  
+<div class="toc side left">
+    <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">目次</span>
+        </summary>
+
+        <div class="inner"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#概要">概要</a>
+      <ul>
+        <li><a href="#脳のモデル">（脳のモデル？）</a></li>
+      </ul>
+    </li>
+    <li><a href="#資料">資料</a></li>
+    <li><a href="#準備">準備</a>
+      <ul>
+        <li><a href="#表記">表記</a></li>
+        <li><a href="#拡散過程">拡散過程</a></li>
+        <li><a href="#情報量">情報量</a>
+          <ul>
+            <li><a href="#参考">（参考）</a></li>
+          </ul>
+        </li>
+        <li><a href="#変分推論">変分推論</a>
+          <ul>
+            <li><a href="#余談">（余談）</a></li>
+          </ul>
+        </li>
+        <li><a href="#ガウス分布">ガウス分布</a></li>
+      </ul>
+    </li>
+    <li><a href="#拡散モデル">拡散モデル</a>
+      <ul>
+        <li><a href="#forward-diffusion-process">Forward diffusion process</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        </div>
+    </details>
+</div>
+
+
+
+
+ 
+  <div class="post-content"><p>
+
+
+
+
+    
+    <input type="checkbox" id="zoomCheck-b2f82" hidden>
+    <label for="zoomCheck-b2f82">
+        <img class="zoomCheck" loading="lazy" decoding="async"
+            src="00.png" alt=""
+             />
+    </label>
+
 </p>
+<h2 id="概要">概要<a hidden class="anchor" aria-hidden="true" href="#概要">#</a></h2>
 <ul>
 <li>画像に逐次的にノイズを付加しランダムな画像を生成するプロセスを考える</li>
 <li>上記の逆過程を推定することで、ランダムな画像から何らかのそれっぽい画像を生成する</li>
 </ul>
-<p>（FYI: DALL-E や Imagen など最近話題の画像生成はだいたい拡散モデルベース）</p>
+<p>DALL-E や Imagen などの画像生成は拡散モデルがベース</p>
 <h3 id="脳のモデル">（脳のモデル？）<a hidden class="anchor" aria-hidden="true" href="#脳のモデル">#</a></h3>
-<blockquote>
-<p>推測の域を出ない話だが、現時点では拡散モデルが脳内の学習/推論の中心的な仕組みの最有力候補と思っている。学習が観測をデノイズするだけで容易で局所的な更新で実現可能。推論時に複数候補を生成でき（エネルギーモデル同様）条件付を後付けでき複数の推論の統合もでき、局所解にはまらない
-<a href="https://twitter.com/hillbig/status/1557687263160836096">https://twitter.com/hillbig/status/1557687263160836096</a></p>
-</blockquote>
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">推測の域を出ない話だが、現時点では拡散モデルが脳内の学習/推論の中心的な仕組みの最有力候補と思っている。学習が観測をデノイズするだけで容易で局所的な更新で実現可能。推論時に複数候補を生成でき（エネルギーモデル同様）条件付を後付けでき複数の推論の統合もでき、局所解にはまらない</p>&mdash; Daisuke Okanohara / 岡野原 大輔 (@hillbig) <a href="https://twitter.com/hillbig/status/1557687263160836096?ref_src=twsrc%5Etfw">August 11, 2022</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>岡野原さんの著書はいずれちゃんと読む。</p>
 <h2 id="資料">資料<a hidden class="anchor" aria-hidden="true" href="#資料">#</a></h2>
 <ol>
 <li>Ho, J., Jain, A., &amp; Abbeel, P.. (2020). <a href="https://arxiv.org/abs/2006.11239">Denoising Diffusion Probabilistic Models</a>.</li>
@@ -201,7 +284,7 @@
 <li>Luo, C.. (2022). <a href="https://arxiv.org/abs/2208.11970">Understanding Diffusion Models: A Unified Perspective</a>.</li>
 <li>須山敦志 (2019)『ベイズ深層学習』講談社</li>
 </ol>
-<h2 id="基礎">基礎<a hidden class="anchor" aria-hidden="true" href="#基礎">#</a></h2>
+<h2 id="準備">準備<a hidden class="anchor" aria-hidden="true" href="#準備">#</a></h2>
 <h3 id="表記">表記<a hidden class="anchor" aria-hidden="true" href="#表記">#</a></h3>
 <ul>
 <li>ステップ $t$ における確率変数：$\mathbf{x}_t\in\mathbb{R}^D$
@@ -268,10 +351,9 @@ $$
 $$</p>
 <p>対数周辺尤度 $\log p(\mathbf{X})$ は $\xi$ に依存しないため、この設定において ELBO の最大化は KL ダイバージェンスの最小化と等価になる。</p>
 <h4 id="余談">（余談）<a hidden class="anchor" aria-hidden="true" href="#余談">#</a></h4>
-<blockquote>
-<p>この界隈、ちょっと気に入らないのが何でもELBOの最大化から話を始める点ですね。KL divergenceの最小化と等価であることをまず抑えたほうが良いです。元々変分ベイズとして解こうとしていたのが無邪気に変なテク入れているうちにEMアルゴリズムになっちゃってたり色々残念な感じになりがちです。
-(<a href="https://twitter.com/sammy_suyama/status/1563756088599920640">https://twitter.com/sammy_suyama/status/1563756088599920640</a> )</p>
-</blockquote>
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">この界隈、ちょっと気に入らないのが何でもELBOの最大化から話を始める点ですね。KL divergenceの最小化と等価であることをまず抑えたほうが良いです。元々変分ベイズとして解こうとしていたのが無邪気に変なテク入れているうちにEMアルゴリズムになっちゃってたり色々残念な感じになりがちです。</p>&mdash; 須山敦志 Suyama Atsushi (@sammy_suyama) <a href="https://twitter.com/sammy_suyama/status/1563756088599920640?ref_src=twsrc%5Etfw">August 28, 2022</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 <h3 id="ガウス分布">ガウス分布<a hidden class="anchor" aria-hidden="true" href="#ガウス分布">#</a></h3>
 <p>特別な確率分布として、以下の $D$ 次元ガウス分布が頻出する：
 $$
@@ -282,7 +364,7 @@ $$
 <h2 id="拡散モデル">拡散モデル<a hidden class="anchor" aria-hidden="true" href="#拡散モデル">#</a></h2>
 <p>元画像 $\mathbf{x}_0$ にノイズを載せる処理を $T$ 回繰り返すことで、ランダムな画像 $\mathbf{x}_T$ を生成することを考える。この逆過程を推定し、ランダムな画像 $\mathbf{x}_T$ から意味のある画像 $\mathbf{x}_0$ を生成することが目標である。</p>
 <h3 id="forward-diffusion-process">Forward diffusion process<a hidden class="anchor" aria-hidden="true" href="#forward-diffusion-process">#</a></h3>
-<p>（書きかけ）</p>
+<p>(Under Construction)</p>
 
 
   </div>
@@ -300,8 +382,8 @@ $$
     <span>&copy; 2023 <a href="https://ivorypawn.github.io/">HideOut</a></span>
     <span>
         Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+        <a href="https://gohugo.io/">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/">PaperMod</a>
     </span>
 </footer>
 <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
@@ -363,6 +445,53 @@ $$
         }
     })
 
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'コピー';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'コピーされました!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'コピー';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
 </script>
 </body>
 

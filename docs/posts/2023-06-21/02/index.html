@@ -11,7 +11,6 @@
 <meta name="author" content="">
 <link rel="canonical" href="https://ivorypawn.github.io/posts/2023-06-21/02/">
 <link crossorigin="anonymous" href="https://ivorypawn.github.io/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
-<script defer crossorigin="anonymous" src="https://ivorypawn.github.io/assets/js/highlight.js" onload="hljs.initHighlightingOnLoad();"></script>
 <link rel="icon" href="https://ivorypawn.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://ivorypawn.github.io/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://ivorypawn.github.io/favicon-32x32.png">
@@ -49,6 +48,29 @@
     });
 </script>
 
+
+
+
+<style>
+    @media screen and (min-width: 769px) {
+         
+        .post-content input[type="checkbox"]:checked ~ label > img {
+            transform: scale(1.6);
+            cursor: zoom-out;
+            position: relative;
+            z-index: 999;
+        }
+
+        .post-content img.zoomCheck {
+            transition: transform 0.15s ease;
+            z-index: 999;
+            cursor: zoom-in;
+        }
+    }
+</style>
+
+
+<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
 <meta property="og:title" content="KaTeX の挙動について" />
 <meta property="og:description" content="PaperMod はデフォルトで数式を使えないため $\KaTeX$ を導入した。ヘッダに math: true を追加すれば使える。 KaTeXに対応させた話 それはいいのだが、一部コマンドは \ を" />
 <meta property="og:type" content="article" />
@@ -177,7 +199,32 @@
     <div class="post-meta"><span title='2023-06-21 06:42:43 +0900 JST'>2023-06-21</span>
 
 </div>
-  </header> 
+  </header>
+
+  
+<div class="toc side left">
+    <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">目次</span>
+        </summary>
+
+        <div class="inner"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#追記">（追記）</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        </div>
+    </details>
+</div>
+
+
+
+
+ 
   <div class="post-content"><p>PaperMod はデフォルトで数式を使えないため $\KaTeX$ を導入した。ヘッダに <code>math: true</code> を追加すれば使える。</p>
 <ul>
 <li><a href="https://chizuchizu.com/posts/katex/">KaTeXに対応させた話</a></li>
@@ -209,8 +256,8 @@
     <span>&copy; 2023 <a href="https://ivorypawn.github.io/">HideOut</a></span>
     <span>
         Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+        <a href="https://gohugo.io/">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/">PaperMod</a>
     </span>
 </footer>
 <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
@@ -272,6 +319,53 @@
         }
     })
 
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'コピー';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'コピーされました!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'コピー';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
 </script>
 </body>
 

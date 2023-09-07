@@ -50,6 +50,29 @@
     });
 </script>
 
+
+
+
+<style>
+    @media screen and (min-width: 769px) {
+         
+        .post-content input[type="checkbox"]:checked ~ label > img {
+            transform: scale(1.6);
+            cursor: zoom-out;
+            position: relative;
+            z-index: 999;
+        }
+
+        .post-content img.zoomCheck {
+            transition: transform 0.15s ease;
+            z-index: 999;
+            cursor: zoom-in;
+        }
+    }
+</style>
+
+
+<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
 <meta property="og:title" content="HideOut" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
@@ -68,7 +91,7 @@
   "description": "",
   "thumbnailUrl": "https://ivorypawn.github.io/favicon.ico",
   "sameAs": [
-      "https://twitter.com/Ivory_Pawn", "https://github.com/ivorypawn/ivorypawn.github.io"
+      "https://twitter.com/Ivory_Pawn", "https://github.com/ivorypawn"
   ]
 }
 </script>
@@ -133,8 +156,13 @@
         <img draggable="false" src="https://ivorypawn.github.io/profile.png" alt="profile image" title=""
             height="200" width="200" />
         <h1>HideOut</h1>
-        <span>Memorandum by TAKAHASHI, Hideaki (髙橋 英晃)</span><div class="social-icons">
-    <a href="https://twitter.com/Ivory_Pawn" target="_blank" rel="noopener noreferrer me" title="Twitter">
+        <span>Memorandum by TAKAHASHI, Hideaki (髙橋 英晃)</span>
+<div class="social-icons" style="padding-bottom: 0px;">
+    
+    
+    
+    
+    <a style="border-bottom: none;" href="https://twitter.com/Ivory_Pawn" rel="me" title="Twitter">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
     stroke-linecap="round" stroke-linejoin="round">
     <path
@@ -142,7 +170,11 @@
     </path>
 </svg>
     </a>
-    <a href="https://github.com/ivorypawn/ivorypawn.github.io" target="_blank" rel="noopener noreferrer me" title="Github">
+    
+    
+    
+    
+    <a style="border-bottom: none;" href="https://github.com/ivorypawn" rel="me" title="Github">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
     stroke-linecap="round" stroke-linejoin="round">
     <path
@@ -161,8 +193,8 @@
     <span>&copy; 2023 <a href="https://ivorypawn.github.io/">HideOut</a></span>
     <span>
         Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+        <a href="https://gohugo.io/">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/">PaperMod</a>
     </span>
 </footer>
 <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">

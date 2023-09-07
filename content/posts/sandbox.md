@@ -5,6 +5,10 @@ draft: true
 math: true
 ---
 
+{{<rawhtml>}}
+<p align="center" style="color: red;"><strong>This is raw HTML</strong></p>
+{{</rawhtml>}}
+
 $\hat u$
 
 $\bar u$

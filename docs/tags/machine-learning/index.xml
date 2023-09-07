@@ -12,7 +12,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ivorypawn.github.io/notes/diffusion-model/</guid>
-      <description>画像に逐次的にノイズを付加しランダムな画像を生成するプロセスを考える 上記の逆過程を推定することで、ランダムな画像から何らかのそれっぽい画像を</description>
+      <description>概要 画像に逐次的にノイズを付加しランダムな画像を生成するプロセスを考える 上記の逆過程を推定することで、ランダムな画像から何らかのそれっぽい画</description>
     </item>
     
   </channel>

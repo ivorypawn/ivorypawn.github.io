@@ -7,11 +7,10 @@
 <meta name="robots" content="index, follow">
 <title>Wavelet Matrix | HideOut</title>
 <meta name="keywords" content="Data Sturucture">
-<meta name="description" content="Wavelet Matrix - HideOut">
+<meta name="description" content="class WaveletMatrix { private: vector&lt;SuccinctBitVector&gt; bit_arrays; vector&lt;uint64_t&gt; begin_one; // 各 bit に着目したときの 1 の開始位置 map&lt;uint64_t, uint64_t&gt; begin_alphabet; // 最後のソートされた配列で各文字の開始位置 const uint64_t size; // 与えられた配列のサイズ const uint64_t maximum_element; // 文字">
 <meta name="author" content="">
 <link rel="canonical" href="https://ivorypawn.github.io/notes/wavelet-matrix/">
 <link crossorigin="anonymous" href="https://ivorypawn.github.io/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
-<script defer crossorigin="anonymous" src="https://ivorypawn.github.io/assets/js/highlight.js" onload="hljs.initHighlightingOnLoad();"></script>
 <link rel="icon" href="https://ivorypawn.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://ivorypawn.github.io/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://ivorypawn.github.io/favicon-32x32.png">
@@ -49,8 +48,31 @@
     });
 </script>
 
+
+
+
+<style>
+    @media screen and (min-width: 769px) {
+         
+        .post-content input[type="checkbox"]:checked ~ label > img {
+            transform: scale(1.6);
+            cursor: zoom-out;
+            position: relative;
+            z-index: 999;
+        }
+
+        .post-content img.zoomCheck {
+            transition: transform 0.15s ease;
+            z-index: 999;
+            cursor: zoom-in;
+        }
+    }
+</style>
+
+
+<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
 <meta property="og:title" content="Wavelet Matrix" />
-<meta property="og:description" content="" />
+<meta property="og:description" content="class WaveletMatrix { private: vector&lt;SuccinctBitVector&gt; bit_arrays; vector&lt;uint64_t&gt; begin_one; // 各 bit に着目したときの 1 の開始位置 map&lt;uint64_t, uint64_t&gt; begin_alphabet; // 最後のソートされた配列で各文字の開始位置 const uint64_t size; // 与えられた配列のサイズ const uint64_t maximum_element; // 文字" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ivorypawn.github.io/notes/wavelet-matrix/" /><meta property="article:section" content="notes" />
 
@@ -58,7 +80,7 @@
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Wavelet Matrix"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:description" content="class WaveletMatrix { private: vector&lt;SuccinctBitVector&gt; bit_arrays; vector&lt;uint64_t&gt; begin_one; // 各 bit に着目したときの 1 の開始位置 map&lt;uint64_t, uint64_t&gt; begin_alphabet; // 最後のソートされた配列で各文字の開始位置 const uint64_t size; // 与えられた配列のサイズ const uint64_t maximum_element; // 文字"/>
 
 
 <script type="application/ld+json">
@@ -87,12 +109,12 @@
   "@type": "BlogPosting",
   "headline": "Wavelet Matrix",
   "name": "Wavelet Matrix",
-  "description": "",
+  "description": "class WaveletMatrix { private: vector\u0026lt;SuccinctBitVector\u0026gt; bit_arrays; vector\u0026lt;uint64_t\u0026gt; begin_one; // 各 bit に着目したときの 1 の開始位置 map\u0026lt;uint64_t, uint64_t\u0026gt; begin_alphabet; // 最後のソートされた配列で各文字の開始位置 const uint64_t size; // 与えられた配列のサイズ const uint64_t maximum_element; // 文字",
   "keywords": [
     "Data Sturucture"
   ],
-  "articleBody": "",
-  "wordCount" : "0",
+  "articleBody": "class WaveletMatrix { private: vector\u003cSuccinctBitVector\u003e bit_arrays; vector\u003cuint64_t\u003e begin_one; // 各 bit に着目したときの 1 の開始位置 map\u003cuint64_t, uint64_t\u003e begin_alphabet; // 最後のソートされた配列で各文字の開始位置 const uint64_t size; // 与えられた配列のサイズ const uint64_t maximum_element; // 文字数 const uint64_t bit_size; // 文字を表すのに必要な bit 数 public: WaveletMatrix(const vector\u003cuint64_t\u003e \u0026array) : size(array.size()), maximum_element(*max_element(array.begin(), array.end()) + 1), bit_size(get_num_of_bit(maximum_element)) { bit_arrays.resize(bit_size, SuccinctBitVector(size)); begin_one.resize(bit_size); vector\u003cuint64_t\u003e v(array), temp[2]; temp[0].reserve(size); temp[1].reserve(size); for (uint64_t i = 0; i \u003c bit_size; ++i) { temp[0].clear(); temp[1].clear(); for (uint64_t j = 0; j \u003c size; ++j) { uint64_t c = v[j]; uint64_t bit = (c \u003e\u003e (bit_size - i - 1)) \u0026 1; temp[bit].push_back(c); bit_arrays[i].setBit(bit, j); } bit_arrays[i].build(); begin_one[i] = temp[0].size(); temp[0].insert(temp[0].end(), temp[1].begin(), temp[1].end()); v.swap(temp[0]); } for (int i = size - 1; i \u003e= 0; --i) { begin_alphabet[v[i]] = i; } } } ",
+  "wordCount" : "176",
   "inLanguage": "ja",
   "datePublished": "0001-01-01T00:00:00Z",
   "dateModified": "0001-01-01T00:00:00Z",
@@ -177,7 +199,58 @@
     <div class="post-meta">
 
 </div>
-  </header> 
+  </header>
+
+  
+
+
+
+
+ 
+  <div class="post-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">WaveletMatrix</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="k">private</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">vector</span><span class="o">&lt;</span><span class="n">SuccinctBitVector</span><span class="o">&gt;</span> <span class="n">bit_arrays</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">uint64_t</span><span class="o">&gt;</span> <span class="n">begin_one</span><span class="p">;</span>              <span class="c1">// 各 bit に着目したときの 1 の開始位置
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">map</span><span class="o">&lt;</span><span class="kt">uint64_t</span><span class="p">,</span> <span class="kt">uint64_t</span><span class="o">&gt;</span> <span class="n">begin_alphabet</span><span class="p">;</span>  <span class="c1">// 最後のソートされた配列で各文字の開始位置
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="k">const</span> <span class="kt">uint64_t</span> <span class="n">size</span><span class="p">;</span>             <span class="c1">// 与えられた配列のサイズ
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">const</span> <span class="kt">uint64_t</span> <span class="n">maximum_element</span><span class="p">;</span>  <span class="c1">// 文字数
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">const</span> <span class="kt">uint64_t</span> <span class="n">bit_size</span><span class="p">;</span>         <span class="c1">// 文字を表すのに必要な bit 数
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">   <span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">WaveletMatrix</span><span class="p">(</span><span class="k">const</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">uint64_t</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">array</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="o">:</span> <span class="n">size</span><span class="p">(</span><span class="n">array</span><span class="p">.</span><span class="n">size</span><span class="p">()),</span> <span class="n">maximum_element</span><span class="p">(</span><span class="o">*</span><span class="n">max_element</span><span class="p">(</span><span class="n">array</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">array</span><span class="p">.</span><span class="n">end</span><span class="p">())</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="n">bit_size</span><span class="p">(</span><span class="n">get_num_of_bit</span><span class="p">(</span><span class="n">maximum_element</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">bit_arrays</span><span class="p">.</span><span class="n">resize</span><span class="p">(</span><span class="n">bit_size</span><span class="p">,</span> <span class="n">SuccinctBitVector</span><span class="p">(</span><span class="n">size</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">        <span class="n">begin_one</span><span class="p">.</span><span class="n">resize</span><span class="p">(</span><span class="n">bit_size</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">vector</span><span class="o">&lt;</span><span class="kt">uint64_t</span><span class="o">&gt;</span> <span class="n">v</span><span class="p">(</span><span class="n">array</span><span class="p">),</span> <span class="n">temp</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">        <span class="n">temp</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">reserve</span><span class="p">(</span><span class="n">size</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">temp</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">reserve</span><span class="p">(</span><span class="n">size</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(</span><span class="kt">uint64_t</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">bit_size</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">temp</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">clear</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">            <span class="n">temp</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">clear</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="p">(</span><span class="kt">uint64_t</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">size</span><span class="p">;</span> <span class="o">++</span><span class="n">j</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="kt">uint64_t</span> <span class="n">c</span> <span class="o">=</span> <span class="n">v</span><span class="p">[</span><span class="n">j</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">                <span class="kt">uint64_t</span> <span class="n">bit</span> <span class="o">=</span> <span class="p">(</span><span class="n">c</span> <span class="o">&gt;&gt;</span> <span class="p">(</span><span class="n">bit_size</span> <span class="o">-</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                <span class="n">temp</span><span class="p">[</span><span class="n">bit</span><span class="p">].</span><span class="n">push_back</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                <span class="n">bit_arrays</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">setBit</span><span class="p">(</span><span class="n">bit</span><span class="p">,</span> <span class="n">j</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="n">bit_arrays</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">build</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="n">begin_one</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">temp</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">size</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">            <span class="n">temp</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">insert</span><span class="p">(</span><span class="n">temp</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">end</span><span class="p">(),</span> <span class="n">temp</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">begin</span><span class="p">(),</span> <span class="n">temp</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">end</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">            <span class="n">v</span><span class="p">.</span><span class="n">swap</span><span class="p">(</span><span class="n">temp</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">size</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">;</span> <span class="o">--</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">begin_alphabet</span><span class="p">[</span><span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
+
+  </div>
 
   <footer class="post-footer">
     <ul class="post-tags">
@@ -191,8 +264,8 @@
     <span>&copy; 2023 <a href="https://ivorypawn.github.io/">HideOut</a></span>
     <span>
         Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+        <a href="https://gohugo.io/">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/">PaperMod</a>
     </span>
 </footer>
 <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
@@ -254,6 +327,53 @@
         }
     })
 
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'コピー';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'コピーされました!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'コピー';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
 </script>
 </body>
 
