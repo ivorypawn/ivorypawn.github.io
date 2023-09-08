@@ -7,7 +7,7 @@
 <meta name="robots" content="index, follow">
 <title>Wavelet Matrix | HideOut</title>
 <meta name="keywords" content="Data Sturucture">
-<meta name="description" content="class WaveletMatrix { private: vector&lt;SuccinctBitVector&gt; bit_arrays; vector&lt;uint64_t&gt; begin_one; // 各 bit に着目したときの 1 の開始位置 map&lt;uint64_t, uint64_t&gt; begin_alphabet; // 最後のソートされた配列で各文字の開始位置 const uint64_t size; // 与えられた配列のサイズ const uint64_t maximum_element; // 文字">
+<meta name="description" content="概要 ～数十億の大規模データ上で、特定範囲の極値や頻度などが高速に求められる構造。 多次元への拡張も可能。 読んだやつ Francisco Claude and Gonzalo Navarro. The Wavelet Matrix. Proc. SPIRE&#39;12, pages 167-179. LNCS 7608">
 <meta name="author" content="">
 <link rel="canonical" href="https://ivorypawn.github.io/notes/wavelet-matrix/">
 <link crossorigin="anonymous" href="https://ivorypawn.github.io/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
@@ -72,7 +72,7 @@
 
 <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
 <meta property="og:title" content="Wavelet Matrix" />
-<meta property="og:description" content="class WaveletMatrix { private: vector&lt;SuccinctBitVector&gt; bit_arrays; vector&lt;uint64_t&gt; begin_one; // 各 bit に着目したときの 1 の開始位置 map&lt;uint64_t, uint64_t&gt; begin_alphabet; // 最後のソートされた配列で各文字の開始位置 const uint64_t size; // 与えられた配列のサイズ const uint64_t maximum_element; // 文字" />
+<meta property="og:description" content="概要 ～数十億の大規模データ上で、特定範囲の極値や頻度などが高速に求められる構造。 多次元への拡張も可能。 読んだやつ Francisco Claude and Gonzalo Navarro. The Wavelet Matrix. Proc. SPIRE&#39;12, pages 167-179. LNCS 7608" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ivorypawn.github.io/notes/wavelet-matrix/" /><meta property="article:section" content="notes" />
 
@@ -80,7 +80,7 @@
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Wavelet Matrix"/>
-<meta name="twitter:description" content="class WaveletMatrix { private: vector&lt;SuccinctBitVector&gt; bit_arrays; vector&lt;uint64_t&gt; begin_one; // 各 bit に着目したときの 1 の開始位置 map&lt;uint64_t, uint64_t&gt; begin_alphabet; // 最後のソートされた配列で各文字の開始位置 const uint64_t size; // 与えられた配列のサイズ const uint64_t maximum_element; // 文字"/>
+<meta name="twitter:description" content="概要 ～数十億の大規模データ上で、特定範囲の極値や頻度などが高速に求められる構造。 多次元への拡張も可能。 読んだやつ Francisco Claude and Gonzalo Navarro. The Wavelet Matrix. Proc. SPIRE&#39;12, pages 167-179. LNCS 7608"/>
 
 
 <script type="application/ld+json">
@@ -109,12 +109,12 @@
   "@type": "BlogPosting",
   "headline": "Wavelet Matrix",
   "name": "Wavelet Matrix",
-  "description": "class WaveletMatrix { private: vector\u0026lt;SuccinctBitVector\u0026gt; bit_arrays; vector\u0026lt;uint64_t\u0026gt; begin_one; // 各 bit に着目したときの 1 の開始位置 map\u0026lt;uint64_t, uint64_t\u0026gt; begin_alphabet; // 最後のソートされた配列で各文字の開始位置 const uint64_t size; // 与えられた配列のサイズ const uint64_t maximum_element; // 文字",
+  "description": "概要 ～数十億の大規模データ上で、特定範囲の極値や頻度などが高速に求められる構造。 多次元への拡張も可能。 読んだやつ Francisco Claude and Gonzalo Navarro. The Wavelet Matrix. Proc. SPIRE'12, pages 167-179. LNCS 7608",
   "keywords": [
     "Data Sturucture"
   ],
-  "articleBody": "class WaveletMatrix { private: vector\u003cSuccinctBitVector\u003e bit_arrays; vector\u003cuint64_t\u003e begin_one; // 各 bit に着目したときの 1 の開始位置 map\u003cuint64_t, uint64_t\u003e begin_alphabet; // 最後のソートされた配列で各文字の開始位置 const uint64_t size; // 与えられた配列のサイズ const uint64_t maximum_element; // 文字数 const uint64_t bit_size; // 文字を表すのに必要な bit 数 public: WaveletMatrix(const vector\u003cuint64_t\u003e \u0026array) : size(array.size()), maximum_element(*max_element(array.begin(), array.end()) + 1), bit_size(get_num_of_bit(maximum_element)) { bit_arrays.resize(bit_size, SuccinctBitVector(size)); begin_one.resize(bit_size); vector\u003cuint64_t\u003e v(array), temp[2]; temp[0].reserve(size); temp[1].reserve(size); for (uint64_t i = 0; i \u003c bit_size; ++i) { temp[0].clear(); temp[1].clear(); for (uint64_t j = 0; j \u003c size; ++j) { uint64_t c = v[j]; uint64_t bit = (c \u003e\u003e (bit_size - i - 1)) \u0026 1; temp[bit].push_back(c); bit_arrays[i].setBit(bit, j); } bit_arrays[i].build(); begin_one[i] = temp[0].size(); temp[0].insert(temp[0].end(), temp[1].begin(), temp[1].end()); v.swap(temp[0]); } for (int i = size - 1; i \u003e= 0; --i) { begin_alphabet[v[i]] = i; } } } ",
-  "wordCount" : "176",
+  "articleBody": "概要 ～数十億の大規模データ上で、特定範囲の極値や頻度などが高速に求められる構造。\n多次元への拡張も可能。\n読んだやつ Francisco Claude and Gonzalo Navarro. The Wavelet Matrix. Proc. SPIRE'12, pages 167-179. LNCS 7608 ウェーブレット木の世界 人工知能学会 私のブックマーク Vol.26 No.6 (2011/11) 簡潔データ構造 簡潔ビットベクトル(完備辞書) ウェーブレット行列最速攻略 Eating Your Own Cat Food コード ウェーブレット行列(wavelet matrix) ウェーブレット行列で競プロの問題を解く 動的ウェーブレット行列(dynamic wavelet matrix) 3 次元空間のクエリを処理する Wavelet Matrix SIGGRAPH Asia の最優秀賞論文を解説してみた（2D Wavelet 行列を用いた定数時間メディアンフィルタ） ウェーブレット行列の構造についてはすでに分かりやすい資料がある（とくに 2., 6., 8. がおすすめ）。\nここでは基本的な部分は取り上げない。以下は個人的なメモ。\n（余談） 上に載せていないが、ウェーブレット行列の名をもつとあるライブラリが、節点情報をアルファベット数分保持する実装になっていた。\n資料 2. p.51 の通り、前身のウェーブレット木に対するウェーブレット行列のアドは、各ビット列の $1$ の開始位置だけ保持すればよいことにある。したがってこのライブラリの実装は誤り。\n表記 文字列データを $T[0,n),\\;0\\leq T[i]",
+  "wordCount" : "2427",
   "inLanguage": "ja",
   "datePublished": "0001-01-01T00:00:00Z",
   "dateModified": "0001-01-01T00:00:00Z",
@@ -202,12 +202,86 @@
   </header>
 
   
+<div class="toc side left">
+    <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">目次</span>
+        </summary>
+
+        <div class="inner"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#概要">概要</a></li>
+    <li><a href="#読んだやつ">読んだやつ</a>
+      <ul>
+        <li><a href="#余談">（余談）</a></li>
+      </ul>
+    </li>
+    <li><a href="#表記">表記</a></li>
+    <li><a href="#実装">実装</a>
+      <ul>
+        <li><a href="#構築">構築</a>
+          <ul>
+            <li><a href="#基数ソートとの違い">基数ソートとの違い</a></li>
+          </ul>
+        </li>
+        <li><a href="#rankc-pos"><code>rank(c, pos)</code></a></li>
+        <li><a href="#rangefreqx-y-l-r"><code>rangefreq(x, y, l, r)</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#多次元への拡張">多次元への拡張</a>
+      <ul>
+        <li><a href="#rangefreqx0-x1-y0-y1-z0-z1"><code>rangefreq(x0, x1, y0, y1, z0, z1)</code></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        </div>
+    </details>
+</div>
 
 
 
 
  
-  <div class="post-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">WaveletMatrix</span> <span class="p">{</span>
+  <div class="post-content"><h2 id="概要">概要<a hidden class="anchor" aria-hidden="true" href="#概要">#</a></h2>
+<p>～数十億の大規模データ上で、特定範囲の極値や頻度などが高速に求められる構造。</p>
+<p>多次元への拡張も可能。</p>
+<h2 id="読んだやつ">読んだやつ<a hidden class="anchor" aria-hidden="true" href="#読んだやつ">#</a></h2>
+<ol>
+<li>Francisco Claude and Gonzalo Navarro. <a href="https://users.dcc.uchile.cl/~gnavarro/ps/spire12.4.pdf">The Wavelet Matrix</a>. Proc. SPIRE'12, pages 167-179. LNCS 7608</li>
+<li><a href="https://tech.preferred.jp/ja/blog/wavelettree_world/">ウェーブレット木の世界</a></li>
+<li><a href="https://www.ai-gakkai.or.jp/resource/my-bookmark/my-bookmark_vol26-no6/">人工知能学会 私のブックマーク Vol.26 No.6 (2011/11) 簡潔データ構造</a></li>
+<li><a href="https://tiramister.net/blog/posts/bitvector/">簡潔ビットベクトル(完備辞書)</a></li>
+<li><a href="https://www.scribd.com/doc/102636443/Wavelet-Matrix">ウェーブレット行列最速攻略</a></li>
+<li>Eating Your Own Cat Food
+<ul>
+<li><a href="https://github.com/MitI-7/WaveletMatrix">コード</a></li>
+<li><a href="https://miti-7.hatenablog.com/entry/2018/04/28/152259">ウェーブレット行列(wavelet matrix)</a></li>
+<li><a href="https://miti-7.hatenablog.com/entry/2019/02/01/152131">ウェーブレット行列で競プロの問題を解く</a></li>
+<li><a href="https://miti-7.hatenablog.com/entry/2019/02/01/143655">動的ウェーブレット行列(dynamic wavelet matrix)</a></li>
+</ul>
+</li>
+<li><a href="https://noshi91.hatenablog.com/entry/2021/06/02/165408">3 次元空間のクエリを処理する Wavelet Matrix</a></li>
+<li><a href="https://qiita.com/TumoiYorozu/items/a8193e5ecd957a1b9b0d">SIGGRAPH Asia の最優秀賞論文を解説してみた（2D Wavelet 行列を用いた定数時間メディアンフィルタ）</a></li>
+</ol>
+<p>ウェーブレット行列の構造についてはすでに分かりやすい資料がある（とくに 2., 6., 8. がおすすめ）。</p>
+<p>ここでは基本的な部分は取り上げない。以下は個人的なメモ。</p>
+<h3 id="余談">（余談）<a hidden class="anchor" aria-hidden="true" href="#余談">#</a></h3>
+<p>上に載せていないが、ウェーブレット行列の名をもつとあるライブラリが、節点情報をアルファベット数分保持する実装になっていた。</p>
+<p><a href="#%E8%AA%AD%E3%82%93%E3%81%A0%E3%82%84%E3%81%A4">資料</a> 2. p.51 の通り、前身のウェーブレット木に対するウェーブレット行列のアドは、各ビット列の $1$ の開始位置だけ保持すればよいことにある。したがってこのライブラリの実装は誤り。</p>
+<h2 id="表記">表記<a hidden class="anchor" aria-hidden="true" href="#表記">#</a></h2>
+<p>文字列データを $T[0,n),\;0\leq T[i]&lt;s$ で表す。$s$ はアルファベットの数。</p>
+<ul>
+<li>DNA：$s=4$ (ATCG)</li>
+<li>ASCII: $s=2^7$</li>
+<li>日本語： $s=$ 数万</li>
+<li>etc.</li>
+</ul>
+<p>とくに $s=2$ のときのビット列を $B[0,n)$ と表す。</p>
+<h2 id="実装">実装<a hidden class="anchor" aria-hidden="true" href="#実装">#</a></h2>
+<h3 id="構築">構築<a hidden class="anchor" aria-hidden="true" href="#構築">#</a></h3>
+<p>以下 C++ で書く。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">WaveletMatrix</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">   <span class="k">private</span><span class="o">:</span>
 </span></span><span class="line"><span class="cl">    <span class="n">vector</span><span class="o">&lt;</span><span class="n">SuccinctBitVector</span><span class="o">&gt;</span> <span class="n">bit_arrays</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">uint64_t</span><span class="o">&gt;</span> <span class="n">begin_one</span><span class="p">;</span>              <span class="c1">// 各 bit に着目したときの 1 の開始位置
@@ -248,7 +322,181 @@
 </span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div>
+</span></span></code></pre></div><p><code>SuccinctBitVector</code> やいくつかのメンバ関数の実装は省略。コンストラクタでウェーブレット行列を構築している。</p>
+<p><code>begin_alphabet</code> は <code>rank</code> を高速化する。動的ウェーブレット行列では使えない（要確認）。</p>
+<p>また範囲指定クエリのみが必要で（空間の干渉判定など）、特定の値についてカウントする必要がない場合は、<code>rank</code> の出番がないため、<code>begin_alphabet</code> を省略できる。</p>
+<h4 id="基数ソートとの違い">基数ソートとの違い<a hidden class="anchor" aria-hidden="true" href="#基数ソートとの違い">#</a></h4>
+<p>実装のウェーブレット行列の振り分けステップは基数ソートに似ているが、基数ソートと違って最上位ビットから比較している。このため最終的に bit-reversed にソートされた配列が生成される。</p>
+<p>この仕様はオリジナルの論文に準拠しており、ビットサイズを節約できる利点がある（cf. <a href="#%E8%AA%AD%E3%82%93%E3%81%A0%E3%82%84%E3%81%A4">資料</a> 1. p.7 <em>Practical considerations</em>）。</p>
+<p>上の <code>WaveletMatrix</code> の実装は引数の <code>array</code> ごとにビットサイズを決定するため、最下位ビットから比較しても効率は変わらない。このほうが基数ソートの理解をそのまま使えて可読性が高いかもしれない。</p>
+<h3 id="rankc-pos"><code>rank(c, pos)</code><a hidden class="anchor" aria-hidden="true" href="#rankc-pos">#</a></h3>
+<p>$T[0,\text{pos})$ における $c\in [0,s)$ の頻度を返す。</p>
+<p>ビット列 $B$ 上の <code>rank</code> は、まず $B$ を 2 段階にブロック分割し、構築時に各ブロックの <code>rank</code> を計算して記録しておき、残りを <code>popcount</code> ないしテーブルから求めて足し上げる。
+分割ブロックの適切なサイズについては <a href="#%E8%AA%AD%E3%82%93%E3%81%A0%E3%82%84%E3%81%A4">資料</a> 4. 参照。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">uint64_t</span> <span class="nf">rank0</span><span class="p">(</span><span class="kt">uint64_t</span> <span class="n">pos</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">pos</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">pos</span> <span class="o">=</span> <span class="n">min</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span> <span class="n">size</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">const</span> <span class="kt">uint64_t</span> <span class="n">ones</span> <span class="o">=</span> <span class="p">(</span><span class="kt">uint64_t</span><span class="p">)((</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="n">pos</span> <span class="o">%</span> <span class="n">blockBitNum</span><span class="p">))</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">pos</span> <span class="o">-</span> <span class="p">(</span><span class="n">L</span><span class="p">[</span><span class="n">pos</span> <span class="o">/</span> <span class="n">LEVEL_L</span><span class="p">]</span> <span class="o">+</span> <span class="n">S</span><span class="p">[</span><span class="n">pos</span> <span class="o">/</span> <span class="n">LEVEL_S</span><span class="p">]</span> <span class="o">+</span> <span class="n">__popcnt16</span><span class="p">(</span><span class="n">B</span><span class="p">[</span><span class="n">pos</span> <span class="o">/</span> <span class="n">blockBitNum</span><span class="p">]</span> <span class="o">&amp;</span> <span class="n">ones</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>文字列 $T$ 上の <code>rank</code> は、$c$ に対応する葉に至るまでウェーブレット木をたどって、ビット列 $B$ 上の <code>rank</code> を適用する。<a href="#%E8%AA%AD%E3%82%93%E3%81%A0%E3%82%84%E3%81%A4">資料</a> 5. p.44 など参照．</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">uint64_t</span> <span class="nf">rank</span><span class="p">(</span><span class="k">const</span> <span class="kt">uint64_t</span> <span class="n">c</span><span class="p">,</span> <span class="kt">uint64_t</span> <span class="n">pos</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">c</span> <span class="o">&gt;=</span> <span class="n">maximum_element</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">auto</span> <span class="n">it</span> <span class="o">=</span> <span class="n">begin_alphabet</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">it</span> <span class="o">==</span> <span class="n">begin_alphabet</span><span class="p">.</span><span class="n">end</span><span class="p">())</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="kt">uint64_t</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">bit_size</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">uint64_t</span> <span class="n">bit</span> <span class="o">=</span> <span class="p">(</span><span class="n">c</span> <span class="o">&gt;&gt;</span> <span class="p">(</span><span class="n">bit_size</span> <span class="o">-</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">pos</span> <span class="o">=</span> <span class="n">bit_arrays</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">rank</span><span class="p">(</span><span class="n">bit</span><span class="p">,</span> <span class="n">pos</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">bit</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">pos</span> <span class="o">+=</span> <span class="n">begin_one</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">const</span> <span class="kt">uint64_t</span> <span class="n">begin_pos</span> <span class="o">=</span> <span class="n">it</span><span class="o">-&gt;</span><span class="n">second</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">pos</span> <span class="o">-</span> <span class="n">begin_pos</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="rangefreqx-y-l-r"><code>rangefreq(x, y, l, r)</code><a hidden class="anchor" aria-hidden="true" href="#rangefreqx-y-l-r">#</a></h3>
+<p>$T[l,r)$ における $[x,y)\subset [0,s)$ に含まれる値の頻度を返す。</p>
+<p>特別な場合 <code>lowfreq(c, l, r) := rangefreq(0, c, l, r)</code> が実装できればよい。実装は <code>rank</code> 同様に書ける。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">// [0, c) &amp;&amp; [begin, pos)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">uint64_t</span> <span class="nf">lowFreq</span><span class="p">(</span><span class="kt">uint64_t</span> <span class="n">c</span><span class="p">,</span> <span class="kt">uint64_t</span> <span class="n">begin_pos</span><span class="p">,</span> <span class="kt">uint64_t</span> <span class="n">end_pos</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">end_pos</span> <span class="o">=</span> <span class="n">min</span><span class="p">(</span><span class="n">size</span><span class="p">,</span> <span class="n">end_pos</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">c</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">end_pos</span> <span class="o">&lt;=</span> <span class="n">begin_pos</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">c</span> <span class="o">&gt;=</span> <span class="n">sup</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">end_pos</span> <span class="o">-</span> <span class="n">begin_pos</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">uint64_t</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="kt">uint64_t</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">bit_size</span> <span class="o">&amp;&amp;</span> <span class="n">begin_pos</span> <span class="o">&lt;</span> <span class="n">end_pos</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">const</span> <span class="kt">uint64_t</span> <span class="n">bit</span> <span class="o">=</span> <span class="p">(</span><span class="n">c</span> <span class="o">&gt;&gt;</span> <span class="p">(</span><span class="n">bit_size</span> <span class="o">-</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">const</span> <span class="kt">uint64_t</span> <span class="n">rank_begin</span> <span class="o">=</span> <span class="n">bit_arrays</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">rank0</span><span class="p">(</span><span class="n">begin_pos</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">const</span> <span class="kt">uint64_t</span> <span class="n">rank_end</span> <span class="o">=</span> <span class="n">bit_arrays</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">rank0</span><span class="p">(</span><span class="n">end_pos</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">bit</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">count</span> <span class="o">+=</span> <span class="n">rank_end</span> <span class="o">-</span> <span class="n">rank_begin</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="n">begin_pos</span> <span class="o">=</span> <span class="n">begin_one</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">begin_pos</span> <span class="o">-</span> <span class="n">rank_begin</span><span class="p">;</span> <span class="c1">// BeginOne + rank1(begin_pos)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="n">end_pos</span> <span class="o">=</span> <span class="n">begin_one</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">end_pos</span> <span class="o">-</span> <span class="n">rank_end</span><span class="p">;</span> <span class="c1">// BeginOne + rank1(end_pos)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">begin_pos</span> <span class="o">=</span> <span class="n">rank_begin</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="n">end_pos</span> <span class="o">=</span> <span class="n">rank_end</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">count</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// [min_c, max_c) &amp;&amp; [begin, pos)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">uint64_t</span> <span class="nf">rangeFreq</span><span class="p">(</span><span class="k">const</span> <span class="kt">uint64_t</span> <span class="n">min_c</span><span class="p">,</span> <span class="k">const</span> <span class="kt">uint64_t</span> <span class="n">max_c</span><span class="p">,</span> <span class="kt">uint64_t</span> <span class="n">begin_pos</span><span class="p">,</span> <span class="kt">uint64_t</span> <span class="n">end_pos</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">max_c</span> <span class="o">&lt;=</span> <span class="n">min_c</span> <span class="o">||</span> <span class="n">end_pos</span> <span class="o">&lt;=</span> <span class="n">begin_pos</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">lowFreq</span><span class="p">(</span><span class="n">max_c</span><span class="p">,</span> <span class="n">begin_pos</span><span class="p">,</span> <span class="n">end_pos</span><span class="p">)</span> <span class="o">-</span> <span class="n">lowFreq</span><span class="p">(</span><span class="n">min_c</span><span class="p">,</span> <span class="n">begin_pos</span><span class="p">,</span> <span class="n">end_pos</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="多次元への拡張">多次元への拡張<a hidden class="anchor" aria-hidden="true" href="#多次元への拡張">#</a></h2>
+<p>ウェーブレット行列 <code>WaveletMatrix</code> は簡潔ビットベクトル <code>SuccinctBitVector</code> のベクトルを持ち、文字列 $T$ の <code>rank</code> や <code>lowfreq</code> の計算を <code>SuccinctBitVector.rank</code> に帰着していた。</p>
+<p>同様に <code>WaveletMatrix</code> のベクトルをもつウェーブレットテンソル <code>WaveletTensor</code> なるクラスを考え、3 次元空間上のクエリ <code>lowfreq</code> を <code>WaveletMatrix.rank</code> に帰着して求めることができる。</p>
+<p><code>WaveletTensor</code> の使用例は以下：</p>
+<ul>
+<li>メディアンフィルタ画像処理（cf. <a href="#%E8%AA%AD%E3%82%93%E3%81%A0%E3%82%84%E3%81%A4">資料</a> 8.）</li>
+<li>3 次元空間の点群の干渉判定（cf. <a href="#%E8%AA%AD%E3%82%93%E3%81%A0%E3%82%84%E3%81%A4">資料</a> 2. p.44, <a href="#%E8%AA%AD%E3%82%93%E3%81%A0%E3%82%84%E3%81%A4">資料</a> 7.）</li>
+</ul>
+<p>試しに後者を簡易実装してみる。座標 $(X,Y,Z)$ は適当な変換により非負になっているものとする。また適当な解像度により $X,Y$ は離散化され整数になっているとする。</p>
+<ol>
+<li>点群を $Z$ 座標でソート</li>
+<li>$Y$ 座標のビットを最上位から注目し <code>WaveletMatrix</code> 同様に振り分け</li>
+<li>
+<ol start="2">
+<li>で定まる順序について以下の文字列 $T$ を生成：</li>
+</ol>
+<ul>
+<li>Bit 0: $X$ 座標</li>
+<li>Bit 1: $X$ の上界</li>
+</ul>
+</li>
+<li>$T$ の <code>WaveletMatrix</code> を構築。以降、$Y$ 座標の最下位ビットにいたるまで繰り返し</li>
+</ol>
+<p>すなわち $X,Y$ 座標を $b$ ビット整数で表すとき、最大 $b$ 個の <code>WaveletMatrix</code> を構築する。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">WaveletTensor</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="k">private</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">const</span> <span class="kt">uint64_t</span> <span class="n">size</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">const</span> <span class="kt">uint64_t</span> <span class="n">supX</span><span class="p">,</span> <span class="n">supY</span><span class="p">,</span> <span class="n">bit_size</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">vector</span><span class="o">&lt;</span><span class="n">WaveletMatrix</span><span class="o">&gt;</span> <span class="n">tensor</span><span class="p">;</span> <span class="c1">// 最上位ビットから
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">uint64_t</span><span class="o">&gt;</span> <span class="n">begin_one</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">WaveletTensor</span><span class="p">(</span><span class="k">const</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">tuple</span><span class="o">&lt;</span><span class="kt">uint64_t</span><span class="p">,</span> <span class="kt">uint64_t</span><span class="p">,</span> <span class="kt">float</span><span class="o">&gt;</span> <span class="o">&gt;&amp;</span> <span class="n">points3D</span><span class="p">,</span> <span class="k">const</span> <span class="kt">uint64_t</span> <span class="n">maxX</span><span class="p">,</span> <span class="k">const</span> <span class="kt">uint64_t</span> <span class="n">maxY</span><span class="p">)</span> <span class="o">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">size</span><span class="p">(</span><span class="n">points3D</span><span class="p">.</span><span class="n">size</span><span class="p">()),</span> <span class="n">supX</span><span class="p">(</span><span class="n">maxX</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="n">supY</span><span class="p">(</span><span class="n">maxY</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="n">bit_size</span><span class="p">(</span><span class="n">get_num_of_bit</span><span class="p">(</span><span class="n">supY</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">tensor</span><span class="p">.</span><span class="n">resize</span><span class="p">(</span><span class="n">bit_size</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">begin_one</span><span class="p">.</span><span class="n">resize</span><span class="p">(</span><span class="n">bit_size</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">vector</span><span class="o">&lt;</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">uint64_t</span><span class="p">,</span> <span class="kt">uint64_t</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">v</span><span class="p">,</span> <span class="n">temp</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">        <span class="n">temp</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">reserve</span><span class="p">(</span><span class="n">size</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">temp</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">reserve</span><span class="p">(</span><span class="n">size</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(</span><span class="kt">uint64_t</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">bit_size</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">temp</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">clear</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">            <span class="n">temp</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">clear</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="n">vector</span><span class="o">&lt;</span><span class="kt">uint64_t</span><span class="o">&gt;</span> <span class="n">codX</span><span class="p">(</span><span class="n">size</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="p">(</span><span class="kt">uint64_t</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">size</span><span class="p">;</span> <span class="o">++</span><span class="n">j</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="k">const</span> <span class="kt">uint64_t</span> <span class="n">cX</span> <span class="o">=</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">?</span> <span class="n">get</span><span class="o">&lt;</span><span class="mi">0</span><span class="o">&gt;</span><span class="p">(</span><span class="n">points3D</span><span class="p">[</span><span class="n">j</span><span class="p">])</span> <span class="o">:</span> <span class="n">v</span><span class="p">[</span><span class="n">j</span><span class="p">].</span><span class="n">first</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                <span class="k">const</span> <span class="kt">uint64_t</span> <span class="n">cY</span> <span class="o">=</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">?</span> <span class="n">get</span><span class="o">&lt;</span><span class="mi">1</span><span class="o">&gt;</span><span class="p">(</span><span class="n">points3D</span><span class="p">[</span><span class="n">j</span><span class="p">])</span> <span class="o">:</span> <span class="n">v</span><span class="p">[</span><span class="n">j</span><span class="p">].</span><span class="n">second</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                <span class="k">const</span> <span class="kt">uint64_t</span> <span class="n">bit</span> <span class="o">=</span> <span class="p">(</span><span class="n">cY</span> <span class="o">&gt;&gt;</span> <span class="p">(</span><span class="n">bit_size</span> <span class="o">-</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                <span class="n">temp</span><span class="p">[</span><span class="n">bit</span><span class="p">].</span><span class="n">emplace_back</span><span class="p">(</span><span class="n">cX</span><span class="p">,</span> <span class="n">cY</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                <span class="n">codX</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">bit</span> <span class="o">?</span> <span class="nl">supX</span> <span class="p">:</span> <span class="n">cX</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="n">tensor</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">init</span><span class="p">(</span><span class="n">codX</span><span class="p">,</span> <span class="n">supX</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="n">begin_one</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">temp</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">size</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">            <span class="n">temp</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">insert</span><span class="p">(</span><span class="n">temp</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">end</span><span class="p">(),</span> <span class="n">temp</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">begin</span><span class="p">(),</span> <span class="n">temp</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">end</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">            <span class="n">v</span><span class="p">.</span><span class="n">swap</span><span class="p">(</span><span class="n">temp</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span></code></pre></div><h3 id="rangefreqx0-x1-y0-y1-z0-z1"><code>rangefreq(x0, x1, y0, y1, z0, z1)</code><a hidden class="anchor" aria-hidden="true" href="#rangefreqx0-x1-y0-y1-z0-z1">#</a></h3>
+<p><code>WaveletMatrix.rangefreq</code> 同様、特別な場合 <code>lowFreq(cx, cy, l, r) := rangefreq(0, cx, 0, cy, l, r)</code> が実装できればよい。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">// [0, cX) &amp;&amp; [0, cY) &amp;&amp; [begin, end)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">uint64_t</span> <span class="nf">lowFreq</span><span class="p">(</span><span class="kt">uint64_t</span> <span class="n">cX</span><span class="p">,</span> <span class="kt">uint64_t</span> <span class="n">cY</span><span class="p">,</span> <span class="kt">uint64_t</span> <span class="n">begin_pos</span><span class="p">,</span> <span class="kt">uint64_t</span> <span class="n">end_pos</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">end_pos</span> <span class="o">=</span> <span class="n">min</span><span class="p">(</span><span class="n">size</span><span class="p">,</span> <span class="n">end_pos</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">cX</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">cY</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">end_pos</span> <span class="o">&lt;=</span> <span class="n">begin_pos</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cX</span> <span class="o">=</span> <span class="n">min</span><span class="p">(</span><span class="n">cX</span><span class="p">,</span> <span class="n">supX</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cY</span> <span class="o">=</span> <span class="n">min</span><span class="p">(</span><span class="n">cY</span><span class="p">,</span> <span class="n">supY</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">cX</span> <span class="o">==</span> <span class="n">supX</span> <span class="o">&amp;&amp;</span> <span class="n">cY</span> <span class="o">==</span> <span class="n">supY</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">end_pos</span> <span class="o">-</span> <span class="n">begin_pos</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">uint64_t</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="kt">uint64_t</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">bit_size</span> <span class="o">&amp;&amp;</span> <span class="n">begin_pos</span> <span class="o">&lt;</span> <span class="n">end_pos</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">const</span> <span class="kt">uint64_t</span> <span class="n">bit</span> <span class="o">=</span> <span class="p">(</span><span class="n">cY</span> <span class="o">&gt;&gt;</span> <span class="p">(</span><span class="n">bit_size</span> <span class="o">-</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">const</span> <span class="kt">uint64_t</span> <span class="n">rank_begin</span> <span class="o">=</span> <span class="n">tensor</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">lowFreq</span><span class="p">(</span><span class="n">supX</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">begin_pos</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">const</span> <span class="kt">uint64_t</span> <span class="n">rank_end</span> <span class="o">=</span> <span class="n">tensor</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">lowFreq</span><span class="p">(</span><span class="n">supX</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">end_pos</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">bit</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">count</span> <span class="o">+=</span> <span class="n">tensor</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">lowFreq</span><span class="p">(</span><span class="n">cX</span><span class="p">,</span> <span class="n">begin_pos</span><span class="p">,</span> <span class="n">end_pos</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="n">begin_pos</span> <span class="o">=</span> <span class="n">begin_one</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">begin_pos</span> <span class="o">-</span> <span class="n">rank_begin</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="n">end_pos</span> <span class="o">=</span> <span class="n">begin_one</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">end_pos</span> <span class="o">-</span> <span class="n">rank_end</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">begin_pos</span> <span class="o">=</span> <span class="n">rank_begin</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="n">end_pos</span> <span class="o">=</span> <span class="n">rank_end</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">count</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// [x0, x1) &amp;&amp; [y0, y1) &amp;&amp; [z0, z1)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">uint64_t</span> <span class="nf">rangeFreq</span><span class="p">(</span><span class="k">const</span> <span class="kt">uint64_t</span> <span class="n">x0</span><span class="p">,</span> <span class="k">const</span> <span class="kt">uint64_t</span> <span class="n">x1</span><span class="p">,</span> <span class="k">const</span> <span class="kt">uint64_t</span> <span class="n">y0</span><span class="p">,</span> <span class="k">const</span> <span class="kt">uint64_t</span> <span class="n">y1</span><span class="p">,</span> <span class="kt">uint64_t</span> <span class="n">z0</span><span class="p">,</span> <span class="kt">uint64_t</span> <span class="n">z1</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">x1</span> <span class="o">&lt;=</span> <span class="n">x0</span> <span class="o">||</span> <span class="n">y1</span> <span class="o">&lt;=</span> <span class="n">y0</span> <span class="o">||</span> <span class="n">z1</span> <span class="o">&lt;=</span> <span class="n">z0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">lowFreq</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">z0</span><span class="p">,</span> <span class="n">z1</span><span class="p">)</span> <span class="o">-</span> <span class="n">lowFreq</span><span class="p">(</span><span class="n">x0</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">z0</span><span class="p">,</span> <span class="n">z1</span><span class="p">)</span> <span class="o">-</span> <span class="n">lowFreq</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">y0</span><span class="p">,</span> <span class="n">z0</span><span class="p">,</span> <span class="n">z1</span><span class="p">)</span> <span class="o">+</span> <span class="n">lowFreq</span><span class="p">(</span><span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">,</span> <span class="n">z0</span><span class="p">,</span> <span class="n">z1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>雑に動作テストずみだが、カバレッジはぜんぜんないので参考程度に。</p>
+
 
   </div>
 
