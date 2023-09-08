@@ -112,7 +112,7 @@ uint64_t rank0(uint64_t pos) {
         return 0;
     }
     pos = min(pos, size);
-    const uint64_t ones = (uint64_t)((1 << (pos % blockBitNum)) - 1);
+    const uint16_t ones = (uint16_t)((1 << (pos % blockBitNum)) - 1);
     return pos - (L[pos / LEVEL_L] + S[pos / LEVEL_S] + __popcnt16(B[pos / blockBitNum] & ones));
 }
 ```
