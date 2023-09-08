@@ -97,3 +97,7 @@
 /* TextWhitespace */ .chroma .w {  }
 
 code { font-family: 'Source Code Pro', monospace; }
+
+.katex {
+  font-size: 1.05em !important; 
+}

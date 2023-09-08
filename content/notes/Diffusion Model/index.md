@@ -18,7 +18,7 @@ DALL-E や Imagen などの画像生成は拡散モデルがベース
 
 岡野原さんの著書はいずれちゃんと読む。
 
-## 資料
+## 読んだやつ
 1. Ho, J., Jain, A., & Abbeel, P.. (2020). [Denoising Diffusion Probabilistic Models](https://arxiv.org/abs/2006.11239).
 2. Weng, L. (2021). [What are Diffusion Models?](https://lilianweng.github.io/posts/2021-07-11-diffusion-models/). lilianweng.github.io.
 3. 第 10 回全日本コンピュータビジョン勉強会「生成モデル論文縛り読み会」[A Conditional Point Diffusion-Refinement Paradigm for 3D Point Cloud Completion](https://speakerdeck.com/takmin/a-conditional-point-diffusion-refinement-paradigm-for-3d-point-cloud-completion)
@@ -112,6 +112,132 @@ $$
 ## 拡散モデル
 元画像 $\mathbf{x}_0$ にノイズを載せる処理を $T$ 回繰り返すことで、ランダムな画像 $\mathbf{x}_T$ を生成することを考える。この逆過程を推定し、ランダムな画像 $\mathbf{x}_T$ から意味のある画像 $\mathbf{x}_0$ を生成することが目標である。
 
-### Forward diffusion process
+### Forward diffusion process $q(\mathbf{x}\_t | \mathbf{x}\_{t-1})$
 
-(Under Construction)
+状態 $\mathbf{x}_{t-1}$ にガウシアンノイズを載せて $\mathbf{x}_t$ に遷移させたときの条件つき分布を、パラメータ $\alpha_t\in(0,1)$ を用いて以下で定式化する。ただし $\mathbf{x}_0\sim q$ とする。
+
+$$
+q(\mathbf{x}_t | \mathbf{x}\_{t-1})=\mathcal{N}(\mathbf{x}_t | \sqrt{\alpha_t} \mathbf{x}\_{t-1},(1-\alpha_t)\mathbf{I}), \quad q(\mathbf{x}\_{1:T} | \mathbf{x}_0)=\prod\_{t=1}^T q(\mathbf{x}_t | \mathbf{x}\_{t-1})
+$$
+
+ガウシアンノイズを $\mathbf{z}_t\sim\mathcal{N}(\mathbf{0}, \mathbf{I})$ として具体的に計算してみる。
+
+$\bar{\alpha}_t = \prod\_{i=1}^T \alpha_i$ とおく。
+
+$$
+\begin{aligned}
+\mathbf{x}_t 
+&= \sqrt{\alpha\_t}\mathbf{x}\_{t-1} + \sqrt{1 - \alpha\_t}\mathbf{z}\_{t-1} \\cr
+&= \sqrt{\alpha\_t \alpha\_{t-1}} \mathbf{x}\_{t-2} + \sqrt{1 - \alpha\_t \alpha\_{t-1}} \bar{\mathbf{z}}\_{t-2} & (\bar{\mathbf{z}}\_{t-2} \text{ merges two Gaussians}) \\cr
+&= \cdots \\cr
+&= \sqrt{\bar{\alpha}\_t}\mathbf{x}\_0 + \sqrt{1 - \bar{\alpha}\_t}\mathbf{z}
+\end{aligned}
+$$
+
+したがって $q(\mathbf{x}\_t \vert \mathbf{x}\_0) = \mathcal{N}(\mathbf{x}\_t; \sqrt{\bar{\alpha}\_t} \mathbf{x}\_0, (1 - \bar{\alpha}\_t)\mathbf{I})$ と書ける。
+
+実は $\beta_t:=1-\alpha_t$（ノイズの強さ）が十分小さければ、$q(\mathbf{x}_{t-1} | \mathbf{x}_t, \mathbf{x}_0)$ もガウス分布と見なせるとのこと。実際、
+
+$$
+\begin{aligned}
+q(\mathbf{x}\_{t-1} \vert \mathbf{x}\_t, \mathbf{x}\_0) 
+&= q(\mathbf{x}\_t \vert \mathbf{x}\_{t-1}, \mathbf{x}\_0) \frac{ q(\mathbf{x}\_{t-1} \vert \mathbf{x}\_0) }{ q(\mathbf{x}\_t \vert \mathbf{x}\_0) } \\cr
+&\propto \exp \left(-\frac{1}{2} \left(\frac{(\mathbf{x}\_t - \sqrt{\alpha\_t} \mathbf{x}\_{t-1})^2}{\beta\_t} + \frac{(\mathbf{x}\_{t-1} - \sqrt{\bar{\alpha}\_{t-1}} \mathbf{x}\_0)^2}{1-\bar{\alpha}\_{t-1}} - \frac{(\mathbf{x}\_t - \sqrt{\bar{\alpha}\_t} \mathbf{x}\_0)^2}{1-\bar{\alpha}\_t} \right) \right) \\cr
+&= \exp \left( -\frac{1}{2} \left( \left(\frac{\alpha\_t}{\beta\_t} + \frac{1}{1 - \bar{\alpha}\_{t-1}}\right) \mathbf{x}\_{t-1}^2 - \left(\frac{2\sqrt{\alpha\_t}}{\beta\_t} \mathbf{x}\_t + \frac{2\sqrt{\bar{\alpha}\_{t-1}}}{1 - \bar{\alpha}\_{t-1}} \mathbf{x}\_0\right) \mathbf{x}\_{t-1} + C(\mathbf{x}\_t, \mathbf{x}\_0) \right) \right)
+\end{aligned}
+$$
+
+と展開される。$C(\mathbf{x}\_t, \mathbf{x}\_0)$ は $\mathbf{x}\_{t-1}$ に依存しないため除外すると、$q(\mathbf{x}\_{t-1} | \mathbf{x}\_t, \mathbf{x}\_0)$ は以下の平均 $\tilde{\mu}\_t$ と分散 $\tilde{\beta}\_t\mathbf{I}$ を持つガウス分布で近似される：
+
+$$
+\begin{aligned}
+\tilde{\beta}\_t
+&= \frac{1 - \bar{\alpha}\_{t-1}}{1 - \bar{\alpha}\_t} \cdot \beta\_t \\cr
+\tilde{\mu}\_t
+&= \left.\left(\frac{\sqrt{\alpha\_t}}{\beta\_t} \mathbf{x}\_t + \frac{\sqrt{\bar{\alpha}\_{t-1} }}{1 - \bar{\alpha}\_{t-1}} \mathbf{x}\_0\right) \right/ \left(\frac{\alpha\_t}{\beta\_t} + \frac{1}{1 - \bar{\alpha}\_{t-1}}\right) \\cr
+&= \frac{\sqrt{\alpha\_t}(1 - \bar{\alpha}\_{t-1})}{1 - \bar{\alpha}\_t} \mathbf{x}\_t + \frac{\sqrt{\bar{\alpha}\_{t-1}}\beta\_t}{1 - \bar{\alpha}\_t} \mathbf{x}\_0 \\cr
+&= \frac{\sqrt{\alpha\_t}(1 - \bar{\alpha}\_{t-1})}{1 - \bar{\alpha}\_t} \mathbf{x}\_t + \frac{\sqrt{\bar{\alpha}\_{t-1}}\beta\_t}{1 - \bar{\alpha}\_t} \frac{1}{\sqrt{\bar{\alpha}\_t}}(\mathbf{x}\_t - \sqrt{1 - \bar{\alpha}\_t}\mathbf{z}\_t) \\cr
+&= \frac{1}{\sqrt{\alpha\_t}} \Big( \mathbf{x}\_t - \frac{1 - \alpha\_t}{\sqrt{1 - \bar{\alpha}\_t}} \mathbf{z}\_t \Big)
+\end{aligned}
+$$
+
+### Reverse diffusion process $p\_\theta(\mathbf{x}\_{t-1} | \mathbf{x}\_t)$
+逆拡散過程は以下のように定式化される：
+
+$$
+p\_\theta(\mathbf{x}\_{0:T}) = p(\mathbf{x}\_T) \prod^T\_{t=1} p\_\theta(\mathbf{x}\_{t-1} \vert \mathbf{x}\_t), \quad
+p\_\theta(\mathbf{x}\_{t-1} \vert \mathbf{x}\_t) = \mathcal{N}(\mathbf{x}\_{t-1}; \mathbf{\mu}\_\theta(\mathbf{x}\_t, t), \mathbf{\Sigma}\_\theta(\mathbf{x}\_t, t)) \quad p(\mathbf{x}\_T)=\mathcal{N}(\mathbf{x}\_T|\mathbf{0},\mathbf{I}).
+$$
+
+上記 $\mathbf{\mu}\_\theta,\mathbf{\Sigma}\_\theta$ が学習対象。
+
+## 損失関数
+[変分推論](#変分推論) で述べたように、対数尤度 $\displaystyle \sum\_i\log p\_\theta(\mathbf{x}\_0^i)$ を最大化するパラメータ $\theta$ を求めたい（$\mathbf{x}\_0^i$ は学習に用いる画像）。
+
+$\mathbf{x}\_0^i\sim q(\mathbf{x}\_0)$ だから、問題は以下のクロスエントロピー最小化と等価となる。
+
+$$
+\arg\min\_\theta-\mathbb{E}\_{q(\mathbf{x}\_0)}[\log p\_\theta(\mathbf{x}\_0)]
+$$
+
+この損失関数を $L_\text{CE}$ とおく。Jensen の不等式により、
+
+$$
+\begin{aligned}
+L_\text{CE}
+&= - \mathbb{E}\_{q(\mathbf{x}\_0)} \log p\_\theta(\mathbf{x}\_0) \\cr
+&= - \mathbb{E}\_{q(\mathbf{x}\_0)} \log \Big( \int p\_\theta(\mathbf{x}\_{0:T}) d\mathbf{x}\_{1:T} \Big) \\cr
+&= - \mathbb{E}\_{q(\mathbf{x}\_0)} \log \Big( \int q(\mathbf{x}\_{1:T} \vert \mathbf{x}\_0) \frac{p\_\theta(\mathbf{x}\_{0:T})}{q(\mathbf{x}\_{1:T} \vert \mathbf{x}\_{0})} d\mathbf{x}\_{1:T} \Big) \\cr
+&= - \mathbb{E}\_{q(\mathbf{x}\_0)} \log \Big( \mathbb{E}\_{q(\mathbf{x}\_{1:T} \vert \mathbf{x}\_0)} \frac{p\_\theta(\mathbf{x}\_{0:T})}{q(\mathbf{x}\_{1:T} \vert \mathbf{x}\_{0})} \Big) \\cr
+&\leq - \mathbb{E}\_{q(\mathbf{x}\_{0:T})} \log \frac{p\_\theta(\mathbf{x}\_{0:T})}{q(\mathbf{x}\_{1:T} \vert \mathbf{x}\_{0})} \\cr
+&= \mathbb{E}\_{q(\mathbf{x}\_{0:T})}\Big[\log \frac{q(\mathbf{x}\_{1:T} \vert \mathbf{x}\_{0})}{p\_\theta(\mathbf{x}\_{0:T})} \Big] \\cr
+&= \mathbb{E}\_{q(\mathbf{x}\_{0:T})} \Big[ \log\frac{q(\mathbf{x}\_{1:T}\vert\mathbf{x}\_0)}{p\_\theta(\mathbf{x}\_{0:T})} \Big] \\cr
+&= \mathbb{E}\_q \Big[ \log\frac{\prod\_{t=1}^T q(\mathbf{x}\_t\vert\mathbf{x}\_{t-1})}{ p\_\theta(\mathbf{x}\_T) \prod\_{t=1}^T p\_\theta(\mathbf{x}\_{t-1} \vert\mathbf{x}\_t) } \Big] \\cr
+&= \mathbb{E}\_q \Big[ -\log p\_\theta(\mathbf{x}\_T) + \sum\_{t=1}^T \log \frac{q(\mathbf{x}\_t\vert\mathbf{x}\_{t-1})}{p\_\theta(\mathbf{x}\_{t-1} \vert\mathbf{x}\_t)} \Big] \\cr
+&= \mathbb{E}\_q \Big[ -\log p\_\theta(\mathbf{x}\_T) + \sum\_{t=2}^T \log \frac{q(\mathbf{x}\_t\vert\mathbf{x}\_{t-1})}{p\_\theta(\mathbf{x}\_{t-1} \vert\mathbf{x}\_t)} + \log\frac{q(\mathbf{x}\_1 \vert \mathbf{x}\_0)}{p\_\theta(\mathbf{x}\_0 \vert \mathbf{x}\_1)} \Big] \\cr
+&= \mathbb{E}\_q \Big[ -\log p\_\theta(\mathbf{x}\_T) + \sum\_{t=2}^T \log \Big( \frac{q(\mathbf{x}\_{t-1} \vert \mathbf{x}\_t, \mathbf{x}\_0)}{p\_\theta(\mathbf{x}\_{t-1} \vert\mathbf{x}\_t)}\cdot \frac{q(\mathbf{x}\_t \vert \mathbf{x}\_0)}{q(\mathbf{x}\_{t-1}\vert\mathbf{x}\_0)} \Big) + \log \frac{q(\mathbf{x}\_1 \vert \mathbf{x}\_0)}{p\_\theta(\mathbf{x}\_0 \vert \mathbf{x}\_1)} \Big] \\cr
+&= \mathbb{E}\_q \Big[ -\log p\_\theta(\mathbf{x}\_T) + \sum\_{t=2}^T \log \frac{q(\mathbf{x}\_{t-1} \vert \mathbf{x}\_t, \mathbf{x}\_0)}{p\_\theta(\mathbf{x}\_{t-1} \vert\mathbf{x}\_t)} + \sum\_{t=2}^T \log \frac{q(\mathbf{x}\_t \vert \mathbf{x}\_0)}{q(\mathbf{x}\_{t-1} \vert \mathbf{x}\_0)} + \log\frac{q(\mathbf{x}\_1 \vert \mathbf{x}\_0)}{p\_\theta(\mathbf{x}\_0 \vert \mathbf{x}\_1)} \Big] \\cr
+&= \mathbb{E}\_q \Big[ -\log p\_\theta(\mathbf{x}\_T) + \sum\_{t=2}^T \log \frac{q(\mathbf{x}\_{t-1} \vert \mathbf{x}\_t, \mathbf{x}\_0)}{p\_\theta(\mathbf{x}\_{t-1} \vert\mathbf{x}\_t)} + \log\frac{q(\mathbf{x}\_T \vert \mathbf{x}\_0)}{q(\mathbf{x}\_1 \vert \mathbf{x}\_0)} + \log \frac{q(\mathbf{x}\_1 \vert \mathbf{x}\_0)}{p\_\theta(\mathbf{x}\_0 \vert \mathbf{x}\_1)} \Big]\\cr
+&= \mathbb{E}\_q \Big[ \log\frac{q(\mathbf{x}\_T \vert \mathbf{x}\_0)}{p\_\theta(\mathbf{x}\_T)} + \sum\_{t=2}^T \log \frac{q(\mathbf{x}\_{t-1} \vert \mathbf{x}\_t, \mathbf{x}\_0)}{p\_\theta(\mathbf{x}\_{t-1} \vert\mathbf{x}\_t)} - \log p\_\theta(\mathbf{x}\_0 \vert \mathbf{x}\_1) \Big] \\cr
+&= \mathbb{E}\_q [D\_\text{KL}[q(\mathbf{x}\_T | \mathbf{x}\_0) || p\_\theta(\mathbf{x}\_T)] + \sum\_{t=2}^T D\_\text{KL}[q(\mathbf{x}\_{t-1} \vert \mathbf{x}\_t, \mathbf{x}\_0) || p\_\theta(\mathbf{x}\_{t-1} \vert\mathbf{x}\_t)]] - \log p\_\theta(\mathbf{x}\_0 |\mathbf{x}\_1)
+\end{aligned}
+$$
+
+最後の数式の第 1 項を $L_T$、第 2 項の総和の中身を $L_{t-1}$、第 3 項を $L_0$ とおく。
+
+$L_T$ は定数、$L_0$ は計算可能であるから、最適化の対象は $L_{t-1}$ となる。
+
+$q,p_\theta$ はガウス分布だったので $L_{t-1}$ は解析的に書ける：
+
+$$
+\begin{aligned}
+L\_t
+&= D\_\text{KL}[q(\mathbf{x}\_{t-1} \vert \mathbf{x}\_t, \mathbf{x}\_0) || p\_\theta(\mathbf{x}\_{t-1} \vert\mathbf{x}\_t)] \\cr
+&= \mathbb{E}\_{\mathbf{x}\_0, \mathbf{z}} \Big[\frac{1}{2 \| \mathbf{\Sigma}\_\theta(\mathbf{x}\_t, t) \|^2\_2} \| \tilde{\mu}\_t(\mathbf{x}\_t, \mathbf{x}\_0) - \mu\_\theta(\mathbf{x}\_t, t) |^2 \Big] \\cr
+&= \mathbb{E}\_{\mathbf{x}\_0, \mathbf{z}} \Big[\frac{ (1 - \alpha\_t)^2 }{2 \alpha\_t (1 - \bar{\alpha}\_t) \| \mathbf{\Sigma}\_\theta \|^2\_2} \|\mathbf{z}\_t - \mathbf{z}\_\theta(\mathbf{x}\_t, t)\|^2 \Big] \\cr
+&= \mathbb{E}\_{\mathbf{x}\_0, \mathbf{z}} \Big[\frac{ (1 - \alpha\_t)^2 }{2 \alpha\_t (1 - \bar{\alpha}\_t) \| \mathbf{\Sigma}\_\theta \|^2\_2} \|\mathbf{z}\_t - \mathbf{z}\_\theta(\sqrt{\bar{\alpha}\_t}\mathbf{x}\_0 + \sqrt{1 - \bar{\alpha}\_t}\mathbf{z}\_t, t)\|^2 \Big] 
+\end{aligned}
+$$
+
+ここで $\mathbf{z}\_t$ はステップ $t$ で加えたノイズ、$\mathbf{z}_\theta$ は学習器によって推定されたノイズを表す。
+
+### Simplification
+
+[Ho et al. (2020)](https://arxiv.org/abs/2006.11239) は、$L_t$ の係数を簡略化した $L_t^\text{simple}$ によって学習が安定することを示した。
+
+$$
+\begin{aligned}
+L\_t^\text{simple}
+&= \mathbb{E}\_{t \sim [1, T], \mathbf{x}\_0, \mathbf{z}\_t} \Big[\|\mathbf{z}\_t - \mathbf{z}\_\theta(\mathbf{x}\_t, t)\|^2 \Big] \\cr
+&= \mathbb{E}\_{t \sim [1, T], \mathbf{x}\_0, \mathbf{z}\_t} \Big[\|\mathbf{z}\_t - \mathbf{z}\_\theta(\sqrt{\bar{\alpha}\_t}\mathbf{x}\_0 + \sqrt{1 - \bar{\alpha}\_t}\mathbf{z}\_t, t)\|^2 \Big]
+\end{aligned}
+$$
+
+## 学習・推論
+[資料](#読んだやつ) 3. のスライドがたいへん分かりやすい。
+
+### 学習
+![](01.jpg)
+
+### 推論
+![](02.jpg)

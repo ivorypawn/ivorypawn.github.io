@@ -8,7 +8,7 @@ deletes --hljs-bg definitions, but this breaks the scrollbar, at minimum, so I d
     --gap: 24px;
     --content-gap: 20px;
     --nav-width: 1024px;
-    --main-width: 720px;
+    --main-width: 800px;
     --header-height: 60px;
     /* Changed this. Went to inspect element and found actual height of footer in Search page. */
     --footer-height: 106px;
