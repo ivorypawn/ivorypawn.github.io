@@ -114,7 +114,7 @@
     "Data Sturucture"
   ],
   "articleBody": "概要 ～数十億の大規模データ上で、特定範囲の極値や頻度などが高速に求められる構造。\n多次元への拡張も可能。\n読んだやつ Francisco Claude and Gonzalo Navarro. The Wavelet Matrix. Proc. SPIRE'12, pages 167-179. LNCS 7608 ウェーブレット木の世界 人工知能学会 私のブックマーク Vol.26 No.6 (2011/11) 簡潔データ構造 簡潔ビットベクトル(完備辞書) ウェーブレット行列最速攻略 Eating Your Own Cat Food コード ウェーブレット行列(wavelet matrix) ウェーブレット行列で競プロの問題を解く 動的ウェーブレット行列(dynamic wavelet matrix) 3 次元空間のクエリを処理する Wavelet Matrix SIGGRAPH Asia の最優秀賞論文を解説してみた（2D Wavelet 行列を用いた定数時間メディアンフィルタ） ウェーブレット行列の構造についてはすでに分かりやすい資料がある（とくに 2., 6., 8. がおすすめ）。\nここでは基本的な部分は取り上げない。以下は個人的なメモ。\n（余談） 上に載せていないが、ウェーブレット行列の名をもつとあるライブラリが、節点情報をアルファベット数分保持する実装になっていた。\n資料 2. p.51 の通り、前身のウェーブレット木に対するウェーブレット行列のアドは、各ビット列の $1$ の開始位置だけ保持すればよいことにある。したがってこのライブラリの実装は誤り。\n表記 文字列データを $T[0,n),\\;0\\leq T[i]",
-  "wordCount" : "2427",
+  "wordCount" : "2422",
   "inLanguage": "ja",
   "datePublished": "0001-01-01T00:00:00Z",
   "dateModified": "0001-01-01T00:00:00Z",
@@ -404,9 +404,9 @@
 <li>メディアンフィルタ画像処理（cf. <a href="#%E8%AA%AD%E3%82%93%E3%81%A0%E3%82%84%E3%81%A4">資料</a> 8.）</li>
 <li>3 次元空間の点群の干渉判定（cf. <a href="#%E8%AA%AD%E3%82%93%E3%81%A0%E3%82%84%E3%81%A4">資料</a> 2. p.44, <a href="#%E8%AA%AD%E3%82%93%E3%81%A0%E3%82%84%E3%81%A4">資料</a> 7.）</li>
 </ul>
-<p>試しに後者を簡易実装してみる。座標 $(X,Y,Z)$ は適当な変換により非負になっているものとする。また適当な解像度により $X,Y$ は離散化され整数になっているとする。</p>
+<p>試しに後者を実装してみる。簡単のため、座標 $X,Y,Z$ は平行移動と適当な解像度の設定により非負整数になっているものとする。</p>
 <ol>
-<li>点群を $Z$ 座標でソート</li>
+<li>点群を $Z$ 座標でソート（以下の実装では省略）</li>
 <li>$Y$ 座標のビットを最上位から注目し <code>WaveletMatrix</code> 同様に振り分け</li>
 <li>
 <ol start="2">
@@ -419,7 +419,7 @@
 </li>
 <li>$T$ の <code>WaveletMatrix</code> を構築。以降、$Y$ 座標の最下位ビットにいたるまで繰り返し</li>
 </ol>
-<p>すなわち $X,Y$ 座標を $b$ ビット整数で表すとき、最大 $b$ 個の <code>WaveletMatrix</code> を構築する。</p>
+<p>すなわち座標を $b$ ビット整数で表すとき、最大 $b$ 個の <code>WaveletMatrix</code> を構築する。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">WaveletTensor</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl"><span class="k">private</span><span class="o">:</span>
 </span></span><span class="line"><span class="cl">    <span class="k">const</span> <span class="kt">uint64_t</span> <span class="n">size</span><span class="p">;</span>
@@ -429,7 +429,7 @@
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">uint64_t</span><span class="o">&gt;</span> <span class="n">begin_one</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">WaveletTensor</span><span class="p">(</span><span class="k">const</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">tuple</span><span class="o">&lt;</span><span class="kt">uint64_t</span><span class="p">,</span> <span class="kt">uint64_t</span><span class="p">,</span> <span class="kt">float</span><span class="o">&gt;</span> <span class="o">&gt;&amp;</span> <span class="n">points3D</span><span class="p">,</span> <span class="k">const</span> <span class="kt">uint64_t</span> <span class="n">maxX</span><span class="p">,</span> <span class="k">const</span> <span class="kt">uint64_t</span> <span class="n">maxY</span><span class="p">)</span> <span class="o">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">WaveletTensor</span><span class="p">(</span><span class="k">const</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">tuple</span><span class="o">&lt;</span><span class="kt">uint64_t</span><span class="p">,</span> <span class="kt">uint64_t</span><span class="p">,</span> <span class="kt">uint64_t</span><span class="o">&gt;</span> <span class="o">&gt;&amp;</span> <span class="n">points3D</span><span class="p">,</span> <span class="k">const</span> <span class="kt">uint64_t</span> <span class="n">maxX</span><span class="p">,</span> <span class="k">const</span> <span class="kt">uint64_t</span> <span class="n">maxY</span><span class="p">)</span> <span class="o">:</span>
 </span></span><span class="line"><span class="cl">        <span class="n">size</span><span class="p">(</span><span class="n">points3D</span><span class="p">.</span><span class="n">size</span><span class="p">()),</span> <span class="n">supX</span><span class="p">(</span><span class="n">maxX</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="n">supY</span><span class="p">(</span><span class="n">maxY</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="n">bit_size</span><span class="p">(</span><span class="n">get_num_of_bit</span><span class="p">(</span><span class="n">supY</span><span class="p">))</span>
 </span></span><span class="line"><span class="cl">    <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="n">tensor</span><span class="p">.</span><span class="n">resize</span><span class="p">(</span><span class="n">bit_size</span><span class="p">);</span>

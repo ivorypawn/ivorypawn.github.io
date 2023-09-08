@@ -191,15 +191,15 @@ uint64_t rangeFreq(const uint64_t min_c, const uint64_t max_c, uint64_t begin_po
 - メディアンフィルタ画像処理（cf. [資料](#読んだやつ) 8.）
 - 3 次元空間の点群の干渉判定（cf. [資料](#読んだやつ) 2. p.44, [資料](#読んだやつ) 7.）
 
-試しに後者を簡易実装してみる。座標 $(X,Y,Z)$ は適当な変換により非負になっているものとする。また適当な解像度により $X,Y$ は離散化され整数になっているとする。
-1. 点群を $Z$ 座標でソート
+試しに後者を実装してみる。簡単のため、座標 $X,Y,Z$ は平行移動と適当な解像度の設定により非負整数になっているものとする。
+1. 点群を $Z$ 座標でソート（以下の実装では省略）
 2. $Y$ 座標のビットを最上位から注目し `WaveletMatrix` 同様に振り分け
 3. 2. で定まる順序について以下の文字列 $T$ を生成：
    - Bit 0: $X$ 座標
    - Bit 1: $X$ の上界
 4. $T$ の `WaveletMatrix` を構築。以降、$Y$ 座標の最下位ビットにいたるまで繰り返し
 
-すなわち $X,Y$ 座標を $b$ ビット整数で表すとき、最大 $b$ 個の `WaveletMatrix` を構築する。
+すなわち座標を $b$ ビット整数で表すとき、最大 $b$ 個の `WaveletMatrix` を構築する。
 
 ```cpp
 class WaveletTensor {
@@ -211,7 +211,7 @@ private:
     vector<uint64_t> begin_one;
 
 public:
-    WaveletTensor(const vector<tuple<uint64_t, uint64_t, float> >& points3D, const uint64_t maxX, const uint64_t maxY) :
+    WaveletTensor(const vector<tuple<uint64_t, uint64_t, uint64_t> >& points3D, const uint64_t maxX, const uint64_t maxY) :
         size(points3D.size()), supX(maxX + 1), supY(maxY + 1), bit_size(get_num_of_bit(supY))
     {
         tensor.resize(bit_size);

@@ -2,7 +2,6 @@
 title: "Monte Carlo Geometry Processing"
 draft: false
 tags: ["論文読み", "Geometry Processing"]
-math: true
 ---
 ![](00.png)
 
