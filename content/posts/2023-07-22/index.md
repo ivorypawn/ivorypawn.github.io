@@ -9,7 +9,7 @@ draft: false
 ## 7/15 14:30 R3 Kojima, S (IM, JPN, 2335) - Takahashi, H (JPN, 1930) 1-0
 2 連勝後の R3 で IM 小島さんとマッチング。
 
-![](01.jpeg)
+{{< thumbnail src="01.jpeg">}}
 
 KID, fianchetto, Panno Variation **8... Na5** の局面。詳しく調べてはいなかったものの、やりたい展開があった。それが [Levan Pantsulaia vs. Liren Ding, 2011](https://youtu.be/QSAVnq40JdY)。ギャンビットからさらに 2 テンポダウンする Ding の構想は驚愕で、機会があれば試してみたいと思っていた。
 
@@ -26,7 +26,7 @@ KID, fianchetto, Panno Variation **8... Na5** の局面。詳しく調べては�
 
 早々に見知らぬ変化になってしまい、形勢・消費時間ともにビハインドのなかどうにか持ちこたえて迎えた局面。
 
-![](02.jpeg)
+{{< thumbnail src="02.jpeg">}}
 
 局面を単純化しなければという焦りから **21... Rxf5?** としたものの、**22. Rxf5 Bxf5 23. Bxg7 Rxg7 24. Ng3 Rxg3 25. Kxg3** の局面は思いのほか望みがなく、負けを早めた。代えて 21... Ne8 で ... f6 のブロックを狙い、22. f6 なら Nd8-e6 から活用するプランとの比較だったが、結果的にそちらがましだったらしい。とはいえ残り 5 分ではどちらにせよ厳しかった。
 
