@@ -1,6 +1,6 @@
 {{- $src := .Get "src" }}
 {{- $imageRes := .Page.Resources.GetMatch $src }}
-{{- $imageRes := $imageRes.Resize "x400" }}
+{{- $imageRes := $imageRes.Fit "800x480" }}
 {{- $imageUrl := $imageRes.RelPermalink }}
 
 <div style="margin-right:auto; margin-left:auto; width: 400px;">
