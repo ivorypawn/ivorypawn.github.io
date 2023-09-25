@@ -1,6 +1,7 @@
 ---
 title: "Japan Chess Classic 2023 レポート"
 date: 2023-07-22T06:11:56+09:00
+tags: ["Chess"]
 draft: false
 ---
 

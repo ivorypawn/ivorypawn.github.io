@@ -5,7 +5,17 @@
     <link>https://ivorypawn.github.io/notes/</link>
     <description>Recent content in Notes on HideOut</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ja-jp</language><atom:link href="https://ivorypawn.github.io/notes/index.xml" rel="self" type="application/rss+xml" />
+    <language>ja-jp</language>
+    <lastBuildDate>Mon, 25 Sep 2023 17:42:28 +0900</lastBuildDate><atom:link href="https://ivorypawn.github.io/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Unity 勉強ノート #01</title>
+      <link>https://ivorypawn.github.io/notes/unity/01/</link>
+      <pubDate>Mon, 25 Sep 2023 17:42:28 +0900</pubDate>
+      
+      <guid>https://ivorypawn.github.io/notes/unity/01/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Diffusion Model</title>
       <link>https://ivorypawn.github.io/notes/diffusion-model/</link>
