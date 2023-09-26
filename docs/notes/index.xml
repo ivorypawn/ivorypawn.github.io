@@ -6,14 +6,23 @@
     <description>Recent content in Notes on HideOut</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Mon, 25 Sep 2023 17:42:28 +0900</lastBuildDate><atom:link href="https://ivorypawn.github.io/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 26 Sep 2023 02:54:39 +0900</lastBuildDate><atom:link href="https://ivorypawn.github.io/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Unity 勉強ノート #02</title>
+      <link>https://ivorypawn.github.io/notes/unity/02/</link>
+      <pubDate>Tue, 26 Sep 2023 02:54:39 +0900</pubDate>
+      
+      <guid>https://ivorypawn.github.io/notes/unity/02/</guid>
+      <description>スクリプトの実行 スクリプトを Unity で実行するには，シーンのゲームオブジェクトにそのスクリプトをアタッチする必要がある． Debug.Log() の結果をコンソールで確認</description>
+    </item>
+    
     <item>
       <title>Unity 勉強ノート #01</title>
       <link>https://ivorypawn.github.io/notes/unity/01/</link>
       <pubDate>Mon, 25 Sep 2023 17:42:28 +0900</pubDate>
       
       <guid>https://ivorypawn.github.io/notes/unity/01/</guid>
-      <description>概要 個人的な Unity 3D の備忘録． Unity は転職活動中に少し触ったが，間が空いたためほとんど忘れた．またそのときは期日があり，やむなく基本が疎かなまま課題</description>
+      <description>概要 個人的な Unity 3D の備忘録． Unity は転職活動中に少し触ったが，間が空いたためほとんど忘れた．またそのときは，期日のため基本が疎かなまま課題を進めて</description>
     </item>
     
     <item>
