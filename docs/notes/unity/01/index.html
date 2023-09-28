@@ -7,7 +7,7 @@
 <meta name="robots" content="index, follow">
 <title>Unity 勉強ノート #01 | HideOut</title>
 <meta name="keywords" content="Unity">
-<meta name="description" content="概要 個人的な Unity 3D の備忘録． Unity は転職活動中に少し触ったが，間が空いたためほとんど忘れた．またそのときは，期日のため基本が疎かなまま課題を進めて">
+<meta name="description" content="概要 個人的な Unity 3D の備忘録． Unity は転職活動中（進行形）に少し触ったが，間が空いたためほとんど忘れた．またそのときは，期日のため基本が疎かなまま課">
 <meta name="author" content="">
 <link rel="canonical" href="https://ivorypawn.github.io/notes/unity/01/">
 <link crossorigin="anonymous" href="https://ivorypawn.github.io/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
@@ -72,7 +72,7 @@
 
 <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
 <meta property="og:title" content="Unity 勉強ノート #01" />
-<meta property="og:description" content="概要 個人的な Unity 3D の備忘録． Unity は転職活動中に少し触ったが，間が空いたためほとんど忘れた．またそのときは，期日のため基本が疎かなまま課題を進めて" />
+<meta property="og:description" content="概要 個人的な Unity 3D の備忘録． Unity は転職活動中（進行形）に少し触ったが，間が空いたためほとんど忘れた．またそのときは，期日のため基本が疎かなまま課" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ivorypawn.github.io/notes/unity/01/" /><meta property="article:section" content="notes" />
 <meta property="article:published_time" content="2023-09-25T17:42:28+09:00" />
@@ -80,7 +80,7 @@
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Unity 勉強ノート #01"/>
-<meta name="twitter:description" content="概要 個人的な Unity 3D の備忘録． Unity は転職活動中に少し触ったが，間が空いたためほとんど忘れた．またそのときは，期日のため基本が疎かなまま課題を進めて"/>
+<meta name="twitter:description" content="概要 個人的な Unity 3D の備忘録． Unity は転職活動中（進行形）に少し触ったが，間が空いたためほとんど忘れた．またそのときは，期日のため基本が疎かなまま課"/>
 
 
 <script type="application/ld+json">
@@ -109,12 +109,12 @@
   "@type": "BlogPosting",
   "headline": "Unity 勉強ノート #01",
   "name": "Unity 勉強ノート #01",
-  "description": "概要 個人的な Unity 3D の備忘録． Unity は転職活動中に少し触ったが，間が空いたためほとんど忘れた．またそのときは，期日のため基本が疎かなまま課題を進めて",
+  "description": "概要 個人的な Unity 3D の備忘録． Unity は転職活動中（進行形）に少し触ったが，間が空いたためほとんど忘れた．またそのときは，期日のため基本が疎かなまま課",
   "keywords": [
     "Unity"
   ],
-  "articleBody": "概要 個人的な Unity 3D の備忘録．\nUnity は転職活動中に少し触ったが，間が空いたためほとんど忘れた．またそのときは，期日のため基本が疎かなまま課題を進めてしまい，デバッグなどいろいろ辛かった．\n今回は基礎から順に学んでいく．いったん前の環境も消し，構築からやり直す．\n資料 軽く調べたが，どの本がいいのかよく分からない．全体的にあまり変わらない気もする．\n入手難度がたまたま低かった以下をとりあえず読んでいる．\nHarrison Ferrone / 吉川 邦夫 訳 (2021), 『Unity 3D ゲーム開発ではじめる C# プログラミング』, インプレス Kindle Unlimited 北村 愛実 (2016), 『Unity 5 の教科書』, SB Creative 赤坂 玲音 (2015), 『エンジニアのための Unity 実践リファレンス』, 技術評論社 岩井 雅幸 (2015), 『uGUI ではじめる Unity UI デザインの教科書』, マイナビ さしあたり 1. をベースに学習を進める．C++ などで既習のセクションはスキップする．また公式ドキュメントを読む習慣をつける．\n追記 適宜リストに追加．\nUnity ユーザーマニュアル（日本語） C# プログラミング ガイド Unity 入門の森 導入 Windows 10 でやっていく．\nUnity Hub インストール 2019 年からバージョン管理ソフトを使うようになったとのこと Unity 2022 インストール 環境によって適宜旧リリースも入れる 歯車 \u003e Add modules Visual Studio 2022 （必要なら）日本語 Unity Editor 適当に 3D プロジェクトを作成し Unity エディタを起動する．GUI のおもな構成要素は以下．\nToolbar（上段のリボン状のパネル） オブジェクト操作（左） 再生，停止（中） レイヤマスク etc.（右） Hierarchy（左カラム） シーン内の要素の階層表示 Scene, Game（中央） Inspector（右カラム） 各オブジェクトのプロパティ編集 Project, Console（下段） アセット（プロジェクトのファイル／フォルダ）表示 デバッグ (memo) Unity エディタ以外からファイル操作しない 過去これでバグった．meta がどう生成されるのか謎で，エクスプローラ上でほかの meta をコピペして直接編集とか プロジェクトを zip 圧縮しない meta が壊れる 7z ならオーケーらしい Inspector のコンポーネント横の情報アイコンからマニュアルに飛べる Visual Studio エディタで適当に C# スクリプトを作ってダブルクリックし Visual Studio で開く．何も起こらなければ Edit \u003e Preference \u003e External Tools \u003e External Script Editor から設定．\n(memo) ファイル名とクラス名は一致する．VS で勝手に変えるとたぶんバグる 変更は Project から 基底の MonoBehaviour は「シーン中のオブジェクトにアタッチできるクラス」の謂 エディタと VS が同期しない Project タブから問題のファイルを Refresh Edit \u003e Preference \u003e Asset Pipeline から Auto Refresh にすることもできる エディタのフォーカス時に自動コンパイルが走る メソッドの真上の行で /// を入力すると タグの枠が自動補完される ",
-  "wordCount" : "1061",
+  "articleBody": "概要 個人的な Unity 3D の備忘録．\nUnity は転職活動中（進行形）に少し触ったが，間が空いたためほとんど忘れた．またそのときは，期日のため基本が疎かなまま課題を進めてしまい，デバッグなどいろいろ辛かった．\n今回は基礎から順に学んでいく．いったん前の環境も消し，構築からやり直す．\n資料 軽く調べたが，どの本がいいのかよく分からない．全体的にあまり変わらない気もする．\n入手難度がたまたま低かった以下をとりあえず読んでいる．\nHarrison Ferrone / 吉川 邦夫 訳 (2021), 『Unity 3D ゲーム開発ではじめる C# プログラミング』, インプレス Kindle Unlimited 北村 愛実 (2016), 『Unity 5 の教科書』, SB Creative 赤坂 玲音 (2015), 『エンジニアのための Unity 実践リファレンス』, 技術評論社 岩井 雅幸 (2015), 『uGUI ではじめる Unity UI デザインの教科書』, マイナビ さしあたり 1. をベースに学習を進める．C++ などで既習のセクションはスキップする．また公式ドキュメントを読む習慣をつける．\n追記 適宜リストに追加．\nUnity ユーザーマニュアル（日本語） C# プログラミング ガイド Unity 入門の森 導入 Windows 10 でやっていく．\nUnity Hub インストール 2019 年からバージョン管理ソフトを使うようになったとのこと Unity 2022 インストール 環境によって適宜旧リリースも入れる 歯車 \u003e Add modules Visual Studio 2022 （必要なら）日本語 Unity Editor 適当に 3D プロジェクトを作成し Unity エディタを起動する．GUI のおもな構成要素は以下．\nToolbar（上段のリボン状のパネル） オブジェクト操作（左） 再生，停止（中） レイヤマスク etc.（右） Hierarchy（左カラム） シーン内の要素の階層表示 Scene, Game（中央） Inspector（右カラム） 各オブジェクトのプロパティ編集 Project, Console（下段） アセット（プロジェクトのファイル／フォルダ）表示 デバッグ (memo) Unity エディタ以外からファイル操作しない 過去これでバグった．meta がどう生成されるのか謎で，エクスプローラ上でほかの meta をコピペして直接編集とか プロジェクトを zip 圧縮しない meta が壊れる 7z ならオーケーらしい Inspector のコンポーネント横の情報アイコンからマニュアルに飛べる Visual Studio エディタで適当に C# スクリプトを作ってダブルクリックし Visual Studio で開く．何も起こらなければ Edit \u003e Preference \u003e External Tools \u003e External Script Editor から設定．\n(memo) ファイル名とクラス名は一致する．VS で勝手に変えるとたぶんバグる 変更は Project から 基底の MonoBehaviour は「シーン中のオブジェクトにアタッチできるクラス」の謂 エディタと VS が同期しない Project タブから問題のファイルを Refresh Edit \u003e Preference \u003e Asset Pipeline から Auto Refresh にすることもできる エディタのフォーカス時に自動コンパイルが走る メソッドの真上の行で /// を入力すると タグの枠が自動補完される ",
+  "wordCount" : "1066",
   "inLanguage": "ja",
   "datePublished": "2023-09-25T17:42:28+09:00",
   "dateModified": "2023-09-25T17:42:28+09:00",
@@ -239,7 +239,7 @@
  
   <div class="post-content"><h2 id="概要">概要<a hidden class="anchor" aria-hidden="true" href="#概要">#</a></h2>
 <p>個人的な Unity 3D の備忘録．</p>
-<p>Unity は転職活動中に少し触ったが，間が空いたためほとんど忘れた．またそのときは，期日のため基本が疎かなまま課題を進めてしまい，デバッグなどいろいろ辛かった．</p>
+<p>Unity は転職活動中（進行形）に少し触ったが，間が空いたためほとんど忘れた．またそのときは，期日のため基本が疎かなまま課題を進めてしまい，デバッグなどいろいろ辛かった．</p>
 <p>今回は基礎から順に学んでいく．いったん前の環境も消し，構築からやり直す．</p>
 <h2 id="資料">資料<a hidden class="anchor" aria-hidden="true" href="#資料">#</a></h2>
 <p>軽く調べたが，どの本がいいのかよく分からない．全体的にあまり変わらない気もする．</p>
