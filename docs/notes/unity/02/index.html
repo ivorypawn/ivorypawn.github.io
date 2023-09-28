@@ -113,8 +113,8 @@
   "keywords": [
     "Unity"
   ],
-  "articleBody": "スクリプトの実行 スクリプトを Unity で実行するには，シーンのゲームオブジェクトにそのスクリプトをアタッチする必要がある．\nDebug.Log() の結果をコンソールで確認してみる．\nProject の当該スクリプトを Hierarchy のオブジェクトにアタッチ ここでは Main Camera を選択 Inspector 上で Main Camera にスクリプトがアタッチされていることを確認 再生し，Console を確認 停止するにはもう一度再生ボタンを押す コンポーネントの public 変数は Inspector で一時変更できる（private 変数は無理）．この変更はスクリプトを書き換えない．また再生中の変更は，停止するともとに戻る．Inspector 上でスクリプトの初期値に戻すこともできる(Reset)．\nDebug.Log(), Debug.LogFormat() は printf 的なメソッド．\n同じディレクトリで定義したクラスは，アタッチや using なしに参照される．これらのクラスと同様，デフォルトで入っている Transform, Camera などのコンポーネントは，再生時，メンバやメソッドをもつオブジェクトとしてメモリ上に展開される．\nC++ からの違い ここまで学んできて，C# と C++ の違いが出てきたのでメモしていく．\nクラスと構造体 class は参照型，struct は値型になる．たとえば，\npublic class Character { public string name; public int exp = 0; public Character(string name) { this.name = name; } public void print() { Debug.LogFormat(\"{0} - {1}\", name, exp); } } void Start() { var taro = new Character(\"taro\"); taro.print(); var jiro = taro; jiro.name = \"jiro\"; taro.print(); } を確かめると，taro.print() の結果が変わる．ほか string なども参照型．\nC++ でいうコピーコンストラクタとかどうするのかはあとで．\nGameObject GameObject のコンポーネントにアクセスする手法は以下の 2 つ：\nGameObject.GetComponent\u003c\u003e() エディタ上で GameObject を Project から Inspector へドラッグ・ドロップ public 変数のみ ただし 2. は，プロジェクト保存やエクスポート，Unity の更新などにともなって変更が失われる可能性がある．また 2. に比べると，1. で Find() を使うほうが時間がかかるため，このメソッドを大量に呼び出す場合は，パフォーマンスに影響が出る可能性がある．\n以下はもっぱら 1. を用いる．\nたとえば MainCamera にアタッチしたスクリプトのクラスで GetComponent() とすると，メインカメラの位置や回転などのベクトルの情報を取得できる．\nGetComponent によってアクセスできるのは，呼び出し側のスクリプトをアタッチしたのと同じ GameObject のコンポーネントのみ．スクリプトが MainCamera にアタッチしている場合，アクセスできるのはデフォルトでは以下の 3 つ：\nTransform Camera Audio Listener 仮に Directional Light の情報にアクセスしたい場合は，Find(\"Directional Light\").GetComponent() などとする．\n",
-  "wordCount" : "957",
+  "articleBody": "スクリプトの実行 スクリプトを Unity で実行するには，シーンのゲームオブジェクトにそのスクリプトをアタッチする必要がある．\nDebug.Log() の結果をコンソールで確認してみる．\nProject の当該スクリプトを Hierarchy のオブジェクトにアタッチ ここでは Main Camera を選択 Inspector 上で Main Camera にスクリプトがアタッチされていることを確認 再生し，Console を確認 停止するにはもう一度再生ボタンを押す コンポーネントの public 変数は Inspector で一時変更できる（private 変数は無理）．この変更はスクリプトを書き換えない．また再生中の変更は，停止するともとに戻る．Inspector 上でスクリプトの初期値に戻すこともできる(Reset)．\nDebug.Log(), Debug.LogFormat() は printf 的なメソッド．\n同じディレクトリで定義したクラスは，アタッチや using なしに参照される．これらのクラスと同様，デフォルトで入っている Transform, Camera などのコンポーネントは，再生時，メンバやメソッドをもつオブジェクトとしてメモリ上に展開される．\nアタッチしたオブジェクトの確認 途中から参加するプロジェクトは，どのコンポーネントがどのオブジェクトにアタッチされているのかわからない．確認する方法はおもに二つある．\nエディタ Project のスクリプトを右クリック \u003e Find Reference In Scene で，Hierarchy がアタッチされているオブジェクトのみに絞り込まれる．\n基本はこっちでよし．\nスクリプト 以下のコードを挿入し実行．\nvoid Start() { Debug.Log($\"{name}\"); } C++ からの違い ここまで学んできて，C# と C++ の違いが出てきたのでメモしていく．\nクラスと構造体 class は参照型，struct は値型になる．たとえば，\npublic class Character { public string name; public int exp = 0; public Character(string name) { this.name = name; } public void print() { Debug.LogFormat(\"{0} - {1}\", name, exp); } } void Start() { var taro = new Character(\"taro\"); taro.print(); var jiro = taro; jiro.name = \"jiro\"; taro.print(); } を確かめると，taro.print() の結果が変わる．ほか string なども参照型．\nC++ でいうコピーコンストラクタとかどうするのかはあとで．\nGameObject GameObject のコンポーネントにアクセスする手法は以下の 2 つ：\nGameObject.GetComponent\u003c\u003e() エディタ上で GameObject を Project から Inspector へドラッグ・ドロップ public 変数のみ ただし 2. は，プロジェクト保存やエクスポート，Unity の更新などにともなって変更が失われる可能性がある．また 2. に比べると，1. で Find() を使うほうが時間がかかるため，このメソッドを大量に呼び出す場合は，パフォーマンスに影響が出る可能性がある．\n以下はもっぱら 1. を用いる．\nたとえば MainCamera にアタッチしたスクリプトのクラスで GetComponent() とすると，メインカメラの位置や回転などのベクトルの情報を取得できる．\nGetComponent によってアクセスできるのは，呼び出し側のスクリプトをアタッチしたのと同じ GameObject のコンポーネントのみ．スクリプトが MainCamera にアタッチしている場合，アクセスできるのはデフォルトでは以下の 3 つ：\nTransform Camera Audio Listener 仮に Directional Light の情報にアクセスしたい場合は，Find(\"Directional Light\").GetComponent() などとする．\n",
+  "wordCount" : "1131",
   "inLanguage": "ja",
   "datePublished": "2023-09-26T02:54:39+09:00",
   "dateModified": "2023-09-26T02:54:39+09:00",
@@ -210,7 +210,16 @@
 
         <div class="inner"><nav id="TableOfContents">
   <ul>
-    <li><a href="#スクリプトの実行">スクリプトの実行</a></li>
+    <li><a href="#スクリプトの実行">スクリプトの実行</a>
+      <ul>
+        <li><a href="#アタッチしたオブジェクトの確認">アタッチしたオブジェクトの確認</a>
+          <ul>
+            <li><a href="#エディタ">エディタ</a></li>
+            <li><a href="#スクリプト">スクリプト</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
     <li><a href="#c-からの違い">C++ からの違い</a>
       <ul>
         <li><a href="#クラスと構造体">クラスと構造体</a></li>
@@ -246,7 +255,18 @@
 <p>コンポーネントの <code>public</code> 変数は <code>Inspector</code> で一時変更できる（<code>private</code> 変数は無理）．この変更はスクリプトを書き換えない．また再生中の変更は，停止するともとに戻る．<code>Inspector</code> 上でスクリプトの初期値に戻すこともできる(<code>Reset</code>)．</p>
 <p><code>Debug.Log()</code>, <code>Debug.LogFormat()</code> は <code>printf</code> 的なメソッド．</p>
 <p>同じディレクトリで定義したクラスは，アタッチや <code>using</code> なしに参照される．これらのクラスと同様，デフォルトで入っている <code>Transform</code>, <code>Camera</code> などのコンポーネントは，再生時，メンバやメソッドをもつオブジェクトとしてメモリ上に展開される．</p>
-<h2 id="c-からの違い">C++ からの違い<a hidden class="anchor" aria-hidden="true" href="#c-からの違い">#</a></h2>
+<h3 id="アタッチしたオブジェクトの確認">アタッチしたオブジェクトの確認<a hidden class="anchor" aria-hidden="true" href="#アタッチしたオブジェクトの確認">#</a></h3>
+<p>途中から参加するプロジェクトは，どのコンポーネントがどのオブジェクトにアタッチされているのかわからない．確認する方法はおもに二つある．</p>
+<h4 id="エディタ">エディタ<a hidden class="anchor" aria-hidden="true" href="#エディタ">#</a></h4>
+<p><code>Project</code> のスクリプトを右クリック &gt; <code>Find Reference In Scene</code> で，<code>Hierarchy</code> がアタッチされているオブジェクトのみに絞り込まれる．</p>
+<p>基本はこっちでよし．</p>
+<h4 id="スクリプト">スクリプト<a hidden class="anchor" aria-hidden="true" href="#スクリプト">#</a></h4>
+<p>以下のコードを挿入し実行．</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c#" data-lang="c#"><span class="line"><span class="cl"><span class="k">void</span> <span class="n">Start</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Debug</span><span class="p">.</span><span class="n">Log</span><span class="p">(</span><span class="s">$&#34;{name}&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="c-からの違い">C++ からの違い<a hidden class="anchor" aria-hidden="true" href="#c-からの違い">#</a></h2>
 <p>ここまで学んできて，C# と C++ の違いが出てきたのでメモしていく．</p>
 <h3 id="クラスと構造体">クラスと構造体<a hidden class="anchor" aria-hidden="true" href="#クラスと構造体">#</a></h3>
 <p><code>class</code> は参照型，<code>struct</code> は値型になる．たとえば，</p>
