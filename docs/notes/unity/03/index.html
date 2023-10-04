@@ -7,7 +7,7 @@
 <meta name="robots" content="index, follow">
 <title>Unity 勉強ノート #03 | HideOut</title>
 <meta name="keywords" content="Unity">
-<meta name="description" content="meta ファイル Prefab">
+<meta name="description" content="おもに資料 1. 6 章以降を読んでいる．エフェクトや物理などすぐ使う予定のない機能はあとに回す．あと実地で必要になった知識のメモなど． レベル構築 ア">
 <meta name="author" content="">
 <link rel="canonical" href="https://ivorypawn.github.io/notes/unity/03/">
 <link crossorigin="anonymous" href="https://ivorypawn.github.io/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
@@ -72,7 +72,7 @@
 
 <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
 <meta property="og:title" content="Unity 勉強ノート #03" />
-<meta property="og:description" content="meta ファイル Prefab" />
+<meta property="og:description" content="おもに資料 1. 6 章以降を読んでいる．エフェクトや物理などすぐ使う予定のない機能はあとに回す．あと実地で必要になった知識のメモなど． レベル構築 ア" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ivorypawn.github.io/notes/unity/03/" /><meta property="article:section" content="notes" />
 <meta property="article:published_time" content="2023-09-28T05:01:17+09:00" />
@@ -80,7 +80,7 @@
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Unity 勉強ノート #03"/>
-<meta name="twitter:description" content="meta ファイル Prefab"/>
+<meta name="twitter:description" content="おもに資料 1. 6 章以降を読んでいる．エフェクトや物理などすぐ使う予定のない機能はあとに回す．あと実地で必要になった知識のメモなど． レベル構築 ア"/>
 
 
 <script type="application/ld+json">
@@ -109,12 +109,12 @@
   "@type": "BlogPosting",
   "headline": "Unity 勉強ノート #03",
   "name": "Unity 勉強ノート #03",
-  "description": "meta ファイル Prefab",
+  "description": "おもに資料 1. 6 章以降を読んでいる．エフェクトや物理などすぐ使う予定のない機能はあとに回す．あと実地で必要になった知識のメモなど． レベル構築 ア",
   "keywords": [
     "Unity"
   ],
-  "articleBody": "meta ファイル Prefab ",
-  "wordCount" : "6",
+  "articleBody": "おもに資料 1. 6 章以降を読んでいる．エフェクトや物理などすぐ使う予定のない機能はあとに回す．あと実地で必要になった知識のメモなど．\nレベル構築 アウトドア環境 Terrain ツール インドア環境 shape geometry Blender などから 3D モデルをインポートすることもある．\nMaterial 任意のゲームオブジェクトはマテリアルとシェーダーをもつ．\nマテリアルは，ゲームオブジェクトがシーンでどうレンダリングされるかを決定し，その制御はシェーダーで行われる．\nシェーダーは，ライティングとテクスチャデータの組み合わせからなる．\nオブジェクトの色を変えるには，マテリアルを作成・編集し，オブジェクトにアタッチする．マテリアルの変更はアタッチ先すべてに影響するため，たとえばシーンの敵すべての色を赤から青に変えるといったことができる．\nPrefab 空のオブジェクトを作成し，複数のプリミティブなどを追加してプレハブを作成する．\nシーン中のプレハブは 1 つ 1 つが別個のインスタンスになる．\nブレハブに新しいオブジェクトを追加するときは，同じヒエラルキーにそのオブジェクトを作成し，右クリックから Added GameObject \u003e プレハブ'xxx'に適用 とする．\n.meta ",
+  "wordCount" : "468",
   "inLanguage": "ja",
   "datePublished": "2023-09-28T05:01:17+09:00",
   "dateModified": "2023-09-28T05:01:17+09:00",
@@ -210,8 +210,13 @@
 
         <div class="inner"><nav id="TableOfContents">
   <ul>
-    <li><a href="#meta-ファイル">meta ファイル</a></li>
-    <li><a href="#prefab">Prefab</a></li>
+    <li><a href="#レベル構築">レベル構築</a>
+      <ul>
+        <li><a href="#material">Material</a></li>
+        <li><a href="#prefab">Prefab</a></li>
+      </ul>
+    </li>
+    <li><a href="#meta">.meta</a></li>
   </ul>
 </nav>
         </div>
@@ -222,8 +227,32 @@
 
 
  
-  <div class="post-content"><h2 id="meta-ファイル">meta ファイル<a hidden class="anchor" aria-hidden="true" href="#meta-ファイル">#</a></h2>
-<h2 id="prefab">Prefab<a hidden class="anchor" aria-hidden="true" href="#prefab">#</a></h2>
+  <div class="post-content"><p>おもに資料 1. 6 章以降を読んでいる．エフェクトや物理などすぐ使う予定のない機能はあとに回す．あと実地で必要になった知識のメモなど．</p>
+<h2 id="レベル構築">レベル構築<a hidden class="anchor" aria-hidden="true" href="#レベル構築">#</a></h2>
+<ul>
+<li>アウトドア環境
+<ul>
+<li><a href="https://docs.unity3d.com/ja/2021.3/Manual/script-Terrain.html">Terrain</a> ツール</li>
+</ul>
+</li>
+<li>インドア環境
+<ul>
+<li>shape</li>
+<li>geometry</li>
+</ul>
+</li>
+</ul>
+<p>Blender などから 3D モデルをインポートすることもある．</p>
+<h3 id="material">Material<a hidden class="anchor" aria-hidden="true" href="#material">#</a></h3>
+<p>任意のゲームオブジェクトはマテリアルとシェーダーをもつ．</p>
+<p>マテリアルは，ゲームオブジェクトがシーンでどうレンダリングされるかを決定し，その制御はシェーダーで行われる．</p>
+<p>シェーダーは，ライティングとテクスチャデータの組み合わせからなる．</p>
+<p>オブジェクトの色を変えるには，マテリアルを作成・編集し，オブジェクトにアタッチする．マテリアルの変更はアタッチ先すべてに影響するため，たとえばシーンの敵すべての色を赤から青に変えるといったことができる．</p>
+<h3 id="prefab">Prefab<a hidden class="anchor" aria-hidden="true" href="#prefab">#</a></h3>
+<p>空のオブジェクトを作成し，複数のプリミティブなどを追加してプレハブを作成する．</p>
+<p>シーン中のプレハブは 1 つ 1 つが別個のインスタンスになる．</p>
+<p>ブレハブに新しいオブジェクトを追加するときは，同じヒエラルキーにそのオブジェクトを作成し，右クリックから <code>Added GameObject</code> &gt; <code>プレハブ'xxx'に適用</code> とする．</p>
+<h2 id="meta">.meta<a hidden class="anchor" aria-hidden="true" href="#meta">#</a></h2>
 
 
   </div>
