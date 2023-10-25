@@ -6,7 +6,7 @@ math: true
 ---
 
 {{<rawhtml>}}
-<p align="center" style="color: red;"><strong>This is raw HTML</strong></p>
+<p align="center" style="color: blue;"><strong>This is raw HTML</strong></p>
 {{</rawhtml>}}
 
 $\hat u$

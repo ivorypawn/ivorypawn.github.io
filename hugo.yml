@@ -19,6 +19,7 @@ params:
   math: true
   ShowCodeCopyButtons: true
   ShowPostNavLinks: true
+  ShowPageNums: true
 
   UseHugoToc: true
   showtoc: true
