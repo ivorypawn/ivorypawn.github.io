@@ -1,18 +1,8 @@
 - id: prev_page
-  translation: "Next"
-
-- id: next_page
   translation: "Prev"
 
-- id: read_time
-  translation:
-    one : "1 分"
-    other: "{{ .Count }} 分"
-
-- id: words
-  translation:
-    one: "文字"
-    other: "{{ .Count }} 文字"
+- id: next_page
+  translation: "Next"
 
 - id: toc
   translation: "Table of Contents"
