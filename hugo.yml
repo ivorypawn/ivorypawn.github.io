@@ -18,6 +18,7 @@ params:
   DateFormat: "2006-01-02"
   math: true
   ShowCodeCopyButtons: true
+  ShowPostNavLinks: true
 
   UseHugoToc: true
   showtoc: true
