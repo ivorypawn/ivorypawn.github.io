@@ -13,6 +13,8 @@ paginate: 5
 taxonomies:
   tag: "tags"
 
+buildDrafts: true
+
 params:
   defaultTheme: dark
   DateFormat: "2006-01-02"

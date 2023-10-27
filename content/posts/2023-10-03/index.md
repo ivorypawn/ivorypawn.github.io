@@ -1,7 +1,7 @@
 ---
 title: "北國王将杯レポート"
 date: 2023-10-03T02:58:30+09:00
-draft: false
+draft: true
 tags: ["将棋"]
 ---
 

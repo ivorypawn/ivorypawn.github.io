@@ -6,7 +6,16 @@
     <description>Recent content on HideOut</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Tue, 03 Oct 2023 02:58:30 +0900</lastBuildDate><atom:link href="https://ivorypawn.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 26 Oct 2023 10:55:54 +0900</lastBuildDate><atom:link href="https://ivorypawn.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Unity 勉強ノート #04</title>
+      <link>https://ivorypawn.github.io/notes/unity/04/</link>
+      <pubDate>Thu, 26 Oct 2023 10:55:54 +0900</pubDate>
+      
+      <guid>https://ivorypawn.github.io/notes/unity/04/</guid>
+      <description>雑に作る とりあえず手を動かさないと身にならないし，モチベも上がらない． 資料 2. で紹介されているゲームを順に作ってみる． フロー 登場するオブジェク</description>
+    </item>
+    
     <item>
       <title>北國王将杯レポート</title>
       <link>https://ivorypawn.github.io/posts/2023-10-03/</link>
@@ -86,6 +95,21 @@
       
       <guid>https://ivorypawn.github.io/posts/2023-06-21/01/</guid>
       <description>引っ越しがようやく落ち着いたので、Hugo で備忘録のためのウェブサイトを生成した。Github Pages で公開予定。 おもな内容： C++, Python 形状処理 機械学習</description>
+    </item>
+    
+    <item>
+      <title>Sandbox</title>
+      <link>https://ivorypawn.github.io/posts/sandbox/</link>
+      <pubDate>Wed, 21 Jun 2023 02:46:37 +0900</pubDate>
+      
+      <guid>https://ivorypawn.github.io/posts/sandbox/</guid>
+      <description>This is raw HTML
+$\hat u$
+$\bar u$
+$$ \begin{align} a &amp;amp;= b &amp;amp; c &amp;amp;= d &amp;amp; e &amp;amp;= f \\\ a&amp;rsquo; &amp;amp;= b&amp;rsquo; &amp;amp; c&amp;rsquo; &amp;amp;= d&amp;rsquo; &amp;amp; e&amp;rsquo; &amp;amp;= f&#39; \end{align} $$
+$$ \begin{align*} 1 &amp;amp;= 2\\\ 3 &amp;amp;= 4 \end{align*} $$
+$$ \hat u_0(x_k):=\left\{ \begin{align*} &amp;amp;g(\bar x_k), &amp;amp; x_k \in \partial \Omega_{\epsilon} \\\ &amp;amp;\hat u_0 (x_{k+1}), &amp;amp; \text{otherwise} \end{align*} \right. $$
+$$ \begin{array}{rl} \biggl\{ \frac{1}{g(x)} \biggr\}^{\prime} &amp;amp;=&amp;amp; \lim_{h \to 0}\frac{\frac{1}{g(x+h)}-\frac{1}{g(x)}}{h} \cr\cr &amp;amp;=&amp;amp; \lim_{h \to 0}\frac{g(x)-g(x+h)}{g(x) g(x+h) h} \cr\cr &amp;amp;=&amp;amp; -\frac{1}{ \bigl\{ g(x) \bigr\}^2} \lim_{h \to 0}\frac{g(x+h)-g(x)}{h} \cr\cr &amp;amp;=&amp;amp; -\frac{g^{\prime}(x)}{ \bigl\{g(x) \bigr\}^2} \end{array} $$</description>
     </item>
     
     <item>

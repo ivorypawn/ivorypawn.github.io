@@ -6,7 +6,16 @@
     <description>Recent content in Notes on HideOut</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Thu, 28 Sep 2023 05:01:17 +0900</lastBuildDate><atom:link href="https://ivorypawn.github.io/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 26 Oct 2023 10:55:54 +0900</lastBuildDate><atom:link href="https://ivorypawn.github.io/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Unity 勉強ノート #04</title>
+      <link>https://ivorypawn.github.io/notes/unity/04/</link>
+      <pubDate>Thu, 26 Oct 2023 10:55:54 +0900</pubDate>
+      
+      <guid>https://ivorypawn.github.io/notes/unity/04/</guid>
+      <description>雑に作る とりあえず手を動かさないと身にならないし，モチベも上がらない． 資料 2. で紹介されているゲームを順に作ってみる． フロー 登場するオブジェク</description>
+    </item>
+    
     <item>
       <title>Unity 勉強ノート #03</title>
       <link>https://ivorypawn.github.io/notes/unity/03/</link>

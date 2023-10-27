@@ -5,11 +5,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Notes | HideOut</title>
+<title>Unity 勉強ノート #04 | HideOut</title>
 <meta name="keywords" content="">
-<meta name="description" content="Notes - HideOut">
+<meta name="description" content="雑に作る とりあえず手を動かさないと身にならないし，モチベも上がらない． 資料 2. で紹介されているゲームを順に作ってみる． フロー 登場するオブジェク">
 <meta name="author" content="">
-<link rel="canonical" href="https://ivorypawn.github.io/notes/">
+<link rel="canonical" href="https://ivorypawn.github.io/notes/unity/04/">
 <link crossorigin="anonymous" href="https://ivorypawn.github.io/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://ivorypawn.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://ivorypawn.github.io/favicon-16x16.png">
@@ -18,7 +18,6 @@
 <link rel="mask-icon" href="https://ivorypawn.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="https://ivorypawn.github.io/notes/index.xml">
 <noscript>
     <style>
         #theme-toggle,
@@ -72,14 +71,16 @@
 
 
 <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
-<meta property="og:title" content="Notes" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://ivorypawn.github.io/notes/" />
+<meta property="og:title" content="Unity 勉強ノート #04" />
+<meta property="og:description" content="雑に作る とりあえず手を動かさないと身にならないし，モチベも上がらない． 資料 2. で紹介されているゲームを順に作ってみる． フロー 登場するオブジェク" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ivorypawn.github.io/notes/unity/04/" /><meta property="article:section" content="notes" />
+<meta property="article:published_time" content="2023-10-26T10:55:54+09:00" />
+<meta property="article:modified_time" content="2023-10-26T10:55:54+09:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Notes"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="Unity 勉強ノート #04"/>
+<meta name="twitter:description" content="雑に作る とりあえず手を動かさないと身にならないし，モチベも上がらない． 資料 2. で紹介されているゲームを順に作ってみる． フロー 登場するオブジェク"/>
 
 
 <script type="application/ld+json">
@@ -92,13 +93,48 @@
       "position":  1 ,
       "name": "Notes",
       "item": "https://ivorypawn.github.io/notes/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Unity 勉強ノート #04",
+      "item": "https://ivorypawn.github.io/notes/unity/04/"
     }
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Unity 勉強ノート #04",
+  "name": "Unity 勉強ノート #04",
+  "description": "雑に作る とりあえず手を動かさないと身にならないし，モチベも上がらない． 資料 2. で紹介されているゲームを順に作ってみる． フロー 登場するオブジェク",
+  "keywords": [
+    
+  ],
+  "articleBody": "雑に作る とりあえず手を動かさないと身にならないし，モチベも上がらない．\n資料 2. で紹介されているゲームを順に作ってみる．\nフロー 登場するオブジェクトを列挙する 動かすオブジェクトの コントローラスクリプト を書く オブジェクトを自動生成する ジェネレータスクリプト を書く UI を更新する 監督スクリプト を書く スクリプトを作る流れを考える Roulette ルーレットを作る．フローの 3., 4. は今回は不要．\nコントローラスクリプトには，タップすると回転を始めて徐々に減速する動作を記述する．\nメモ Unity の 2D は 3D シーンを平面に投影したもの．エディタの基本操作はほぼ共通 シーンビューに配置した画像は スプライト と呼ばれる ",
+  "wordCount" : "280",
+  "inLanguage": "ja",
+  "datePublished": "2023-10-26T10:55:54+09:00",
+  "dateModified": "2023-10-26T10:55:54+09:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://ivorypawn.github.io/notes/unity/04/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "HideOut",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ivorypawn.github.io/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
 
-<body class="list dark" id="top">
+<body class=" dark" id="top">
 <script>
     if (localStorage.getItem("pref-theme") === "light") {
         document.body.classList.remove('dark')
@@ -141,7 +177,7 @@
             </li>
             <li>
                 <a href="https://ivorypawn.github.io/notes/" title="notes">
-                    <span class="active">notes</span>
+                    <span>notes</span>
                 </a>
             </li>
             <li>
@@ -152,79 +188,82 @@
         </ul>
     </nav>
 </header>
-<main class="main"> 
-<header class="page-header">
-  <h1>
-    Notes
-  </h1>
-</header>
+<main class="main">
 
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>Unity 勉強ノート #04<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>雑に作る とりあえず手を動かさないと身にならないし，モチベも上がらない． 資料 2. で紹介されているゲームを順に作ってみる． フロー 登場するオブジェク...</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-10-26 10:55:54 +0900 JST'>2023-10-26</span></footer>
-  <a class="entry-link" aria-label="post link to Unity 勉強ノート #04" href="https://ivorypawn.github.io/notes/unity/04/"></a>
-</article>
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      Unity 勉強ノート #04<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>
+    </h1>
+    <div class="post-meta"><span title='2023-10-26 10:55:54 +0900 JST'>2023-10-26</span>
 
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>Unity 勉強ノート #03<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>
-    </h2>
+</div>
   </header>
-  <div class="entry-content">
-    <p>おもに資料 1. 6 章以降を読んでいる．エフェクトや物理などすぐ使う予定のない機能はあとに回す．あと実地で必要になった知識のメモなど． レベル構築 ア...</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-09-28 05:01:17 +0900 JST'>2023-09-28</span></footer>
-  <a class="entry-link" aria-label="post link to Unity 勉強ノート #03" href="https://ivorypawn.github.io/notes/unity/03/"></a>
-</article>
 
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>Unity 勉強ノート #02
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>スクリプトの実行 スクリプトを Unity で実行するには，シーンのゲームオブジェクトにそのスクリプトをアタッチする必要がある． Debug.Log() の結果をコンソールで確認...</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-09-26 02:54:39 +0900 JST'>2023-09-26</span></footer>
-  <a class="entry-link" aria-label="post link to Unity 勉強ノート #02" href="https://ivorypawn.github.io/notes/unity/02/"></a>
-</article>
+  
+<div class="toc side left">
+    <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
 
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>Unity 勉強ノート #01
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>概要 個人的な Unity 3D の備忘録． Unity は転職活動中（進行形）に少し触ったが，間が空いたためほとんど忘れた．またそのときは，期日のため基本が疎かなまま課...</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-09-25 17:42:28 +0900 JST'>2023-09-25</span></footer>
-  <a class="entry-link" aria-label="post link to Unity 勉強ノート #01" href="https://ivorypawn.github.io/notes/unity/01/"></a>
-</article>
+        <div class="inner"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#雑に作る">雑に作る</a>
+      <ul>
+        <li><a href="#フロー">フロー</a></li>
+        <li><a href="#roulette">Roulette</a></li>
+      </ul>
+    </li>
+    <li><a href="#メモ">メモ</a></li>
+  </ul>
+</nav>
+        </div>
+    </details>
+</div>
 
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>Diffusion Model
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>概要 画像に逐次的にノイズを付加しランダムな画像を生成するプロセスを考える 上記の逆過程を推定することで、ランダムな画像から何らかのそれっぽい画...</p>
+
+
+
+ 
+  <div class="post-content"><h2 id="雑に作る">雑に作る<a hidden class="anchor" aria-hidden="true" href="#雑に作る">#</a></h2>
+<p>とりあえず手を動かさないと身にならないし，モチベも上がらない．</p>
+<p>資料 2. で紹介されているゲームを順に作ってみる．</p>
+<h3 id="フロー">フロー<a hidden class="anchor" aria-hidden="true" href="#フロー">#</a></h3>
+<ol>
+<li>登場するオブジェクトを列挙する</li>
+<li>動かすオブジェクトの <strong>コントローラスクリプト</strong> を書く</li>
+<li>オブジェクトを自動生成する <strong>ジェネレータスクリプト</strong> を書く</li>
+<li>UI を更新する <strong>監督スクリプト</strong> を書く</li>
+<li>スクリプトを作る流れを考える</li>
+</ol>
+<h3 id="roulette">Roulette<a hidden class="anchor" aria-hidden="true" href="#roulette">#</a></h3>
+<p>ルーレットを作る．フローの 3., 4. は今回は不要．</p>
+<p>コントローラスクリプトには，タップすると回転を始めて徐々に減速する動作を記述する．</p>
+<h2 id="メモ">メモ<a hidden class="anchor" aria-hidden="true" href="#メモ">#</a></h2>
+<ul>
+<li>Unity の 2D は 3D シーンを平面に投影したもの．エディタの基本操作はほぼ共通</li>
+<li>シーンビューに配置した画像は <strong>スプライト</strong> と呼ばれる</li>
+<li></li>
+</ul>
+
+
   </div>
-  <footer class="entry-footer"></footer>
-  <a class="entry-link" aria-label="post link to Diffusion Model" href="https://ivorypawn.github.io/notes/diffusion-model/"></a>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="https://ivorypawn.github.io/notes/unity/03/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>Unity 勉強ノート #03</span>
+  </a>
+</nav>
+
+  </footer>
 </article>
-<footer class="page-footer">
-  <nav class="pagination">
-    <a class="next" href="https://ivorypawn.github.io/notes/page/2/">
-      Old &nbsp;2/2&nbsp;»
-    </a>
-  </nav>
-</footer>
     </main>
     
 <footer class="footer">
@@ -294,6 +333,53 @@
         }
     })
 
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
 </script>
 </body>
 

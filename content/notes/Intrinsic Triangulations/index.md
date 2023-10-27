@@ -1,6 +1,6 @@
 ---
 title: "Intrinsic Triangulations"
-draft: false
+draft: true
 tags: ["論文読み", "Geometry Processing"]
 ---
 

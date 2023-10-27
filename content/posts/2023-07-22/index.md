@@ -2,7 +2,7 @@
 title: "Japan Chess Classic 2023 レポート"
 date: 2023-07-22T06:11:56+09:00
 tags: ["Chess"]
-draft: false
+draft: true
 ---
 
 三宮で開催された [ジャパンチェスクラシック 2023](https://japanchess.org/2023/03/japan-chess-classic_2023/) に参加しました。印象に残った局（おもに敗局）を振り返ります。
