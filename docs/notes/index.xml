@@ -13,7 +13,7 @@
       <pubDate>Thu, 26 Oct 2023 10:55:54 +0900</pubDate>
       
       <guid>https://ivorypawn.github.io/notes/unity/04/</guid>
-      <description>雑に作る とりあえず手を動かさないと身にならないし，モチベも上がらない． 資料 2. で紹介されているゲームを順に作ってみる． フロー 登場するオブジェク</description>
+      <description>雑に作る とりあえず手を動かさないと身にならないし，モチベも上がらない． 資料 2. で紹介されているゲームを順に作ってみる． 一般的なフロー 登場するオ</description>
     </item>
     
     <item>
@@ -40,7 +40,7 @@
       <pubDate>Mon, 25 Sep 2023 17:42:28 +0900</pubDate>
       
       <guid>https://ivorypawn.github.io/notes/unity/01/</guid>
-      <description>概要 個人的な Unity 3D の備忘録． Unity は転職活動中（進行形）に少し触ったが，間が空いたためほとんど忘れた．またそのときは，期日のため基本が疎かなまま課</description>
+      <description>概要 個人的な Unity 3D の備忘録． 前回は行き当たりばったりにコーディングしてしまい，身にならなかった．今回は基礎から順に学んでいく．いったん前の環境</description>
     </item>
     
     <item>
@@ -68,6 +68,15 @@
       
       <guid>https://ivorypawn.github.io/notes/monte-carlo-geometry-processing/</guid>
       <description>資料 Sawhney, R., &amp;amp; Crane, K. (2020). Monte Carlo Geometry Processing: A Grid-Free Approach to PDE-Based Methods on Volumetric Domains. ACM Trans. Graph., 39(4). Sawhney, R., Seyb, D., Jarosz, W., &amp;amp; Crane, K. (2022). Grid-free Monte Carlo for PDEs with spatially varying coefficients. ACM Transactions on Graphics (Proceedings of SIGGRAPH), 41(4). Jacobson, A., Baran, I., Popović, J., &amp;amp; Sorkine, O. (2011). Bounded</description>
+    </item>
+    
+    <item>
+      <title>Stochastic Poisson Surface Reconstruction</title>
+      <link>https://ivorypawn.github.io/notes/stochastic-poisson-surface-reconstruction/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ivorypawn.github.io/notes/stochastic-poisson-surface-reconstruction/</guid>
+      <description>概要 Silvia Sellán, &amp;amp; Alec Jacobson (2022). Stochastic Poisson Surface Reconstruction. ACM Transactions on Graphics. を読んだ． ベースとなる先行研究の Poisson Surface Reconstruction は，法線つき点群からメッシュを復元する手法．PSR は点群が</description>
     </item>
     
     <item>
