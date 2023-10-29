@@ -67,7 +67,8 @@ $$
 
 ただし $x_{k+1}$ は球 $B(x_k)$ を $\Omega$ に含まれる範囲で大きくとったときの境界 $\partial B(x_k)$ からランダムに選択する。また $\partial\Omega_{\epsilon}$ は境界 $\partial\Omega$ からトレランス $\epsilon$ 内の領域であり、$\bar{x}_{k}$ は $x_k$ からもっとも近い $\partial\Omega$ 上の点を表すものとする。
 
-![](01.jpg)
+<!-- ![](01.jpg) -->
+{{< thumbnail src="01.jpg">}}
 
 なお $\partial\Omega_{\epsilon}$ に到達するまでの必要ステップは $O(\log 1/\epsilon)$ とのこと。
 
@@ -199,7 +200,8 @@ $$
 
 ## アプリケーション
 ### 形状変換
-![](02.jpg)
+<!-- ![](02.jpg) -->
+{{< thumbnail src="02.jpg">}}
 
 境界がベジエ曲線で表現される 2 つの領域 $\Omega,\Omega'\in\mathbb{R}^2$ を考える。入力 $\Omega$ によって $\Omega'$ が得られたとみなし、座標変換 $\phi':\Omega'\rightarrow\Omega$ を考える。両者の制御点の個数と接続関係は共通しており、各制御点の座標と重みが異なるとする。
 
