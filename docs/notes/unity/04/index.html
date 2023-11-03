@@ -7,7 +7,7 @@
 <meta name="robots" content="index, follow">
 <title>Unity 勉強ノート #04 | HideOut</title>
 <meta name="keywords" content="">
-<meta name="description" content="雑に作る とりあえず手を動かさないと身にならないし，モチベも上がらない． 資料 2. で紹介されているゲームを順に作ってみる． 一般的なフロー 登場するオ">
+<meta name="description" content="雑に作る とりあえず手を動かさないと身にならないし，モチベも上がらない． 資料 2. のゲームを順に作ってみる．スマホで動かすのはとりあえずスキップ．">
 <meta name="author" content="">
 <link rel="canonical" href="https://ivorypawn.github.io/notes/unity/04/">
 <link crossorigin="anonymous" href="https://ivorypawn.github.io/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
@@ -72,7 +72,7 @@
 
 <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
 <meta property="og:title" content="Unity 勉強ノート #04" />
-<meta property="og:description" content="雑に作る とりあえず手を動かさないと身にならないし，モチベも上がらない． 資料 2. で紹介されているゲームを順に作ってみる． 一般的なフロー 登場するオ" />
+<meta property="og:description" content="雑に作る とりあえず手を動かさないと身にならないし，モチベも上がらない． 資料 2. のゲームを順に作ってみる．スマホで動かすのはとりあえずスキップ．" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ivorypawn.github.io/notes/unity/04/" /><meta property="article:section" content="notes" />
 <meta property="article:published_time" content="2023-10-26T10:55:54+09:00" />
@@ -80,7 +80,7 @@
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Unity 勉強ノート #04"/>
-<meta name="twitter:description" content="雑に作る とりあえず手を動かさないと身にならないし，モチベも上がらない． 資料 2. で紹介されているゲームを順に作ってみる． 一般的なフロー 登場するオ"/>
+<meta name="twitter:description" content="雑に作る とりあえず手を動かさないと身にならないし，モチベも上がらない． 資料 2. のゲームを順に作ってみる．スマホで動かすのはとりあえずスキップ．"/>
 
 
 <script type="application/ld+json">
@@ -109,12 +109,12 @@
   "@type": "BlogPosting",
   "headline": "Unity 勉強ノート #04",
   "name": "Unity 勉強ノート #04",
-  "description": "雑に作る とりあえず手を動かさないと身にならないし，モチベも上がらない． 資料 2. で紹介されているゲームを順に作ってみる． 一般的なフロー 登場するオ",
+  "description": "雑に作る とりあえず手を動かさないと身にならないし，モチベも上がらない． 資料 2. のゲームを順に作ってみる．スマホで動かすのはとりあえずスキップ．",
   "keywords": [
     
   ],
-  "articleBody": "雑に作る とりあえず手を動かさないと身にならないし，モチベも上がらない．\n資料 2. で紹介されているゲームを順に作ってみる．\n一般的なフロー 登場するオブジェクトを列挙する 動かすオブジェクトの コントローラスクリプト を書く オブジェクトを自動生成する ジェネレータスクリプト を書く UI を更新する 監督スクリプト を書く スクリプトを作る流れを考える Roulette ルーレットを作る．フローの 3., 4. は今回は不要．\nコントローラスクリプトには，タップすると回転を始めて徐々に減速する動作を記述する．\nメモ Unity の 2D は 3D シーンを平面に投影したもの．エディタの基本操作はほぼ共通 シーンビューに配置した画像は スプライト と呼ばれる ",
-  "wordCount" : "284",
+  "articleBody": "雑に作る とりあえず手を動かさないと身にならないし，モチベも上がらない．\n資料 2. のゲームを順に作ってみる．スマホで動かすのはとりあえずスキップ．\n（これが #01 か #02 でよかった）\nフロー 登場するオブジェクトを列挙する 動かすオブジェクトの コントローラスクリプト を書く オブジェクトを自動生成する ジェネレータスクリプト を書く UI を更新する 監督スクリプト を書く スクリプトを作る流れを考える Roulette ルーレットを作る．フロー 3., 4. は不要．\nコントローラスクリプトに，タップ（クリック）すると回転を始めて，徐々に減速する動作を記述する．\nInput.GetMouseButtonDown(0) 引数 0 が左クリック，1 が右クリック，2 が中央クリックに対応 transform.Rotate(x, y, z) 引数が X, Y, Z 軸の回転量に対応 SwipeCar フラグに車を寸止めするゲーム．監督スクリプトを作成する．\nスワイプ距離の取得，オブジェクト速度への適用 Input.GetMouseButtonUp(0) Input.mousePosition.x transform.Translate(x, 0, 0) 元位置を原点とするローカル座標 uGUI using UnityEngine.UI using UnityEngine とは別に必要 (GameObject).GetComponent() など GameObject.Find() AudioSource コンポーネント UIText を追加すると UI 設計画面が作成される．UI 設計画面はゲームの設計画面よりはるかに大きいが，実行時はゲーム画面に対応する．\nEventSystem はユーザの入力を UI 部品に中継する．入力の割り当て，無効化，キーやマウスの設定変更などが可能．\n監督スクリプトは空のオブジェクトに渡す．\n各コンポーネントへのアクセス CatEscape 避けゲー．\n雑多メモ GameObject という箱にコンポーネント（設定資料）を追加して機能を実現する 座標・回転なら Transform，物理挙動なら Rigidbody，SE なら AudioSource など Unity の 2D は 3D シーンを平面に投影したもの．エディタの基本操作はほぼ共通 シーンビューに配置した画像は スプライト と呼ばれる 最初にスケールを決定して、すべて同じスケールになるようにビルドする e.g. 3D なら $1\\,\\mathrm{unity\\ unit} = 1\\,\\mathrm{m}$，2D なら $1\\,\\mathrm{unity\\ unit} = 1\\,\\mathrm{pixel}$ がよくある ",
+  "wordCount" : "736",
   "inLanguage": "ja",
   "datePublished": "2023-10-26T10:55:54+09:00",
   "dateModified": "2023-10-26T10:55:54+09:00",
@@ -212,11 +212,17 @@
   <ul>
     <li><a href="#雑に作る">雑に作る</a>
       <ul>
-        <li><a href="#一般的なフロー">一般的なフロー</a></li>
+        <li><a href="#フロー">フロー</a></li>
         <li><a href="#roulette">Roulette</a></li>
+        <li><a href="#swipecar">SwipeCar</a>
+          <ul>
+            <li><a href="#各コンポーネントへのアクセス">各コンポーネントへのアクセス</a></li>
+          </ul>
+        </li>
+        <li><a href="#catescape">CatEscape</a></li>
       </ul>
     </li>
-    <li><a href="#メモ">メモ</a></li>
+    <li><a href="#雑多メモ">雑多メモ</a></li>
   </ul>
 </nav>
         </div>
@@ -229,8 +235,9 @@
  
   <div class="post-content"><h2 id="雑に作る">雑に作る<a hidden class="anchor" aria-hidden="true" href="#雑に作る">#</a></h2>
 <p>とりあえず手を動かさないと身にならないし，モチベも上がらない．</p>
-<p>資料 2. で紹介されているゲームを順に作ってみる．</p>
-<h3 id="一般的なフロー">一般的なフロー<a hidden class="anchor" aria-hidden="true" href="#一般的なフロー">#</a></h3>
+<p>資料 2. のゲームを順に作ってみる．スマホで動かすのはとりあえずスキップ．</p>
+<p>（これが #01 か #02 でよかった）</p>
+<h3 id="フロー">フロー<a hidden class="anchor" aria-hidden="true" href="#フロー">#</a></h3>
 <ol>
 <li>登場するオブジェクトを列挙する</li>
 <li>動かすオブジェクトの <strong>コントローラスクリプト</strong> を書く</li>
@@ -239,13 +246,67 @@
 <li>スクリプトを作る流れを考える</li>
 </ol>
 <h3 id="roulette">Roulette<a hidden class="anchor" aria-hidden="true" href="#roulette">#</a></h3>
-<p>ルーレットを作る．フローの 3., 4. は今回は不要．</p>
-<p>コントローラスクリプトには，タップすると回転を始めて徐々に減速する動作を記述する．</p>
-<h2 id="メモ">メモ<a hidden class="anchor" aria-hidden="true" href="#メモ">#</a></h2>
+<p>ルーレットを作る．フロー 3., 4. は不要．</p>
+<p>コントローラスクリプトに，タップ（クリック）すると回転を始めて，徐々に減速する動作を記述する．</p>
 <ul>
+<li><code>Input.GetMouseButtonDown(0)</code>
+<ul>
+<li>引数 0 が左クリック，1 が右クリック，2 が中央クリックに対応</li>
+</ul>
+</li>
+<li><code>transform.Rotate(x, y, z)</code>
+<ul>
+<li>引数が X, Y, Z 軸の回転量に対応</li>
+</ul>
+</li>
+</ul>
+<h3 id="swipecar">SwipeCar<a hidden class="anchor" aria-hidden="true" href="#swipecar">#</a></h3>
+<p>フラグに車を寸止めするゲーム．監督スクリプトを作成する．</p>
+<ul>
+<li>スワイプ距離の取得，オブジェクト速度への適用
+<ul>
+<li><code>Input.GetMouseButtonUp(0)</code></li>
+<li><code>Input.mousePosition.x</code></li>
+<li><code>transform.Translate(x, 0, 0)</code>
+<ul>
+<li>元位置を原点とするローカル座標</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>uGUI
+<ul>
+<li><code>using UnityEngine.UI</code>
+<ul>
+<li><code>using UnityEngine</code> とは別に必要</li>
+<li><code>(GameObject).GetComponent&lt;Text&gt;()</code> など</li>
+</ul>
+</li>
+<li><code>GameObject.Find()</code></li>
+</ul>
+</li>
+<li>AudioSource コンポーネント</li>
+</ul>
+<p>UIText を追加すると UI 設計画面が作成される．UI 設計画面はゲームの設計画面よりはるかに大きいが，実行時はゲーム画面に対応する．</p>
+<p><code>EventSystem</code> はユーザの入力を UI 部品に中継する．入力の割り当て，無効化，キーやマウスの設定変更などが可能．</p>
+<p>監督スクリプトは空のオブジェクトに渡す．</p>
+<h4 id="各コンポーネントへのアクセス">各コンポーネントへのアクセス<a hidden class="anchor" aria-hidden="true" href="#各コンポーネントへのアクセス">#</a></h4>
+<h3 id="catescape">CatEscape<a hidden class="anchor" aria-hidden="true" href="#catescape">#</a></h3>
+<p>避けゲー．</p>
+<h2 id="雑多メモ">雑多メモ<a hidden class="anchor" aria-hidden="true" href="#雑多メモ">#</a></h2>
+<ul>
+<li><code>GameObject</code> という箱にコンポーネント（設定資料）を追加して機能を実現する
+<ul>
+<li>座標・回転なら <code>Transform</code>，物理挙動なら <code>Rigidbody</code>，SE なら <code>AudioSource</code> など</li>
+</ul>
+</li>
 <li>Unity の 2D は 3D シーンを平面に投影したもの．エディタの基本操作はほぼ共通</li>
 <li>シーンビューに配置した画像は <strong>スプライト</strong> と呼ばれる</li>
-<li></li>
+<li>最初にスケールを決定して、すべて同じスケールになるようにビルドする
+<ul>
+<li>e.g. 3D なら $1\,\mathrm{unity\ unit} = 1\,\mathrm{m}$，2D なら $1\,\mathrm{unity\ unit} = 1\,\mathrm{pixel}$ がよくある</li>
+</ul>
+</li>
 </ul>
 
 

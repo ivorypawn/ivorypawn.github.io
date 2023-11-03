@@ -7,7 +7,7 @@
 <meta name="robots" content="index, follow">
 <title>Unity 勉強ノート #01 | HideOut</title>
 <meta name="keywords" content="Unity">
-<meta name="description" content="概要 個人的な Unity 3D の備忘録． 前回は行き当たりばったりにコーディングしてしまい，身にならなかった．今回は基礎から順に学んでいく．いったん前の環境">
+<meta name="description" content="概要 個人的な Unity 3D の備忘録． 以前の課題は行き当たりばったりにコーディングしてしまい，身にならなかった．今回は基礎から順に学んでいく．いったん前">
 <meta name="author" content="">
 <link rel="canonical" href="https://ivorypawn.github.io/notes/unity/01/">
 <link crossorigin="anonymous" href="https://ivorypawn.github.io/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
@@ -72,7 +72,7 @@
 
 <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
 <meta property="og:title" content="Unity 勉強ノート #01" />
-<meta property="og:description" content="概要 個人的な Unity 3D の備忘録． 前回は行き当たりばったりにコーディングしてしまい，身にならなかった．今回は基礎から順に学んでいく．いったん前の環境" />
+<meta property="og:description" content="概要 個人的な Unity 3D の備忘録． 以前の課題は行き当たりばったりにコーディングしてしまい，身にならなかった．今回は基礎から順に学んでいく．いったん前" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ivorypawn.github.io/notes/unity/01/" /><meta property="article:section" content="notes" />
 <meta property="article:published_time" content="2023-09-25T17:42:28+09:00" />
@@ -80,7 +80,7 @@
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Unity 勉強ノート #01"/>
-<meta name="twitter:description" content="概要 個人的な Unity 3D の備忘録． 前回は行き当たりばったりにコーディングしてしまい，身にならなかった．今回は基礎から順に学んでいく．いったん前の環境"/>
+<meta name="twitter:description" content="概要 個人的な Unity 3D の備忘録． 以前の課題は行き当たりばったりにコーディングしてしまい，身にならなかった．今回は基礎から順に学んでいく．いったん前"/>
 
 
 <script type="application/ld+json">
@@ -109,12 +109,12 @@
   "@type": "BlogPosting",
   "headline": "Unity 勉強ノート #01",
   "name": "Unity 勉強ノート #01",
-  "description": "概要 個人的な Unity 3D の備忘録． 前回は行き当たりばったりにコーディングしてしまい，身にならなかった．今回は基礎から順に学んでいく．いったん前の環境",
+  "description": "概要 個人的な Unity 3D の備忘録． 以前の課題は行き当たりばったりにコーディングしてしまい，身にならなかった．今回は基礎から順に学んでいく．いったん前",
   "keywords": [
     "Unity"
   ],
-  "articleBody": "概要 個人的な Unity 3D の備忘録．\n前回は行き当たりばったりにコーディングしてしまい，身にならなかった．今回は基礎から順に学んでいく．いったん前の環境も消し，構築からやり直す．\n資料 軽く調べたが，どの本がいいのかよく分からない．入手難度がたまたま低かった以下をとりあえず読んでいる．\nHarrison Ferrone / 吉川 邦夫 訳 (2021), 『Unity 3D ゲーム開発ではじめる C# プログラミング』, インプレス Kindle Unlimited 北村 愛実 (2016), 『Unity 5 の教科書』, SB Creative 赤坂 玲音 (2015), 『エンジニアのための Unity 実践リファレンス』, 技術評論社 岩井 雅幸 (2015), 『uGUI ではじめる Unity UI デザインの教科書』, マイナビ さしあたり 1. をベースに学習を進める．C++ などで既習のセクションはスキップする．また公式ドキュメントを読む習慣をつける．\n追記 適宜リストに追加．\nUnity ユーザーマニュアル（日本語） C# プログラミング ガイド Unity 入門の森 入門 Unity @KINDAI Info-Tech HUB 導入 Windows 10 でやっていく．\nUnity Hub インストール 2019 年からバージョン管理ソフトを使うようになったとのこと Unity 2022 インストール 環境によって適宜旧リリースも入れる 歯車 \u003e Add modules Visual Studio 2022 （必要なら）日本語 Unity Editor 適当に 3D プロジェクトを作成し Unity エディタを起動する．GUI のおもな構成要素は以下．\nToolbar（上段のリボン状のパネル） オブジェクト操作（左） 再生，停止（中） レイヤマスク etc.（右） Hierarchy（左カラム） シーン内の要素の階層表示 Scene, Game（中央） Inspector（右カラム） 各オブジェクトのプロパティ編集 Project, Console（下段） アセット（プロジェクトのファイル／フォルダ）表示 デバッグ (memo) Unity エディタ以外からファイル操作しない 過去これでバグった．meta がどう生成されるのか謎で，エクスプローラ上でほかの meta をコピペして直接編集とか プロジェクトを zip 圧縮しない meta が壊れる 7z ならオーケーらしい Inspector のコンポーネント横の情報アイコンからマニュアルに飛べる Visual Studio エディタで適当に C# スクリプトを作ってダブルクリックし Visual Studio で開く．何も起こらなければ Edit \u003e Preference \u003e External Tools \u003e External Script Editor から設定．\n(memo) ファイル名とクラス名は一致する．VS で勝手に変えるとたぶんバグる 変更は Project から 基底の MonoBehaviour は「シーン中のオブジェクトにアタッチできるクラス」の謂 エディタと VS が同期しない Project タブから問題のファイルを Refresh Edit \u003e Preference \u003e Asset Pipeline から Auto Refresh にすることもできる エディタのフォーカス時に自動コンパイルが走る メソッドの真上の行で /// を入力すると タグの枠が自動補完される ",
-  "wordCount" : "1008",
+  "articleBody": "概要 個人的な Unity 3D の備忘録．\n以前の課題は行き当たりばったりにコーディングしてしまい，身にならなかった．今回は基礎から順に学んでいく．いったん前の環境も消し，構築からやり直す．\n資料 とりあえず入手難度がたまたま低かった本を読んでいる．\nHarrison Ferrone / 吉川 邦夫 訳 (2021), 『Unity 3D ゲーム開発ではじめる C# プログラミング』, インプレス Kindle Unlimited 北村 愛実 (2016), 『Unity 5 の教科書』, SB Creative 赤坂 玲音 (2015), 『エンジニアのための Unity 実践リファレンス』, 技術評論社 岩井 雅幸 (2015), 『uGUI ではじめる Unity UI デザインの教科書』, マイナビ さしあたりバージョンの近い 1. を読み進める（制御文などの章はスキップ）．公式ドキュメントを読む習慣もつける．\n適宜以下に追加．\nUnity ユーザーマニュアル（日本語） C# プログラミング ガイド Unity 入門の森 Zenn Books 入門 Unity @KINDAI Info-Tech HUB Unity 開発に関する 50 の Tips 〜ベストプラクティス〜 (2016 Edition) 導入 Windows 10 でやっていく．\nUnity Hub インストール 2019 年からバージョン管理ソフトを使うようになったとのこと Unity 2022 インストール 環境によって適宜旧リリースも入れる 歯車 \u003e Add modules Visual Studio 2022 （必要なら）日本語 Unity Editor 適当に 3D プロジェクトを作成し Unity エディタを起動する．GUI のおもな構成要素は以下．\nToolbar（上段のリボン状のパネル） オブジェクト操作（左） 再生，停止（中） レイヤマスク etc.（右） Hierarchy（左カラム） シーン内の要素の階層表示 Scene, Game（中央） Inspector（右カラム） 各オブジェクトのプロパティ編集 Project, Console（下段） アセット（プロジェクトのファイル／フォルダ）表示 デバッグ (memo) Unity エディタ以外からファイル操作しない 過去これでバグった．meta がどう生成されるのか謎で，エクスプローラ上でほかの meta をコピペして直接編集とか プロジェクトを zip 圧縮しない meta が壊れる 7z ならオーケーらしい Inspector のコンポーネント横の情報アイコンからマニュアルに飛べる Visual Studio エディタで適当に C# スクリプトを作ってダブルクリックし Visual Studio で開く．何も起こらなければ Edit \u003e Preference \u003e External Tools \u003e External Script Editor から設定．\nこれを忘れると入力補完が使えなかったりする．\n(memo) ファイル名とクラス名は一致する．VS で勝手に変えるとたぶんバグる 変更は Project から 基底の MonoBehaviour は「シーン中のオブジェクトにアタッチできるクラス」の謂 エディタと VS が同期しない Project タブから問題のファイルを Refresh Edit \u003e Preference \u003e Asset Pipeline から Auto Refresh にすることもできる エディタのフォーカス時に自動コンパイルが走る メソッドの真上の行で /// を入力すると タグの枠が自動補完される ",
+  "wordCount" : "1024",
   "inLanguage": "ja",
   "datePublished": "2023-09-25T17:42:28+09:00",
   "dateModified": "2023-09-25T17:42:28+09:00",
@@ -213,7 +213,7 @@
     <li><a href="#概要">概要</a></li>
     <li><a href="#資料">資料</a>
       <ul>
-        <li><a href="#追記">追記</a></li>
+        <li><a href="#zenn-books">Zenn Books</a></li>
       </ul>
     </li>
     <li><a href="#導入">導入</a></li>
@@ -239,9 +239,9 @@
  
   <div class="post-content"><h2 id="概要">概要<a hidden class="anchor" aria-hidden="true" href="#概要">#</a></h2>
 <p>個人的な Unity 3D の備忘録．</p>
-<p>前回は行き当たりばったりにコーディングしてしまい，身にならなかった．今回は基礎から順に学んでいく．いったん前の環境も消し，構築からやり直す．</p>
+<p>以前の課題は行き当たりばったりにコーディングしてしまい，身にならなかった．今回は基礎から順に学んでいく．いったん前の環境も消し，構築からやり直す．</p>
 <h2 id="資料">資料<a hidden class="anchor" aria-hidden="true" href="#資料">#</a></h2>
-<p>軽く調べたが，どの本がいいのかよく分からない．入手難度がたまたま低かった以下をとりあえず読んでいる．</p>
+<p>とりあえず入手難度がたまたま低かった本を読んでいる．</p>
 <ol>
 <li>Harrison Ferrone / 吉川 邦夫 訳 (2021), 『<a href="https://book.impress.co.jp/books/1120101145">Unity 3D ゲーム開発ではじめる C# プログラミング</a>』, インプレス
 <ul>
@@ -252,14 +252,17 @@
 <li>赤坂 玲音 (2015), 『<a href="https://gihyo.jp/book/2015/978-4-7741-7303-0">エンジニアのための Unity 実践リファレンス</a>』, 技術評論社</li>
 <li>岩井 雅幸 (2015), 『<a href="https://book.mynavi.jp/supportsite/detail/9784839956400.html">uGUI ではじめる Unity UI デザインの教科書</a>』, マイナビ</li>
 </ol>
-<p>さしあたり 1. をベースに学習を進める．C++ などで既習のセクションはスキップする．また公式ドキュメントを読む習慣をつける．</p>
-<h3 id="追記">追記<a hidden class="anchor" aria-hidden="true" href="#追記">#</a></h3>
-<p>適宜リストに追加．</p>
+<p>さしあたりバージョンの近い 1. を読み進める（制御文などの章はスキップ）．公式ドキュメントを読む習慣もつける．</p>
+<p>適宜以下に追加．</p>
 <ul>
 <li><a href="https://docs.unity3d.com/ja/current/Manual/index.html">Unity ユーザーマニュアル（日本語）</a></li>
 <li><a href="https://learn.microsoft.com/ja-jp/dotnet/csharp/programming-guide/">C# プログラミング ガイド</a></li>
 <li><a href="https://3dunity.org/">Unity 入門の森</a></li>
+</ul>
+<h3 id="zenn-books">Zenn Books<a hidden class="anchor" aria-hidden="true" href="#zenn-books">#</a></h3>
+<ul>
 <li><a href="https://zenn.dev/sane21/books/b42ecebc457eb6/viewer/cf8cdb">入門 Unity @KINDAI Info-Tech HUB</a></li>
+<li><a href="https://zenn.dev/sh1ch/books/4f49e00cfd92be082e1c/viewer/8a5619780235f1bc3f74">Unity 開発に関する 50 の Tips 〜ベストプラクティス〜 (2016 Edition)</a></li>
 </ul>
 <h2 id="導入">導入<a hidden class="anchor" aria-hidden="true" href="#導入">#</a></h2>
 <p>Windows 10 でやっていく．</p>
@@ -326,6 +329,7 @@
 </ul>
 <h2 id="visual-studio">Visual Studio<a hidden class="anchor" aria-hidden="true" href="#visual-studio">#</a></h2>
 <p>エディタで適当に C# スクリプトを作ってダブルクリックし Visual Studio で開く．何も起こらなければ <code>Edit</code> &gt; <code>Preference</code> &gt; <code>External Tools</code> &gt; <code>External Script Editor</code> から設定．</p>
+<p>これを忘れると入力補完が使えなかったりする．</p>
 <h3 id="memo-1">(memo)<a hidden class="anchor" aria-hidden="true" href="#memo-1">#</a></h3>
 <ul>
 <li>ファイル名とクラス名は一致する．VS で勝手に変えるとたぶんバグる
@@ -355,10 +359,10 @@
       <li><a href="https://ivorypawn.github.io/tags/unity/">Unity</a></li>
     </ul>
 <nav class="paginav">
-  <a class="prev" href="https://ivorypawn.github.io/notes/diffusion-model/">
+  <a class="prev" href="https://ivorypawn.github.io/notes/algebraic-topology/01/">
     <span class="title">« Prev</span>
     <br>
-    <span>Diffusion Model</span>
+    <span>Algebraic Topology 勉強ノート #01</span>
   </a>
   <a class="next" href="https://ivorypawn.github.io/notes/unity/02/">
     <span class="title">Next »</span>

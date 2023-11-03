@@ -6,14 +6,23 @@
     <description>Recent content on HideOut</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Thu, 26 Oct 2023 10:55:54 +0900</lastBuildDate><atom:link href="https://ivorypawn.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 03 Nov 2023 14:37:49 +0900</lastBuildDate><atom:link href="https://ivorypawn.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>珈琲飲みたい</title>
+      <link>https://ivorypawn.github.io/posts/2023-11-03/</link>
+      <pubDate>Fri, 03 Nov 2023 14:37:49 +0900</pubDate>
+      
+      <guid>https://ivorypawn.github.io/posts/2023-11-03/</guid>
+      <description>トップページに Buy me a coffee のリンクをつけた． 現状，記事に挿入すると text-decoration:none !important が効かず下線が表示される． Buy me a coffee ☕ 優先順位がよく分からないが，そういう使</description>
+    </item>
+    
     <item>
       <title>Unity 勉強ノート #04</title>
       <link>https://ivorypawn.github.io/notes/unity/04/</link>
       <pubDate>Thu, 26 Oct 2023 10:55:54 +0900</pubDate>
       
       <guid>https://ivorypawn.github.io/notes/unity/04/</guid>
-      <description>雑に作る とりあえず手を動かさないと身にならないし，モチベも上がらない． 資料 2. で紹介されているゲームを順に作ってみる． 一般的なフロー 登場するオ</description>
+      <description>雑に作る とりあえず手を動かさないと身にならないし，モチベも上がらない． 資料 2. のゲームを順に作ってみる．スマホで動かすのはとりあえずスキップ．</description>
     </item>
     
     <item>
@@ -49,7 +58,7 @@
       <pubDate>Mon, 25 Sep 2023 17:42:28 +0900</pubDate>
       
       <guid>https://ivorypawn.github.io/notes/unity/01/</guid>
-      <description>概要 個人的な Unity 3D の備忘録． 前回は行き当たりばったりにコーディングしてしまい，身にならなかった．今回は基礎から順に学んでいく．いったん前の環境</description>
+      <description>概要 個人的な Unity 3D の備忘録． 以前の課題は行き当たりばったりにコーディングしてしまい，身にならなかった．今回は基礎から順に学んでいく．いったん前</description>
     </item>
     
     <item>
@@ -110,6 +119,33 @@ $$ \begin{align} a &amp;amp;= b &amp;amp; c &amp;amp;= d &amp;amp; e &amp;amp;= 
 $$ \begin{align*} 1 &amp;amp;= 2\\\ 3 &amp;amp;= 4 \end{align*} $$
 $$ \hat u_0(x_k):=\left\{ \begin{align*} &amp;amp;g(\bar x_k), &amp;amp; x_k \in \partial \Omega_{\epsilon} \\\ &amp;amp;\hat u_0 (x_{k+1}), &amp;amp; \text{otherwise} \end{align*} \right. $$
 $$ \begin{array}{rl} \biggl\{ \frac{1}{g(x)} \biggr\}^{\prime} &amp;amp;=&amp;amp; \lim_{h \to 0}\frac{\frac{1}{g(x+h)}-\frac{1}{g(x)}}{h} \cr\cr &amp;amp;=&amp;amp; \lim_{h \to 0}\frac{g(x)-g(x+h)}{g(x) g(x+h) h} \cr\cr &amp;amp;=&amp;amp; -\frac{1}{ \bigl\{ g(x) \bigr\}^2} \lim_{h \to 0}\frac{g(x+h)-g(x)}{h} \cr\cr &amp;amp;=&amp;amp; -\frac{g^{\prime}(x)}{ \bigl\{g(x) \bigr\}^2} \end{array} $$</description>
+    </item>
+    
+    <item>
+      <title>Algebraic Topology 勉強ノート #01</title>
+      <link>https://ivorypawn.github.io/notes/algebraic-topology/01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ivorypawn.github.io/notes/algebraic-topology/01/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Algebraic Topology 勉強ノート #02</title>
+      <link>https://ivorypawn.github.io/notes/algebraic-topology/02/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ivorypawn.github.io/notes/algebraic-topology/02/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Algebraic Topology 勉強ノート #03</title>
+      <link>https://ivorypawn.github.io/notes/algebraic-topology/03/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ivorypawn.github.io/notes/algebraic-topology/03/</guid>
+      <description></description>
     </item>
     
     <item>
