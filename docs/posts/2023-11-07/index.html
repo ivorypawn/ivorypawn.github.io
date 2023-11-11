@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ja" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>将棋 AI を利用した学習に関する雑感 | HideOut</title>
+<meta name="keywords" content="将棋, Chess">
+<meta name="description" content="自身の敗局を並べるのは，有効な棋力向上の手段である．そこには主に 2 つの観点が存在する． どれが悪手で何が最善だったのか（客観的・演繹的） なぜ最">
+<meta name="author" content="">
+<link rel="canonical" href="https://ivorypawn.github.io/posts/2023-11-07/">
+<link crossorigin="anonymous" href="https://ivorypawn.github.io/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://ivorypawn.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://ivorypawn.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://ivorypawn.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://ivorypawn.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://ivorypawn.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css" integrity="sha384-KiWOvVjnN8qwAZbuQyWDIbfCLFhLXNETzBQjA/92pIowpC0d2O3nppDGQVgwd2nB" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js" integrity="sha384-0fdwu/T/EQMsQlrHCCHoH10pkPLlKA1jL5dFyUOvB3lfeT2540/2g6YgSi2BL14p" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          
+          
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: false},
+              {left: '\\[', right: '\\]', display: true}
+          ],
+          
+          throwOnError : false
+        });
+    });
+</script>
+
+
+
+
+<style>
+    @media screen and (min-width: 769px) {
+         
+        .post-content input[type="checkbox"]:checked ~ label > img {
+            transform: scale(1.6);
+            cursor: zoom-out;
+            position: relative;
+            z-index: 999;
+        }
+
+        .post-content img.zoomCheck {
+            transition: transform 0.15s ease;
+            z-index: 999;
+            cursor: zoom-in;
+        }
+    }
+</style>
+
+
+<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+<meta property="og:title" content="将棋 AI を利用した学習に関する雑感" />
+<meta property="og:description" content="自身の敗局を並べるのは，有効な棋力向上の手段である．そこには主に 2 つの観点が存在する． どれが悪手で何が最善だったのか（客観的・演繹的） なぜ最" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ivorypawn.github.io/posts/2023-11-07/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-11-07T16:15:15+09:00" />
+<meta property="article:modified_time" content="2023-11-07T16:15:15+09:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="将棋 AI を利用した学習に関する雑感"/>
+<meta name="twitter:description" content="自身の敗局を並べるのは，有効な棋力向上の手段である．そこには主に 2 つの観点が存在する． どれが悪手で何が最善だったのか（客観的・演繹的） なぜ最"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://ivorypawn.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "将棋 AI を利用した学習に関する雑感",
+      "item": "https://ivorypawn.github.io/posts/2023-11-07/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "将棋 AI を利用した学習に関する雑感",
+  "name": "将棋 AI を利用した学習に関する雑感",
+  "description": "自身の敗局を並べるのは，有効な棋力向上の手段である．そこには主に 2 つの観点が存在する． どれが悪手で何が最善だったのか（客観的・演繹的） なぜ最",
+  "keywords": [
+    "将棋", "Chess"
+  ],
+  "articleBody": "自身の敗局を並べるのは，有効な棋力向上の手段である．そこには主に 2 つの観点が存在する．\nどれが悪手で何が最善だったのか（客観的・演繹的） なぜ最善を選べなかったのか（主観的・帰納的） 実際には『このあたりで間違えたな．何が正解だったんだろう．こうか．なるほど』の段階で反省が終わり，なぜ最善手が見つけられなかったのか，あるいはなぜ見つけていながらほかの手を選んでしまったかという分析までは行わないことが多い．それが悪いわけではない．たとえば単なる技術不足が敗因なら，1. までに留めて反省のサイクルを早く回すほうがよい．また意識的な 2. の実施は自らの欠点を直視しなければならず，辛い作業かもしれない．\nそもそも心理的な仮説の検証は難しい．心理学一般においても，ダニング・クルーガー効果や自我消耗仮説など，かつて定説のように扱われたこともある多くの主張が再現性を疑われている（cf. 心理学・行動経済学等の著名な研究論文が次々に追試失敗【心理学】）\n一方 1. に時間を費やしているにも関わらず，勝率が伸びない状況はしばしばある．普段なら見える最善手を実戦で逃してしまう，似たような間違いを繰り返しているかもしれない，何かのきっかけで勝てる気もするがその何かがわからない……などなど．かような状態は 2. の分析不十分が原因かもしれない．\n一例をジョッシュ・ウェイツキン著（吉田俊太郎訳）『習得への情熱』から引用する．\nあの時期の僕にとって，大会の対局中に犯したミスのほとんどが，例外なく，その時点で僕が背負っていた心の重荷と深く関係していた．チェス盤上に現れる問題が，チェス以外の日常の心の問題を如実に示していたことに僕は気がついた．(p.91)\nチェスにおけるそういった僕の心理的問題点は，つまりは，それまでの形に拘泥してしまうことに帰結するものであり，それは僕が根深いところでホームシックの心理状態になっているからにほかならない．ようやくこの関連性に気が付いた僕は，チェスにおいても，日常においても，意識してこの変わり目の問題に対処するようになった．チェスの対局では，戦いの性質が変化したところで何度か深呼吸をして頭をすっきりさせるようにした．日常では，変化に逆らうのではなく，気持ちよく受け入れるようにした．(p.93)\nウェイツキンは 2. を重要視しているが，たとえば上記のパフォーマンスに悪影響を及ぼしていた心理状態について，彼がどのような過程で自己診断を下したのかなどの記述はない．この部分は結局，ウェイツキン個人の経験や洞察力，チェスへの理解度に依存している．非才の身なる我々は，どうすれば『思うように勝てないのはホームシックが関係しているかもしれない』などと思いつけるだろう．そしてその仮説や考えうる対策の効果を，どうやって検証すればよいのか．\nウェイツキンの著書は，大半が彼の経験談と観念的な議論からなる．そのようにしか語りえないことはあるだろうし，彼の文章は実際魅力的だが，再現性のある方法論には計量と統計はやはり不可欠だ．本記事の後半で，そのような方法の構築を試みる．\n◆ 何が悪手だったか把握しないまま最善手を選べなかった理由に悩むのはナンセンスだ．反省は常に 1. ⇒ 2. の順に進行する．AI 以前は必然的に 1. にリソースの大半が充てられていた．自分より強い存在が傍らにおり，疑問にすぐ答えが返ってくるような環境は例外的だった．\nAI の発達によって，人間の学習において 1. の精度向上およびリードタイム短縮が可能になった．現在の AI 活用の大半がこの形式をとる．とはいえ 1. の重要性自体は AI 前後でなにも変わっていない．上位プレイヤーはそれを理解しているから，課題局面における AI の判断を最終的には受け入れるにせよ，初めから無条件に受け入れはしない．これによって，微妙に条件が違う局面が現れても大勢を見誤ることは少なく，まったく未知の局面において既知の局面との類似点を見出し方針を立てることができる．\n上記のアンチパターンについても考えてみよう．\n(Under Construction)\n◆ これまで 1. における既存の AI 活用について見てきた．次は 2. における活用の可能性を考えたい．具体的には，評価値による定量的な心理分析である．\n私が大学将棋部にいたとき（ちょうど情報処理学会が，ソフトウェアがトッププロの実力を超えたことを宣言し，プロジェクトを終了したころだったと思う），評価値を用いた心理統計法的な分析手法を考え，ほかの部員にも頼んで試したことがあった．\nあらかじめ断っておくと，データ収集が想像以上に面倒だったため，データ検証段階以前に当時の試みは頓挫した（後述するがこの部分は改善できる）．だからこの手法が役に立つ保証は今のところない．とはいえ，基本的な考え方は今も正しいと思っている．\n◇ 評価値は「勝ちやすさ」という人間にとって明瞭な解釈がある．AI の評価値が高い局面が必ずしも人間にとって勝ちやすいわけではないが（e.g. 非常に難解な唯一の勝ち筋がある局面でも AI は $+\\infty$ の評価を下す），両者の相関は高く，定量分析の変数として十分信頼できると言ってよい．\nまず自身の棋譜の解析結果から，最善手を指したときとの評価値の差が閾値 $T$ を超えた着手を取得し，特徴量のテーブルデータを作成する．抽出する特徴量はいろいろ考えられるが，一例を以下に示す．\n最善手を選んだときの評価値 $E$ 実戦の着手の評価値 $E_*$ 評価値の差 $\\Delta E=E-E_*$ $\\Delta E\u003eT$ のときその手を取得 同じ $\\Delta E=300$ であっても，$0\\Rightarrow -300$ と $1500\\Rightarrow 1200$ では深刻度が異なる．閾値 $T$ は $E=0$ で極小となるような変数にするのがよいかもしれない 先後 手数，進行度合 最終的な勝敗 駒の種類 盤上の駒 or 持ち駒 互いの玉との距離 攻め／受けの推定 最後の項目はいまの思いつきだが，さらに想像をたくましくすると，盤上の駒全体の利きを分布とみなし，飛角香などに関しては途中に駒があれば減衰するなどの条件を課して，双方の玉を中心としたカーネルで畳み込めば，実際の玉の危険度とかなり相関しそうである．Conv 層は平面上の信号をカーネルを使って畳み込む処理の離散化だから，この類の特徴が CNN 系のソフトが内部で評価していることなのかもしれない．\n上で挙げた特徴量は取得時に指し手の意思が介入せず，データ収集は完全に自動化できる．先述の将棋部での試みは，自動化のノウハウがなく手動でテーブルデータを作成したため，あまりに煩雑だった．理想的にはオンライン対局場のバックエンドで実装し，ユーザーからも隠蔽してしまうのがよいと思う．\nいったんデータ収集が完了すれば，あとは一般的な特徴量エンジニアリングと効果検証の範疇である．\n間違うときの傾向の推定 序／中／終盤 攻め／受け 有利時／不利時 etc. 推定をもとにした施策の決定 施策導入前後の推定の比較 あとはこのサイクルを回せばよい．\n◇ そのときの回答者の気分で結果が変わるかもしれない項目は，慎重に導入しなければならない．たとえば『このときの自身の形勢判断を 5 段階評価せよ』という設問はどうか．\n(Under Construction)\n◆ ここまでの記述は，用語を変えればあらゆる分野に適用されるような，汎用的な議論である．AI が発達するずっと前から，本質的に同様のことを論じたテキストはたくさんあるに違いない．このテキストは，単に書き手の私が将棋界隈に首まで浸かってしまっているからという理由で，それらを将棋用語を使って焼き直したものにすぎない．\nではなぜ書くのか？ すでに書かれた，より洗練されたテキストを探せばよいのではないか？ あるいは LLM に生成させればよいのではないか？\nそのように感じるならば，おそらく学習における 1. の重要性を評価できていない．こういうのは自分で考えて書くのがよいのだ．\n",
+  "wordCount" : "3126",
+  "inLanguage": "ja",
+  "datePublished": "2023-11-07T16:15:15+09:00",
+  "dateModified": "2023-11-07T16:15:15+09:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://ivorypawn.github.io/posts/2023-11-07/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "HideOut",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ivorypawn.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class=" dark" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://ivorypawn.github.io/" accesskey="h" title="HideOut (Alt + H)">HideOut</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://ivorypawn.github.io/posts/" title="posts">
+                    <span>posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ivorypawn.github.io/notes/" title="notes">
+                    <span>notes</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ivorypawn.github.io/tags/" title="tags">
+                    <span>tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      将棋 AI を利用した学習に関する雑感<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>
+    </h1>
+    <div class="post-meta"><span title='2023-11-07 16:15:15 +0900 JST'>2023-11-07</span>
+
+</div>
+  </header>
+
+  
+<div class="toc side left">
+    <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#heading">◆</a></li>
+    <li><a href="#heading-1">◆</a>
+      <ul>
+        <li><a href="#heading-2">◇</a></li>
+        <li><a href="#heading-3">◇</a></li>
+      </ul>
+    </li>
+    <li><a href="#heading-4">◆</a></li>
+  </ul>
+</nav>
+        </div>
+    </details>
+</div>
+
+
+
+
+ 
+  <div class="post-content"><p>自身の敗局を並べるのは，有効な棋力向上の手段である．そこには主に 2 つの観点が存在する．</p>
+<ol>
+<li>どれが悪手で何が最善だったのか（<strong>客観的・演繹的</strong>）</li>
+<li>なぜ最善を選べなかったのか（<strong>主観的・帰納的</strong>）</li>
+</ol>
+<p>実際には『このあたりで間違えたな．何が正解だったんだろう．こうか．なるほど』の段階で反省が終わり，なぜ最善手が見つけられなかったのか，あるいはなぜ見つけていながらほかの手を選んでしまったかという分析までは行わないことが多い．それが悪いわけではない．たとえば単なる技術不足が敗因なら，1. までに留めて反省のサイクルを早く回すほうがよい．また意識的な 2. の実施は自らの欠点を直視しなければならず，辛い作業かもしれない．</p>
+<p>そもそも心理的な仮説の検証は難しい．心理学一般においても，ダニング・クルーガー効果や自我消耗仮説など，かつて定説のように扱われたこともある多くの主張が再現性を疑われている（cf. <a href="https://note.com/s1000s/n/na0dbd2e8632d">心理学・行動経済学等の著名な研究論文が次々に追試失敗【心理学】</a>）</p>
+<p>一方 1. に時間を費やしているにも関わらず，勝率が伸びない状況はしばしばある．普段なら見える最善手を実戦で逃してしまう，似たような間違いを繰り返しているかもしれない，何かのきっかけで勝てる気もするがその何かがわからない……などなど．かような状態は 2. の分析不十分が原因かもしれない．</p>
+<p>一例をジョッシュ・ウェイツキン著（吉田俊太郎訳）『習得への情熱』から引用する．</p>
+<blockquote>
+<p>あの時期の僕にとって，大会の対局中に犯したミスのほとんどが，例外なく，その時点で僕が背負っていた心の重荷と深く関係していた．チェス盤上に現れる問題が，チェス以外の日常の心の問題を如実に示していたことに僕は気がついた．(p.91)</p>
+</blockquote>
+<blockquote>
+<p>チェスにおけるそういった僕の心理的問題点は，つまりは，それまでの形に拘泥してしまうことに帰結するものであり，それは僕が根深いところでホームシックの心理状態になっているからにほかならない．ようやくこの関連性に気が付いた僕は，チェスにおいても，日常においても，意識してこの変わり目の問題に対処するようになった．チェスの対局では，戦いの性質が変化したところで何度か深呼吸をして頭をすっきりさせるようにした．日常では，変化に逆らうのではなく，気持ちよく受け入れるようにした．(p.93)</p>
+</blockquote>
+<p>ウェイツキンは 2. を重要視しているが，たとえば上記のパフォーマンスに悪影響を及ぼしていた心理状態について，彼がどのような過程で自己診断を下したのかなどの記述はない．この部分は結局，ウェイツキン個人の経験や洞察力，チェスへの理解度に依存している．非才の身なる我々は，どうすれば『思うように勝てないのはホームシックが関係しているかもしれない』などと思いつけるだろう．そしてその仮説や考えうる対策の効果を，どうやって検証すればよいのか．</p>
+<p>ウェイツキンの著書は，大半が彼の経験談と観念的な議論からなる．そのようにしか語りえないことはあるだろうし，彼の文章は実際魅力的だが，再現性のある方法論には計量と統計はやはり不可欠だ．本記事の後半で，そのような方法の構築を試みる．</p>
+<h2 id="heading">◆<a hidden class="anchor" aria-hidden="true" href="#heading">#</a></h2>
+<p>何が悪手だったか把握しないまま最善手を選べなかった理由に悩むのはナンセンスだ．反省は常に 1. ⇒ 2. の順に進行する．AI 以前は必然的に 1. にリソースの大半が充てられていた．自分より強い存在が傍らにおり，疑問にすぐ答えが返ってくるような環境は例外的だった．</p>
+<p>AI の発達によって，人間の学習において 1. の精度向上およびリードタイム短縮が可能になった．現在の AI 活用の大半がこの形式をとる．とはいえ 1. の重要性自体は AI 前後でなにも変わっていない．上位プレイヤーはそれを理解しているから，課題局面における AI の判断を最終的には受け入れるにせよ，初めから無条件に受け入れはしない．これによって，微妙に条件が違う局面が現れても大勢を見誤ることは少なく，まったく未知の局面において既知の局面との類似点を見出し方針を立てることができる．</p>
+<p>上記のアンチパターンについても考えてみよう．</p>
+<p>(Under Construction)</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="heading-1">◆<a hidden class="anchor" aria-hidden="true" href="#heading-1">#</a></h2>
+<p>これまで 1. における既存の AI 活用について見てきた．次は 2. における活用の可能性を考えたい．具体的には，評価値による定量的な心理分析である．</p>
+<p>私が大学将棋部にいたとき（ちょうど情報処理学会が，ソフトウェアがトッププロの実力を超えたことを宣言し，プロジェクトを終了したころだったと思う），評価値を用いた心理統計法的な分析手法を考え，ほかの部員にも頼んで試したことがあった．</p>
+<p>あらかじめ断っておくと，データ収集が想像以上に面倒だったため，データ検証段階以前に当時の試みは頓挫した（後述するがこの部分は改善できる）．だからこの手法が役に立つ保証は今のところない．とはいえ，基本的な考え方は今も正しいと思っている．</p>
+<h3 id="heading-2">◇<a hidden class="anchor" aria-hidden="true" href="#heading-2">#</a></h3>
+<p>評価値は「勝ちやすさ」という人間にとって明瞭な解釈がある．AI の評価値が高い局面が必ずしも人間にとって勝ちやすいわけではないが（e.g. 非常に難解な唯一の勝ち筋がある局面でも AI は $+\infty$ の評価を下す），両者の相関は高く，定量分析の変数として十分信頼できると言ってよい．</p>
+<p>まず自身の棋譜の解析結果から，最善手を指したときとの評価値の差が閾値 $T$ を超えた着手を取得し，特徴量のテーブルデータを作成する．抽出する特徴量はいろいろ考えられるが，一例を以下に示す．</p>
+<ul>
+<li>最善手を選んだときの評価値 $E$</li>
+<li>実戦の着手の評価値 $E_*$</li>
+<li>評価値の差 $\Delta E=E-E_*$
+<ul>
+<li>$\Delta E&gt;T$ のときその手を取得</li>
+<li>同じ $\Delta E=300$ であっても，$0\Rightarrow -300$ と $1500\Rightarrow 1200$ では深刻度が異なる．閾値 $T$ は $E=0$ で極小となるような変数にするのがよいかもしれない</li>
+</ul>
+</li>
+<li>先後</li>
+<li>手数，進行度合</li>
+<li>最終的な勝敗</li>
+<li>駒の種類</li>
+<li>盤上の駒 or 持ち駒</li>
+<li>互いの玉との距離
+<ul>
+<li>攻め／受けの推定</li>
+</ul>
+</li>
+</ul>
+<p>最後の項目はいまの思いつきだが，さらに想像をたくましくすると，盤上の駒全体の利きを分布とみなし，飛角香などに関しては途中に駒があれば減衰するなどの条件を課して，双方の玉を中心としたカーネルで畳み込めば，実際の玉の危険度とかなり相関しそうである．Conv 層は平面上の信号をカーネルを使って畳み込む処理の離散化だから，この類の特徴が CNN 系のソフトが内部で評価していることなのかもしれない．</p>
+<p>上で挙げた特徴量は取得時に指し手の意思が介入せず，データ収集は完全に自動化できる．先述の将棋部での試みは，自動化のノウハウがなく手動でテーブルデータを作成したため，あまりに煩雑だった．理想的にはオンライン対局場のバックエンドで実装し，ユーザーからも隠蔽してしまうのがよいと思う．</p>
+<p>いったんデータ収集が完了すれば，あとは一般的な特徴量エンジニアリングと効果検証の範疇である．</p>
+<ul>
+<li>間違うときの傾向の推定
+<ul>
+<li>序／中／終盤</li>
+<li>攻め／受け</li>
+<li>有利時／不利時</li>
+<li>etc.</li>
+</ul>
+</li>
+<li>推定をもとにした施策の決定</li>
+<li>施策導入前後の推定の比較</li>
+</ul>
+<p>あとはこのサイクルを回せばよい．</p>
+<h3 id="heading-3">◇<a hidden class="anchor" aria-hidden="true" href="#heading-3">#</a></h3>
+<p>そのときの回答者の気分で結果が変わるかもしれない項目は，慎重に導入しなければならない．たとえば『このときの自身の形勢判断を 5 段階評価せよ』という設問はどうか．</p>
+<!-- raw HTML omitted -->
+<p>(Under Construction)</p>
+<h2 id="heading-4">◆<a hidden class="anchor" aria-hidden="true" href="#heading-4">#</a></h2>
+<p>ここまでの記述は，用語を変えればあらゆる分野に適用されるような，汎用的な議論である．AI が発達するずっと前から，本質的に同様のことを論じたテキストはたくさんあるに違いない．このテキストは，単に書き手の私が将棋界隈に首まで浸かってしまっているからという理由で，それらを将棋用語を使って焼き直したものにすぎない．</p>
+<p>ではなぜ書くのか？ すでに書かれた，より洗練されたテキストを探せばよいのではないか？ あるいは LLM に生成させればよいのではないか？</p>
+<p>そのように感じるならば，おそらく学習における 1. の重要性を評価できていない．こういうのは自分で考えて書くのがよいのだ．</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://ivorypawn.github.io/tags/%E5%B0%86%E6%A3%8B/">将棋</a></li>
+      <li><a href="https://ivorypawn.github.io/tags/chess/">Chess</a></li>
+    </ul>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="https://ivorypawn.github.io/">HideOut</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

@@ -1,10 +1,11 @@
 ---
 title: "珈琲飲みたい"
 date: 2023-11-03T14:37:49+09:00
+tags: ["Hugo"]
 draft: false
 ---
 
-トップページに Buy me a coffee のリンクをつけた．
+トップページに珈琲乞食リンクをつけた．
 
 現状，記事に挿入すると `text-decoration:none !important` が効かず下線が表示される．
 

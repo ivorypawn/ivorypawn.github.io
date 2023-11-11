@@ -6,7 +6,16 @@
     <description>Recent content in 将棋 on HideOut</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Tue, 03 Oct 2023 02:58:30 +0900</lastBuildDate><atom:link href="https://ivorypawn.github.io/tags/%E5%B0%86%E6%A3%8B/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 07 Nov 2023 16:15:15 +0900</lastBuildDate><atom:link href="https://ivorypawn.github.io/tags/%E5%B0%86%E6%A3%8B/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>将棋 AI を利用した学習に関する雑感</title>
+      <link>https://ivorypawn.github.io/posts/2023-11-07/</link>
+      <pubDate>Tue, 07 Nov 2023 16:15:15 +0900</pubDate>
+      
+      <guid>https://ivorypawn.github.io/posts/2023-11-07/</guid>
+      <description>自身の敗局を並べるのは，有効な棋力向上の手段である．そこには主に 2 つの観点が存在する． どれが悪手で何が最善だったのか（客観的・演繹的） なぜ最</description>
+    </item>
+    
     <item>
       <title>北國王将杯レポート</title>
       <link>https://ivorypawn.github.io/posts/2023-10-03/</link>

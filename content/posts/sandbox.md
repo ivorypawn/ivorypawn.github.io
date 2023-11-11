@@ -1,30 +1,39 @@
 ---
 title: "Sandbox"
-date: 2023-06-21T02:46:37+09:00
 draft: true
-math: true
 ---
 
+## Markdown All in One (VSCode)
+- `Alt + S` で打ち消し線
+
+## HTML
 {{<rawhtml>}}
 <p align="center" style="color: blue;"><strong>This is raw HTML</strong></p>
 {{</rawhtml>}}
 
-$\hat u$
 
-$\bar u$
+## Diagram
+```goat
+      .               .                .               .--- 1          .-- 1     / 1
+     / \              |                |           .---+            .-+         +
+    /   \         .---+---.         .--+--.        |   '--- 2      |   '-- 2   / \ 2
+   +     +        |       |        |       |    ---+            ---+          +
+  / \   / \     .-+-.   .-+-.     .+.     .+.      |   .--- 3      |   .-- 3   \ / 3
+ /   \ /   \    |   |   |   |    |   |   |   |     '---+            '-+         +
+ 1   2 3   4    1   2   3   4    1   2   3   4         '--- 4          '-- 4     \ 4
 
+```
+
+- [Diagrams](https://gohugo.io/content-management/diagrams/)
+- [HUGOサイトでMermaid記法](https://tech.nosuz.jp/post/2022-02/mermaid/)
+
+
+## $\LaTeX$
 $$
-\begin{align}
+\begin{align*}
 a  &= b  & c  &= d  & e  &= f \\\\\\
 a' &= b' & c' &= d' & e' &= f'
-\end{align}
-$$
-
-$$
-\begin{align\*}
-1 &= 2\\\\\\
-3 &= 4
-\end{align\*}
+\end{align*}
 $$
 
 $$
@@ -39,3 +48,7 @@ $$
 $$
 \\begin{array}{rl} \\biggl\\\{ \\frac{1}{g(x)} \\biggr\\\}^{\\prime} &=& \\lim_{h \\to 0}\\frac{\\frac{1}{g(x+h)}-\\frac{1}{g(x)}}{h} \\cr\\cr &=& \\lim_{h \\to 0}\\frac{g(x)-g(x+h)}{g(x) g(x+h) h} \\cr\\cr  &=& -\\frac{1}{ \\bigl\\\{ g(x) \\bigr\\\}^2} \\lim_{h \\to 0}\\frac{g(x+h)-g(x)}{h} \\cr\\cr &=& -\\frac{g^{\\prime}(x)}{ \\bigl\\\{g(x) \\bigr\\\}^2} \end{array}
 $$
+
+$\sum\limits_\mathrm{min}^\mathrm{max}\quad\sum_\mathrm{min}^\mathrm{max}\quad$
+$\displaystyle\sum_\mathrm{min}^\mathrm{max}$
+

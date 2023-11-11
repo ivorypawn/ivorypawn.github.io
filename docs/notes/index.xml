@@ -6,14 +6,23 @@
     <description>Recent content in Notes on HideOut</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Thu, 26 Oct 2023 10:55:54 +0900</lastBuildDate><atom:link href="https://ivorypawn.github.io/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 03 Nov 2023 22:18:01 +0900</lastBuildDate><atom:link href="https://ivorypawn.github.io/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Unity 勉強ノート #05</title>
+      <link>https://ivorypawn.github.io/notes/unity/05/</link>
+      <pubDate>Fri, 03 Nov 2023 22:18:01 +0900</pubDate>
+      
+      <guid>https://ivorypawn.github.io/notes/unity/05/</guid>
+      <description>雑に作る 2 引き続きシンプルなゲームを作っていく． CatEscape 避けゲー．ジェネレータスクリプトで Prefab を生成する． Input.GetKeyDown(KeyCode.LeftArrow) etc. Destroy(gameObject) gameObject が自身を指す 一時停止してヒエラルキ</description>
+    </item>
+    
     <item>
       <title>Unity 勉強ノート #04</title>
       <link>https://ivorypawn.github.io/notes/unity/04/</link>
       <pubDate>Thu, 26 Oct 2023 10:55:54 +0900</pubDate>
       
       <guid>https://ivorypawn.github.io/notes/unity/04/</guid>
-      <description>雑に作る とりあえず手を動かさないと身にならないし，モチベも上がらない． 資料 2. のゲームを順に作ってみる．スマホで動かすのはとりあえずスキップ．</description>
+      <description>雑に作る とりあえず手を動かさないことには始まらない（ということをいつも忘れる）．資料 2. のゲームを順に作ってみる．スマホで動かす手順はスキップ</description>
     </item>
     
     <item>
@@ -22,7 +31,7 @@
       <pubDate>Thu, 28 Sep 2023 05:01:17 +0900</pubDate>
       
       <guid>https://ivorypawn.github.io/notes/unity/03/</guid>
-      <description>おもに資料 1. 6 章以降を読んでいる．エフェクトや物理などすぐ使う予定のない機能はあとに回す．あと実地で必要になった知識のメモなど． レベル構築 ア</description>
+      <description>資料 1. 6 章以降． レベル構築 アウトドア環境 Terrain ツール インドア環境 shape geometry Blender などから 3D モデルをインポートすることもある． Material 任意のゲームオブジェクトはマ</description>
     </item>
     
     <item>
@@ -49,25 +58,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ivorypawn.github.io/notes/algebraic-topology/01/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Algebraic Topology 勉強ノート #02</title>
-      <link>https://ivorypawn.github.io/notes/algebraic-topology/02/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://ivorypawn.github.io/notes/algebraic-topology/02/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Algebraic Topology 勉強ノート #03</title>
-      <link>https://ivorypawn.github.io/notes/algebraic-topology/03/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://ivorypawn.github.io/notes/algebraic-topology/03/</guid>
-      <description></description>
+      <description>Vidit Nanda 先生の Computational Algebraic Topology で勉強したときのメモ． 複体 ホモトピー ホモロジー</description>
     </item>
     
     <item>

@@ -6,14 +6,32 @@
     <description>Recent content on HideOut</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Fri, 03 Nov 2023 14:37:49 +0900</lastBuildDate><atom:link href="https://ivorypawn.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 07 Nov 2023 16:15:15 +0900</lastBuildDate><atom:link href="https://ivorypawn.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>将棋 AI を利用した学習に関する雑感</title>
+      <link>https://ivorypawn.github.io/posts/2023-11-07/</link>
+      <pubDate>Tue, 07 Nov 2023 16:15:15 +0900</pubDate>
+      
+      <guid>https://ivorypawn.github.io/posts/2023-11-07/</guid>
+      <description>自身の敗局を並べるのは，有効な棋力向上の手段である．そこには主に 2 つの観点が存在する． どれが悪手で何が最善だったのか（客観的・演繹的） なぜ最</description>
+    </item>
+    
+    <item>
+      <title>Unity 勉強ノート #05</title>
+      <link>https://ivorypawn.github.io/notes/unity/05/</link>
+      <pubDate>Fri, 03 Nov 2023 22:18:01 +0900</pubDate>
+      
+      <guid>https://ivorypawn.github.io/notes/unity/05/</guid>
+      <description>雑に作る 2 引き続きシンプルなゲームを作っていく． CatEscape 避けゲー．ジェネレータスクリプトで Prefab を生成する． Input.GetKeyDown(KeyCode.LeftArrow) etc. Destroy(gameObject) gameObject が自身を指す 一時停止してヒエラルキ</description>
+    </item>
+    
     <item>
       <title>珈琲飲みたい</title>
       <link>https://ivorypawn.github.io/posts/2023-11-03/</link>
       <pubDate>Fri, 03 Nov 2023 14:37:49 +0900</pubDate>
       
       <guid>https://ivorypawn.github.io/posts/2023-11-03/</guid>
-      <description>トップページに Buy me a coffee のリンクをつけた． 現状，記事に挿入すると text-decoration:none !important が効かず下線が表示される． Buy me a coffee ☕ 優先順位がよく分からないが，そういう使</description>
+      <description>トップページに珈琲乞食リンクをつけた． 現状，記事に挿入すると text-decoration:none !important が効かず下線が表示される． Buy me a coffee ☕ 優先順位がよく分からないが，そういう使い</description>
     </item>
     
     <item>
@@ -22,7 +40,7 @@
       <pubDate>Thu, 26 Oct 2023 10:55:54 +0900</pubDate>
       
       <guid>https://ivorypawn.github.io/notes/unity/04/</guid>
-      <description>雑に作る とりあえず手を動かさないと身にならないし，モチベも上がらない． 資料 2. のゲームを順に作ってみる．スマホで動かすのはとりあえずスキップ．</description>
+      <description>雑に作る とりあえず手を動かさないことには始まらない（ということをいつも忘れる）．資料 2. のゲームを順に作ってみる．スマホで動かす手順はスキップ</description>
     </item>
     
     <item>
@@ -40,7 +58,7 @@
       <pubDate>Thu, 28 Sep 2023 05:01:17 +0900</pubDate>
       
       <guid>https://ivorypawn.github.io/notes/unity/03/</guid>
-      <description>おもに資料 1. 6 章以降を読んでいる．エフェクトや物理などすぐ使う予定のない機能はあとに回す．あと実地で必要になった知識のメモなど． レベル構築 ア</description>
+      <description>資料 1. 6 章以降． レベル構築 アウトドア環境 Terrain ツール インドア環境 shape geometry Blender などから 3D モデルをインポートすることもある． Material 任意のゲームオブジェクトはマ</description>
     </item>
     
     <item>
@@ -107,45 +125,12 @@
     </item>
     
     <item>
-      <title>Sandbox</title>
-      <link>https://ivorypawn.github.io/posts/sandbox/</link>
-      <pubDate>Wed, 21 Jun 2023 02:46:37 +0900</pubDate>
-      
-      <guid>https://ivorypawn.github.io/posts/sandbox/</guid>
-      <description>This is raw HTML
-$\hat u$
-$\bar u$
-$$ \begin{align} a &amp;amp;= b &amp;amp; c &amp;amp;= d &amp;amp; e &amp;amp;= f \\\ a&amp;rsquo; &amp;amp;= b&amp;rsquo; &amp;amp; c&amp;rsquo; &amp;amp;= d&amp;rsquo; &amp;amp; e&amp;rsquo; &amp;amp;= f&#39; \end{align} $$
-$$ \begin{align*} 1 &amp;amp;= 2\\\ 3 &amp;amp;= 4 \end{align*} $$
-$$ \hat u_0(x_k):=\left\{ \begin{align*} &amp;amp;g(\bar x_k), &amp;amp; x_k \in \partial \Omega_{\epsilon} \\\ &amp;amp;\hat u_0 (x_{k+1}), &amp;amp; \text{otherwise} \end{align*} \right. $$
-$$ \begin{array}{rl} \biggl\{ \frac{1}{g(x)} \biggr\}^{\prime} &amp;amp;=&amp;amp; \lim_{h \to 0}\frac{\frac{1}{g(x+h)}-\frac{1}{g(x)}}{h} \cr\cr &amp;amp;=&amp;amp; \lim_{h \to 0}\frac{g(x)-g(x+h)}{g(x) g(x+h) h} \cr\cr &amp;amp;=&amp;amp; -\frac{1}{ \bigl\{ g(x) \bigr\}^2} \lim_{h \to 0}\frac{g(x+h)-g(x)}{h} \cr\cr &amp;amp;=&amp;amp; -\frac{g^{\prime}(x)}{ \bigl\{g(x) \bigr\}^2} \end{array} $$</description>
-    </item>
-    
-    <item>
       <title>Algebraic Topology 勉強ノート #01</title>
       <link>https://ivorypawn.github.io/notes/algebraic-topology/01/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ivorypawn.github.io/notes/algebraic-topology/01/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Algebraic Topology 勉強ノート #02</title>
-      <link>https://ivorypawn.github.io/notes/algebraic-topology/02/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://ivorypawn.github.io/notes/algebraic-topology/02/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Algebraic Topology 勉強ノート #03</title>
-      <link>https://ivorypawn.github.io/notes/algebraic-topology/03/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://ivorypawn.github.io/notes/algebraic-topology/03/</guid>
-      <description></description>
+      <description>Vidit Nanda 先生の Computational Algebraic Topology で勉強したときのメモ． 複体 ホモトピー ホモロジー</description>
     </item>
     
     <item>
@@ -173,6 +158,15 @@ $$ \begin{array}{rl} \biggl\{ \frac{1}{g(x)} \biggr\}^{\prime} &amp;amp;=&amp;am
       
       <guid>https://ivorypawn.github.io/notes/monte-carlo-geometry-processing/</guid>
       <description>資料 Sawhney, R., &amp;amp; Crane, K. (2020). Monte Carlo Geometry Processing: A Grid-Free Approach to PDE-Based Methods on Volumetric Domains. ACM Trans. Graph., 39(4). Sawhney, R., Seyb, D., Jarosz, W., &amp;amp; Crane, K. (2022). Grid-free Monte Carlo for PDEs with spatially varying coefficients. ACM Transactions on Graphics (Proceedings of SIGGRAPH), 41(4). Jacobson, A., Baran, I., Popović, J., &amp;amp; Sorkine, O. (2011). Bounded</description>
+    </item>
+    
+    <item>
+      <title>Sandbox</title>
+      <link>https://ivorypawn.github.io/posts/sandbox/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ivorypawn.github.io/posts/sandbox/</guid>
+      <description>Markdown All in One (VSCode) Alt + S で打ち消し線 HTML This is raw HTML Diagram 1 2 3 4 1 2 3 4 1 2 3 4 1 2 3 4 1 2 3 4 1 2 3 4 Diagrams HUGOサイトでMermaid記法 $\LaTeX$ $$ \begin{align*} a &amp;amp;= b &amp;amp; c</description>
     </item>
     
     <item>

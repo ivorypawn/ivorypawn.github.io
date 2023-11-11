@@ -6,14 +6,32 @@
     <description>Recent content in Unity on HideOut</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Thu, 28 Sep 2023 05:01:17 +0900</lastBuildDate><atom:link href="https://ivorypawn.github.io/tags/unity/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 03 Nov 2023 22:18:01 +0900</lastBuildDate><atom:link href="https://ivorypawn.github.io/tags/unity/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Unity 勉強ノート #05</title>
+      <link>https://ivorypawn.github.io/notes/unity/05/</link>
+      <pubDate>Fri, 03 Nov 2023 22:18:01 +0900</pubDate>
+      
+      <guid>https://ivorypawn.github.io/notes/unity/05/</guid>
+      <description>雑に作る 2 引き続きシンプルなゲームを作っていく． CatEscape 避けゲー．ジェネレータスクリプトで Prefab を生成する． Input.GetKeyDown(KeyCode.LeftArrow) etc. Destroy(gameObject) gameObject が自身を指す 一時停止してヒエラルキ</description>
+    </item>
+    
+    <item>
+      <title>Unity 勉強ノート #04</title>
+      <link>https://ivorypawn.github.io/notes/unity/04/</link>
+      <pubDate>Thu, 26 Oct 2023 10:55:54 +0900</pubDate>
+      
+      <guid>https://ivorypawn.github.io/notes/unity/04/</guid>
+      <description>雑に作る とりあえず手を動かさないことには始まらない（ということをいつも忘れる）．資料 2. のゲームを順に作ってみる．スマホで動かす手順はスキップ</description>
+    </item>
+    
     <item>
       <title>Unity 勉強ノート #03</title>
       <link>https://ivorypawn.github.io/notes/unity/03/</link>
       <pubDate>Thu, 28 Sep 2023 05:01:17 +0900</pubDate>
       
       <guid>https://ivorypawn.github.io/notes/unity/03/</guid>
-      <description>おもに資料 1. 6 章以降を読んでいる．エフェクトや物理などすぐ使う予定のない機能はあとに回す．あと実地で必要になった知識のメモなど． レベル構築 ア</description>
+      <description>資料 1. 6 章以降． レベル構築 アウトドア環境 Terrain ツール インドア環境 shape geometry Blender などから 3D モデルをインポートすることもある． Material 任意のゲームオブジェクトはマ</description>
     </item>
     
     <item>
