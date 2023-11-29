@@ -25,12 +25,14 @@ tags: ["英語学習"]
 - [言語の部屋](https://www.youtube.com/@Gengo_No_Heya/featured) (Youtube)
   - [母音を理屈で理解する【音声学入門講座】](https://youtu.be/7905IhIa1oY?si=DJkZkHMeAzBAwdz7)
   - [子音を理屈で理解する【音声学入門講座】](https://youtu.be/1Bv1uMKqG7E?si=xvaIs7TYJs9-Chri)
+  - [Wをめぐる綴りと発音の歴史【warpはワープではなくウォープ】](https://youtu.be/abceONi0kp4?si=-Fgkwg7hQNRVmaT9)
 - [川原繁人の音声学入門（基礎編）](https://www.youtube.com/playlist?list=PLdrzcCNXDQp3a9qIryGOIJjqXy3OhRXWa)
   - [MRIで英語の母音を確認しよう](https://youtu.be/XDnBPvMO2Q4?si=D1W4InF0Lh1LRBLs)
   - [MRIで学ぶ調音点・調音法（例はすべて英語の発音だよ）](https://youtu.be/Av_-44zImMI?si=AzkrLPr2vAEoV7-O)
 - [The International Phonetic Alphabet (IPA)](https://www.cambridge.org/features/IPAchart/) (Cambridge)
 - [Help:IPA/English](https://en.wikipedia.org/wiki/Help:IPA/English) (Wikipedia)
 - [英語の発音記号45個を徹底解説！【イラスト＆音声つき】](https://eikaiwa.dmm.com/blog/learning-english/tips/phonetic-alphabets/)
+- [the rtMRI IPA chart (John Esling)](https://sail.usc.edu/span/rtmri_ipa/je_2015.html)
 
 ## 母音
 母音は舌や唇によって空気の流れを邪魔せず，声帯の振動によって出す．英語・日本語の母音は，口蓋帆を上げ鼻孔をふさいで発音する（フランス語などには鼻に抜ける鼻母音もある）．
