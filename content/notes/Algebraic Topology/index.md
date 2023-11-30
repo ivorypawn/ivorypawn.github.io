@@ -1,5 +1,5 @@
 ---
-title: "Algebraic Topology 勉強ノート #01"
+title: "Algebraic Topology 勉強ノート"
 draft: true
 tags: ["Algebraic Topology"]
 ---

@@ -80,11 +80,11 @@
     </item>
     
     <item>
-      <title>Algebraic Topology 勉強ノート #01</title>
-      <link>https://ivorypawn.github.io/notes/algebraic-topology/01/</link>
+      <title>Algebraic Topology 勉強ノート</title>
+      <link>https://ivorypawn.github.io/notes/algebraic-topology/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ivorypawn.github.io/notes/algebraic-topology/01/</guid>
+      <guid>https://ivorypawn.github.io/notes/algebraic-topology/</guid>
       <description>Vidit Nanda 先生の Computational Algebraic Topology で勉強したときのメモ． 複体 ホモトピー ホモロジー</description>
     </item>
     
@@ -130,7 +130,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ivorypawn.github.io/notes/python/</guid>
-      <description>Windows 10 の仮想環境構築まわりは，しばらく使わないと忘れがちなのでメモ．</description>
+      <description>Windows 10 で Python の仮想環境を構築した．しばらく使わないと忘れがちなのでメモ．</description>
     </item>
     
     <item>
@@ -193,7 +193,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ivorypawn.github.io/notes/optimal-transport/</guid>
-      <description></description>
+      <description>資料 輸送問題を近似的に行列計算で解く（機械学習への応用つき）</description>
     </item>
     
     <item>
