@@ -15,5 +15,41 @@
       <description>概要 画像に逐次的にノイズを付加しランダムな画像を生成するプロセスを考える 上記の逆過程を推定することで、ランダムな画像から何らかのそれっぽい画</description>
     </item>
     
+    <item>
+      <title>GBDT</title>
+      <link>https://ivorypawn.github.io/notes/gbdt/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ivorypawn.github.io/notes/gbdt/</guid>
+      <description>概要 GBDT(Gradient Boosting Decision Tree; 勾配ブースティング決定木) は，決定木によるアンサンブル学習の一種．Kaggle で頻用されている． GBDT は決定木の列の推定を統合（bo</description>
+    </item>
+    
+    <item>
+      <title>Python 仮想環境に関する覚書</title>
+      <link>https://ivorypawn.github.io/notes/python/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ivorypawn.github.io/notes/python/</guid>
+      <description>Windows 10 で Python の仮想環境を構築した．しばらく使わないと忘れがちなのでメモ．</description>
+    </item>
+    
+    <item>
+      <title>ベイズ推定覚書</title>
+      <link>https://ivorypawn.github.io/notes/bayes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ivorypawn.github.io/notes/bayes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>最適輸送問題覚書</title>
+      <link>https://ivorypawn.github.io/notes/optimal-transport/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ivorypawn.github.io/notes/optimal-transport/</guid>
+      <description>資料 基本的なところは佐藤竜馬先生の『最適輸送の理論とアルゴリズム』で勉強している．読んだ資料や活用事例，参加したオンライン勉強会へのリンクな</description>
+    </item>
+    
   </channel>
 </rss>

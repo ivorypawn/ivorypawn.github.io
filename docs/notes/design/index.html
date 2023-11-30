@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <title>デザインに関する覚書 | HideOut</title>
-<meta name="keywords" content="">
+<meta name="keywords" content="UI">
 <meta name="description" content="UI/UX，資料づくり，プレゼン本番で心がけることなどの個人用まとめ． UI 制作 これだけ守れば見やすくなるデザインの基礎 1 / 2 / 3 神資料．とくに">
 <meta name="author" content="">
 <link rel="canonical" href="https://ivorypawn.github.io/notes/design/">
@@ -111,7 +111,7 @@
   "name": "デザインに関する覚書",
   "description": "UI/UX，資料づくり，プレゼン本番で心がけることなどの個人用まとめ． UI 制作 これだけ守れば見やすくなるデザインの基礎 1 / 2 / 3 神資料．とくに",
   "keywords": [
-    
+    "UI"
   ],
   "articleBody": "UI/UX，資料づくり，プレゼン本番で心がけることなどの個人用まとめ．\nUI 制作 これだけ守れば見やすくなるデザインの基礎 1 / 2 / 3 神資料．とくに 1 の RGB に関する解説は蒙が啓かれた 【個人開発・ポートフォリオに】簡単にいい感じのデザインにできるサービスまとめ Sociomedia ヒューマンインターフェース ガイドライン 色覚多様性 統計上，男性の 5% と女性の ~1% は同輝度の赤と緑の見分けがつかない（P 型色覚）．現実には明度の違いで見分けられているケースも多いと思うが，そうであっても赤と緑が素朴に使われている UI を見ると，「えっ大丈夫なの」とはなる．\n異なる色覚の持ち主から UI がどう見えているかは，Chrome DevTools などを使えば確認できる．\n色覚多様性(色覚異常)の見え方を Chrome DevTools でシミュレーションする WYSIWYG について WYSIWYG は What You See Is What You Get のアクロニムで，すべての操作を直感的に可能にするような UI のこと．代表例は PowerPoint．\nWYSIWYG の宿命として「ボタン多すぎ問題」があり，ごく基本的な操作ですらメニューからいちいちボタンを探してマウスポチポチさせられがち．実際これが煩わしくて（ほかにも理由は色々あるが），私はパワポはなるべく使わない．\n【まだパワポ！？】Markdownから爆速スライド作成【パワポが許されるのは小学生までだよね】 マッキンゼーの『なぜ今、日本に「デザイン」が必要なのか』によれば，\nWIPO (World Intellectual Property Organization、世界知的所有権機関) が公表している 2021 年のグローバルイノベーションインデックスでは、日本は 130 カ国中 13 位に止まっている 。日本製品は全般的に高品質であるというイメージが定着しているものの、時に、不必要な機能を多く備え、オーバースペックな場合がある。日本のメーカーは、他のグローバルな競合企業と比較して、変化への適応にも後れを取っている。\nとのこと．ボタンではなく不必要な機能が多い場合は，UI だけでなんとかするよりモジュールを分ける戦略も検討したい．\nなおスライド資料作成の文脈で言えば，個人的には Marp をいちばん使っている．UI/UX のシンプルさと出力の美しさ，少しデザインを凝りたくなったときに必要な手間のバランスがとてもよい．バージョン管理が容易な点や，$\\LaTeX$ や HTML が使える点も嬉しい．もっと流行ってほしい．\nMisc テキストの敬体と常体はなるべく統一する テキストの用言止めと体言止めをなるべく統一する e.g.「～を削除」／「～を削除する」 データ可視化 Nussbaumer Knaflic, C. (2015). Storytelling with data (C. N. Knaflic, Ed.). John Wiley \u0026 Sons. 神資料２．以前は上記リンクからダウンロードできたが，いまはどうか分からない （邦題の『Google 流 資料作成術』はウケ狙いが過ぎる印象で，一部の邦訳も微妙だった） Stanford CS course on data visualization techniques (Winter 2020) 可視化や統計でデータに『恣意的なストーリーを語らせる』16の闇の魔術【bad charts】 OpenCVでのデモの見栄えを工夫したまとめ(ディープラーニング系) フォント 基本的に UD（ユニバーサルデザイン）フォントを使うべき．読字に困難のあるロービジョンやディスレクシアの負担を軽減できる．\nユニバーサルデザインを意識したスライドづくりのポイント③「UDフォントの使い方」 が分かりやすかった．ユニバーサルデザイン一般を学ぶ上で，菊池先生のほかの note も非常に勉強になる．\nUD デジタル教科書体 Windows にデフォルトで入っている UD フォント．アカデミアの人がつくる資料で比較的よく見かける印象．\n文字詰めに関して以下の 3 種がある：\nN: 等幅 NP: 英数字がプロポーショナル NK: 英数字＋かな文字がプロポーショナル MORISAWA BIZ UD 教科書体よりビジネス向けのフォント．\nフォントが大好物な人に朗報🎉 MORISAWA BIZ UDゴシックとUD明朝がオープンソースになったぞ！！ オープンソースになったため，ほかのフォントと自在に組み合わせられる．私はコーディングに JetBrains Mono と合成した UDEV Gothic を使っている．\nUDEV Gothic を使っていて個人的に嬉しいのはリガチャの存在で，例えば \u003c= が ≼ になる．ただし一部のリガチャは，環境によっては効かなかったりした．\n話しかた 非エンジニアサイドに技術的負債や設計を説明するノウハウ David Tong, How to Make Sure Your Talk Doesn’t Suck 研究発表は【道案内ゲーム】- 聞き手を迷子にさせないための９ルール ",
   "wordCount" : "1708",
@@ -315,6 +315,7 @@
 
   <footer class="post-footer">
     <ul class="post-tags">
+      <li><a href="https://ivorypawn.github.io/tags/ui/">UI</a></li>
     </ul>
 <nav class="paginav">
   <a class="prev" href="https://ivorypawn.github.io/notes/bayes/">

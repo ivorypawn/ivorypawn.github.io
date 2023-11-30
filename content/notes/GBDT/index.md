@@ -1,6 +1,7 @@
 ---
 title: "GBDT"
 draft: false
+tags: ["論文読み", "Machine Learning"]
 ---
 ## 概要
 GBDT(Gradient Boosting Decision Tree; 勾配ブースティング決定木) は，決定木によるアンサンブル学習の一種．Kaggle で頻用されている．
