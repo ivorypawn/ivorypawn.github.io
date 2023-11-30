@@ -205,5 +205,14 @@
       <description>前置き 将棋の動画を収録する前から，英語の発音を矯正したいとは思っていた．最近引っ越した結果，近所で海外の旅行客を助ける機会が増えて，想像以上</description>
     </item>
     
+    <item>
+      <title>連想コンテナ覚書 (C&#43;&#43;)</title>
+      <link>https://ivorypawn.github.io/notes/map/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ivorypawn.github.io/notes/map/</guid>
+      <description>std::unordered_map や boost::flat_map などのハッシュマップはほぼ $O(1)$ で探索でき，赤黒木の std::map に比べて探索も走査も速いとされている． [C++] STLの型の使い分け std::mapを線形探</description>
+    </item>
+    
   </channel>
 </rss>

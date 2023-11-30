@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ja" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>連想コンテナ覚書 (C&#43;&#43;) | HideOut</title>
+<meta name="keywords" content="Data Sturucture">
+<meta name="description" content="std::unordered_map や boost::flat_map などのハッシュマップはほぼ $O(1)$ で探索でき，赤黒木の std::map に比べて探索も走査も速いとされている． [C&#43;&#43;] STLの型の使い分け std::mapを線形探">
+<meta name="author" content="">
+<link rel="canonical" href="https://ivorypawn.github.io/notes/map/">
+<link crossorigin="anonymous" href="https://ivorypawn.github.io/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://ivorypawn.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://ivorypawn.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://ivorypawn.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://ivorypawn.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://ivorypawn.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css" integrity="sha384-KiWOvVjnN8qwAZbuQyWDIbfCLFhLXNETzBQjA/92pIowpC0d2O3nppDGQVgwd2nB" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js" integrity="sha384-0fdwu/T/EQMsQlrHCCHoH10pkPLlKA1jL5dFyUOvB3lfeT2540/2g6YgSi2BL14p" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          
+          
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: false},
+              {left: '\\[', right: '\\]', display: true}
+          ],
+          
+          throwOnError : false
+        });
+    });
+</script>
+
+
+
+
+<style>
+    @media screen and (min-width: 769px) {
+         
+        .post-content input[type="checkbox"]:checked ~ label > img {
+            transform: scale(1.6);
+            cursor: zoom-out;
+            position: relative;
+            z-index: 999;
+        }
+
+        .post-content img.zoomCheck {
+            transition: transform 0.15s ease;
+            z-index: 999;
+            cursor: zoom-in;
+        }
+    }
+</style>
+
+
+<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+<meta property="og:title" content="連想コンテナ覚書 (C&#43;&#43;)" />
+<meta property="og:description" content="std::unordered_map や boost::flat_map などのハッシュマップはほぼ $O(1)$ で探索でき，赤黒木の std::map に比べて探索も走査も速いとされている． [C&#43;&#43;] STLの型の使い分け std::mapを線形探" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ivorypawn.github.io/notes/map/" /><meta property="article:section" content="notes" />
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="連想コンテナ覚書 (C&#43;&#43;)"/>
+<meta name="twitter:description" content="std::unordered_map や boost::flat_map などのハッシュマップはほぼ $O(1)$ で探索でき，赤黒木の std::map に比べて探索も走査も速いとされている． [C&#43;&#43;] STLの型の使い分け std::mapを線形探"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Notes",
+      "item": "https://ivorypawn.github.io/notes/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "連想コンテナ覚書 (C++)",
+      "item": "https://ivorypawn.github.io/notes/map/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "連想コンテナ覚書 (C++)",
+  "name": "連想コンテナ覚書 (C\u002b\u002b)",
+  "description": "std::unordered_map や boost::flat_map などのハッシュマップはほぼ $O(1)$ で探索でき，赤黒木の std::map に比べて探索も走査も速いとされている． [C++] STLの型の使い分け std::mapを線形探",
+  "keywords": [
+    "Data Sturucture"
+  ],
+  "articleBody": "std::unordered_map や boost::flat_map などのハッシュマップはほぼ $O(1)$ で探索でき，赤黒木の std::map に比べて探索も走査も速いとされている．\n[C++] STLの型の使い分け std::mapを線形探索してはいけない100の理由 mapとunordered_mapのアイテム全走査の比較とmapの存在意義について考える また unordered_map と map の使用は似ており，置換すること自体はさほど難しくない．\nでは常に map の代わりに unordered_map を使えばいいのかというと，いろいろと問題がある．\nまず map は半順序さえ定義しておけば任意のユーザー定義型をキーに使えるが，unordered_map は std::hash の特殊化などが必要になる．\npairをキーにしたstd::unordered_mapを手軽に使えるようにする また要素数が少ないときは unordered_map のほうが定数倍が大きく，遅くなることがある．実際，適当な競プロで比較実験したところ，実行時間にはほとんど差がなかった．入力が大きい問題であっても，重複を削除したあとの要素数がさほどでもなく，定数倍の影響が効く可能性がある．競プロではとりあえず map で書いておき，TLE 境界例が出たときだけ考慮すればよいと思う．\nさらに VC++ では以下のような罠が存在した．\nVC++のunordered_set/unordered_mapが遅い件 仮に map を unordered_map に置換する場合，動作テストだけでなくベンチマークが必須．\nなおコンテナの検索が不要で，単に（ソートされた）ユニークなリストが欲しいだけであれば，std::vector + std::sort + std::unique のほうが遥かに高速である．\nコンテナへの挿入の速度について std::sortとstd::uniqueでstd::vectorの重複要素を削除する ハッシュテーブル一般については私はほとんど理解していないが，unordered_map より高速なハッシュマップはいくつもあるとのこと．\ngoogle::dense_hash_mapを使う 高速なハッシュテーブルを設計する 私が書いた最速のハッシュテーブル – PART 1 必要に応じて勉強したい．\n",
+  "wordCount" : "820",
+  "inLanguage": "ja",
+  "datePublished": "0001-01-01T00:00:00Z",
+  "dateModified": "0001-01-01T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://ivorypawn.github.io/notes/map/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "HideOut",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ivorypawn.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class=" dark" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://ivorypawn.github.io/" accesskey="h" title="HideOut (Alt + H)">HideOut</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://ivorypawn.github.io/posts/" title="posts">
+                    <span>posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ivorypawn.github.io/notes/" title="notes">
+                    <span>notes</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ivorypawn.github.io/tags/" title="tags">
+                    <span>tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      連想コンテナ覚書 (C&#43;&#43;)<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>
+    </h1>
+    <div class="post-meta">
+
+</div>
+  </header>
+
+  
+
+
+
+
+ 
+  <div class="post-content"><p><code>std::unordered_map</code> や <code>boost::flat_map</code> などのハッシュマップはほぼ $O(1)$ で探索でき，赤黒木の <code>std::map</code> に比べて探索も走査も速いとされている．</p>
+<ul>
+<li><a href="https://qiita.com/h_hiro_/items/a83a8fd2391d4a3f0e1c">[C++] STLの型の使い分け</a></li>
+<li><a href="https://www.slideshare.net/kikairoya/map-17091504">std::mapを線形探索してはいけない100の理由</a></li>
+<li><a href="https://sleepy-yoshi.hatenablog.com/entry/20121111/p1">mapとunordered_mapのアイテム全走査の比較とmapの存在意義について考える</a></li>
+</ul>
+<p>また <code>unordered_map</code> と <code>map</code> の使用は似ており，置換すること自体はさほど難しくない．</p>
+<p>では常に <code>map</code> の代わりに <code>unordered_map</code> を使えばいいのかというと，いろいろと問題がある．</p>
+<p>まず <code>map</code> は半順序さえ定義しておけば任意のユーザー定義型をキーに使えるが，<code>unordered_map</code> は <code>std::hash</code> の特殊化などが必要になる．</p>
+<ul>
+<li><a href="https://qiita.com/hamamu/items/4d081751b69aa3bb3557">pairをキーにしたstd::unordered_mapを手軽に使えるようにする</a></li>
+</ul>
+<p>また要素数が少ないときは <code>unordered_map</code> のほうが定数倍が大きく，遅くなることがある．実際，適当な競プロで比較実験したところ，実行時間にはほとんど差がなかった．入力が大きい問題であっても，重複を削除したあとの要素数がさほどでもなく，定数倍の影響が効く可能性がある．競プロではとりあえず <code>map</code> で書いておき，TLE 境界例が出たときだけ考慮すればよいと思う．</p>
+<p>さらに VC++ では以下のような罠が存在した．</p>
+<ul>
+<li><a href="https://xoinu.hatenablog.com/entry/2016/12/10/092748">VC++のunordered_set/unordered_mapが遅い件</a></li>
+</ul>
+<p>仮に <code>map</code> を <code>unordered_map</code> に置換する場合，動作テストだけでなくベンチマークが必須．</p>
+<p>なおコンテナの検索が不要で，単に（ソートされた）ユニークなリストが欲しいだけであれば，<code>std::vector</code> + <code>std::sort</code> + <code>std::unique</code> のほうが遥かに高速である．</p>
+<ul>
+<li><a href="https://xoinu.hatenablog.com/entry/2014/08/14/105740">コンテナへの挿入の速度について</a></li>
+<li><a href="https://qiita.com/ysk24ok/items/30ae72f4f1060b088588">std::sortとstd::uniqueでstd::vectorの重複要素を削除する</a></li>
+</ul>
+<p>ハッシュテーブル一般については私はほとんど理解していないが，<code>unordered_map</code> より高速なハッシュマップはいくつもあるとのこと．</p>
+<ul>
+<li><a href="https://dfukunaga.hatenablog.com/entry/2018/04/28/104242">google::dense_hash_mapを使う</a></li>
+<li><a href="https://postd.cc/designing-a-fast-hash-table/">高速なハッシュテーブルを設計する</a></li>
+<li><a href="https://postd.cc/i-wrote-the-fastest-hashtable-1/">私が書いた最速のハッシュテーブル – PART 1</a></li>
+</ul>
+<p>必要に応じて勉強したい．</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://ivorypawn.github.io/tags/data-sturucture/">Data Sturucture</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="next" href="https://ivorypawn.github.io/notes/phonetics/">
+    <span class="title">Next »</span>
+    <br>
+    <span>発音に関する覚書</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="https://ivorypawn.github.io/">HideOut</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

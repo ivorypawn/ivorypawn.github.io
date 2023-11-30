@@ -15,5 +15,14 @@
       <description>概要 ～数十億の大規模データ上で、特定範囲の極値や頻度などが高速に求められる構造。 多次元への拡張も可能。 読んだやつ Francisco Claude and Gonzalo Navarro. The Wavelet Matrix. Proc. SPIRE&#39;12, pages 167-179. LNCS 7608</description>
     </item>
     
+    <item>
+      <title>連想コンテナ覚書 (C&#43;&#43;)</title>
+      <link>https://ivorypawn.github.io/notes/map/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ivorypawn.github.io/notes/map/</guid>
+      <description>std::unordered_map や boost::flat_map などのハッシュマップはほぼ $O(1)$ で探索でき，赤黒木の std::map に比べて探索も走査も速いとされている． [C++] STLの型の使い分け std::mapを線形探</description>
+    </item>
+    
   </channel>
 </rss>
