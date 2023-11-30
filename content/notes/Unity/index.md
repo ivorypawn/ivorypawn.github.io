@@ -1,5 +1,5 @@
 ---
-title: "Unity 覚書（随時追記）"
+title: "Unity 覚書"
 draft: true
 tags: ["Unity"]
 ---

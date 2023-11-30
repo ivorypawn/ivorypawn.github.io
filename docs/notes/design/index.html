@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="ja" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>デザインに関する覚書 | HideOut</title>
+<meta name="keywords" content="">
+<meta name="description" content="UI/UX，資料づくり，プレゼン本番で心がけることなどの個人用まとめ． UI 制作 これだけ守れば見やすくなるデザインの基礎 1 / 2 / 3 神資料．とくに">
+<meta name="author" content="">
+<link rel="canonical" href="https://ivorypawn.github.io/notes/design/">
+<link crossorigin="anonymous" href="https://ivorypawn.github.io/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://ivorypawn.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://ivorypawn.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://ivorypawn.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://ivorypawn.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://ivorypawn.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css" integrity="sha384-KiWOvVjnN8qwAZbuQyWDIbfCLFhLXNETzBQjA/92pIowpC0d2O3nppDGQVgwd2nB" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js" integrity="sha384-0fdwu/T/EQMsQlrHCCHoH10pkPLlKA1jL5dFyUOvB3lfeT2540/2g6YgSi2BL14p" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          
+          
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: false},
+              {left: '\\[', right: '\\]', display: true}
+          ],
+          
+          throwOnError : false
+        });
+    });
+</script>
+
+
+
+
+<style>
+    @media screen and (min-width: 769px) {
+         
+        .post-content input[type="checkbox"]:checked ~ label > img {
+            transform: scale(1.6);
+            cursor: zoom-out;
+            position: relative;
+            z-index: 999;
+        }
+
+        .post-content img.zoomCheck {
+            transition: transform 0.15s ease;
+            z-index: 999;
+            cursor: zoom-in;
+        }
+    }
+</style>
+
+
+<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+<meta property="og:title" content="デザインに関する覚書" />
+<meta property="og:description" content="UI/UX，資料づくり，プレゼン本番で心がけることなどの個人用まとめ． UI 制作 これだけ守れば見やすくなるデザインの基礎 1 / 2 / 3 神資料．とくに" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ivorypawn.github.io/notes/design/" /><meta property="article:section" content="notes" />
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="デザインに関する覚書"/>
+<meta name="twitter:description" content="UI/UX，資料づくり，プレゼン本番で心がけることなどの個人用まとめ． UI 制作 これだけ守れば見やすくなるデザインの基礎 1 / 2 / 3 神資料．とくに"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Notes",
+      "item": "https://ivorypawn.github.io/notes/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "デザインに関する覚書",
+      "item": "https://ivorypawn.github.io/notes/design/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "デザインに関する覚書",
+  "name": "デザインに関する覚書",
+  "description": "UI/UX，資料づくり，プレゼン本番で心がけることなどの個人用まとめ． UI 制作 これだけ守れば見やすくなるデザインの基礎 1 / 2 / 3 神資料．とくに",
+  "keywords": [
+    
+  ],
+  "articleBody": "UI/UX，資料づくり，プレゼン本番で心がけることなどの個人用まとめ．\nUI 制作 これだけ守れば見やすくなるデザインの基礎 1 / 2 / 3 神資料．とくに 1 の RGB に関する解説は蒙が啓かれた 【個人開発・ポートフォリオに】簡単にいい感じのデザインにできるサービスまとめ Sociomedia ヒューマンインターフェース ガイドライン 色覚多様性 統計上，男性の 5% と女性の ~1% は同輝度の赤と緑の見分けがつかない（P 型色覚）．現実には明度の違いで見分けられているケースも多いと思うが，そうであっても赤と緑が素朴に使われている UI を見ると，「えっ大丈夫なの」とはなる．\n異なる色覚の持ち主から UI がどう見えているかは，Chrome DevTools などを使えば確認できる．\n色覚多様性(色覚異常)の見え方を Chrome DevTools でシミュレーションする WYSIWYG について WYSIWYG は What You See Is What You Get のアクロニムで，すべての操作を直感的に可能にするような UI のこと．代表例は PowerPoint．\nWYSIWYG の宿命として「ボタン多すぎ問題」があり，ごく基本的な操作ですらメニューからいちいちボタンを探してマウスポチポチさせられがち．実際これが煩わしくて（ほかにも理由は色々あるが），私はパワポはなるべく使わない．\n【まだパワポ！？】Markdownから爆速スライド作成【パワポが許されるのは小学生までだよね】 マッキンゼーの『なぜ今、日本に「デザイン」が必要なのか』によれば，\nWIPO (World Intellectual Property Organization、世界知的所有権機関) が公表している 2021 年のグローバルイノベーションインデックスでは、日本は 130 カ国中 13 位に止まっている 。日本製品は全般的に高品質であるというイメージが定着しているものの、時に、不必要な機能を多く備え、オーバースペックな場合がある。日本のメーカーは、他のグローバルな競合企業と比較して、変化への適応にも後れを取っている。\nとのこと．ボタンではなく不必要な機能が多い場合は，UI だけでなんとかするよりモジュールを分ける戦略も検討したい．\nなおスライド資料作成の文脈で言えば，個人的には Marp をいちばん使っている．UI/UX のシンプルさと出力の美しさ，少しデザインを凝りたくなったときに必要な手間のバランスがとてもよい．バージョン管理が容易な点や，$\\LaTeX$ や HTML が使える点も嬉しい．もっと流行ってほしい．\nMisc テキストの敬体と常体はなるべく統一する テキストの用言止めと体言止めをなるべく統一する e.g.「～を削除」／「～を削除する」 データ可視化 Nussbaumer Knaflic, C. (2015). Storytelling with data (C. N. Knaflic, Ed.). John Wiley \u0026 Sons. 神資料２．以前は上記リンクからダウンロードできたが，いまはどうか分からない （邦題の『Google 流 資料作成術』はウケ狙いが過ぎる印象で，一部の邦訳も微妙だった） Stanford CS course on data visualization techniques (Winter 2020) 可視化や統計でデータに『恣意的なストーリーを語らせる』16の闇の魔術【bad charts】 OpenCVでのデモの見栄えを工夫したまとめ(ディープラーニング系) フォント 基本的に UD（ユニバーサルデザイン）フォントを使うべき．読字に困難のあるロービジョンやディスレクシアの負担を軽減できる．\nユニバーサルデザインを意識したスライドづくりのポイント③「UDフォントの使い方」 が分かりやすかった．ユニバーサルデザイン一般を学ぶ上で，菊池先生のほかの note も非常に勉強になる．\nUD デジタル教科書体 Windows にデフォルトで入っている UD フォント．アカデミアの人がつくる資料で比較的よく見かける印象．\n文字詰めに関して以下の 3 種がある：\nN: 等幅 NP: 英数字がプロポーショナル NK: 英数字＋かな文字がプロポーショナル MORISAWA BIZ UD 教科書体よりビジネス向けのフォント．\nフォントが大好物な人に朗報🎉 MORISAWA BIZ UDゴシックとUD明朝がオープンソースになったぞ！！ オープンソースになったため，ほかのフォントと自在に組み合わせられる．私はコーディングに JetBrains Mono と合成した UDEV Gothic を使っている．\nUDEV Gothic を使っていて個人的に嬉しいのはリガチャの存在で，例えば \u003c= が ≼ になる．ただし一部のリガチャは，環境によっては効かなかったりした．\n話しかた 非エンジニアサイドに技術的負債や設計を説明するノウハウ David Tong, How to Make Sure Your Talk Doesn’t Suck 研究発表は【道案内ゲーム】- 聞き手を迷子にさせないための９ルール ",
+  "wordCount" : "1708",
+  "inLanguage": "ja",
+  "datePublished": "0001-01-01T00:00:00Z",
+  "dateModified": "0001-01-01T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://ivorypawn.github.io/notes/design/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "HideOut",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ivorypawn.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class=" dark" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://ivorypawn.github.io/" accesskey="h" title="HideOut (Alt + H)">HideOut</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://ivorypawn.github.io/posts/" title="posts">
+                    <span>posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ivorypawn.github.io/notes/" title="notes">
+                    <span>notes</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ivorypawn.github.io/tags/" title="tags">
+                    <span>tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      デザインに関する覚書<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>
+    </h1>
+    <div class="post-meta">
+
+</div>
+  </header>
+
+  
+<div class="toc side left">
+    <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#ui-制作">UI 制作</a>
+      <ul>
+        <li><a href="#色覚多様性">色覚多様性</a></li>
+        <li><a href="#wysiwyg-について">WYSIWYG について</a></li>
+        <li><a href="#misc">Misc</a></li>
+      </ul>
+    </li>
+    <li><a href="#データ可視化">データ可視化</a></li>
+    <li><a href="#フォント">フォント</a>
+      <ul>
+        <li><a href="#ud-デジタル教科書体">UD デジタル教科書体</a></li>
+        <li><a href="#morisawa-biz-ud">MORISAWA BIZ UD</a></li>
+      </ul>
+    </li>
+    <li><a href="#話しかた">話しかた</a></li>
+  </ul>
+</nav>
+        </div>
+    </details>
+</div>
+
+
+
+
+ 
+  <div class="post-content"><p>UI/UX，資料づくり，プレゼン本番で心がけることなどの個人用まとめ．</p>
+<h2 id="ui-制作">UI 制作<a hidden class="anchor" aria-hidden="true" href="#ui-制作">#</a></h2>
+<ul>
+<li><strong>これだけ守れば見やすくなるデザインの基礎</strong> <a href="https://speakerdeck.com/kinakobooster/koredakeshou-rebajian-yasukunarudezainfalseji-chu">1</a> / <a href="https://speakerdeck.com/kinakobooster/uidezainwohazimeyou">2</a> / <a href="https://speakerdeck.com/kinakobooster/jin-ri-karadekiruuxdezain">3</a>
+<ul>
+<li>神資料．とくに 1 の RGB に関する解説は蒙が啓かれた</li>
+</ul>
+</li>
+<li><a href="https://qiita.com/aiandrox/items/4196c8f5b564d29fdce7">【個人開発・ポートフォリオに】簡単にいい感じのデザインにできるサービスまとめ</a></li>
+<li><a href="https://www.sociomedia.co.jp/category/shig">Sociomedia ヒューマンインターフェース ガイドライン</a></li>
+</ul>
+<h3 id="色覚多様性">色覚多様性<a hidden class="anchor" aria-hidden="true" href="#色覚多様性">#</a></h3>
+<p>統計上，男性の 5% と女性の ~1% は同輝度の赤と緑の見分けがつかない（P 型色覚）．現実には明度の違いで見分けられているケースも多いと思うが，そうであっても赤と緑が素朴に使われている UI を見ると，「えっ大丈夫なの」とはなる．</p>
+<p>異なる色覚の持ち主から UI がどう見えているかは，Chrome DevTools などを使えば確認できる．</p>
+<ul>
+<li><a href="https://dev.classmethod.jp/articles/google-chrome-devtools-vision-deficiencies/">色覚多様性(色覚異常)の見え方を Chrome DevTools でシミュレーションする</a></li>
+</ul>
+<h3 id="wysiwyg-について">WYSIWYG について<a hidden class="anchor" aria-hidden="true" href="#wysiwyg-について">#</a></h3>
+<p>WYSIWYG は <em>What You See Is What You Get</em> のアクロニムで，すべての操作を直感的に可能にするような UI のこと．代表例は PowerPoint．</p>
+<p>WYSIWYG の宿命として「ボタン多すぎ問題」があり，ごく基本的な操作ですらメニューからいちいちボタンを探してマウスポチポチさせられがち．実際これが煩わしくて（ほかにも理由は色々あるが），私はパワポはなるべく使わない．</p>
+<ul>
+<li><a href="https://trap.jp/post/1341/">【まだパワポ！？】Markdownから爆速スライド作成【パワポが許されるのは小学生までだよね】</a></li>
+</ul>
+<p>マッキンゼーの『<a href="https://www.mckinsey.com/jp/our-insights/japans-design-imperative">なぜ今、日本に「デザイン」が必要なのか</a>』によれば，</p>
+<blockquote>
+<p>WIPO (World Intellectual Property Organization、世界知的所有権機関) が公表している 2021 年のグローバルイノベーションインデックスでは、日本は 130 カ国中 13 位に止まっている 。日本製品は全般的に高品質であるというイメージが定着しているものの、時に、不必要な機能を多く備え、オーバースペックな場合がある。日本のメーカーは、他のグローバルな競合企業と比較して、変化への適応にも後れを取っている。</p>
+</blockquote>
+<p>とのこと．ボタンではなく不必要な機能が多い場合は，UI だけでなんとかするよりモジュールを分ける戦略も検討したい．</p>
+<p>なおスライド資料作成の文脈で言えば，個人的には <a href="https://github.com/marp-team/marpit">Marp</a> をいちばん使っている．UI/UX のシンプルさと出力の美しさ，少しデザインを凝りたくなったときに必要な手間のバランスがとてもよい．バージョン管理が容易な点や，$\LaTeX$ や HTML が使える点も嬉しい．もっと流行ってほしい．</p>
+<h3 id="misc">Misc<a hidden class="anchor" aria-hidden="true" href="#misc">#</a></h3>
+<ul>
+<li>テキストの敬体と常体はなるべく統一する</li>
+<li>テキストの用言止めと体言止めをなるべく統一する
+<ul>
+<li>e.g.「～を削除」／「～を削除する」</li>
+</ul>
+</li>
+</ul>
+<h2 id="データ可視化">データ可視化<a hidden class="anchor" aria-hidden="true" href="#データ可視化">#</a></h2>
+<ul>
+<li>Nussbaumer Knaflic, C. (2015). <a href="http://www.storytellingwithdata.com/"><strong>Storytelling with data</strong></a> (C. N. Knaflic, Ed.). John Wiley &amp; Sons.
+<ul>
+<li>神資料２．以前は上記リンクからダウンロードできたが，いまはどうか分からない</li>
+<li>（邦題の『Google 流 資料作成術』はウケ狙いが過ぎる印象で，一部の邦訳も微妙だった）</li>
+</ul>
+</li>
+<li><a href="https://magrawala.github.io/cs448b-wi20/">Stanford CS course on data visualization techniques (Winter 2020)</a></li>
+<li><a href="https://qiita.com/Ringa_hyj/items/a938ec99d0fde052837e">可視化や統計でデータに『恣意的なストーリーを語らせる』16の闇の魔術【bad charts】</a></li>
+<li><a href="https://qiita.com/Kazuhito/items/f8f21956436dc410f8d2">OpenCVでのデモの見栄えを工夫したまとめ(ディープラーニング系)</a></li>
+</ul>
+<h2 id="フォント">フォント<a hidden class="anchor" aria-hidden="true" href="#フォント">#</a></h2>
+<p>基本的に UD（ユニバーサルデザイン）フォントを使うべき．読字に困難のあるロービジョンやディスレクシアの負担を軽減できる．</p>
+<p><a href="https://note.com/tep_kikuchi/n/n43ce66c33870">ユニバーサルデザインを意識したスライドづくりのポイント③「UDフォントの使い方」</a> が分かりやすかった．ユニバーサルデザイン一般を学ぶ上で，菊池先生のほかの note も非常に勉強になる．</p>
+<h3 id="ud-デジタル教科書体">UD デジタル教科書体<a hidden class="anchor" aria-hidden="true" href="#ud-デジタル教科書体">#</a></h3>
+<p>Windows にデフォルトで入っている UD フォント．アカデミアの人がつくる資料で比較的よく見かける印象．</p>
+<p>文字詰めに関して以下の 3 種がある：</p>
+<ul>
+<li>N: 等幅</li>
+<li>NP: 英数字がプロポーショナル</li>
+<li>NK: 英数字＋かな文字がプロポーショナル</li>
+</ul>
+<h3 id="morisawa-biz-ud">MORISAWA BIZ UD<a hidden class="anchor" aria-hidden="true" href="#morisawa-biz-ud">#</a></h3>
+<p>教科書体よりビジネス向けのフォント．</p>
+<ul>
+<li><a href="https://coliss.com/articles/build-websites/operation/work/googlefonts-morisawa-biz-ud-gothic-and-mincho.html">フォントが大好物な人に朗報🎉 MORISAWA BIZ UDゴシックとUD明朝がオープンソースになったぞ！！</a></li>
+</ul>
+<p>オープンソースになったため，ほかのフォントと自在に組み合わせられる．私はコーディングに JetBrains Mono と合成した <a href="https://github.com/yuru7/udev-gothic/">UDEV Gothic</a> を使っている．</p>
+<p>UDEV Gothic を使っていて個人的に嬉しいのはリガチャの存在で，例えば <code>&lt;=</code> が <code>≼</code> になる．ただし一部のリガチャは，環境によっては効かなかったりした．</p>
+<h2 id="話しかた">話しかた<a hidden class="anchor" aria-hidden="true" href="#話しかた">#</a></h2>
+<ul>
+<li><a href="https://qiita.com/MinoDriven/items/2d63dcaa92b50b049889">非エンジニアサイドに技術的負債や設計を説明するノウハウ</a></li>
+<li>David Tong, <a href="http://www.damtp.cam.ac.uk/user/tong/talks/talk.pdf">How to Make Sure Your Talk Doesn&rsquo;t Suck</a></li>
+<li><a href="https://note.com/hisashi_is/n/nab735f3cb4f8">研究発表は【道案内ゲーム】- 聞き手を迷子にさせないための９ルール</a></li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="https://ivorypawn.github.io/notes/bayes/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>ベイズ推定覚書</span>
+  </a>
+  <a class="next" href="https://ivorypawn.github.io/notes/wavelet-matrix/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Wavelet Matrix</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="https://ivorypawn.github.io/">HideOut</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

@@ -52,6 +52,15 @@
     </item>
     
     <item>
+      <title>Python 仮想環境に関する覚書</title>
+      <link>https://ivorypawn.github.io/notes/python/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ivorypawn.github.io/notes/python/</guid>
+      <description>Windows 10 の仮想環境構築まわりは，しばらく使わないと忘れがちなのでメモ．</description>
+    </item>
+    
+    <item>
       <title>Stochastic Poisson Surface Reconstruction</title>
       <link>https://ivorypawn.github.io/notes/stochastic-poisson-surface-reconstruction/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -61,7 +70,7 @@
     </item>
     
     <item>
-      <title>Unity 覚書（随時追記）</title>
+      <title>Unity 覚書</title>
       <link>https://ivorypawn.github.io/notes/unity/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -76,6 +85,33 @@
       
       <guid>https://ivorypawn.github.io/notes/wavelet-matrix/</guid>
       <description>概要 ～数十億の大規模データ上で、特定範囲の極値や頻度などが高速に求められる構造。 多次元への拡張も可能。 読んだやつ Francisco Claude and Gonzalo Navarro. The Wavelet Matrix. Proc. SPIRE&#39;12, pages 167-179. LNCS 7608</description>
+    </item>
+    
+    <item>
+      <title>デザインに関する覚書</title>
+      <link>https://ivorypawn.github.io/notes/design/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ivorypawn.github.io/notes/design/</guid>
+      <description>UI/UX，資料づくり，プレゼン本番で心がけることなどの個人用まとめ． UI 制作 これだけ守れば見やすくなるデザインの基礎 1 / 2 / 3 神資料．とくに</description>
+    </item>
+    
+    <item>
+      <title>ベイズ推定覚書</title>
+      <link>https://ivorypawn.github.io/notes/bayes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ivorypawn.github.io/notes/bayes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>最適輸送問題覚書</title>
+      <link>https://ivorypawn.github.io/notes/optimal-transport/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ivorypawn.github.io/notes/optimal-transport/</guid>
+      <description></description>
     </item>
     
     <item>
