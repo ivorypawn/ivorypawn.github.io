@@ -41,6 +41,8 @@ params:
       url: "https://twitter.com/Ivory_Pawn"
     - name: github
       url: "https://github.com/ivorypawn"
+    - name: youtube
+      url: "https://www.youtube.com/@hideoutshogi"
 
   assets:
     disableFingerprinting: true
