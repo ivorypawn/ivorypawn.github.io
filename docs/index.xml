@@ -6,7 +6,16 @@
     <description>Recent content on HideOut</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Tue, 07 Nov 2023 16:15:15 +0900</lastBuildDate><atom:link href="https://ivorypawn.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 17 Jan 2024 14:17:29 +0900</lastBuildDate><atom:link href="https://ivorypawn.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Neural Geometric Level of Detail</title>
+      <link>https://ivorypawn.github.io/notes/nglod/</link>
+      <pubDate>Wed, 17 Jan 2024 14:17:29 +0900</pubDate>
+      
+      <guid>https://ivorypawn.github.io/notes/nglod/</guid>
+      <description>資料 Towaki Takikawa, Joey Litalien, Kangxue Yin, Karsten Kreis, Charles Loop, Derek Nowrouzezahrai, Alec Jacobson, Morgan McGuire, &amp;amp; Sanja Fidler (2021). Neural Geometric Level of Detail: Real-time Rendering with Implicit 3D Shapes. Talk: Toronto Geometry Colloquium - Siddhartha Chaudhuri &amp;amp; Towaki Takikawa Towaki Takikawa, Or Perel, Clement Fuji Tsang, Charles Loop, Joey Litalien, Jonathan Tremblay, Sanja Fidler, &amp;amp; Maria Shugrina. (2022). Kaolin Wisp: A PyTorch Library and Engine for</description>
+    </item>
+    
     <item>
       <title>将棋 AI を利用した学習に関する雑感</title>
       <link>https://ivorypawn.github.io/posts/2023-11-07/</link>
