@@ -1,29 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Chess on HideOut</title>
     <link>https://ivorypawn.github.io/tags/chess/</link>
     <description>Recent content in Chess on HideOut</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Tue, 07 Nov 2023 16:15:15 +0900</lastBuildDate><atom:link href="https://ivorypawn.github.io/tags/chess/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 07 Nov 2023 16:15:15 +0900</lastBuildDate>
+    <atom:link href="https://ivorypawn.github.io/tags/chess/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>将棋 AI を利用した学習に関する雑感</title>
       <link>https://ivorypawn.github.io/posts/2023-11-07/</link>
       <pubDate>Tue, 07 Nov 2023 16:15:15 +0900</pubDate>
-      
       <guid>https://ivorypawn.github.io/posts/2023-11-07/</guid>
       <description>自身の敗局を並べるのは，有効な棋力向上の手段である．そこには主に 2 つの観点が存在する． どれが悪手で何が最善だったのか（客観的・演繹的） なぜ最</description>
     </item>
-    
     <item>
       <title>Japan Chess Classic 2023 レポート</title>
       <link>https://ivorypawn.github.io/posts/2023-07-22/</link>
       <pubDate>Sat, 22 Jul 2023 06:11:56 +0900</pubDate>
-      
       <guid>https://ivorypawn.github.io/posts/2023-07-22/</guid>
       <description>三宮で開催された ジャパンチェスクラシック 2023 に参加しました。印象に残った局（おもに敗局）を振り返ります。 7/15 14:30 R3 Kojima, S (IM, JPN, 2335) - Takahashi, H (JPN, 1930) 1-0 2 連勝後の</description>
     </item>
-    
   </channel>
 </rss>

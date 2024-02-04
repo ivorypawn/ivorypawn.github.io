@@ -1,155 +1,123 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Notes on HideOut</title>
     <link>https://ivorypawn.github.io/notes/</link>
     <description>Recent content in Notes on HideOut</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Wed, 17 Jan 2024 14:17:29 +0900</lastBuildDate><atom:link href="https://ivorypawn.github.io/notes/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Neural Geometric Level of Detail</title>
-      <link>https://ivorypawn.github.io/notes/nglod/</link>
-      <pubDate>Wed, 17 Jan 2024 14:17:29 +0900</pubDate>
-      
-      <guid>https://ivorypawn.github.io/notes/nglod/</guid>
-      <description>資料 Towaki Takikawa, Joey Litalien, Kangxue Yin, Karsten Kreis, Charles Loop, Derek Nowrouzezahrai, Alec Jacobson, Morgan McGuire, &amp;amp; Sanja Fidler (2021). Neural Geometric Level of Detail: Real-time Rendering with Implicit 3D Shapes. Talk: Toronto Geometry Colloquium - Siddhartha Chaudhuri &amp;amp; Towaki Takikawa Towaki Takikawa, Or Perel, Clement Fuji Tsang, Charles Loop, Joey Litalien, Jonathan Tremblay, Sanja Fidler, &amp;amp; Maria Shugrina. (2022). Kaolin Wisp: A PyTorch Library and Engine for</description>
-    </item>
-    
+    <atom:link href="https://ivorypawn.github.io/notes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Algebraic Topology 覚書</title>
       <link>https://ivorypawn.github.io/notes/algebraic-topology/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://ivorypawn.github.io/notes/algebraic-topology/</guid>
       <description>基礎の基礎から Vidit Nanda 先生の Computational Algebraic Topology で勉強したときのメモ． 複体 ホモトピー ホモロジー</description>
     </item>
-    
     <item>
       <title>Diffusion Model</title>
       <link>https://ivorypawn.github.io/notes/diffusion-model/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://ivorypawn.github.io/notes/diffusion-model/</guid>
       <description>概要 画像に逐次的にノイズを付加しランダムな画像を生成するプロセスを考える 上記の逆過程を推定することで、ランダムな画像から何らかのそれっぽい画</description>
     </item>
-    
     <item>
       <title>GBDT</title>
       <link>https://ivorypawn.github.io/notes/gbdt/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://ivorypawn.github.io/notes/gbdt/</guid>
       <description>概要 GBDT(Gradient Boosting Decision Tree; 勾配ブースティング決定木) は，決定木によるアンサンブル学習の一種．Kaggle で頻用されている． GBDT は決定木の列の推定を統合（bo</description>
     </item>
-    
     <item>
       <title>Intrinsic Triangulations</title>
       <link>https://ivorypawn.github.io/notes/intrinsic-triangulations/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://ivorypawn.github.io/notes/intrinsic-triangulations/</guid>
       <description>概要 離散微分幾何学者 Keenan Crane 先生のメッシュ 内在表現 関連論文を読んだまとめ。 3D モデルの（位相的）三角形分割 $T$ を、メッシュの頂点、エッジ、フェースの</description>
     </item>
-    
     <item>
       <title>Monte Carlo Geometry Processing</title>
       <link>https://ivorypawn.github.io/notes/monte-carlo-geometry-processing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://ivorypawn.github.io/notes/monte-carlo-geometry-processing/</guid>
       <description>資料 Sawhney, R., &amp;amp; Crane, K. (2020). Monte Carlo Geometry Processing: A Grid-Free Approach to PDE-Based Methods on Volumetric Domains. ACM Trans. Graph., 39(4). Sawhney, R., Seyb, D., Jarosz, W., &amp;amp; Crane, K. (2022). Grid-free Monte Carlo for PDEs with spatially varying coefficients. ACM Transactions on Graphics (Proceedings of SIGGRAPH), 41(4). Jacobson, A., Baran, I., Popović, J., &amp;amp; Sorkine, O. (2011). Bounded</description>
     </item>
-    
+    <item>
+      <title>Neural Geometric Level of Detail</title>
+      <link>https://ivorypawn.github.io/notes/nglod/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ivorypawn.github.io/notes/nglod/</guid>
+      <description>資料 Towaki Takikawa, Joey Litalien, Kangxue Yin, Karsten Kreis, Charles Loop, Derek Nowrouzezahrai, Alec Jacobson, Morgan McGuire, &amp;amp; Sanja Fidler (2021). Neural Geometric Level of Detail: Real-time Rendering with Implicit 3D Shapes. Talk: Toronto Geometry Colloquium - Siddhartha Chaudhuri &amp;amp; Towaki Takikawa Towaki Takikawa, Or Perel, Clement Fuji Tsang, Charles Loop, Joey Litalien, Jonathan Tremblay, Sanja Fidler, &amp;amp; Maria Shugrina. (2022). Kaolin Wisp: A PyTorch Library and Engine for</description>
+    </item>
     <item>
       <title>Python 仮想環境に関する覚書</title>
       <link>https://ivorypawn.github.io/notes/python/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://ivorypawn.github.io/notes/python/</guid>
       <description>Windows 10 で Python の仮想環境を構築した．しばらく使わないと忘れがちなのでメモ．</description>
     </item>
-    
     <item>
       <title>Stochastic Poisson Surface Reconstruction</title>
       <link>https://ivorypawn.github.io/notes/stochastic-poisson-surface-reconstruction/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://ivorypawn.github.io/notes/stochastic-poisson-surface-reconstruction/</guid>
       <description>概要 Silvia Sellán, &amp;amp; Alec Jacobson (2022). Stochastic Poisson Surface Reconstruction. ACM Transactions on Graphics. を読んだ． ベースとなる先行研究の Poisson Surface Reconstruction は，法線つき点群からメッシュを復元する手法．PSR は点群が</description>
     </item>
-    
     <item>
       <title>Unity 覚書</title>
       <link>https://ivorypawn.github.io/notes/unity/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://ivorypawn.github.io/notes/unity/</guid>
       <description>Unity 備忘録を集約．初歩的な内容が中心．環境は Windows 10 + Visual Studio 2022． 資料 適宜追加． オンライン Unity ユーザーマニュアル（日本語） C# プログラミング ガイド Unity</description>
     </item>
-    
     <item>
       <title>Wavelet Matrix</title>
       <link>https://ivorypawn.github.io/notes/wavelet-matrix/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://ivorypawn.github.io/notes/wavelet-matrix/</guid>
       <description>概要 ～数十億の大規模データ上で、特定範囲の極値や頻度などが高速に求められる構造。 多次元への拡張も可能。 読んだやつ Francisco Claude and Gonzalo Navarro. The Wavelet Matrix. Proc. SPIRE&#39;12, pages 167-179. LNCS 7608</description>
     </item>
-    
     <item>
       <title>デザインに関する覚書</title>
       <link>https://ivorypawn.github.io/notes/design/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://ivorypawn.github.io/notes/design/</guid>
       <description>UI/UX，資料づくり，プレゼン本番で心がけることなどの個人用まとめ． UI 制作 これだけ守れば見やすくなるデザインの基礎 1 / 2 / 3 神資料．とくに</description>
     </item>
-    
     <item>
       <title>ベイズ推定覚書</title>
       <link>https://ivorypawn.github.io/notes/bayes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://ivorypawn.github.io/notes/bayes/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>最適輸送問題覚書</title>
       <link>https://ivorypawn.github.io/notes/optimal-transport/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://ivorypawn.github.io/notes/optimal-transport/</guid>
       <description>資料 基本的なところは佐藤竜馬先生の『最適輸送の理論とアルゴリズム』で勉強している．読んだ資料や活用事例，参加したオンライン勉強会へのリンクな</description>
     </item>
-    
     <item>
       <title>将棋関連対訳例文仮安置所</title>
       <link>https://ivorypawn.github.io/notes/translation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://ivorypawn.github.io/notes/translation/</guid>
       <description>原稿作成時の備忘録．後述のツールで文法や表現をチェックしているが，私個人の英語能力が高くないため，おかしな表現を含んでいる可能性は高い． 英文</description>
     </item>
-    
     <item>
       <title>発音に関する覚書</title>
       <link>https://ivorypawn.github.io/notes/phonetics/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://ivorypawn.github.io/notes/phonetics/</guid>
       <description>前置き 将棋の動画を収録する前から，英語の発音を矯正したいとは思っていた．最近引っ越した結果，近所で海外の旅行客を助ける機会が増えて，想像以上</description>
     </item>
-    
     <item>
       <title>連想コンテナ覚書 (C&#43;&#43;)</title>
       <link>https://ivorypawn.github.io/notes/map/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://ivorypawn.github.io/notes/map/</guid>
       <description>std::unordered_map や boost::flat_map などのハッシュマップはほぼ $O(1)$ で探索でき，赤黒木の std::map に比べて探索も走査も速いとされている． [C++] STLの型の使い分け std::mapを線形探</description>
     </item>
-    
   </channel>
 </rss>

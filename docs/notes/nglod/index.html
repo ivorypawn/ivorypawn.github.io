@@ -75,8 +75,8 @@
 <meta property="og:description" content="資料 Towaki Takikawa, Joey Litalien, Kangxue Yin, Karsten Kreis, Charles Loop, Derek Nowrouzezahrai, Alec Jacobson, Morgan McGuire, &amp; Sanja Fidler (2021). Neural Geometric Level of Detail: Real-time Rendering with Implicit 3D Shapes. Talk: Toronto Geometry Colloquium - Siddhartha Chaudhuri &amp; Towaki Takikawa Towaki Takikawa, Or Perel, Clement Fuji Tsang, Charles Loop, Joey Litalien, Jonathan Tremblay, Sanja Fidler, &amp; Maria Shugrina. (2022). Kaolin Wisp: A PyTorch Library and Engine for" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ivorypawn.github.io/notes/nglod/" /><meta property="article:section" content="notes" />
-<meta property="article:published_time" content="2024-01-17T14:17:29+09:00" />
-<meta property="article:modified_time" content="2024-01-17T14:17:29+09:00" />
+
+
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Neural Geometric Level of Detail"/>
@@ -116,8 +116,8 @@
   "articleBody": "資料 Towaki Takikawa, Joey Litalien, Kangxue Yin, Karsten Kreis, Charles Loop, Derek Nowrouzezahrai, Alec Jacobson, Morgan McGuire, \u0026 Sanja Fidler (2021). Neural Geometric Level of Detail: Real-time Rendering with Implicit 3D Shapes. Talk: Toronto Geometry Colloquium - Siddhartha Chaudhuri \u0026 Towaki Takikawa Towaki Takikawa, Or Perel, Clement Fuji Tsang, Charles Loop, Joey Litalien, Jonathan Tremblay, Sanja Fidler, \u0026 Maria Shugrina. (2022). Kaolin Wisp: A PyTorch Library and Engine for Neural Fields Research. Neural SDFs 符号つき距離関数（signed distance functions; SDFs）$f: \\mathbb{R}^{3} \\rightarrow \\mathbb{R}$ は，オブジェクト $\\mathcal{M}$ の境界 $\\mathcal{S}=\\partial\\mathcal{M}$ からの符号つき距離を表す 3D 表現の一種．\nオブジェクト内部で $f\u003c0$ を約束し，境界 $\\mathcal{S}$ を 0-等値面で表す．SDF は点群やメッシュとは異なり境界の構成要素が陽に存在せず，境界全体が陰関数表現される．\nNeural SDF $f_\\theta$ は $f$ を近似するパラメータ $\\theta$ のニューラルネットワーク．向きの揃った法線つき点群やマルチビューから推定することが多い．\nNeural SDF によるレンダリングは視点によらず滑らかである．また空間的コストが $|\\theta|$ で抑えられるため，複雑な形状ではメッシュなどと比べてコンパクトになる特性をもつ．\nいっぽう一般に Neural SDF はレンダリングと学習のコストが高いという課題がある．典型的な Neural SDF は sphere tracing というアルゴリズムでレンダリングするが，これは各レイに対し比較的サイズの大きい MLP を相当ステップ適用するため，計算コストが高くなる．\nこのため Neural SDF のリアルタイムアプリケーションへの適用は非現実的であったが，この論文は LOD と組み合わせてこの課題を解決している．\n関連：NeRF Ben Mildenhall, Pratul P. Srinivasan, Matthew Tancik, Jonathan T. Barron, Ravi Ramamoorthi, \u0026 Ren Ng (2020). NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis. In ECCV.\n関数 $F_{\\Theta}:(x, y, z, \\theta, \\phi) \\rightarrow(R, G, B, \\sigma)$ をマルチビューから最適化する．$\\theta, \\phi$ は座標 $(x,y,z)$ におけるレイの方向（前節の $\\theta$ とはべつもの），$\\sigma$ はオブジェクト密度を表す．\nレンダリングは色関数と密度関数の積のレイに沿った重みつき積分によって計算される．重みは $\\sigma$ の累積に対して指数的に減衰するため，レイが手前側で干渉する境界上の点以外の影響は無視される．\n$F_{\\Theta}$ の出力は入力に対してセンシティブであるが，ニューラルネットワークは一般に高周波成分の大きい関数の近似が苦手．これを解決するため positional encoding によってあらかじめ $(x, y, z, \\theta, \\phi)$ を成分分解したものを入力する工夫をしている．\nNeRF は 6 ヶ月以内に少なくとも 25 の後続研究が登場し，高速化，動的化，リライティング，合成の拡張がされた：NeRF Explosion 2020．\n提案手法：NGLOD オブジェクトは $\\mathcal{B}=[-1,1]^3$ に収まるようスケーリングされているとする．\n",
   "wordCount" : "921",
   "inLanguage": "ja",
-  "datePublished": "2024-01-17T14:17:29+09:00",
-  "dateModified": "2024-01-17T14:17:29+09:00",
+  "datePublished": "0001-01-01T00:00:00Z",
+  "dateModified": "0001-01-01T00:00:00Z",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://ivorypawn.github.io/notes/nglod/"
@@ -196,7 +196,7 @@
     <h1 class="post-title">
       Neural Geometric Level of Detail<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>
     </h1>
-    <div class="post-meta"><span title='2024-01-17 14:17:29 +0900 JST'>2024-01-17</span>
+    <div class="post-meta">
 
 </div>
   </header>
@@ -299,10 +299,15 @@
       <li><a href="https://ivorypawn.github.io/tags/geometry-processing/">Geometry Processing</a></li>
     </ul>
 <nav class="paginav">
-  <a class="prev" href="https://ivorypawn.github.io/notes/algebraic-topology/">
+  <a class="prev" href="https://ivorypawn.github.io/notes/python/">
     <span class="title">« Prev</span>
     <br>
-    <span>Algebraic Topology 覚書</span>
+    <span>Python 仮想環境に関する覚書</span>
+  </a>
+  <a class="next" href="https://ivorypawn.github.io/notes/monte-carlo-geometry-processing/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Monte Carlo Geometry Processing</span>
   </a>
 </nav>
 

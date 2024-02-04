@@ -1,6 +1,5 @@
 ---
 title: "Neural Geometric Level of Detail"
-date: 2024-01-17T14:17:29+09:00
 draft: true
 tags: ["論文読み", "Geometry Processing"]
 ---

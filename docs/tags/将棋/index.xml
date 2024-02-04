@@ -1,56 +1,47 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>将棋 on HideOut</title>
     <link>https://ivorypawn.github.io/tags/%E5%B0%86%E6%A3%8B/</link>
     <description>Recent content in 将棋 on HideOut</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Tue, 07 Nov 2023 16:15:15 +0900</lastBuildDate><atom:link href="https://ivorypawn.github.io/tags/%E5%B0%86%E6%A3%8B/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 07 Nov 2023 16:15:15 +0900</lastBuildDate>
+    <atom:link href="https://ivorypawn.github.io/tags/%E5%B0%86%E6%A3%8B/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>将棋 AI を利用した学習に関する雑感</title>
       <link>https://ivorypawn.github.io/posts/2023-11-07/</link>
       <pubDate>Tue, 07 Nov 2023 16:15:15 +0900</pubDate>
-      
       <guid>https://ivorypawn.github.io/posts/2023-11-07/</guid>
       <description>自身の敗局を並べるのは，有効な棋力向上の手段である．そこには主に 2 つの観点が存在する． どれが悪手で何が最善だったのか（客観的・演繹的） なぜ最</description>
     </item>
-    
     <item>
       <title>北國王将杯レポート</title>
       <link>https://ivorypawn.github.io/posts/2023-10-03/</link>
       <pubDate>Tue, 03 Oct 2023 02:58:30 +0900</pubDate>
-      
       <guid>https://ivorypawn.github.io/posts/2023-10-03/</guid>
       <description>2023-10-01 に行われた北國王将杯を振り返る． なお賞金 10 万円（！）ということを優勝するまで知らず，帰路で封をあけてビビった．何局か気の抜けた序中盤を指し</description>
     </item>
-    
     <item>
       <title>Y 研レポート</title>
       <link>https://ivorypawn.github.io/posts/2023-09-25/</link>
       <pubDate>Mon, 25 Sep 2023 17:31:47 +0900</pubDate>
-      
       <guid>https://ivorypawn.github.io/posts/2023-09-25/</guid>
       <description>2023-09-23 に参加した Y 研の内容を振り返る． 3 局 30 分 60 秒 6 名（三段 1 名，二段 1 名，アマチュア 4 名） Under construction. 1 局目 2 局目 3 局目 総括</description>
     </item>
-    
     <item>
       <title>アマ王将北陸予選レポート</title>
       <link>https://ivorypawn.github.io/posts/2023-09-11/</link>
       <pubDate>Mon, 11 Sep 2023 18:36:55 +0900</pubDate>
-      
       <guid>https://ivorypawn.github.io/posts/2023-09-11/</guid>
       <description>2023-09-10 に行われたアマ王将北陸予選を振り返る。 本戦 2 回戦 私が後手。 18 手目 直前に並べていた 2021-02-12 竜王戦 斎藤慎太郎-佐藤和俊 の類型になったため、興味本位で</description>
     </item>
-    
     <item>
       <title>将棋関連対訳例文仮安置所</title>
       <link>https://ivorypawn.github.io/notes/translation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://ivorypawn.github.io/notes/translation/</guid>
       <description>原稿作成時の備忘録．後述のツールで文法や表現をチェックしているが，私個人の英語能力が高くないため，おかしな表現を含んでいる可能性は高い． 英文</description>
     </item>
-    
   </channel>
 </rss>

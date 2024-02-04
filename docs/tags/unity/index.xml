@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Unity on HideOut</title>
     <link>https://ivorypawn.github.io/tags/unity/</link>
     <description>Recent content in Unity on HideOut</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ja-jp</language><atom:link href="https://ivorypawn.github.io/tags/unity/index.xml" rel="self" type="application/rss+xml" />
+    <language>ja-jp</language>
+    <atom:link href="https://ivorypawn.github.io/tags/unity/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Unity 覚書</title>
       <link>https://ivorypawn.github.io/notes/unity/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://ivorypawn.github.io/notes/unity/</guid>
       <description>Unity 備忘録を集約．初歩的な内容が中心．環境は Windows 10 + Visual Studio 2022． 資料 適宜追加． オンライン Unity ユーザーマニュアル（日本語） C# プログラミング ガイド Unity</description>
     </item>
-    
   </channel>
 </rss>
