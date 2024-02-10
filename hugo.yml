@@ -25,7 +25,7 @@ params:
 
   UseHugoToc: true
   showtoc: true
-  tocopen: true
+  tocopen: false
   TocSide: left
 
   profileMode:
