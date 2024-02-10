@@ -49,5 +49,12 @@
       <guid>https://ivorypawn.github.io/notes/stochastic-poisson-surface-reconstruction/</guid>
       <description>概要 Silvia Sellán, &amp;amp; Alec Jacobson (2022). Stochastic Poisson Surface Reconstruction. ACM Transactions on Graphics. を読んだ． ベースとなる先行研究の Poisson Surface Reconstruction は，法線つき点群からメッシュを復元する手法．PSR は点群が</description>
     </item>
+    <item>
+      <title>Word Tour</title>
+      <link>https://ivorypawn.github.io/notes/wordtour/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ivorypawn.github.io/notes/wordtour/</guid>
+      <description>単語埋め込みを健全性を保持したまま一次元へ次元削減する手法の提案．World ではない． 資料 Sato, R.. (2022). Word Tour: One-dimensional Word Embeddings via the Traveling Salesman Problem. (NAACL 2022) NLP コロキウム資料 最適</description>
+    </item>
   </channel>
 </rss>

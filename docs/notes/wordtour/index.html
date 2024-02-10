@@ -5,11 +5,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Geometry Processing | HideOut</title>
-<meta name="keywords" content="">
-<meta name="description" content="">
+<title>Word Tour | HideOut</title>
+<meta name="keywords" content="論文読み, NLP">
+<meta name="description" content="単語埋め込みを健全性を保持したまま一次元へ次元削減する手法の提案．World ではない． 資料 Sato, R.. (2022). Word Tour: One-dimensional Word Embeddings via the Traveling Salesman Problem. (NAACL 2022) NLP コロキウム資料 最適">
 <meta name="author" content="">
-<link rel="canonical" href="https://ivorypawn.github.io/tags/geometry-processing/">
+<link rel="canonical" href="https://ivorypawn.github.io/notes/wordtour/">
 <link crossorigin="anonymous" href="https://ivorypawn.github.io/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://ivorypawn.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://ivorypawn.github.io/favicon-16x16.png">
@@ -18,7 +18,6 @@
 <link rel="mask-icon" href="https://ivorypawn.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="https://ivorypawn.github.io/tags/geometry-processing/index.xml">
 <noscript>
     <style>
         #theme-toggle,
@@ -72,18 +71,70 @@
 
 
 <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
-<meta property="og:title" content="Geometry Processing" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://ivorypawn.github.io/tags/geometry-processing/" />
+<meta property="og:title" content="Word Tour" />
+<meta property="og:description" content="単語埋め込みを健全性を保持したまま一次元へ次元削減する手法の提案．World ではない． 資料 Sato, R.. (2022). Word Tour: One-dimensional Word Embeddings via the Traveling Salesman Problem. (NAACL 2022) NLP コロキウム資料 最適" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ivorypawn.github.io/notes/wordtour/" /><meta property="article:section" content="notes" />
+
+
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Geometry Processing"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="Word Tour"/>
+<meta name="twitter:description" content="単語埋め込みを健全性を保持したまま一次元へ次元削減する手法の提案．World ではない． 資料 Sato, R.. (2022). Word Tour: One-dimensional Word Embeddings via the Traveling Salesman Problem. (NAACL 2022) NLP コロキウム資料 最適"/>
 
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Notes",
+      "item": "https://ivorypawn.github.io/notes/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Word Tour",
+      "item": "https://ivorypawn.github.io/notes/wordtour/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Word Tour",
+  "name": "Word Tour",
+  "description": "単語埋め込みを健全性を保持したまま一次元へ次元削減する手法の提案．World ではない． 資料 Sato, R.. (2022). Word Tour: One-dimensional Word Embeddings via the Traveling Salesman Problem. (NAACL 2022) NLP コロキウム資料 最適",
+  "keywords": [
+    "論文読み", "NLP"
+  ],
+  "articleBody": "単語埋め込みを健全性を保持したまま一次元へ次元削減する手法の提案．World ではない．\n資料 Sato, R.. (2022). Word Tour: One-dimensional Word Embeddings via the Traveling Salesman Problem. (NAACL 2022) NLP コロキウム資料 最適輸送の使いかた 導入 自然言語の計算機可読表現をどのように実装するか考える．\n",
+  "wordCount" : "106",
+  "inLanguage": "ja",
+  "datePublished": "0001-01-01T00:00:00Z",
+  "dateModified": "0001-01-01T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://ivorypawn.github.io/notes/wordtour/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "HideOut",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ivorypawn.github.io/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
 
-<body class="list dark" id="top">
+<body class=" dark" id="top">
 <script>
     if (localStorage.getItem("pref-theme") === "light") {
         document.body.classList.remove('dark')
@@ -137,62 +188,72 @@
         </ul>
     </nav>
 </header>
-<main class="main"> 
-<header class="page-header">
-  <h1>
-    Geometry Processing
-  </h1>
+<main class="main">
 
-  <nav class="pagination">
-  </nav>
-</header>
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      Word Tour<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>
+    </h1>
+    <div class="post-meta">
 
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2>Intrinsic Triangulations<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>
-    </h2>
+</div>
   </header>
-  <div class="entry-content">
-    <p>概要 離散微分幾何学者 Keenan Crane 先生のメッシュ 内在表現 関連論文を読んだまとめ。 3D モデルの（位相的）三角形分割 $T$ を、メッシュの頂点、エッジ、フェースの...</p>
-  </div>
-  <footer class="entry-footer"></footer>
-  <a class="entry-link" aria-label="post link to Intrinsic Triangulations" href="https://ivorypawn.github.io/notes/intrinsic-triangulations/"></a>
-</article>
 
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2>Monte Carlo Geometry Processing
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>資料 Sawhney, R., &amp; Crane, K. (2020). Monte Carlo Geometry Processing: A Grid-Free Approach to PDE-Based Methods on Volumetric Domains. ACM Trans. Graph., 39(4). Sawhney, R., Seyb, D., Jarosz, W., &amp; Crane, K. (2022). Grid-free Monte Carlo for PDEs with spatially varying coefficients. ACM Transactions on Graphics (Proceedings of SIGGRAPH), 41(4). Jacobson, A., Baran, I., Popović, J., &amp; Sorkine, O. (2011). Bounded...</p>
-  </div>
-  <footer class="entry-footer"></footer>
-  <a class="entry-link" aria-label="post link to Monte Carlo Geometry Processing" href="https://ivorypawn.github.io/notes/monte-carlo-geometry-processing/"></a>
-</article>
+  
+<div class="toc side left">
+    <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
 
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2>Neural Geometric Level of Detail<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>資料 Towaki Takikawa, Joey Litalien, Kangxue Yin, Karsten Kreis, Charles Loop, Derek Nowrouzezahrai, Alec Jacobson, Morgan McGuire, &amp; Sanja Fidler (2021). Neural Geometric Level of Detail: Real-time Rendering with Implicit 3D Shapes. Talk: Toronto Geometry Colloquium - Siddhartha Chaudhuri &amp; Towaki Takikawa Towaki Takikawa, Or Perel, Clement Fuji Tsang, Charles Loop, Joey Litalien, Jonathan Tremblay, Sanja Fidler, &amp; Maria Shugrina. (2022). Kaolin Wisp: A PyTorch Library and Engine for...</p>
-  </div>
-  <footer class="entry-footer"></footer>
-  <a class="entry-link" aria-label="post link to Neural Geometric Level of Detail" href="https://ivorypawn.github.io/notes/nglod/"></a>
-</article>
+        <div class="inner"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#資料">資料</a></li>
+    <li><a href="#導入">導入</a></li>
+  </ul>
+</nav>
+        </div>
+    </details>
+</div>
 
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2>Stochastic Poisson Surface Reconstruction
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>概要 Silvia Sellán, &amp; Alec Jacobson (2022). Stochastic Poisson Surface Reconstruction. ACM Transactions on Graphics. を読んだ． ベースとなる先行研究の Poisson Surface Reconstruction は，法線つき点群からメッシュを復元する手法．PSR は点群が...</p>
+
+
+
+ 
+  <div class="post-content"><p>単語埋め込みを健全性を保持したまま一次元へ次元削減する手法の提案．World ではない．</p>
+<h2 id="資料">資料<a hidden class="anchor" aria-hidden="true" href="#資料">#</a></h2>
+<ol>
+<li>Sato, R.. (2022). <a href="https://arxiv.org/abs/2205.01954">Word Tour: One-dimensional Word Embeddings via the Traveling Salesman Problem</a>. (NAACL 2022)</li>
+<li><a href="https://www.slideshare.net/joisino/word-tour-onedimensional-word-embeddings-via-the-traveling-salesman-problem-naacl-2022">NLP コロキウム資料</a></li>
+<li><a href="https://speakerdeck.com/eumesy/how-to-leverage-optimal-transport">最適輸送の使いかた</a></li>
+</ol>
+<h2 id="導入">導入<a hidden class="anchor" aria-hidden="true" href="#導入">#</a></h2>
+<p>自然言語の計算機可読表現をどのように実装するか考える．</p>
+
+
   </div>
-  <footer class="entry-footer"></footer>
-  <a class="entry-link" aria-label="post link to Stochastic Poisson Surface Reconstruction" href="https://ivorypawn.github.io/notes/stochastic-poisson-surface-reconstruction/"></a>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://ivorypawn.github.io/tags/%E8%AB%96%E6%96%87%E8%AA%AD%E3%81%BF/">論文読み</a></li>
+      <li><a href="https://ivorypawn.github.io/tags/nlp/">NLP</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="https://ivorypawn.github.io/notes/design/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>デザインに関する覚書</span>
+  </a>
+  <a class="next" href="https://ivorypawn.github.io/notes/wavelet-matrix/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Wavelet Matrix</span>
+  </a>
+</nav>
+
+  </footer>
 </article>
     </main>
     
@@ -263,6 +324,53 @@
         }
     })
 
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
 </script>
 </body>
 

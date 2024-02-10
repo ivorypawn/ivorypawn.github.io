@@ -21,6 +21,7 @@ svg:hover {
 
 .page-header h1 {
     font-size: 40px;
+    margin: 0 0 10px;
 }
 
 .pagination {

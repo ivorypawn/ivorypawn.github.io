@@ -26,7 +26,7 @@
       <link>https://ivorypawn.github.io/notes/python/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://ivorypawn.github.io/notes/python/</guid>
-      <description>Windows 10 で Python の仮想環境を構築した．しばらく使わないと忘れがちなのでメモ．</description>
+      <description>しばらく使わないと忘れがち． Rye MacOS Ventura 13.4. 導入 手順通りやるだけだが手もとでエラーが出たのでメモ． curl: (6) Could not resolve host: rye-up.com DNS を 8.8.8.8 と 8.8.4.4 にしたら解決した． zsh にパス</description>
     </item>
     <item>
       <title>ベイズ推定覚書</title>

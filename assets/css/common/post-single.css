@@ -56,23 +56,23 @@ https://github.com/adityatelange/hugo-PaperMod/pull/143/files#diff-12ad2b661fa0e
 
 .post-content h2 {
     margin: 32px auto 24px;
-    font-size: 33px;
+    font-size: 32px;
 }
 
 .post-content h3 {
-    font-size: 28px;
+    font-size: 29px;
 }
 
 .post-content h4 {
-    font-size: 23px;
+    font-size: 26px;
 }
 
 .post-content h5 {
-    font-size: 18px;
+    font-size: 23px;
 }
 
 .post-content h6 {
-    font-size: 14px;
+    font-size: 20px;
 }
 
 /*
@@ -447,7 +447,8 @@ https://github.com/reorx/hugo-PaperModX/blob/master/assets/css/common/post-singl
 
     .toc.side.left {
         left: 15px;
-        width: 250px;
+        width: 235px;
+        margin-right: 15px;
     }
 
     .toc.side.right {

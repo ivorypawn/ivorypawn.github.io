@@ -8,7 +8,7 @@ defaultContentLanguage: "ja"
 hasCJKLanguage: true
 
 title: "HideOut"
-paginate: 5
+paginate: 8
 
 taxonomies:
   tag: "tags"
