@@ -122,7 +122,7 @@ WordTour から適当な区間を切り出したものを眺めると，他手�
 
 Embedding を対照学習で生成したのち k-means++ で 2000 のクラスタに分割し，centroid の集合に WordTour を適用することで，後段の GBDT の学習が少ない弱学習器（決定木）で効率的に進んだとしている．
 
-残念ながらコンペ終了後に leakage 発覚し，上位モデルは過学習していただけではないかとの疑いがもたれた．
+残念ながらコンペ終了後に leakage 発覚し，上位モデルは過学習の疑いがもたれた．
 
 - [Leakage (67% of test rows leaked - more than anyone expected.)](https://www.kaggle.com/competitions/foursquare-location-matching/discussion/335799)
 
