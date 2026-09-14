@@ -1,5 +1,5 @@
 {{- if .Get "inline" -}}
-<strong style="color: #99e6d0;">{{ .Inner | strings.TrimSpace }}</strong>
+<strong style="color: var(--kifu-color);">{{ .Inner | strings.TrimSpace }}</strong>
 {{- else -}}
-<strong style="display: block; text-align: center; margin: 1rem 0; color: #99e6d0;">{{ .Inner | strings.TrimSpace }}</strong>
+<strong style="display: block; text-align: center; margin: 1rem 0; color: var(--kifu-color);">{{ .Inner | strings.TrimSpace }}</strong>
 {{- end -}}

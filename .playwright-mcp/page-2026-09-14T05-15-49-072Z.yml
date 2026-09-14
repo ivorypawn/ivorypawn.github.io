@@ -1,0 +1,131 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e4]:
+        - link "HideOut" [ref=e5] [cursor=pointer]:
+          - /url: http://localhost:1313/
+        - generic [ref=e6]:
+          - button "(Alt + T)" [ref=e7] [cursor=pointer]
+          - list [ref=e14]:
+            - listitem [ref=e15]: "|"
+      - list [ref=e16]:
+        - listitem [ref=e17]:
+          - link "posts" [ref=e18] [cursor=pointer]:
+            - /url: http://localhost:1313/posts/
+        - listitem [ref=e19]:
+          - link "notes" [ref=e20] [cursor=pointer]:
+            - /url: http://localhost:1313/notes/
+        - listitem [ref=e21]:
+          - link "tags" [ref=e22] [cursor=pointer]:
+            - /url: http://localhost:1313/tags/
+  - main [ref=e23]:
+    - article [ref=e24]:
+      - generic [ref=e25]:
+        - heading "2026 クラブカップ将棋対抗戦記" [level=1] [ref=e26]
+        - generic "2026-09-13 12:50:15 +0900 JST" [ref=e28]: 2026-09-13
+      - group [ref=e30]:
+        - generic "Table of Contents" [ref=e31]
+        - navigation [ref=e33]:
+          - list [ref=e34]:
+            - listitem [ref=e35]:
+              - link "大会概要" [ref=e36] [cursor=pointer]:
+                - /url: "#大会概要"
+            - listitem [ref=e37]:
+              - link "チーム" [ref=e38] [cursor=pointer]:
+                - /url: "#チーム"
+            - listitem [ref=e39]:
+              - link "棋譜解説" [ref=e40] [cursor=pointer]:
+                - /url: "#棋譜解説"
+            - listitem [ref=e41]:
+              - link "結果" [ref=e42] [cursor=pointer]:
+                - /url: "#結果"
+      - generic [ref=e43]:
+        - paragraph [ref=e44]:
+          - text: "(English version:"
+          - link "2026 Club Cup Shogi Team Tournament Report" [ref=e45] [cursor=pointer]:
+            - /url: ../en/
+          - text: .)
+        - paragraph [ref=e46]: 十数年ぶりにクラブカップ in 神戸に出場しました。
+        - heading "大会概要" [level=2] [ref=e47]
+        - list [ref=e48]:
+          - listitem [ref=e49]: 3 人制団体戦
+          - listitem [ref=e50]:
+            - text: 予選 2 局の結果により 4 種のトーナメントに振り分け
+            - list [ref=e51]:
+              - listitem [ref=e52]: ○○ / ○× / ×○ / ××
+              - listitem [ref=e53]: なので 3 局は指すことになる
+          - listitem [ref=e54]: 30 分切れ負け
+        - heading "チーム" [level=2] [ref=e55]
+        - paragraph [ref=e56]
+        - list [ref=e58]:
+          - listitem [ref=e59]:
+            - link "Alan Baker" [ref=e60] [cursor=pointer]:
+              - /url: https://ja.wikipedia.org/wiki/%E3%82%A2%E3%83%A9%E3%83%B3%E3%83%BB%E3%83%99%E3%82%A4%E3%82%AB%E3%83%BC_(%E5%93%B2%E5%AD%A6%E8%80%85)
+            - text: ": スワースモア大学の教授。年末まで京大数理研に滞在。三段くらい？"
+          - listitem [ref=e61]: 大野拓斗：石川県で教えていた小学生。大会時点で研修会 B2
+          - listitem [ref=e62]: 私
+        - paragraph [ref=e63]: Baker さんについての詳細は上記リンクを参照してください。
+        - paragraph [ref=e64]: 予選は ×○ で、トーナメントは順調に勝ち進みました。
+        - heading "棋譜解説" [level=2] [ref=e65]
+        - paragraph [ref=e66]:
+          - img "準決勝" [ref=e68]
+          - generic [ref=e69]: 準決勝
+        - paragraph [ref=e70]: 準決勝を振り返ります。私が後手ですが、以下の局面と棋譜は先手側で表記します。
+        - paragraph [ref=e71]:
+          - img "37 手目" [ref=e73]
+          - generic [ref=e74]: 37 手目
+        - paragraph [ref=e75]: こちらの駒組みは飽和しており、相手は ☖７１玉〜☖８２玉 まで囲いたい状況です。ぬるい手を指すと相手だけ一方的に改善していくため、積極的に動きたいところです。
+        - paragraph [ref=e76]: 実戦は角の射線を通すため 5 筋を切りにいきました。
+        - strong [ref=e77]: ☗５６歩☖２６歩☗同歩☖同飛☗２７歩☖２４飛☗５５歩☖同角
+        - paragraph [ref=e78]:
+          - img "45 手目" [ref=e80]
+          - generic [ref=e81]: 45 手目
+        - paragraph [ref=e82]: 当初の予定はここで ☗５４歩☖同銀☗５６飛 でした。☗５４銀☖同飛☗６５銀 が直接の狙いで、もしも ☖４３金 なら ☗５４銀☖同歩☗５５飛☖同歩☗３２銀 で繋がります。
+        - paragraph [ref=e83]: しかし読み直すと、☗５６飛 にシンプルに ☖７７角成 とされて拙いことに気づきました。以下 ☗５４銀☖６４桂 または ☗５４飛☖４４桂 のどちらも攻めが続きません。
+        - paragraph [ref=e84]:
+          - text: 本譜は
+          - strong [ref=e85]: ☗５６銀
+          - text: と予定変更。一つの想定として、以下 ☖６４角☗同角☖同歩☗５５銀（次に ☗１５角☖２２飛☗２６飛☖２５歩☗同飛☖同飛☗４２角成 が狙い）☖３３桂☗９７角（☗６６飛 は ☖７５角 で無効）をざっと読みましたが、上手くいく感触がなかったため他の手段も探すつもりでした。実際局後の検討で、上の順は最後 ☖５４銀 で手にならないことがわかりました。
+        - paragraph [ref=e86]:
+          - text: 実戦はさほど時間を使われずに
+          - strong [ref=e87]: ☖２２角
+          - text: 。局後に尋ねると、彼女は ☖６４角 自体があまり発想になかったようです。
+        - strong [ref=e88]: ☗４５銀☖５２金☗７９角
+        - paragraph [ref=e89]: ☖５２金が疑問手で、形勢がこちらに傾きました。自ら角道を止めるため指しづらかったかもしれませんが、直ちに ☖３３桂 と銀を追うほうが勝ったように思います。本譜は ☗７９角 で ☗４５銀 が安定してしまいました。☗５６歩 の段階から朧げに見えていた転換ですが、望外のタイミングで入りました。相手視点では直前まで ☗５４歩 を警戒していたはずなので、少し読みづらかったかもしれません。
+        - strong [ref=e90]: ☖７１玉☗３５角☖６４飛☗４６角☖１４飛☗１６歩
+        - paragraph [ref=e91]:
+          - generic:
+            - img "56 手目"
+          - generic [ref=e92]: 56 手目
+        - paragraph [ref=e93]: 最終 ☗１６歩 が自陣を拡げつつ飛車を圧迫する気持ちのいい手です。以下、勝利しました。
+        - heading "結果" [level=2] [ref=e94]
+        - paragraph [ref=e95]:
+          - text: （公式：
+          - link "光証券杯2026クラブカップ将棋対抗戦【結果報告】" [ref=e96] [cursor=pointer]:
+            - /url: https://www.kansai-shogi.info/results-clubcup2026/
+          - text: ）
+        - paragraph [ref=e97]:
+          - generic:
+            - img "表彰式"
+          - generic [ref=e98]: 表彰式
+        - paragraph [ref=e99]: 優勝しました。個人成績は大野くんが勝ち越し、Baker さんは厳しいかもと予想していましたが、決勝で初勝利を挙げてくれました。ほかにも内容で勝っていた将棋はあり、切れ負けにさえ適応できればさらに勝てるでしょう。
+        - paragraph [ref=e100]: 私の学生時代にも京都に来ていた Baker さんを連れてある大会に出場したことがありましたが、個人戦かつ初戦からシングルエリミネーションのため、当時はすぐ終わってしまいました。今回は 5 局指せて Baker さんも勝利できたので満足です（馴染みのない切れ負けで 5 局指すのはタフな体験だったとは思いますが）。
+        - paragraph [ref=e101]:
+          - text: 彼は年末まで京都に滞在予定です。11 月 3 日の
+          - link "西日本団体対抗将棋大会" [ref=e102] [cursor=pointer]:
+            - /url: https://www.kansai-shogi.info/dantaisen45/
+          - text: も出てみたいらしいので、ほかに 3 人見つかれば出場します。組んでもいいよという人はお声かけください。
+      - generic:
+        - list
+  - contentinfo [ref=e103]:
+    - generic [ref=e104]:
+      - text: © 2026
+      - link "HideOut" [ref=e105] [cursor=pointer]:
+        - /url: http://localhost:1313/
+    - generic [ref=e106]:
+      - text: Powered by
+      - link "Hugo" [ref=e107] [cursor=pointer]:
+        - /url: https://gohugo.io/
+      - text: "&"
+      - link "PaperMod" [ref=e108] [cursor=pointer]:
+        - /url: https://github.com/adityatelange/hugo-PaperMod/
