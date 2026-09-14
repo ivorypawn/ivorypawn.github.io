@@ -10,9 +10,9 @@
     <atom:link href="https://ivorypawn.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2026 Club Cup Shogi Team Tournament Report</title>
-      <link>https://ivorypawn.github.io/posts/2026-09-13/en/</link>
+      <link>https://ivorypawn.github.io/blog/2026-09-13/en/</link>
       <pubDate>Sun, 13 Sep 2026 18:19:59 +0900</pubDate>
-      <guid>https://ivorypawn.github.io/posts/2026-09-13/en/</guid>
+      <guid>https://ivorypawn.github.io/blog/2026-09-13/en/</guid>
       <description>&lt;p&gt;（日本語版：&lt;a href=&#34;../jp/&#34;&gt;2026 クラブカップ将棋対抗戦記&lt;/a&gt;）&lt;/p&gt;
 &lt;p&gt;I played in the Club Cup in Kobe for the first time in well over a decade.&lt;/p&gt;
 &lt;h2 id=&#34;tournament-format&#34;&gt;Tournament Format&lt;/h2&gt;
@@ -32,9 +32,9 @@
     </item>
     <item>
       <title>2026 クラブカップ将棋対抗戦記</title>
-      <link>https://ivorypawn.github.io/posts/2026-09-13/jp/</link>
+      <link>https://ivorypawn.github.io/blog/2026-09-13/jp/</link>
       <pubDate>Sun, 13 Sep 2026 12:50:15 +0900</pubDate>
-      <guid>https://ivorypawn.github.io/posts/2026-09-13/jp/</guid>
+      <guid>https://ivorypawn.github.io/blog/2026-09-13/jp/</guid>
       <description>&lt;p&gt;(English version: &lt;a href=&#34;../en/&#34;&gt;2026 Club Cup Shogi Team Tournament Report&lt;/a&gt;.)&lt;/p&gt;
 &lt;p&gt;十数年ぶりにクラブカップ in 神戸に出場しました。&lt;/p&gt;
 &lt;h2 id=&#34;大会概要&#34;&gt;大会概要&lt;/h2&gt;
@@ -59,7 +59,7 @@
     &lt;input type=&#34;checkbox&#34; id=&#34;zoomCheck-2926e&#34; hidden&gt;
     &lt;label for=&#34;zoomCheck-2926e&#34;&gt;
         &lt;img class=&#34;zoomCheck&#34; loading=&#34;lazy&#34; decoding=&#34;async&#34;
-            src=&#34;https://ivorypawn.github.io/posts/2026-09-13/IMG_0312.JPG&#34; alt=&#34;&#34;
+            src=&#34;https://ivorypawn.github.io/blog/2026-09-13/IMG_0312.JPG&#34; alt=&#34;&#34;
             style=&#34;width: 400px; max-width: 100%; height: auto; display: block; margin: 1rem 0; margin-inline: auto;&#34;
              /&gt;
     &lt;/label&gt;
@@ -68,9 +68,9 @@
     </item>
     <item>
       <title>國分『暇と退屈の倫理学』に関するメモ</title>
-      <link>https://ivorypawn.github.io/posts/2024-01-27/</link>
+      <link>https://ivorypawn.github.io/blog/2024-01-27/</link>
       <pubDate>Sat, 27 Jan 2024 15:28:18 +0900</pubDate>
-      <guid>https://ivorypawn.github.io/posts/2024-01-27/</guid>
+      <guid>https://ivorypawn.github.io/blog/2024-01-27/</guid>
       <description>&lt;p&gt;（底本：國分功一郎『暇と退屈の倫理学』初版第五刷，朝日出版社）&lt;/p&gt;
 &lt;p&gt;本書に登場する引用を時系列順に整理する．&lt;/p&gt;
 &lt;h2 id=&#34;序章-好きなこととは何か&#34;&gt;序章 「好きなこと」とは何か&lt;/h2&gt;
@@ -80,9 +80,9 @@
     </item>
     <item>
       <title>将棋 AI を利用した学習に関する雑感</title>
-      <link>https://ivorypawn.github.io/posts/2023-11-07/</link>
+      <link>https://ivorypawn.github.io/blog/2023-11-07/</link>
       <pubDate>Tue, 07 Nov 2023 16:15:15 +0900</pubDate>
-      <guid>https://ivorypawn.github.io/posts/2023-11-07/</guid>
+      <guid>https://ivorypawn.github.io/blog/2023-11-07/</guid>
       <description>&lt;p&gt;自身の敗局を並べるのは，有効な棋力向上の手段である．そこには主に 2 つの観点が存在する．&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;どれが悪手で何が最善だったのか（&lt;strong&gt;客観的・演繹的&lt;/strong&gt;）&lt;/li&gt;
@@ -92,9 +92,9 @@
     </item>
     <item>
       <title>珈琲飲みたい</title>
-      <link>https://ivorypawn.github.io/posts/2023-11-03/</link>
+      <link>https://ivorypawn.github.io/blog/2023-11-03/</link>
       <pubDate>Fri, 03 Nov 2023 14:37:49 +0900</pubDate>
-      <guid>https://ivorypawn.github.io/posts/2023-11-03/</guid>
+      <guid>https://ivorypawn.github.io/blog/2023-11-03/</guid>
       <description>&lt;p&gt;トップページに珈琲乞食リンクをつけた．&lt;/p&gt;
 &lt;p&gt;現状，記事に挿入すると &lt;code&gt;text-decoration:none !important&lt;/code&gt; が効かず下線が表示される．&lt;/p&gt;
 
@@ -107,9 +107,9 @@
     </item>
     <item>
       <title>アマ王将北陸予選レポート</title>
-      <link>https://ivorypawn.github.io/posts/2023-09-11/</link>
+      <link>https://ivorypawn.github.io/blog/2023-09-11/</link>
       <pubDate>Mon, 11 Sep 2023 18:36:55 +0900</pubDate>
-      <guid>https://ivorypawn.github.io/posts/2023-09-11/</guid>
+      <guid>https://ivorypawn.github.io/blog/2023-09-11/</guid>
       <description>&lt;p&gt;2023-09-10 に行われたアマ王将北陸予選を振り返る。&lt;/p&gt;
 &lt;h2 id=&#34;本戦-2-回戦&#34;&gt;本戦 2 回戦&lt;/h2&gt;
 &lt;p&gt;私が後手。&lt;/p&gt;
@@ -123,7 +123,7 @@
     &lt;input type=&#34;checkbox&#34; id=&#34;zoomCheck-fe07e&#34; hidden&gt;
     &lt;label for=&#34;zoomCheck-fe07e&#34;&gt;
         &lt;img class=&#34;zoomCheck&#34; loading=&#34;lazy&#34; decoding=&#34;async&#34;
-            src=&#34;https://ivorypawn.github.io/posts/2023-09-11/01.png&#34; alt=&#34;&#34;
+            src=&#34;https://ivorypawn.github.io/blog/2023-09-11/01.png&#34; alt=&#34;&#34;
             style=&#34;width: 400px; max-width: 100%; height: auto; display: block; margin: 1rem 0; margin-inline: auto;&#34;
              /&gt;
     &lt;/label&gt;
@@ -133,18 +133,18 @@
     </item>
     <item>
       <title>Japan Chess Classic 2023 レポート</title>
-      <link>https://ivorypawn.github.io/posts/2023-07-22/</link>
+      <link>https://ivorypawn.github.io/blog/2023-07-22/</link>
       <pubDate>Sat, 22 Jul 2023 06:11:56 +0900</pubDate>
-      <guid>https://ivorypawn.github.io/posts/2023-07-22/</guid>
+      <guid>https://ivorypawn.github.io/blog/2023-07-22/</guid>
       <description>&lt;p&gt;三宮で開催された &lt;a href=&#34;https://japanchess.org/2023/03/japan-chess-classic_2023/&#34;&gt;ジャパンチェスクラシック 2023&lt;/a&gt; に参加しました。印象に残った局（おもに敗局）を振り返ります。&lt;/p&gt;
 &lt;h2 id=&#34;715-1430-r3-kojima-s-im-jpn-2335---takahashi-h-jpn-1930-1-0&#34;&gt;7/15 14:30 R3 Kojima, S (IM, JPN, 2335) - Takahashi, H (JPN, 1930) 1-0&lt;/h2&gt;
 &lt;p&gt;2 連勝後の R3 で IM 小島さんとマッチング。&lt;/p&gt;</description>
     </item>
     <item>
       <title>KaTeX の挙動について</title>
-      <link>https://ivorypawn.github.io/posts/2023-06-21/02/</link>
+      <link>https://ivorypawn.github.io/blog/2023-06-21/02/</link>
       <pubDate>Wed, 21 Jun 2023 06:42:43 +0900</pubDate>
-      <guid>https://ivorypawn.github.io/posts/2023-06-21/02/</guid>
+      <guid>https://ivorypawn.github.io/blog/2023-06-21/02/</guid>
       <description>&lt;p&gt;PaperMod はデフォルトで数式を使えないため $\KaTeX$ を導入した。ヘッダに &lt;code&gt;math: true&lt;/code&gt; を追加すれば使える。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://chizuchizu.com/posts/katex/&#34;&gt;KaTeXに対応させた話&lt;/a&gt;&lt;/li&gt;
@@ -153,9 +153,9 @@
     </item>
     <item>
       <title>備忘録開設</title>
-      <link>https://ivorypawn.github.io/posts/2023-06-21/01/</link>
+      <link>https://ivorypawn.github.io/blog/2023-06-21/01/</link>
       <pubDate>Wed, 21 Jun 2023 03:53:32 +0900</pubDate>
-      <guid>https://ivorypawn.github.io/posts/2023-06-21/01/</guid>
+      <guid>https://ivorypawn.github.io/blog/2023-06-21/01/</guid>
       <description>&lt;p&gt;引っ越しがようやく落ち着いたので、Hugo で備忘録のためのウェブサイトを生成した。Github Pages で公開予定。&lt;/p&gt;
 &lt;p&gt;おもな内容：&lt;/p&gt;
 &lt;ul&gt;
@@ -296,9 +296,9 @@ $$
     </item>
     <item>
       <title>Sandbox</title>
-      <link>https://ivorypawn.github.io/posts/sandbox/</link>
+      <link>https://ivorypawn.github.io/blog/sandbox/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ivorypawn.github.io/posts/sandbox/</guid>
+      <guid>https://ivorypawn.github.io/blog/sandbox/</guid>
       <description>&lt;h2 id=&#34;markdown-all-in-one-vscode&#34;&gt;Markdown All in One (VSCode)&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;Alt + S&lt;/code&gt; で打ち消し線&lt;/li&gt;

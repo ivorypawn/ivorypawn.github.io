@@ -17,7 +17,7 @@ The following blog post was a great help in layouts and other overrides:
 
 ```sh
 hugo new notes/Test/index.md
-hugo new posts/yyyy-mm-dd/index.md
+hugo new blog/yyyy-mm-dd/index.md
 
 hugo
 hugo server
