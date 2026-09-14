@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Notes on HideOut</title>
-    <link>http://localhost:1313/notes/</link>
+    <link>https://ivorypawn.github.io/notes/</link>
     <description>Recent content in Notes on HideOut</description>
     <generator>Hugo -- 0.138.0</generator>
     <language>ja-jp</language>
-    <atom:link href="http://localhost:1313/notes/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ivorypawn.github.io/notes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Algebraic Topology 覚書</title>
-      <link>http://localhost:1313/notes/algebraic-topology/</link>
+      <link>https://ivorypawn.github.io/notes/algebraic-topology/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/notes/algebraic-topology/</guid>
+      <guid>https://ivorypawn.github.io/notes/algebraic-topology/</guid>
       <description>&lt;p&gt;基礎の基礎から Vidit Nanda 先生の &lt;a href=&#34;https://people.maths.ox.ac.uk/nanda/cat/&#34;&gt;Computational Algebraic Topology&lt;/a&gt; で勉強したときのメモ．&lt;/p&gt;
 &lt;h2 id=&#34;複体&#34;&gt;複体&lt;/h2&gt;
 &lt;h2 id=&#34;ホモトピー&#34;&gt;ホモトピー&lt;/h2&gt;
@@ -19,9 +19,9 @@
     </item>
     <item>
       <title>Diffusion Model</title>
-      <link>http://localhost:1313/notes/diffusion-model/</link>
+      <link>https://ivorypawn.github.io/notes/diffusion-model/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/notes/diffusion-model/</guid>
+      <guid>https://ivorypawn.github.io/notes/diffusion-model/</guid>
       <description>&lt;p&gt;
 
 
@@ -31,7 +31,8 @@
     &lt;input type=&#34;checkbox&#34; id=&#34;zoomCheck-b2f82&#34; hidden&gt;
     &lt;label for=&#34;zoomCheck-b2f82&#34;&gt;
         &lt;img class=&#34;zoomCheck&#34; loading=&#34;lazy&#34; decoding=&#34;async&#34;
-            src=&#34;00.png&#34; alt=&#34;&#34;
+            src=&#34;https://ivorypawn.github.io/notes/diffusion-model/00.png&#34; alt=&#34;&#34;
+            
              /&gt;
     &lt;/label&gt;
 
@@ -45,18 +46,18 @@
     </item>
     <item>
       <title>GBDT</title>
-      <link>http://localhost:1313/notes/gbdt/</link>
+      <link>https://ivorypawn.github.io/notes/gbdt/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/notes/gbdt/</guid>
+      <guid>https://ivorypawn.github.io/notes/gbdt/</guid>
       <description>&lt;h2 id=&#34;概要&#34;&gt;概要&lt;/h2&gt;
 &lt;p&gt;GBDT(Gradient Boosting Decision Tree; 勾配ブースティング決定木) は，決定木によるアンサンブル学習の一種．Kaggle で頻用されている．&lt;/p&gt;
 &lt;p&gt;GBDT は決定木の列の推定を統合（boosting）することで高精度な予測を行う．決定木の列は，既存の列のアンサンブルから生じる誤差を予測する決定木を新たに生成するということを繰り返して，逐次的に生成される．&lt;/p&gt;</description>
     </item>
     <item>
       <title>Intrinsic Triangulations</title>
-      <link>http://localhost:1313/notes/intrinsic-triangulations/</link>
+      <link>https://ivorypawn.github.io/notes/intrinsic-triangulations/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/notes/intrinsic-triangulations/</guid>
+      <guid>https://ivorypawn.github.io/notes/intrinsic-triangulations/</guid>
       <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
       &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/gcRDdYrgOhg?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
       &gt;&lt;/iframe&gt;
@@ -68,9 +69,9 @@
     </item>
     <item>
       <title>Monte Carlo Geometry Processing</title>
-      <link>http://localhost:1313/notes/monte-carlo-geometry-processing/</link>
+      <link>https://ivorypawn.github.io/notes/monte-carlo-geometry-processing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/notes/monte-carlo-geometry-processing/</guid>
+      <guid>https://ivorypawn.github.io/notes/monte-carlo-geometry-processing/</guid>
       <description>&lt;p&gt;
 
 
@@ -80,7 +81,8 @@
     &lt;input type=&#34;checkbox&#34; id=&#34;zoomCheck-b2f82&#34; hidden&gt;
     &lt;label for=&#34;zoomCheck-b2f82&#34;&gt;
         &lt;img class=&#34;zoomCheck&#34; loading=&#34;lazy&#34; decoding=&#34;async&#34;
-            src=&#34;00.png&#34; alt=&#34;&#34;
+            src=&#34;https://ivorypawn.github.io/notes/monte-carlo-geometry-processing/00.png&#34; alt=&#34;&#34;
+            
              /&gt;
     &lt;/label&gt;
 
@@ -105,9 +107,9 @@ $$
     </item>
     <item>
       <title>Neural Geometric Level of Detail</title>
-      <link>http://localhost:1313/notes/nglod/</link>
+      <link>https://ivorypawn.github.io/notes/nglod/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/notes/nglod/</guid>
+      <guid>https://ivorypawn.github.io/notes/nglod/</guid>
       <description>&lt;h2 id=&#34;資料&#34;&gt;資料&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Towaki Takikawa, Joey Litalien, Kangxue Yin, Karsten Kreis, Charles Loop, Derek Nowrouzezahrai, Alec Jacobson, Morgan McGuire, &amp;amp; Sanja Fidler (2021). &lt;a href=&#34;https://research.nvidia.com/labs/toronto-ai/nglod/&#34;&gt;Neural Geometric Level of Detail: Real-time Rendering with Implicit 3D Shapes&lt;/a&gt;.&lt;/li&gt;
@@ -119,9 +121,9 @@ $$
     </item>
     <item>
       <title>Python 仮想環境に関する覚書</title>
-      <link>http://localhost:1313/notes/python/</link>
+      <link>https://ivorypawn.github.io/notes/python/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/notes/python/</guid>
+      <guid>https://ivorypawn.github.io/notes/python/</guid>
       <description>&lt;p&gt;しばらく使わないと忘れがち．&lt;/p&gt;
 &lt;h2 id=&#34;ryehttpsrye-upcom&#34;&gt;&lt;a href=&#34;https://rye-up.com/&#34;&gt;Rye&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
@@ -135,9 +137,9 @@ $$
     </item>
     <item>
       <title>Stochastic Poisson Surface Reconstruction</title>
-      <link>http://localhost:1313/notes/stochastic-poisson-surface-reconstruction/</link>
+      <link>https://ivorypawn.github.io/notes/stochastic-poisson-surface-reconstruction/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/notes/stochastic-poisson-surface-reconstruction/</guid>
+      <guid>https://ivorypawn.github.io/notes/stochastic-poisson-surface-reconstruction/</guid>
       <description>&lt;p&gt;
 
 
@@ -147,7 +149,8 @@ $$
     &lt;input type=&#34;checkbox&#34; id=&#34;zoomCheck-77928&#34; hidden&gt;
     &lt;label for=&#34;zoomCheck-77928&#34;&gt;
         &lt;img class=&#34;zoomCheck&#34; loading=&#34;lazy&#34; decoding=&#34;async&#34;
-            src=&#34;00.png#center&#34; alt=&#34;&#34;
+            src=&#34;https://ivorypawn.github.io/notes/stochastic-poisson-surface-reconstruction/00.png#center&#34; alt=&#34;&#34;
+            
              /&gt;
     &lt;/label&gt;
 
@@ -161,9 +164,9 @@ $$
     </item>
     <item>
       <title>Unity 覚書</title>
-      <link>http://localhost:1313/notes/unity/</link>
+      <link>https://ivorypawn.github.io/notes/unity/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/notes/unity/</guid>
+      <guid>https://ivorypawn.github.io/notes/unity/</guid>
       <description>&lt;p&gt;Unity 備忘録を集約．初歩的な内容が中心．環境は Windows 10 + Visual Studio 2022．&lt;/p&gt;
 &lt;h2 id=&#34;資料&#34;&gt;資料&lt;/h2&gt;
 &lt;p&gt;適宜追加．&lt;/p&gt;
@@ -199,9 +202,9 @@ $$
     </item>
     <item>
       <title>Wavelet Matrix</title>
-      <link>http://localhost:1313/notes/wavelet-matrix/</link>
+      <link>https://ivorypawn.github.io/notes/wavelet-matrix/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/notes/wavelet-matrix/</guid>
+      <guid>https://ivorypawn.github.io/notes/wavelet-matrix/</guid>
       <description>&lt;h2 id=&#34;概要&#34;&gt;概要&lt;/h2&gt;
 &lt;p&gt;～数十億の大規模データ上で、特定範囲の極値や頻度などが高速に求められる構造。&lt;/p&gt;
 &lt;p&gt;多次元への拡張も可能。&lt;/p&gt;
@@ -227,9 +230,9 @@ $$
     </item>
     <item>
       <title>Word Tour</title>
-      <link>http://localhost:1313/notes/wordtour/</link>
+      <link>https://ivorypawn.github.io/notes/wordtour/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/notes/wordtour/</guid>
+      <guid>https://ivorypawn.github.io/notes/wordtour/</guid>
       <description>&lt;p&gt;単語埋め込みを健全性を保持したまま一次元へ次元削減する手法の提案．World ではない．&lt;/p&gt;
 &lt;h2 id=&#34;資料&#34;&gt;資料&lt;/h2&gt;
 &lt;ol&gt;
@@ -242,9 +245,9 @@ $$
     </item>
     <item>
       <title>デザインに関する覚書</title>
-      <link>http://localhost:1313/notes/design/</link>
+      <link>https://ivorypawn.github.io/notes/design/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/notes/design/</guid>
+      <guid>https://ivorypawn.github.io/notes/design/</guid>
       <description>&lt;p&gt;UI/UX，資料づくり，プレゼン本番で心がけることなどの個人用まとめ．&lt;/p&gt;
 &lt;h2 id=&#34;ui-制作&#34;&gt;UI 制作&lt;/h2&gt;
 &lt;ul&gt;
@@ -261,40 +264,40 @@ $$
     </item>
     <item>
       <title>ベイズ推定覚書</title>
-      <link>http://localhost:1313/notes/bayes/</link>
+      <link>https://ivorypawn.github.io/notes/bayes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/notes/bayes/</guid>
+      <guid>https://ivorypawn.github.io/notes/bayes/</guid>
       <description></description>
     </item>
     <item>
       <title>最適輸送問題覚書</title>
-      <link>http://localhost:1313/notes/optimal-transport/</link>
+      <link>https://ivorypawn.github.io/notes/optimal-transport/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/notes/optimal-transport/</guid>
+      <guid>https://ivorypawn.github.io/notes/optimal-transport/</guid>
       <description>&lt;h2 id=&#34;資料&#34;&gt;資料&lt;/h2&gt;
 &lt;p&gt;基本的なところは佐藤竜馬先生の『最適輸送の理論とアルゴリズム』で勉強している．読んだ資料や活用事例，参加したオンライン勉強会へのリンクなど．&lt;/p&gt;</description>
     </item>
     <item>
       <title>将棋関連対訳例文仮安置所</title>
-      <link>http://localhost:1313/notes/translation/</link>
+      <link>https://ivorypawn.github.io/notes/translation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/notes/translation/</guid>
+      <guid>https://ivorypawn.github.io/notes/translation/</guid>
       <description>&lt;p&gt;原稿作成時の備忘録．後述のツールで文法や表現をチェックしているが，私個人の英語能力が高くないため，おかしな表現を含んでいる可能性は高い．&lt;/p&gt;
 &lt;p&gt;英文上の棋譜の記法は &lt;a href=&#34;https://en.wikipedia.org/wiki/Shogi_notation#Kitao%E2%80%93Kawasaki_notation&#34;&gt;Kitao–Kawasaki notation&lt;/a&gt; を採用する．&lt;/p&gt;</description>
     </item>
     <item>
       <title>発音に関する覚書</title>
-      <link>http://localhost:1313/notes/phonetics/</link>
+      <link>https://ivorypawn.github.io/notes/phonetics/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/notes/phonetics/</guid>
+      <guid>https://ivorypawn.github.io/notes/phonetics/</guid>
       <description>&lt;h2 id=&#34;前置き&#34;&gt;前置き&lt;/h2&gt;
 &lt;p&gt;将棋の動画を収録する前から，英語の発音を矯正したいとは思っていた．最近引っ越した結果，近所で海外の旅行客を助ける機会が増えて，想像以上にいまの自分がダメなことに危機感を覚えたのもある．発音への自信のなさは，会話への消極性にもつながる．&lt;/p&gt;</description>
     </item>
     <item>
       <title>連想コンテナ覚書 (C&#43;&#43;)</title>
-      <link>http://localhost:1313/notes/map/</link>
+      <link>https://ivorypawn.github.io/notes/map/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/notes/map/</guid>
+      <guid>https://ivorypawn.github.io/notes/map/</guid>
       <description>&lt;p&gt;&lt;code&gt;std::unordered_map&lt;/code&gt; や &lt;code&gt;boost::flat_map&lt;/code&gt; などのハッシュマップはほぼ $O(1)$ で探索でき，赤黒木の &lt;code&gt;std::map&lt;/code&gt; に比べて探索も走査も速いとされている．&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://qiita.com/h_hiro_/items/a83a8fd2391d4a3f0e1c&#34;&gt;[C++] STLの型の使い分け&lt;/a&gt;&lt;/li&gt;

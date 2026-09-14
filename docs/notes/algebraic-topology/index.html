@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="ja" dir="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>Algebraic Topology 覚書 | HideOut</title>
 <meta name="keywords" content="Algebraic Topology">
 <meta name="description" content="基礎の基礎から Vidit Nanda 先生の Computational Algebraic Topology で勉強したときのメモ．
@@ -12,16 +12,16 @@
 ホモトピー
 ホモロジー">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/notes/algebraic-topology/">
-<link crossorigin="anonymous" href="http://localhost:1313/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<link rel="canonical" href="https://ivorypawn.github.io/notes/algebraic-topology/">
+<link crossorigin="anonymous" href="https://ivorypawn.github.io/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://ivorypawn.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://ivorypawn.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://ivorypawn.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://ivorypawn.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://ivorypawn.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="ja" href="http://localhost:1313/notes/algebraic-topology/">
+<link rel="alternate" hreflang="ja" href="https://ivorypawn.github.io/notes/algebraic-topology/">
 <noscript>
     <style>
         #theme-toggle,
@@ -75,7 +75,72 @@
 
 
 <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+<meta property="og:url" content="https://ivorypawn.github.io/notes/algebraic-topology/">
+  <meta property="og:site_name" content="HideOut">
+  <meta property="og:title" content="Algebraic Topology 覚書">
+  <meta property="og:description" content="基礎の基礎から Vidit Nanda 先生の Computational Algebraic Topology で勉強したときのメモ．
+複体 ホモトピー ホモロジー">
+  <meta property="og:locale" content="ja-jp">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="notes">
+    <meta property="article:tag" content="Algebraic Topology">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Algebraic Topology 覚書">
+<meta name="twitter:description" content="基礎の基礎から Vidit Nanda 先生の Computational Algebraic Topology で勉強したときのメモ．
+複体
+ホモトピー
+ホモロジー">
 
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Notes",
+      "item": "https://ivorypawn.github.io/notes/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Algebraic Topology 覚書",
+      "item": "https://ivorypawn.github.io/notes/algebraic-topology/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Algebraic Topology 覚書",
+  "name": "Algebraic Topology 覚書",
+  "description": "基礎の基礎から Vidit Nanda 先生の Computational Algebraic Topology で勉強したときのメモ．\n複体 ホモトピー ホモロジー",
+  "keywords": [
+    "Algebraic Topology"
+  ],
+  "articleBody": "基礎の基礎から Vidit Nanda 先生の Computational Algebraic Topology で勉強したときのメモ．\n複体 ホモトピー ホモロジー ",
+  "wordCount" : "38",
+  "inLanguage": "ja",
+  "datePublished": "0001-01-01T00:00:00Z",
+  "dateModified": "0001-01-01T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://ivorypawn.github.io/notes/algebraic-topology/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "HideOut",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ivorypawn.github.io/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
 
 <body class=" dark" id="top">
@@ -89,7 +154,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="HideOut (Alt + H)">HideOut</a>
+            <a href="https://ivorypawn.github.io/" accesskey="h" title="HideOut (Alt + H)">HideOut</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -117,17 +182,17 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/posts/" title="posts">
+                <a href="https://ivorypawn.github.io/posts/" title="posts">
                     <span>posts</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/notes/" title="notes">
+                <a href="https://ivorypawn.github.io/notes/" title="notes">
                     <span>notes</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/tags/" title="tags">
+                <a href="https://ivorypawn.github.io/tags/" title="tags">
                     <span>tags</span>
                 </a>
             </li>
@@ -149,7 +214,7 @@
 
   
 <div class="toc side left">
-    <details >
+    <details open>
         <summary accesskey="c" title="(Alt + C)">
             <span class="details">Table of Contents</span>
         </summary>
@@ -179,10 +244,10 @@
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="http://localhost:1313/tags/algebraic-topology/">Algebraic Topology</a></li>
+      <li><a href="https://ivorypawn.github.io/tags/algebraic-topology/">Algebraic Topology</a></li>
     </ul>
 <nav class="paginav">
-  <a class="prev" href="http://localhost:1313/notes/diffusion-model/">
+  <a class="prev" href="https://ivorypawn.github.io/notes/diffusion-model/">
     <span class="title">« Prev</span>
     <br>
     <span>Diffusion Model</span>
@@ -194,7 +259,7 @@
     </main>
     
 <footer class="footer">
-    <span>&copy; 2025 <a href="http://localhost:1313/">HideOut</a></span>
+    <span>&copy; 2026 <a href="https://ivorypawn.github.io/">HideOut</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/">Hugo</a> &

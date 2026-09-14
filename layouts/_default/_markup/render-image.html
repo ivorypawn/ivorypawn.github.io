@@ -3,17 +3,56 @@
 <!-- Image zoom effect -->
 <!-- Source: https://adityatelange.in/blog/hugo-image-zoom-in/#sample-image-with-zoom-in-effect -->
 <!-- Checks if page is part of section and page is not section itself -->
+{{- $src := .Destination }}
+{{- $url := urls.Parse .Destination }}
+{{- if and .Page.File (not $url.IsAbs) (not $url.Host) $url.Path (not (hasPrefix $url.Path "/")) }}
+    {{- $suffix := replaceRE `^[^?#]*` "" .Destination }}
+    {{- with .Page.Resources.GetMatch (strings.TrimPrefix "./" $url.Path) }}
+        {{- $src = printf "%s%s" .Permalink $suffix }}
+    {{- else }}
+        {{/* Resolve shared content images relative to the Markdown source file. */}}
+        {{- $path := path.Join $.Page.File.Dir $url.Path }}
+        {{- if and (not (hasPrefix $path "../")) (fileExists (path.Join "content" $path)) }}
+            {{- $src = printf "%s%s" ($path | absURL) $suffix }}
+        {{- end }}
+    {{- end }}
+{{- end }}
+{{- $alt := slice }}
+{{- $width := "" }}
+{{- $align := "" }}
+{{- range findRE `\S+` .PlainText }}
+    {{- if findRE `^w:[1-9][0-9]*$` . }}
+        {{- $width = strings.TrimPrefix "w:" . }}
+    {{- else if in (slice "left" "center" "right") . }}
+        {{- $align = . }}
+    {{- else }}
+        {{- $alt = $alt | append . }}
+    {{- end }}
+{{- end }}
+{{- $style := "" }}
+{{- with $width }}
+    {{- $style = printf "width: %spx; max-width: 100%%; height: auto;" . }}
+{{- end }}
+{{- with $align }}
+    {{- $style = printf "%s display: block; margin: 1rem 0; margin-inline: %s;" $style (index (dict "left" "0 auto" "center" "auto" "right" "auto 0") .) }}
+{{- end }}
+{{- $caption := delimit $alt " " }}
 {{- if and (ne .Page.Kind "section") (.Page.Section ) }}
     <!-- Generate a unique id for each image -->
     {{- $random := (substr (md5 .Destination) 0 5) }}
     <input type="checkbox" id="zoomCheck-{{$random}}" hidden>
     <label for="zoomCheck-{{$random}}">
         <img class="zoomCheck" loading="lazy" decoding="async"
-            src="{{ .Destination | safeURL }}" alt="{{ .Text }}"
+            src="{{ $src | safeURL }}" alt="{{ delimit $alt " " }}"
+            {{ with $style }}style="{{ . | safeCSS }}"{{ end }}
             {{ with.Title}} title="{{ . }}" {{ end }} />
     </label>
 {{- else }}
-    <img loading="lazy" decoding="async" src="{{ .Destination | safeURL }}"
-        alt="{{ .Text }}" {{ with .Title}} title="{{ . }}" {{ end }} />
+    <img loading="lazy" decoding="async" src="{{ $src | safeURL }}"
+        alt="{{ delimit $alt " " }}" {{ with $style }}style="{{ . | safeCSS }}"{{ end }}
+        {{ with .Title}} title="{{ . }}" {{ end }} />
+{{- end }}
+{{- with $caption }}
+    <span class="image-caption" style="{{ printf "%s display: block; font-size: 0.8em; line-height: 1.5; margin-top: -0.5rem; margin-bottom: 1rem; text-align: %s;" $style ($align | default "left") | safeCSS }}">{{ . }}</span>
 {{- end }}
 <!-- End image zoom effect -->

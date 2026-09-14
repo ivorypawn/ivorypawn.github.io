@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Geometry Processing on HideOut</title>
-    <link>http://localhost:1313/tags/geometry-processing/</link>
+    <link>https://ivorypawn.github.io/tags/geometry-processing/</link>
     <description>Recent content in Geometry Processing on HideOut</description>
     <generator>Hugo -- 0.138.0</generator>
     <language>ja-jp</language>
-    <atom:link href="http://localhost:1313/tags/geometry-processing/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ivorypawn.github.io/tags/geometry-processing/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Intrinsic Triangulations</title>
-      <link>http://localhost:1313/notes/intrinsic-triangulations/</link>
+      <link>https://ivorypawn.github.io/notes/intrinsic-triangulations/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/notes/intrinsic-triangulations/</guid>
+      <guid>https://ivorypawn.github.io/notes/intrinsic-triangulations/</guid>
       <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
       &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/gcRDdYrgOhg?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
       &gt;&lt;/iframe&gt;
@@ -23,9 +23,9 @@
     </item>
     <item>
       <title>Monte Carlo Geometry Processing</title>
-      <link>http://localhost:1313/notes/monte-carlo-geometry-processing/</link>
+      <link>https://ivorypawn.github.io/notes/monte-carlo-geometry-processing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/notes/monte-carlo-geometry-processing/</guid>
+      <guid>https://ivorypawn.github.io/notes/monte-carlo-geometry-processing/</guid>
       <description>&lt;p&gt;
 
 
@@ -35,7 +35,8 @@
     &lt;input type=&#34;checkbox&#34; id=&#34;zoomCheck-b2f82&#34; hidden&gt;
     &lt;label for=&#34;zoomCheck-b2f82&#34;&gt;
         &lt;img class=&#34;zoomCheck&#34; loading=&#34;lazy&#34; decoding=&#34;async&#34;
-            src=&#34;00.png&#34; alt=&#34;&#34;
+            src=&#34;https://ivorypawn.github.io/notes/monte-carlo-geometry-processing/00.png&#34; alt=&#34;&#34;
+            
              /&gt;
     &lt;/label&gt;
 
@@ -60,9 +61,9 @@ $$
     </item>
     <item>
       <title>Neural Geometric Level of Detail</title>
-      <link>http://localhost:1313/notes/nglod/</link>
+      <link>https://ivorypawn.github.io/notes/nglod/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/notes/nglod/</guid>
+      <guid>https://ivorypawn.github.io/notes/nglod/</guid>
       <description>&lt;h2 id=&#34;資料&#34;&gt;資料&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Towaki Takikawa, Joey Litalien, Kangxue Yin, Karsten Kreis, Charles Loop, Derek Nowrouzezahrai, Alec Jacobson, Morgan McGuire, &amp;amp; Sanja Fidler (2021). &lt;a href=&#34;https://research.nvidia.com/labs/toronto-ai/nglod/&#34;&gt;Neural Geometric Level of Detail: Real-time Rendering with Implicit 3D Shapes&lt;/a&gt;.&lt;/li&gt;
@@ -74,9 +75,9 @@ $$
     </item>
     <item>
       <title>Stochastic Poisson Surface Reconstruction</title>
-      <link>http://localhost:1313/notes/stochastic-poisson-surface-reconstruction/</link>
+      <link>https://ivorypawn.github.io/notes/stochastic-poisson-surface-reconstruction/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/notes/stochastic-poisson-surface-reconstruction/</guid>
+      <guid>https://ivorypawn.github.io/notes/stochastic-poisson-surface-reconstruction/</guid>
       <description>&lt;p&gt;
 
 
@@ -86,7 +87,8 @@ $$
     &lt;input type=&#34;checkbox&#34; id=&#34;zoomCheck-77928&#34; hidden&gt;
     &lt;label for=&#34;zoomCheck-77928&#34;&gt;
         &lt;img class=&#34;zoomCheck&#34; loading=&#34;lazy&#34; decoding=&#34;async&#34;
-            src=&#34;00.png#center&#34; alt=&#34;&#34;
+            src=&#34;https://ivorypawn.github.io/notes/stochastic-poisson-surface-reconstruction/00.png#center&#34; alt=&#34;&#34;
+            
              /&gt;
     &lt;/label&gt;
 
