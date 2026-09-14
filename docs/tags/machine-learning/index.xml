@@ -1,46 +1,77 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Machine Learning on HideOut</title>
-    <link>https://ivorypawn.github.io/tags/machine-learning/</link>
+    <link>http://localhost:1313/tags/machine-learning/</link>
     <description>Recent content in Machine Learning on HideOut</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.138.0</generator>
     <language>ja-jp</language>
-    <atom:link href="https://ivorypawn.github.io/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Diffusion Model</title>
-      <link>https://ivorypawn.github.io/notes/diffusion-model/</link>
+      <link>http://localhost:1313/notes/diffusion-model/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ivorypawn.github.io/notes/diffusion-model/</guid>
-      <description>概要 画像に逐次的にノイズを付加しランダムな画像を生成するプロセスを考える 上記の逆過程を推定することで、ランダムな画像から何らかのそれっぽい画</description>
+      <guid>http://localhost:1313/notes/diffusion-model/</guid>
+      <description>&lt;p&gt;
+
+
+
+
+    
+    &lt;input type=&#34;checkbox&#34; id=&#34;zoomCheck-b2f82&#34; hidden&gt;
+    &lt;label for=&#34;zoomCheck-b2f82&#34;&gt;
+        &lt;img class=&#34;zoomCheck&#34; loading=&#34;lazy&#34; decoding=&#34;async&#34;
+            src=&#34;00.png&#34; alt=&#34;&#34;
+             /&gt;
+    &lt;/label&gt;
+
+&lt;/p&gt;
+&lt;h2 id=&#34;概要&#34;&gt;概要&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;画像に逐次的にノイズを付加しランダムな画像を生成するプロセスを考える&lt;/li&gt;
+&lt;li&gt;上記の逆過程を推定することで、ランダムな画像から何らかのそれっぽい画像を生成する&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;DALL-E や Imagen などの画像生成は拡散モデルがベース&lt;/p&gt;</description>
     </item>
     <item>
       <title>GBDT</title>
-      <link>https://ivorypawn.github.io/notes/gbdt/</link>
+      <link>http://localhost:1313/notes/gbdt/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ivorypawn.github.io/notes/gbdt/</guid>
-      <description>概要 GBDT(Gradient Boosting Decision Tree; 勾配ブースティング決定木) は，決定木によるアンサンブル学習の一種．Kaggle で頻用されている． GBDT は決定木の列の推定を統合（bo</description>
+      <guid>http://localhost:1313/notes/gbdt/</guid>
+      <description>&lt;h2 id=&#34;概要&#34;&gt;概要&lt;/h2&gt;
+&lt;p&gt;GBDT(Gradient Boosting Decision Tree; 勾配ブースティング決定木) は，決定木によるアンサンブル学習の一種．Kaggle で頻用されている．&lt;/p&gt;
+&lt;p&gt;GBDT は決定木の列の推定を統合（boosting）することで高精度な予測を行う．決定木の列は，既存の列のアンサンブルから生じる誤差を予測する決定木を新たに生成するということを繰り返して，逐次的に生成される．&lt;/p&gt;</description>
     </item>
     <item>
       <title>Python 仮想環境に関する覚書</title>
-      <link>https://ivorypawn.github.io/notes/python/</link>
+      <link>http://localhost:1313/notes/python/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ivorypawn.github.io/notes/python/</guid>
-      <description>しばらく使わないと忘れがち． Rye MacOS Ventura 13.4. 導入 手順通りやるだけだが手もとでエラーが出たのでメモ． curl: (6) Could not resolve host: rye-up.com DNS を 8.8.8.8 と 8.8.4.4 にしたら解決した． zsh にパス</description>
+      <guid>http://localhost:1313/notes/python/</guid>
+      <description>&lt;p&gt;しばらく使わないと忘れがち．&lt;/p&gt;
+&lt;h2 id=&#34;ryehttpsrye-upcom&#34;&gt;&lt;a href=&#34;https://rye-up.com/&#34;&gt;Rye&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;MacOS Ventura 13.4.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;導入&#34;&gt;導入&lt;/h3&gt;
+&lt;p&gt;手順通りやるだけだが手もとでエラーが出たのでメモ．&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl: (6) Could not resolve host: rye-up.com
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;DNS を &lt;code&gt;8.8.8.8&lt;/code&gt; と &lt;code&gt;8.8.4.4&lt;/code&gt; にしたら解決した．&lt;/p&gt;
+&lt;p&gt;zsh にパスも通しておく．&lt;/p&gt;</description>
     </item>
     <item>
       <title>ベイズ推定覚書</title>
-      <link>https://ivorypawn.github.io/notes/bayes/</link>
+      <link>http://localhost:1313/notes/bayes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ivorypawn.github.io/notes/bayes/</guid>
+      <guid>http://localhost:1313/notes/bayes/</guid>
       <description></description>
     </item>
     <item>
       <title>最適輸送問題覚書</title>
-      <link>https://ivorypawn.github.io/notes/optimal-transport/</link>
+      <link>http://localhost:1313/notes/optimal-transport/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ivorypawn.github.io/notes/optimal-transport/</guid>
-      <description>資料 基本的なところは佐藤竜馬先生の『最適輸送の理論とアルゴリズム』で勉強している．読んだ資料や活用事例，参加したオンライン勉強会へのリンクな</description>
+      <guid>http://localhost:1313/notes/optimal-transport/</guid>
+      <description>&lt;h2 id=&#34;資料&#34;&gt;資料&lt;/h2&gt;
+&lt;p&gt;基本的なところは佐藤竜馬先生の『最適輸送の理論とアルゴリズム』で勉強している．読んだ資料や活用事例，参加したオンライン勉強会へのリンクなど．&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

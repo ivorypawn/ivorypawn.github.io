@@ -1,60 +1,152 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>論文読み on HideOut</title>
-    <link>https://ivorypawn.github.io/tags/%E8%AB%96%E6%96%87%E8%AA%AD%E3%81%BF/</link>
+    <link>http://localhost:1313/tags/%E8%AB%96%E6%96%87%E8%AA%AD%E3%81%BF/</link>
     <description>Recent content in 論文読み on HideOut</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.138.0</generator>
     <language>ja-jp</language>
-    <atom:link href="https://ivorypawn.github.io/tags/%E8%AB%96%E6%96%87%E8%AA%AD%E3%81%BF/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/%E8%AB%96%E6%96%87%E8%AA%AD%E3%81%BF/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Diffusion Model</title>
-      <link>https://ivorypawn.github.io/notes/diffusion-model/</link>
+      <link>http://localhost:1313/notes/diffusion-model/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ivorypawn.github.io/notes/diffusion-model/</guid>
-      <description>概要 画像に逐次的にノイズを付加しランダムな画像を生成するプロセスを考える 上記の逆過程を推定することで、ランダムな画像から何らかのそれっぽい画</description>
+      <guid>http://localhost:1313/notes/diffusion-model/</guid>
+      <description>&lt;p&gt;
+
+
+
+
+    
+    &lt;input type=&#34;checkbox&#34; id=&#34;zoomCheck-b2f82&#34; hidden&gt;
+    &lt;label for=&#34;zoomCheck-b2f82&#34;&gt;
+        &lt;img class=&#34;zoomCheck&#34; loading=&#34;lazy&#34; decoding=&#34;async&#34;
+            src=&#34;00.png&#34; alt=&#34;&#34;
+             /&gt;
+    &lt;/label&gt;
+
+&lt;/p&gt;
+&lt;h2 id=&#34;概要&#34;&gt;概要&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;画像に逐次的にノイズを付加しランダムな画像を生成するプロセスを考える&lt;/li&gt;
+&lt;li&gt;上記の逆過程を推定することで、ランダムな画像から何らかのそれっぽい画像を生成する&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;DALL-E や Imagen などの画像生成は拡散モデルがベース&lt;/p&gt;</description>
     </item>
     <item>
       <title>GBDT</title>
-      <link>https://ivorypawn.github.io/notes/gbdt/</link>
+      <link>http://localhost:1313/notes/gbdt/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ivorypawn.github.io/notes/gbdt/</guid>
-      <description>概要 GBDT(Gradient Boosting Decision Tree; 勾配ブースティング決定木) は，決定木によるアンサンブル学習の一種．Kaggle で頻用されている． GBDT は決定木の列の推定を統合（bo</description>
+      <guid>http://localhost:1313/notes/gbdt/</guid>
+      <description>&lt;h2 id=&#34;概要&#34;&gt;概要&lt;/h2&gt;
+&lt;p&gt;GBDT(Gradient Boosting Decision Tree; 勾配ブースティング決定木) は，決定木によるアンサンブル学習の一種．Kaggle で頻用されている．&lt;/p&gt;
+&lt;p&gt;GBDT は決定木の列の推定を統合（boosting）することで高精度な予測を行う．決定木の列は，既存の列のアンサンブルから生じる誤差を予測する決定木を新たに生成するということを繰り返して，逐次的に生成される．&lt;/p&gt;</description>
     </item>
     <item>
       <title>Intrinsic Triangulations</title>
-      <link>https://ivorypawn.github.io/notes/intrinsic-triangulations/</link>
+      <link>http://localhost:1313/notes/intrinsic-triangulations/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ivorypawn.github.io/notes/intrinsic-triangulations/</guid>
-      <description>概要 離散微分幾何学者 Keenan Crane 先生のメッシュ 内在表現 関連論文を読んだまとめ。 3D モデルの（位相的）三角形分割 $T$ を、メッシュの頂点、エッジ、フェースの</description>
+      <guid>http://localhost:1313/notes/intrinsic-triangulations/</guid>
+      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/gcRDdYrgOhg?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
+      &gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;h2 id=&#34;概要&#34;&gt;概要&lt;/h2&gt;
+&lt;p&gt;離散微分幾何学者 &lt;a href=&#34;https://www.cs.cmu.edu/~kmcrane/&#34;&gt;Keenan Crane&lt;/a&gt; 先生のメッシュ &lt;strong&gt;内在表現&lt;/strong&gt; 関連論文を読んだまとめ。&lt;/p&gt;
+&lt;p&gt;3D モデルの（位相的）三角形分割 $T$ を、メッシュの頂点、エッジ、フェースの組 $(V,E,F)$ で表記する。各頂点をインデックス $i\in V$ で表し、エッジとフェースはそれぞれ $ij\in E, ijk\in F$ などと表すことにする。通常、メッシュのデータ表現は、おもに頂点座標 $\mathbf{f}: V \rightarrow \mathbb{R}^{3}$ と頂点間の接続を表すリストを用いる（e.g. Halfedge, Signed incidence matrices, Gluing map）。以下この表現を &lt;strong&gt;外在表現&lt;/strong&gt; と呼ぶ。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Monte Carlo Geometry Processing</title>
-      <link>https://ivorypawn.github.io/notes/monte-carlo-geometry-processing/</link>
+      <link>http://localhost:1313/notes/monte-carlo-geometry-processing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ivorypawn.github.io/notes/monte-carlo-geometry-processing/</guid>
-      <description>資料 Sawhney, R., &amp;amp; Crane, K. (2020). Monte Carlo Geometry Processing: A Grid-Free Approach to PDE-Based Methods on Volumetric Domains. ACM Trans. Graph., 39(4). Sawhney, R., Seyb, D., Jarosz, W., &amp;amp; Crane, K. (2022). Grid-free Monte Carlo for PDEs with spatially varying coefficients. ACM Transactions on Graphics (Proceedings of SIGGRAPH), 41(4). Jacobson, A., Baran, I., Popović, J., &amp;amp; Sorkine, O. (2011). Bounded</description>
+      <guid>http://localhost:1313/notes/monte-carlo-geometry-processing/</guid>
+      <description>&lt;p&gt;
+
+
+
+
+    
+    &lt;input type=&#34;checkbox&#34; id=&#34;zoomCheck-b2f82&#34; hidden&gt;
+    &lt;label for=&#34;zoomCheck-b2f82&#34;&gt;
+        &lt;img class=&#34;zoomCheck&#34; loading=&#34;lazy&#34; decoding=&#34;async&#34;
+            src=&#34;00.png&#34; alt=&#34;&#34;
+             /&gt;
+    &lt;/label&gt;
+
+&lt;/p&gt;
+&lt;h2 id=&#34;資料&#34;&gt;資料&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Sawhney, R., &amp;amp; Crane, K. (2020). &lt;a href=&#34;https://www.cs.cmu.edu/~kmcrane/Projects/MonteCarloGeometryProcessing/index.html&#34;&gt;Monte Carlo Geometry Processing: A Grid-Free Approach to PDE-Based Methods on Volumetric Domains&lt;/a&gt;. ACM Trans. Graph., 39(4).&lt;/li&gt;
+&lt;li&gt;Sawhney, R., Seyb, D., Jarosz, W., &amp;amp; Crane, K. (2022). &lt;a href=&#34;https://cs.dartmouth.edu/wjarosz/publications/sawhneyseyb22gridfree.html&#34;&gt;Grid-free Monte Carlo for PDEs with spatially varying coefficients&lt;/a&gt;. ACM Transactions on Graphics (Proceedings of SIGGRAPH), 41(4).&lt;/li&gt;
+&lt;li&gt;Jacobson, A., Baran, I., Popović, J., &amp;amp; Sorkine, O. (2011). &lt;a href=&#34;https://homes.cs.washington.edu/~jovan/papers/jacobson-2011-bbw.pdf&#34;&gt;Bounded Biharmonic Weights for Real-Time Deformation&lt;/a&gt;. ACM Trans. Graph., 30(4).&lt;/li&gt;
+&lt;li&gt;Oded Stein, Eitan Grinspun, Max Wardetzky, &amp;amp; Alec Jacobson (2017). &lt;a href=&#34;https://arxiv.org/abs/1707.04348&#34;&gt;Natural Boundary Conditions for Smoothing in Geometry Processing&lt;/a&gt;. CoRR, abs/1707.04348.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;概要&#34;&gt;概要&lt;/h2&gt;
+&lt;p&gt;（単純）モンテカルロ法は、積分 $\displaystyle I:=\int_{\Omega} f(x) d x$ を $N$ 個のサンプルから以下のように近似する。
+$$
+F_{N}:=|\Omega| \frac{1}{N} \sum_{i=1}^{N} f(X_{i}), \quad X_{i} \sim \mathcal{U}(\Omega)
+$$
+ここで $\mathcal{U}(\Omega)$ は領域 $\Omega$ 上の一様分布を表す。より一般に $\Omega$ 上の任意の確率分布 $p$ に対して以下が成り立つ。
+$$
+\frac{1}{N} \sum_{i=1}^{N} \frac{f(X_{i})}{p(X_{i})}, \quad X_{i} \sim p
+$$
+本手法は調和関数の積分に関する式から出発して、volumetric な 3D モデル上のいくつかの実用的な偏微分方程式をモンテカルロ法に基づいて解く、WoS (Walk on Spheres) アルゴリズムを研究する。このアプローチには例えば以下の利点が考えられる。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Neural Geometric Level of Detail</title>
-      <link>https://ivorypawn.github.io/notes/nglod/</link>
+      <link>http://localhost:1313/notes/nglod/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ivorypawn.github.io/notes/nglod/</guid>
-      <description>資料 Towaki Takikawa, Joey Litalien, Kangxue Yin, Karsten Kreis, Charles Loop, Derek Nowrouzezahrai, Alec Jacobson, Morgan McGuire, &amp;amp; Sanja Fidler (2021). Neural Geometric Level of Detail: Real-time Rendering with Implicit 3D Shapes. Talk: Toronto Geometry Colloquium - Siddhartha Chaudhuri &amp;amp; Towaki Takikawa Towaki Takikawa, Or Perel, Clement Fuji Tsang, Charles Loop, Joey Litalien, Jonathan Tremblay, Sanja Fidler, &amp;amp; Maria Shugrina. (2022). Kaolin Wisp: A PyTorch Library and Engine for</description>
+      <guid>http://localhost:1313/notes/nglod/</guid>
+      <description>&lt;h2 id=&#34;資料&#34;&gt;資料&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Towaki Takikawa, Joey Litalien, Kangxue Yin, Karsten Kreis, Charles Loop, Derek Nowrouzezahrai, Alec Jacobson, Morgan McGuire, &amp;amp; Sanja Fidler (2021). &lt;a href=&#34;https://research.nvidia.com/labs/toronto-ai/nglod/&#34;&gt;Neural Geometric Level of Detail: Real-time Rendering with Implicit 3D Shapes&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Talk: &lt;a href=&#34;&#34;&gt;Toronto Geometry Colloquium - Siddhartha Chaudhuri &amp;amp; Towaki Takikawa&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Towaki Takikawa, Or Perel, Clement Fuji Tsang, Charles Loop, Joey Litalien, Jonathan Tremblay, Sanja Fidler, &amp;amp; Maria Shugrina. (2022). &lt;a href=&#34;https://github.com/NVIDIAGameWorks/kaolin-wisp&#34;&gt;Kaolin Wisp: A PyTorch Library and Engine for Neural Fields Research&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;neural-sdfs&#34;&gt;Neural SDFs&lt;/h2&gt;
+&lt;p&gt;符号つき距離関数（signed distance functions; SDFs）$f: \mathbb{R}^{3} \rightarrow \mathbb{R}$ は，オブジェクト $\mathcal{M}$ の境界 $\mathcal{S}=\partial\mathcal{M}$ からの符号つき距離を表す 3D 表現の一種．&lt;/p&gt;</description>
     </item>
     <item>
       <title>Stochastic Poisson Surface Reconstruction</title>
-      <link>https://ivorypawn.github.io/notes/stochastic-poisson-surface-reconstruction/</link>
+      <link>http://localhost:1313/notes/stochastic-poisson-surface-reconstruction/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ivorypawn.github.io/notes/stochastic-poisson-surface-reconstruction/</guid>
-      <description>概要 Silvia Sellán, &amp;amp; Alec Jacobson (2022). Stochastic Poisson Surface Reconstruction. ACM Transactions on Graphics. を読んだ． ベースとなる先行研究の Poisson Surface Reconstruction は，法線つき点群からメッシュを復元する手法．PSR は点群が</description>
+      <guid>http://localhost:1313/notes/stochastic-poisson-surface-reconstruction/</guid>
+      <description>&lt;p&gt;
+
+
+
+
+    
+    &lt;input type=&#34;checkbox&#34; id=&#34;zoomCheck-77928&#34; hidden&gt;
+    &lt;label for=&#34;zoomCheck-77928&#34;&gt;
+        &lt;img class=&#34;zoomCheck&#34; loading=&#34;lazy&#34; decoding=&#34;async&#34;
+            src=&#34;00.png#center&#34; alt=&#34;&#34;
+             /&gt;
+    &lt;/label&gt;
+
+&lt;/p&gt;
+&lt;h2 id=&#34;概要&#34;&gt;概要&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Silvia Sellán, &amp;amp; Alec Jacobson (2022). &lt;a href=&#34;https://www.dgp.toronto.edu/projects/stochastic-psr/&#34;&gt;Stochastic Poisson Surface Reconstruction&lt;/a&gt;. ACM Transactions on Graphics.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;を読んだ．&lt;/p&gt;
+&lt;p&gt;ベースとなる先行研究の &lt;a href=&#34;https://hhoppe.com/proj/poissonrecon/&#34;&gt;Poisson Surface Reconstruction&lt;/a&gt; は，法線つき点群からメッシュを復元する手法．PSR は点群が欠損していたりノイズを含んでいる場合に精度が悪かった．&lt;/p&gt;</description>
     </item>
     <item>
       <title>Word Tour</title>
-      <link>https://ivorypawn.github.io/notes/wordtour/</link>
+      <link>http://localhost:1313/notes/wordtour/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ivorypawn.github.io/notes/wordtour/</guid>
-      <description>単語埋め込みを健全性を保持したまま一次元へ次元削減する手法の提案．World ではない． 資料 Sato, R.. (2022). Word Tour: One-dimensional Word Embeddings via the Traveling Salesman Problem. (NAACL 2022) NLP コロキウム資料 最適</description>
+      <guid>http://localhost:1313/notes/wordtour/</guid>
+      <description>&lt;p&gt;単語埋め込みを健全性を保持したまま一次元へ次元削減する手法の提案．World ではない．&lt;/p&gt;
+&lt;h2 id=&#34;資料&#34;&gt;資料&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Sato, R.. (2022). &lt;a href=&#34;https://arxiv.org/abs/2205.01954&#34;&gt;Word Tour: One-dimensional Word Embeddings via the Traveling Salesman Problem&lt;/a&gt;. (NAACL 2022)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.slideshare.net/joisino/word-tour-onedimensional-word-embeddings-via-the-traveling-salesman-problem-naacl-2022&#34;&gt;NLP コロキウム資料&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://speakerdeck.com/eumesy/how-to-leverage-optimal-transport&#34;&gt;最適輸送の使いかた&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;導入&#34;&gt;導入&lt;/h2&gt;
+&lt;p&gt;自然言語の計算機可読表現をどのように実装するか考える．&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

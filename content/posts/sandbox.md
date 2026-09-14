@@ -4,15 +4,17 @@ draft: true
 ---
 
 ## Markdown All in One (VSCode)
+
 - `Alt + S` で打ち消し線
 
 ## HTML
+
 {{<rawhtml>}}
 <p align="center" style="color: blue;"><strong>This is raw HTML</strong></p>
 {{</rawhtml>}}
 
-
 ## Diagram
+
 ```goat
       .               .                .               .--- 1          .-- 1     / 1
      / \              |                |           .---+            .-+         +
@@ -27,8 +29,8 @@ draft: true
 - [Diagrams](https://gohugo.io/content-management/diagrams/)
 - [HUGOサイトでMermaid記法](https://tech.nosuz.jp/post/2022-02/mermaid/)
 
-
 ## $\LaTeX$
+
 $$
 \begin{align*}
 a  &= b  & c  &= d  & e  &= f \\\\\\
@@ -41,7 +43,7 @@ $$
 \begin{align\*}
   &g(\bar x_k), & x_k \in \partial \Omega_{\epsilon} \\\\\\
   &\hat u_0 (x_{k+1}), & \text{otherwise}
-\end{align\*} 
+\end{align\*}
 \right.
 $$
 
@@ -51,4 +53,3 @@ $$
 
 $\sum\limits_\mathrm{min}^\mathrm{max}\quad\sum_\mathrm{min}^\mathrm{max}\quad$
 $\displaystyle\sum_\mathrm{min}^\mathrm{max}$
-

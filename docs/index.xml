@@ -1,201 +1,573 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>HideOut</title>
-    <link>https://ivorypawn.github.io/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on HideOut</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.138.0</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sat, 27 Jan 2024 15:28:18 +0900</lastBuildDate>
-    <atom:link href="https://ivorypawn.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 20 Mar 2025 00:32:34 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>國分「暇と退屈の倫理学」に関するメモ</title>
-      <link>https://ivorypawn.github.io/posts/2024-01-27/</link>
+      <title>國分功一郎の著書に関するツイートに関する所感</title>
+      <link>http://localhost:1313/posts/2025-03-20/</link>
+      <pubDate>Thu, 20 Mar 2025 00:32:34 +0900</pubDate>
+      <guid>http://localhost:1313/posts/2025-03-20/</guid>
+      <description>&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;國分功一郎『原子力時代における哲学』読んでるけど、全然理解してなくてクラクラする…&lt;br&gt;「原子核の崩壊というのは、生態圏では起こらず太陽圏で起こる現象だといいます。」&lt;br&gt;放射性崩壊なんてありふれた現象ですし、天然原子炉の話もズレすぎでしょ&lt;br&gt;哲学やる前に物理学の教科書読めや &lt;a href=&#34;https://t.co/a7daBI95Kj&#34;&gt;pic.twitter.com/a7daBI95Kj&lt;/a&gt;&lt;/p&gt;&amp;mdash; ヴォルヴィーノ＠読書垢 (@dokushoa) &lt;a href=&#34;https://twitter.com/dokushoa/status/1900844794433466516?ref_src=twsrc%5Etfw&#34;&gt;March 15, 2025&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;著者は中沢新一の独自用語に依拠してる感じですね&lt;br&gt;こんな感じの思想&lt;a href=&#34;https://t.co/kIFAweLCv6&#34;&gt;https://t.co/kIFAweLCv6&lt;/a&gt; &lt;a href=&#34;https://t.co/EVh9oiGuBW&#34;&gt;https://t.co/EVh9oiGuBW&lt;/a&gt; &lt;a href=&#34;https://t.co/prs7yVv60m&#34;&gt;pic.twitter.com/prs7yVv60m&lt;/a&gt;&lt;/p&gt;&amp;mdash; ヴォルヴィーノ＠読書垢 (@dokushoa) &lt;a href=&#34;https://twitter.com/dokushoa/status/1900917050115325956?ref_src=twsrc%5Etfw&#34;&gt;March 15, 2025&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>國分『暇と退屈の倫理学』に関するメモ</title>
+      <link>http://localhost:1313/posts/2024-01-27/</link>
       <pubDate>Sat, 27 Jan 2024 15:28:18 +0900</pubDate>
-      <guid>https://ivorypawn.github.io/posts/2024-01-27/</guid>
-      <description>（底本：國分功一郎『暇と退屈の倫理学』初版第五刷，朝日出版社） 本書に登場する引用を時系列順に整理する． 序章 「好きなこと」とは何か 18th; Kant 人間は世</description>
+      <guid>http://localhost:1313/posts/2024-01-27/</guid>
+      <description>&lt;p&gt;（底本：國分功一郎『暇と退屈の倫理学』初版第五刷，朝日出版社）&lt;/p&gt;
+&lt;p&gt;本書に登場する引用を時系列順に整理する．&lt;/p&gt;
+&lt;h2 id=&#34;序章-好きなこととは何か&#34;&gt;序章 「好きなこと」とは何か&lt;/h2&gt;
+&lt;h3 id=&#34;18th-kant&#34;&gt;18th; Kant&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;人間は世界を受け取るだけでない．それらを自分なりの型にあてはめて，主体的にまとめ上げる．[&amp;hellip;] そして，人間にはそのような主体性が当然期待できるのだと，カントはそう考えていた．&lt;/p&gt;</description>
     </item>
     <item>
       <title>将棋 AI を利用した学習に関する雑感</title>
-      <link>https://ivorypawn.github.io/posts/2023-11-07/</link>
+      <link>http://localhost:1313/posts/2023-11-07/</link>
       <pubDate>Tue, 07 Nov 2023 16:15:15 +0900</pubDate>
-      <guid>https://ivorypawn.github.io/posts/2023-11-07/</guid>
-      <description>自身の敗局を並べるのは，有効な棋力向上の手段である．そこには主に 2 つの観点が存在する． どれが悪手で何が最善だったのか（客観的・演繹的） なぜ最</description>
+      <guid>http://localhost:1313/posts/2023-11-07/</guid>
+      <description>&lt;p&gt;自身の敗局を並べるのは，有効な棋力向上の手段である．そこには主に 2 つの観点が存在する．&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;どれが悪手で何が最善だったのか（&lt;strong&gt;客観的・演繹的&lt;/strong&gt;）&lt;/li&gt;
+&lt;li&gt;なぜ最善を選べなかったのか（&lt;strong&gt;主観的・帰納的&lt;/strong&gt;）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;実際には『このあたりで間違えたな．何が正解だったんだろう．こうか．なるほど』の段階で反省が終わり，なぜ最善手が見つけられなかったのか，あるいはなぜ見つけていながらほかの手を選んでしまったかという分析までは行わないことが多い．それが悪いわけではない．たとえば単なる技術不足が敗因なら，1. までに留めて反省のサイクルを早く回すほうがよい．また意識的な 2. の実施は自らの欠点を直視しなければならず，辛い作業かもしれない．&lt;/p&gt;</description>
     </item>
     <item>
       <title>珈琲飲みたい</title>
-      <link>https://ivorypawn.github.io/posts/2023-11-03/</link>
+      <link>http://localhost:1313/posts/2023-11-03/</link>
       <pubDate>Fri, 03 Nov 2023 14:37:49 +0900</pubDate>
-      <guid>https://ivorypawn.github.io/posts/2023-11-03/</guid>
-      <description>トップページに珈琲乞食リンクをつけた． 現状，記事に挿入すると text-decoration:none !important が効かず下線が表示される． Buy me a coffee ☕ 優先順位がよく分からないが，そういう使い</description>
+      <guid>http://localhost:1313/posts/2023-11-03/</guid>
+      <description>&lt;p&gt;トップページに珈琲乞食リンクをつけた．&lt;/p&gt;
+&lt;p&gt;現状，記事に挿入すると &lt;code&gt;text-decoration:none !important&lt;/code&gt; が効かず下線が表示される．&lt;/p&gt;
+
+&lt;div style=&#34;margin-right:auto; margin-left:auto; text-align: center; width: 170px; border: 1px solid #333333; border-radius: 10px; background-color: #F5F5EA&#34;&gt;
+    &lt;a href=&#34;https://www.buymeacoffee.com/ivorypawn&#34; style=&#34;text-decoration:none !important; color:#C2410C; font-size:smaller&#34;&gt;&lt;b&gt;Buy me a coffee ☕&lt;/b&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;/br&gt;
+
+&lt;p&gt;優先順位がよく分からないが，そういう使い方をする予定がないので放置している．いろいろ貼るなら shortcode にしたほうがいい．&lt;/p&gt;</description>
     </item>
     <item>
       <title>北國王将杯レポート</title>
-      <link>https://ivorypawn.github.io/posts/2023-10-03/</link>
+      <link>http://localhost:1313/posts/2023-10-03/</link>
       <pubDate>Tue, 03 Oct 2023 02:58:30 +0900</pubDate>
-      <guid>https://ivorypawn.github.io/posts/2023-10-03/</guid>
-      <description>2023-10-01 に行われた北國王将杯を振り返る． なお賞金 10 万円（！）ということを優勝するまで知らず，帰路で封をあけてビビった．何局か気の抜けた序中盤を指し</description>
+      <guid>http://localhost:1313/posts/2023-10-03/</guid>
+      <description>&lt;p&gt;2023-10-01 に行われた北國王将杯を振り返る．&lt;/p&gt;
+&lt;p&gt;なお賞金 10 万円（！）ということを優勝するまで知らず，帰路で封をあけてビビった．何局か気の抜けた序中盤を指していたので，勝てたのは運がよかったと思う．&lt;/p&gt;</description>
     </item>
     <item>
       <title>Y 研レポート</title>
-      <link>https://ivorypawn.github.io/posts/2023-09-25/</link>
+      <link>http://localhost:1313/posts/2023-09-25/</link>
       <pubDate>Mon, 25 Sep 2023 17:31:47 +0900</pubDate>
-      <guid>https://ivorypawn.github.io/posts/2023-09-25/</guid>
-      <description>2023-09-23 に参加した Y 研の内容を振り返る． 3 局 30 分 60 秒 6 名（三段 1 名，二段 1 名，アマチュア 4 名） Under construction. 1 局目 2 局目 3 局目 総括</description>
+      <guid>http://localhost:1313/posts/2023-09-25/</guid>
+      <description>&lt;p&gt;2023-09-23 に参加した Y 研の内容を振り返る．&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;3 局&lt;/li&gt;
+&lt;li&gt;30 分 60 秒&lt;/li&gt;
+&lt;li&gt;6 名（三段 1 名，二段 1 名，アマチュア 4 名）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Under construction.&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;1-局目&#34;&gt;1 局目&lt;/h2&gt;
+&lt;h2 id=&#34;2-局目&#34;&gt;2 局目&lt;/h2&gt;
+&lt;h2 id=&#34;3-局目&#34;&gt;3 局目&lt;/h2&gt;
+&lt;h2 id=&#34;総括&#34;&gt;総括&lt;/h2&gt;</description>
     </item>
     <item>
       <title>アマ王将北陸予選レポート</title>
-      <link>https://ivorypawn.github.io/posts/2023-09-11/</link>
+      <link>http://localhost:1313/posts/2023-09-11/</link>
       <pubDate>Mon, 11 Sep 2023 18:36:55 +0900</pubDate>
-      <guid>https://ivorypawn.github.io/posts/2023-09-11/</guid>
-      <description>2023-09-10 に行われたアマ王将北陸予選を振り返る。 本戦 2 回戦 私が後手。 18 手目 直前に並べていた 2021-02-12 竜王戦 斎藤慎太郎-佐藤和俊 の類型になったため、興味本位で</description>
+      <guid>http://localhost:1313/posts/2023-09-11/</guid>
+      <description>&lt;p&gt;2023-09-10 に行われたアマ王将北陸予選を振り返る。&lt;/p&gt;
+&lt;h2 id=&#34;本戦-2-回戦&#34;&gt;本戦 2 回戦&lt;/h2&gt;
+&lt;p&gt;私が後手。&lt;/p&gt;
+&lt;h3 id=&#34;18-手目&#34;&gt;18 手目&lt;/h3&gt;
+&lt;!-- ![](01.png#center) --&gt;
+
+
+&lt;div style=&#34;margin-right:auto; margin-left:auto; width: 400px;&#34;&gt;
+  &lt;figure&gt;
+    &lt;a href=&#34;01.png&#34; target=&#34;_blank&#34;&gt;
+      &lt;img src=&#34;http://localhost:1313/posts/2023-09-11/01.png&#34; alt=&#34;01.png&#34; /&gt;
+    &lt;/a&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
+&lt;p&gt;直前に並べていた &lt;a href=&#34;https://shogidb2.com/games/96ccddc8b48ae34e76b3a520fe9a8c09da1609e7#l2gkg1nl%2F1r1s2s2%2F2npp1bpp%2Fp1p2pp2%2F1p5P1%2FP1P3P2%2F1PBPPPS1P%2F1S1K3R1%2FLN1G1G1NL%20b%20-%2021&#34;&gt;2021-02-12 竜王戦 斎藤慎太郎-佐藤和俊&lt;/a&gt; の類型になったため、興味本位で誘導してみたが、&lt;strong&gt;☗５８金右&lt;/strong&gt; でいきなりよく分からなくなった。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Japan Chess Classic 2023 レポート</title>
-      <link>https://ivorypawn.github.io/posts/2023-07-22/</link>
+      <link>http://localhost:1313/posts/2023-07-22/</link>
       <pubDate>Sat, 22 Jul 2023 06:11:56 +0900</pubDate>
-      <guid>https://ivorypawn.github.io/posts/2023-07-22/</guid>
-      <description>三宮で開催された ジャパンチェスクラシック 2023 に参加しました。印象に残った局（おもに敗局）を振り返ります。 7/15 14:30 R3 Kojima, S (IM, JPN, 2335) - Takahashi, H (JPN, 1930) 1-0 2 連勝後の</description>
+      <guid>http://localhost:1313/posts/2023-07-22/</guid>
+      <description>&lt;p&gt;三宮で開催された &lt;a href=&#34;https://japanchess.org/2023/03/japan-chess-classic_2023/&#34;&gt;ジャパンチェスクラシック 2023&lt;/a&gt; に参加しました。印象に残った局（おもに敗局）を振り返ります。&lt;/p&gt;
+&lt;h2 id=&#34;715-1430-r3-kojima-s-im-jpn-2335---takahashi-h-jpn-1930-1-0&#34;&gt;7/15 14:30 R3 Kojima, S (IM, JPN, 2335) - Takahashi, H (JPN, 1930) 1-0&lt;/h2&gt;
+&lt;p&gt;2 連勝後の R3 で IM 小島さんとマッチング。&lt;/p&gt;</description>
     </item>
     <item>
       <title>KaTeX の挙動について</title>
-      <link>https://ivorypawn.github.io/posts/2023-06-21/02/</link>
+      <link>http://localhost:1313/posts/2023-06-21/02/</link>
       <pubDate>Wed, 21 Jun 2023 06:42:43 +0900</pubDate>
-      <guid>https://ivorypawn.github.io/posts/2023-06-21/02/</guid>
-      <description>PaperMod はデフォルトで数式を使えないため $\KaTeX$ を導入した。ヘッダに math: true を追加すれば使える。 KaTeXに対応させた話 それはいいのだが、一部コマンドは \ を</description>
+      <guid>http://localhost:1313/posts/2023-06-21/02/</guid>
+      <description>&lt;p&gt;PaperMod はデフォルトで数式を使えないため $\KaTeX$ を導入した。ヘッダに &lt;code&gt;math: true&lt;/code&gt; を追加すれば使える。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://chizuchizu.com/posts/katex/&#34;&gt;KaTeXに対応させた話&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;それはいいのだが、一部コマンドは &lt;code&gt;\&lt;/code&gt; を重ねないとうまく表示されないらしい。&lt;/p&gt;</description>
     </item>
     <item>
       <title>備忘録開設</title>
-      <link>https://ivorypawn.github.io/posts/2023-06-21/01/</link>
+      <link>http://localhost:1313/posts/2023-06-21/01/</link>
       <pubDate>Wed, 21 Jun 2023 03:53:32 +0900</pubDate>
-      <guid>https://ivorypawn.github.io/posts/2023-06-21/01/</guid>
-      <description>引っ越しがようやく落ち着いたので、Hugo で備忘録のためのウェブサイトを生成した。Github Pages で公開予定。 おもな内容： C++, Python 形状処理 機械学習</description>
+      <guid>http://localhost:1313/posts/2023-06-21/01/</guid>
+      <description>&lt;p&gt;引っ越しがようやく落ち着いたので、Hugo で備忘録のためのウェブサイトを生成した。Github Pages で公開予定。&lt;/p&gt;
+&lt;p&gt;おもな内容：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;C++, Python&lt;/li&gt;
+&lt;li&gt;形状処理&lt;/li&gt;
+&lt;li&gt;機械学習&lt;/li&gt;
+&lt;li&gt;幾何学&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;今後増えるかもしれない内容：&lt;/p&gt;</description>
     </item>
     <item>
       <title>Algebraic Topology 覚書</title>
-      <link>https://ivorypawn.github.io/notes/algebraic-topology/</link>
+      <link>http://localhost:1313/notes/algebraic-topology/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ivorypawn.github.io/notes/algebraic-topology/</guid>
-      <description>基礎の基礎から Vidit Nanda 先生の Computational Algebraic Topology で勉強したときのメモ． 複体 ホモトピー ホモロジー</description>
+      <guid>http://localhost:1313/notes/algebraic-topology/</guid>
+      <description>&lt;p&gt;基礎の基礎から Vidit Nanda 先生の &lt;a href=&#34;https://people.maths.ox.ac.uk/nanda/cat/&#34;&gt;Computational Algebraic Topology&lt;/a&gt; で勉強したときのメモ．&lt;/p&gt;
+&lt;h2 id=&#34;複体&#34;&gt;複体&lt;/h2&gt;
+&lt;h2 id=&#34;ホモトピー&#34;&gt;ホモトピー&lt;/h2&gt;
+&lt;h2 id=&#34;ホモロジー&#34;&gt;ホモロジー&lt;/h2&gt;</description>
     </item>
     <item>
       <title>Diffusion Model</title>
-      <link>https://ivorypawn.github.io/notes/diffusion-model/</link>
+      <link>http://localhost:1313/notes/diffusion-model/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ivorypawn.github.io/notes/diffusion-model/</guid>
-      <description>概要 画像に逐次的にノイズを付加しランダムな画像を生成するプロセスを考える 上記の逆過程を推定することで、ランダムな画像から何らかのそれっぽい画</description>
+      <guid>http://localhost:1313/notes/diffusion-model/</guid>
+      <description>&lt;p&gt;
+
+
+
+
+    
+    &lt;input type=&#34;checkbox&#34; id=&#34;zoomCheck-b2f82&#34; hidden&gt;
+    &lt;label for=&#34;zoomCheck-b2f82&#34;&gt;
+        &lt;img class=&#34;zoomCheck&#34; loading=&#34;lazy&#34; decoding=&#34;async&#34;
+            src=&#34;00.png&#34; alt=&#34;&#34;
+             /&gt;
+    &lt;/label&gt;
+
+&lt;/p&gt;
+&lt;h2 id=&#34;概要&#34;&gt;概要&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;画像に逐次的にノイズを付加しランダムな画像を生成するプロセスを考える&lt;/li&gt;
+&lt;li&gt;上記の逆過程を推定することで、ランダムな画像から何らかのそれっぽい画像を生成する&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;DALL-E や Imagen などの画像生成は拡散モデルがベース&lt;/p&gt;</description>
     </item>
     <item>
       <title>GBDT</title>
-      <link>https://ivorypawn.github.io/notes/gbdt/</link>
+      <link>http://localhost:1313/notes/gbdt/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ivorypawn.github.io/notes/gbdt/</guid>
-      <description>概要 GBDT(Gradient Boosting Decision Tree; 勾配ブースティング決定木) は，決定木によるアンサンブル学習の一種．Kaggle で頻用されている． GBDT は決定木の列の推定を統合（bo</description>
+      <guid>http://localhost:1313/notes/gbdt/</guid>
+      <description>&lt;h2 id=&#34;概要&#34;&gt;概要&lt;/h2&gt;
+&lt;p&gt;GBDT(Gradient Boosting Decision Tree; 勾配ブースティング決定木) は，決定木によるアンサンブル学習の一種．Kaggle で頻用されている．&lt;/p&gt;
+&lt;p&gt;GBDT は決定木の列の推定を統合（boosting）することで高精度な予測を行う．決定木の列は，既存の列のアンサンブルから生じる誤差を予測する決定木を新たに生成するということを繰り返して，逐次的に生成される．&lt;/p&gt;</description>
     </item>
     <item>
       <title>Intrinsic Triangulations</title>
-      <link>https://ivorypawn.github.io/notes/intrinsic-triangulations/</link>
+      <link>http://localhost:1313/notes/intrinsic-triangulations/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ivorypawn.github.io/notes/intrinsic-triangulations/</guid>
-      <description>概要 離散微分幾何学者 Keenan Crane 先生のメッシュ 内在表現 関連論文を読んだまとめ。 3D モデルの（位相的）三角形分割 $T$ を、メッシュの頂点、エッジ、フェースの</description>
+      <guid>http://localhost:1313/notes/intrinsic-triangulations/</guid>
+      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/gcRDdYrgOhg?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
+      &gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;h2 id=&#34;概要&#34;&gt;概要&lt;/h2&gt;
+&lt;p&gt;離散微分幾何学者 &lt;a href=&#34;https://www.cs.cmu.edu/~kmcrane/&#34;&gt;Keenan Crane&lt;/a&gt; 先生のメッシュ &lt;strong&gt;内在表現&lt;/strong&gt; 関連論文を読んだまとめ。&lt;/p&gt;
+&lt;p&gt;3D モデルの（位相的）三角形分割 $T$ を、メッシュの頂点、エッジ、フェースの組 $(V,E,F)$ で表記する。各頂点をインデックス $i\in V$ で表し、エッジとフェースはそれぞれ $ij\in E, ijk\in F$ などと表すことにする。通常、メッシュのデータ表現は、おもに頂点座標 $\mathbf{f}: V \rightarrow \mathbb{R}^{3}$ と頂点間の接続を表すリストを用いる（e.g. Halfedge, Signed incidence matrices, Gluing map）。以下この表現を &lt;strong&gt;外在表現&lt;/strong&gt; と呼ぶ。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Monte Carlo Geometry Processing</title>
-      <link>https://ivorypawn.github.io/notes/monte-carlo-geometry-processing/</link>
+      <link>http://localhost:1313/notes/monte-carlo-geometry-processing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ivorypawn.github.io/notes/monte-carlo-geometry-processing/</guid>
-      <description>資料 Sawhney, R., &amp;amp; Crane, K. (2020). Monte Carlo Geometry Processing: A Grid-Free Approach to PDE-Based Methods on Volumetric Domains. ACM Trans. Graph., 39(4). Sawhney, R., Seyb, D., Jarosz, W., &amp;amp; Crane, K. (2022). Grid-free Monte Carlo for PDEs with spatially varying coefficients. ACM Transactions on Graphics (Proceedings of SIGGRAPH), 41(4). Jacobson, A., Baran, I., Popović, J., &amp;amp; Sorkine, O. (2011). Bounded</description>
+      <guid>http://localhost:1313/notes/monte-carlo-geometry-processing/</guid>
+      <description>&lt;p&gt;
+
+
+
+
+    
+    &lt;input type=&#34;checkbox&#34; id=&#34;zoomCheck-b2f82&#34; hidden&gt;
+    &lt;label for=&#34;zoomCheck-b2f82&#34;&gt;
+        &lt;img class=&#34;zoomCheck&#34; loading=&#34;lazy&#34; decoding=&#34;async&#34;
+            src=&#34;00.png&#34; alt=&#34;&#34;
+             /&gt;
+    &lt;/label&gt;
+
+&lt;/p&gt;
+&lt;h2 id=&#34;資料&#34;&gt;資料&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Sawhney, R., &amp;amp; Crane, K. (2020). &lt;a href=&#34;https://www.cs.cmu.edu/~kmcrane/Projects/MonteCarloGeometryProcessing/index.html&#34;&gt;Monte Carlo Geometry Processing: A Grid-Free Approach to PDE-Based Methods on Volumetric Domains&lt;/a&gt;. ACM Trans. Graph., 39(4).&lt;/li&gt;
+&lt;li&gt;Sawhney, R., Seyb, D., Jarosz, W., &amp;amp; Crane, K. (2022). &lt;a href=&#34;https://cs.dartmouth.edu/wjarosz/publications/sawhneyseyb22gridfree.html&#34;&gt;Grid-free Monte Carlo for PDEs with spatially varying coefficients&lt;/a&gt;. ACM Transactions on Graphics (Proceedings of SIGGRAPH), 41(4).&lt;/li&gt;
+&lt;li&gt;Jacobson, A., Baran, I., Popović, J., &amp;amp; Sorkine, O. (2011). &lt;a href=&#34;https://homes.cs.washington.edu/~jovan/papers/jacobson-2011-bbw.pdf&#34;&gt;Bounded Biharmonic Weights for Real-Time Deformation&lt;/a&gt;. ACM Trans. Graph., 30(4).&lt;/li&gt;
+&lt;li&gt;Oded Stein, Eitan Grinspun, Max Wardetzky, &amp;amp; Alec Jacobson (2017). &lt;a href=&#34;https://arxiv.org/abs/1707.04348&#34;&gt;Natural Boundary Conditions for Smoothing in Geometry Processing&lt;/a&gt;. CoRR, abs/1707.04348.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;概要&#34;&gt;概要&lt;/h2&gt;
+&lt;p&gt;（単純）モンテカルロ法は、積分 $\displaystyle I:=\int_{\Omega} f(x) d x$ を $N$ 個のサンプルから以下のように近似する。
+$$
+F_{N}:=|\Omega| \frac{1}{N} \sum_{i=1}^{N} f(X_{i}), \quad X_{i} \sim \mathcal{U}(\Omega)
+$$
+ここで $\mathcal{U}(\Omega)$ は領域 $\Omega$ 上の一様分布を表す。より一般に $\Omega$ 上の任意の確率分布 $p$ に対して以下が成り立つ。
+$$
+\frac{1}{N} \sum_{i=1}^{N} \frac{f(X_{i})}{p(X_{i})}, \quad X_{i} \sim p
+$$
+本手法は調和関数の積分に関する式から出発して、volumetric な 3D モデル上のいくつかの実用的な偏微分方程式をモンテカルロ法に基づいて解く、WoS (Walk on Spheres) アルゴリズムを研究する。このアプローチには例えば以下の利点が考えられる。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Neural Geometric Level of Detail</title>
-      <link>https://ivorypawn.github.io/notes/nglod/</link>
+      <link>http://localhost:1313/notes/nglod/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ivorypawn.github.io/notes/nglod/</guid>
-      <description>資料 Towaki Takikawa, Joey Litalien, Kangxue Yin, Karsten Kreis, Charles Loop, Derek Nowrouzezahrai, Alec Jacobson, Morgan McGuire, &amp;amp; Sanja Fidler (2021). Neural Geometric Level of Detail: Real-time Rendering with Implicit 3D Shapes. Talk: Toronto Geometry Colloquium - Siddhartha Chaudhuri &amp;amp; Towaki Takikawa Towaki Takikawa, Or Perel, Clement Fuji Tsang, Charles Loop, Joey Litalien, Jonathan Tremblay, Sanja Fidler, &amp;amp; Maria Shugrina. (2022). Kaolin Wisp: A PyTorch Library and Engine for</description>
+      <guid>http://localhost:1313/notes/nglod/</guid>
+      <description>&lt;h2 id=&#34;資料&#34;&gt;資料&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Towaki Takikawa, Joey Litalien, Kangxue Yin, Karsten Kreis, Charles Loop, Derek Nowrouzezahrai, Alec Jacobson, Morgan McGuire, &amp;amp; Sanja Fidler (2021). &lt;a href=&#34;https://research.nvidia.com/labs/toronto-ai/nglod/&#34;&gt;Neural Geometric Level of Detail: Real-time Rendering with Implicit 3D Shapes&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Talk: &lt;a href=&#34;&#34;&gt;Toronto Geometry Colloquium - Siddhartha Chaudhuri &amp;amp; Towaki Takikawa&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Towaki Takikawa, Or Perel, Clement Fuji Tsang, Charles Loop, Joey Litalien, Jonathan Tremblay, Sanja Fidler, &amp;amp; Maria Shugrina. (2022). &lt;a href=&#34;https://github.com/NVIDIAGameWorks/kaolin-wisp&#34;&gt;Kaolin Wisp: A PyTorch Library and Engine for Neural Fields Research&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;neural-sdfs&#34;&gt;Neural SDFs&lt;/h2&gt;
+&lt;p&gt;符号つき距離関数（signed distance functions; SDFs）$f: \mathbb{R}^{3} \rightarrow \mathbb{R}$ は，オブジェクト $\mathcal{M}$ の境界 $\mathcal{S}=\partial\mathcal{M}$ からの符号つき距離を表す 3D 表現の一種．&lt;/p&gt;</description>
     </item>
     <item>
       <title>Python 仮想環境に関する覚書</title>
-      <link>https://ivorypawn.github.io/notes/python/</link>
+      <link>http://localhost:1313/notes/python/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ivorypawn.github.io/notes/python/</guid>
-      <description>しばらく使わないと忘れがち． Rye MacOS Ventura 13.4. 導入 手順通りやるだけだが手もとでエラーが出たのでメモ． curl: (6) Could not resolve host: rye-up.com DNS を 8.8.8.8 と 8.8.4.4 にしたら解決した． zsh にパス</description>
+      <guid>http://localhost:1313/notes/python/</guid>
+      <description>&lt;p&gt;しばらく使わないと忘れがち．&lt;/p&gt;
+&lt;h2 id=&#34;ryehttpsrye-upcom&#34;&gt;&lt;a href=&#34;https://rye-up.com/&#34;&gt;Rye&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;MacOS Ventura 13.4.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;導入&#34;&gt;導入&lt;/h3&gt;
+&lt;p&gt;手順通りやるだけだが手もとでエラーが出たのでメモ．&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl: (6) Could not resolve host: rye-up.com
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;DNS を &lt;code&gt;8.8.8.8&lt;/code&gt; と &lt;code&gt;8.8.4.4&lt;/code&gt; にしたら解決した．&lt;/p&gt;
+&lt;p&gt;zsh にパスも通しておく．&lt;/p&gt;</description>
     </item>
     <item>
       <title>Sandbox</title>
-      <link>https://ivorypawn.github.io/posts/sandbox/</link>
+      <link>http://localhost:1313/posts/sandbox/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ivorypawn.github.io/posts/sandbox/</guid>
-      <description>Markdown All in One (VSCode) Alt + S で打ち消し線 HTML This is raw HTML Diagram 1 2 3 4 1 2 3 4 1 2 3 4 1 2 3 4 1 2 3 4 1 2 3 4 Diagrams HUGOサイトでMermaid記法 $\LaTeX$ $$ \begin{align*} a &amp;amp;= b &amp;amp; c</description>
+      <guid>http://localhost:1313/posts/sandbox/</guid>
+      <description>&lt;h2 id=&#34;markdown-all-in-one-vscode&#34;&gt;Markdown All in One (VSCode)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Alt + S&lt;/code&gt; で打ち消し線&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;html&#34;&gt;HTML&lt;/h2&gt;
+
+&lt;p align=&#34;center&#34; style=&#34;color: blue;&#34;&gt;&lt;strong&gt;This is raw HTML&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;diagram&#34;&gt;Diagram&lt;/h2&gt;
+
+
+
+&lt;div class=&#34;goat svg-container &#34;&gt;
+  
+    &lt;svg
+      xmlns=&#34;http://www.w3.org/2000/svg&#34;
+      font-family=&#34;Menlo,Lucida Console,monospace&#34;
+      
+        viewBox=&#34;0 0 680 121&#34;
+      &gt;
+      &lt;g transform=&#39;translate(8,16)&#39;&gt;
+&lt;path d=&#39;M 440,0 L 464,0&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;path d=&#39;M 576,0 L 584,0&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;path d=&#39;M 408,16 L 440,16&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;path d=&#39;M 552,16 L 560,16&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;path d=&#39;M 144,32 L 176,32&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;path d=&#39;M 176,32 L 208,32&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;path d=&#39;M 296,32 L 312,32&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;path d=&#39;M 312,32 L 328,32&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;path d=&#39;M 440,32 L 464,32&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;path d=&#39;M 576,32 L 584,32&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;path d=&#39;M 384,48 L 408,48&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;path d=&#39;M 512,48 L 536,48&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;path d=&#39;M 128,64 L 144,64&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;path d=&#39;M 144,64 L 160,64&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;path d=&#39;M 192,64 L 208,64&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;path d=&#39;M 208,64 L 224,64&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;path d=&#39;M 440,64 L 464,64&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;path d=&#39;M 576,64 L 584,64&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;path d=&#39;M 408,80 L 440,80&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;path d=&#39;M 552,80 L 560,80&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;path d=&#39;M 440,96 L 464,96&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;path d=&#39;M 576,96 L 584,96&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;path d=&#39;M 128,64 L 128,80&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;path d=&#39;M 144,32 L 144,64&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;path d=&#39;M 160,64 L 160,80&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;path d=&#39;M 176,0 L 176,32&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;path d=&#39;M 192,64 L 192,80&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;path d=&#39;M 208,32 L 208,64&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;path d=&#39;M 224,64 L 224,80&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;path d=&#39;M 280,48 L 280,64&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;path d=&#39;M 312,0 L 312,32&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;path d=&#39;M 344,48 L 344,64&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;path d=&#39;M 408,16 L 408,48&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;path d=&#39;M 408,48 L 408,80&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;path d=&#39;M 440,0 L 440,16&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;path d=&#39;M 440,16 L 440,32&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;path d=&#39;M 440,64 L 440,80&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;path d=&#39;M 440,80 L 440,96&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;path d=&#39;M 536,32 L 536,48&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;path d=&#39;M 536,48 L 536,64&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;path d=&#39;M 8,80 L 24,48&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;path d=&#39;M 24,48 L 48,0&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;path d=&#39;M 56,80 L 72,48&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;path d=&#39;M 624,48 L 640,16&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;path d=&#39;M 640,16 L 648,0&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;path d=&#39;M 640,80 L 648,64&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;path d=&#39;M 24,48 L 40,80&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;path d=&#39;M 48,0 L 72,48&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;path d=&#39;M 72,48 L 88,80&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;path d=&#39;M 624,48 L 640,80&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;path d=&#39;M 640,80 L 648,96&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;path d=&#39;M 640,16 L 648,32&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;path d=&#39;M 576,0 A 16,16 0 0,0 560,16&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;path d=&#39;M 552,16 A 16,16 0 0,0 536,32&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;path d=&#39;M 296,32 A 16,16 0 0,0 280,48&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;path d=&#39;M 328,32 A 16,16 0 0,1 344,48&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;path d=&#39;M 560,16 A 16,16 0 0,0 576,32&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;path d=&#39;M 280,64 A 16,16 0 0,0 264,80&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;path d=&#39;M 280,64 A 16,16 0 0,1 296,80&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;path d=&#39;M 344,64 A 16,16 0 0,0 328,80&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;path d=&#39;M 344,64 A 16,16 0 0,1 360,80&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;path d=&#39;M 576,64 A 16,16 0 0,0 560,80&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;path d=&#39;M 536,64 A 16,16 0 0,0 552,80&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;path d=&#39;M 560,80 A 16,16 0 0,0 576,96&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39;&gt;&lt;/path&gt;
+&lt;text text-anchor=&#39;middle&#39; x=&#39;8&#39; y=&#39;100&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;1&lt;/text&gt;
+&lt;text text-anchor=&#39;middle&#39; x=&#39;40&#39; y=&#39;100&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;2&lt;/text&gt;
+&lt;text text-anchor=&#39;middle&#39; x=&#39;56&#39; y=&#39;100&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;3&lt;/text&gt;
+&lt;text text-anchor=&#39;middle&#39; x=&#39;88&#39; y=&#39;100&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;4&lt;/text&gt;
+&lt;text text-anchor=&#39;middle&#39; x=&#39;128&#39; y=&#39;100&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;1&lt;/text&gt;
+&lt;text text-anchor=&#39;middle&#39; x=&#39;160&#39; y=&#39;100&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;2&lt;/text&gt;
+&lt;text text-anchor=&#39;middle&#39; x=&#39;192&#39; y=&#39;100&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;3&lt;/text&gt;
+&lt;text text-anchor=&#39;middle&#39; x=&#39;224&#39; y=&#39;100&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;4&lt;/text&gt;
+&lt;text text-anchor=&#39;middle&#39; x=&#39;264&#39; y=&#39;100&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;1&lt;/text&gt;
+&lt;text text-anchor=&#39;middle&#39; x=&#39;296&#39; y=&#39;100&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;2&lt;/text&gt;
+&lt;text text-anchor=&#39;middle&#39; x=&#39;328&#39; y=&#39;100&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;3&lt;/text&gt;
+&lt;text text-anchor=&#39;middle&#39; x=&#39;360&#39; y=&#39;100&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;4&lt;/text&gt;
+&lt;text text-anchor=&#39;middle&#39; x=&#39;480&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;1&lt;/text&gt;
+&lt;text text-anchor=&#39;middle&#39; x=&#39;480&#39; y=&#39;36&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;2&lt;/text&gt;
+&lt;text text-anchor=&#39;middle&#39; x=&#39;480&#39; y=&#39;68&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;3&lt;/text&gt;
+&lt;text text-anchor=&#39;middle&#39; x=&#39;480&#39; y=&#39;100&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;4&lt;/text&gt;
+&lt;text text-anchor=&#39;middle&#39; x=&#39;600&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;1&lt;/text&gt;
+&lt;text text-anchor=&#39;middle&#39; x=&#39;600&#39; y=&#39;36&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;2&lt;/text&gt;
+&lt;text text-anchor=&#39;middle&#39; x=&#39;600&#39; y=&#39;68&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;3&lt;/text&gt;
+&lt;text text-anchor=&#39;middle&#39; x=&#39;600&#39; y=&#39;100&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;4&lt;/text&gt;
+&lt;text text-anchor=&#39;middle&#39; x=&#39;664&#39; y=&#39;4&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;1&lt;/text&gt;
+&lt;text text-anchor=&#39;middle&#39; x=&#39;664&#39; y=&#39;36&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;2&lt;/text&gt;
+&lt;text text-anchor=&#39;middle&#39; x=&#39;664&#39; y=&#39;68&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;3&lt;/text&gt;
+&lt;text text-anchor=&#39;middle&#39; x=&#39;664&#39; y=&#39;100&#39; fill=&#39;currentColor&#39; style=&#39;font-size:1em&#39;&gt;4&lt;/text&gt;
+&lt;/g&gt;
+
+    &lt;/svg&gt;
+  
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://gohugo.io/content-management/diagrams/&#34;&gt;Diagrams&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://tech.nosuz.jp/post/2022-02/mermaid/&#34;&gt;HUGOサイトでMermaid記法&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;latex&#34;&gt;$\LaTeX$&lt;/h2&gt;
+&lt;p&gt;$$
+\begin{align*}
+a  &amp;amp;= b  &amp;amp; c  &amp;amp;= d  &amp;amp; e  &amp;amp;= f \\\
+a&amp;rsquo; &amp;amp;= b&amp;rsquo; &amp;amp; c&amp;rsquo; &amp;amp;= d&amp;rsquo; &amp;amp; e&amp;rsquo; &amp;amp;= f&#39;
+\end{align*}
+$$&lt;/p&gt;</description>
     </item>
     <item>
       <title>Stochastic Poisson Surface Reconstruction</title>
-      <link>https://ivorypawn.github.io/notes/stochastic-poisson-surface-reconstruction/</link>
+      <link>http://localhost:1313/notes/stochastic-poisson-surface-reconstruction/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ivorypawn.github.io/notes/stochastic-poisson-surface-reconstruction/</guid>
-      <description>概要 Silvia Sellán, &amp;amp; Alec Jacobson (2022). Stochastic Poisson Surface Reconstruction. ACM Transactions on Graphics. を読んだ． ベースとなる先行研究の Poisson Surface Reconstruction は，法線つき点群からメッシュを復元する手法．PSR は点群が</description>
+      <guid>http://localhost:1313/notes/stochastic-poisson-surface-reconstruction/</guid>
+      <description>&lt;p&gt;
+
+
+
+
+    
+    &lt;input type=&#34;checkbox&#34; id=&#34;zoomCheck-77928&#34; hidden&gt;
+    &lt;label for=&#34;zoomCheck-77928&#34;&gt;
+        &lt;img class=&#34;zoomCheck&#34; loading=&#34;lazy&#34; decoding=&#34;async&#34;
+            src=&#34;00.png#center&#34; alt=&#34;&#34;
+             /&gt;
+    &lt;/label&gt;
+
+&lt;/p&gt;
+&lt;h2 id=&#34;概要&#34;&gt;概要&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Silvia Sellán, &amp;amp; Alec Jacobson (2022). &lt;a href=&#34;https://www.dgp.toronto.edu/projects/stochastic-psr/&#34;&gt;Stochastic Poisson Surface Reconstruction&lt;/a&gt;. ACM Transactions on Graphics.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;を読んだ．&lt;/p&gt;
+&lt;p&gt;ベースとなる先行研究の &lt;a href=&#34;https://hhoppe.com/proj/poissonrecon/&#34;&gt;Poisson Surface Reconstruction&lt;/a&gt; は，法線つき点群からメッシュを復元する手法．PSR は点群が欠損していたりノイズを含んでいる場合に精度が悪かった．&lt;/p&gt;</description>
     </item>
     <item>
       <title>Unity 覚書</title>
-      <link>https://ivorypawn.github.io/notes/unity/</link>
+      <link>http://localhost:1313/notes/unity/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ivorypawn.github.io/notes/unity/</guid>
-      <description>Unity 備忘録を集約．初歩的な内容が中心．環境は Windows 10 + Visual Studio 2022． 資料 適宜追加． オンライン Unity ユーザーマニュアル（日本語） C# プログラミング ガイド Unity</description>
+      <guid>http://localhost:1313/notes/unity/</guid>
+      <description>&lt;p&gt;Unity 備忘録を集約．初歩的な内容が中心．環境は Windows 10 + Visual Studio 2022．&lt;/p&gt;
+&lt;h2 id=&#34;資料&#34;&gt;資料&lt;/h2&gt;
+&lt;p&gt;適宜追加．&lt;/p&gt;
+&lt;h3 id=&#34;オンライン&#34;&gt;オンライン&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.unity3d.com/ja/current/Manual/index.html&#34;&gt;Unity ユーザーマニュアル（日本語）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://learn.microsoft.com/ja-jp/dotnet/csharp/programming-guide/&#34;&gt;C# プログラミング ガイド&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://3dunity.org/&#34;&gt;Unity 入門の森&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://zenn.dev/sane21/books/b42ecebc457eb6/viewer/cf8cdb&#34;&gt;入門 Unity @KINDAI Info-Tech HUB&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://zenn.dev/sh1ch/books/4f49e00cfd92be082e1c/viewer/8a5619780235f1bc3f74&#34;&gt;Unity 開発に関する 50 の Tips 〜ベストプラクティス〜 (2016 Edition)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://zenn.dev/twugo/books/21cb3a6515e7b8&#34;&gt;(非公式和訳）Unity - level up your code with game programming patterns&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://zenn.dev/sh1ch/books/35fbffce89f26b&#34;&gt;Unity「2Dゲーム開発全般をカバーする本（英語）」を日本語で読む&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;書籍&#34;&gt;書籍&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Harrison Ferrone / 吉川 邦夫 訳 (2021)『&lt;a href=&#34;https://book.impress.co.jp/books/1120101145&#34;&gt;Unity 3D ゲーム開発ではじめる C# プログラミング&lt;/a&gt;』&lt;/li&gt;
+&lt;li&gt;北村 愛実 (2016)『&lt;a href=&#34;https://www.sbcr.jp/product/4797386790/&#34;&gt;Unity 5 の教科書&lt;/a&gt;』&lt;/li&gt;
+&lt;li&gt;赤坂 玲音 (2015)『&lt;a href=&#34;https://gihyo.jp/book/2015/978-4-7741-7303-0&#34;&gt;エンジニアのための Unity 実践リファレンス&lt;/a&gt;』&lt;/li&gt;
+&lt;li&gt;岩井 雅幸 (2015)『&lt;a href=&#34;https://book.mynavi.jp/supportsite/detail/9784839956400.html&#34;&gt;uGUI ではじめる Unity UI デザインの教科書&lt;/a&gt;』&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;導入&#34;&gt;導入&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://unity.com/ja/download&#34;&gt;Unity Hub&lt;/a&gt; インストール
+&lt;ul&gt;
+&lt;li&gt;2019 年からバージョン管理ソフトになった．Hub から適宜旧バージョンを入れられる&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Unity 2022 インストール&lt;/li&gt;
+&lt;li&gt;歯車 &amp;gt; &lt;code&gt;Add modules&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;unity-editor&#34;&gt;Unity Editor&lt;/h2&gt;
+&lt;p&gt;おもな GUI 構成要素：&lt;/p&gt;</description>
     </item>
     <item>
       <title>Wavelet Matrix</title>
-      <link>https://ivorypawn.github.io/notes/wavelet-matrix/</link>
+      <link>http://localhost:1313/notes/wavelet-matrix/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ivorypawn.github.io/notes/wavelet-matrix/</guid>
-      <description>概要 ～数十億の大規模データ上で、特定範囲の極値や頻度などが高速に求められる構造。 多次元への拡張も可能。 読んだやつ Francisco Claude and Gonzalo Navarro. The Wavelet Matrix. Proc. SPIRE&#39;12, pages 167-179. LNCS 7608</description>
+      <guid>http://localhost:1313/notes/wavelet-matrix/</guid>
+      <description>&lt;h2 id=&#34;概要&#34;&gt;概要&lt;/h2&gt;
+&lt;p&gt;～数十億の大規模データ上で、特定範囲の極値や頻度などが高速に求められる構造。&lt;/p&gt;
+&lt;p&gt;多次元への拡張も可能。&lt;/p&gt;
+&lt;h2 id=&#34;読んだやつ&#34;&gt;読んだやつ&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Francisco Claude and Gonzalo Navarro. &lt;a href=&#34;https://users.dcc.uchile.cl/~gnavarro/ps/spire12.4.pdf&#34;&gt;The Wavelet Matrix&lt;/a&gt;. Proc. SPIRE&#39;12, pages 167-179. LNCS 7608&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://tech.preferred.jp/ja/blog/wavelettree_world/&#34;&gt;ウェーブレット木の世界&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.ai-gakkai.or.jp/resource/my-bookmark/my-bookmark_vol26-no6/&#34;&gt;人工知能学会 私のブックマーク Vol.26 No.6 (2011/11) 簡潔データ構造&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://tiramister.net/blog/posts/bitvector/&#34;&gt;簡潔ビットベクトル(完備辞書)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.scribd.com/doc/102636443/Wavelet-Matrix&#34;&gt;ウェーブレット行列最速攻略&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Eating Your Own Cat Food
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/MitI-7/WaveletMatrix&#34;&gt;コード&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://miti-7.hatenablog.com/entry/2018/04/28/152259&#34;&gt;ウェーブレット行列(wavelet matrix)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://miti-7.hatenablog.com/entry/2019/02/01/152131&#34;&gt;ウェーブレット行列で競プロの問題を解く&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://miti-7.hatenablog.com/entry/2019/02/01/143655&#34;&gt;動的ウェーブレット行列(dynamic wavelet matrix)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://noshi91.hatenablog.com/entry/2021/06/02/165408&#34;&gt;3 次元空間のクエリを処理する Wavelet Matrix&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://qiita.com/TumoiYorozu/items/a8193e5ecd957a1b9b0d&#34;&gt;SIGGRAPH Asia の最優秀賞論文を解説してみた（2D Wavelet 行列を用いた定数時間メディアンフィルタ）&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;ウェーブレット行列の構造についてはすでに分かりやすい資料がある（とくに 2., 6., 8. がおすすめ）。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Word Tour</title>
-      <link>https://ivorypawn.github.io/notes/wordtour/</link>
+      <link>http://localhost:1313/notes/wordtour/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ivorypawn.github.io/notes/wordtour/</guid>
-      <description>単語埋め込みを健全性を保持したまま一次元へ次元削減する手法の提案．World ではない． 資料 Sato, R.. (2022). Word Tour: One-dimensional Word Embeddings via the Traveling Salesman Problem. (NAACL 2022) NLP コロキウム資料 最適</description>
+      <guid>http://localhost:1313/notes/wordtour/</guid>
+      <description>&lt;p&gt;単語埋め込みを健全性を保持したまま一次元へ次元削減する手法の提案．World ではない．&lt;/p&gt;
+&lt;h2 id=&#34;資料&#34;&gt;資料&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Sato, R.. (2022). &lt;a href=&#34;https://arxiv.org/abs/2205.01954&#34;&gt;Word Tour: One-dimensional Word Embeddings via the Traveling Salesman Problem&lt;/a&gt;. (NAACL 2022)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.slideshare.net/joisino/word-tour-onedimensional-word-embeddings-via-the-traveling-salesman-problem-naacl-2022&#34;&gt;NLP コロキウム資料&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://speakerdeck.com/eumesy/how-to-leverage-optimal-transport&#34;&gt;最適輸送の使いかた&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;導入&#34;&gt;導入&lt;/h2&gt;
+&lt;p&gt;自然言語の計算機可読表現をどのように実装するか考える．&lt;/p&gt;</description>
     </item>
     <item>
       <title>デザインに関する覚書</title>
-      <link>https://ivorypawn.github.io/notes/design/</link>
+      <link>http://localhost:1313/notes/design/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ivorypawn.github.io/notes/design/</guid>
-      <description>UI/UX，資料づくり，プレゼン本番で心がけることなどの個人用まとめ． UI 制作 これだけ守れば見やすくなるデザインの基礎 1 / 2 / 3 神資料．とくに</description>
+      <guid>http://localhost:1313/notes/design/</guid>
+      <description>&lt;p&gt;UI/UX，資料づくり，プレゼン本番で心がけることなどの個人用まとめ．&lt;/p&gt;
+&lt;h2 id=&#34;ui-制作&#34;&gt;UI 制作&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;これだけ守れば見やすくなるデザインの基礎&lt;/strong&gt; &lt;a href=&#34;https://speakerdeck.com/kinakobooster/koredakeshou-rebajian-yasukunarudezainfalseji-chu&#34;&gt;1&lt;/a&gt; / &lt;a href=&#34;https://speakerdeck.com/kinakobooster/uidezainwohazimeyou&#34;&gt;2&lt;/a&gt; / &lt;a href=&#34;https://speakerdeck.com/kinakobooster/jin-ri-karadekiruuxdezain&#34;&gt;3&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;神資料．とくに 1 の RGB に関する解説は蒙が啓かれた&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://qiita.com/aiandrox/items/4196c8f5b564d29fdce7&#34;&gt;【個人開発・ポートフォリオに】簡単にいい感じのデザインにできるサービスまとめ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.sociomedia.co.jp/category/shig&#34;&gt;Sociomedia ヒューマンインターフェース ガイドライン&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;色覚多様性&#34;&gt;色覚多様性&lt;/h3&gt;
+&lt;p&gt;統計上，男性の 5% と女性の ~1% は同輝度の赤と緑の見分けがつかない（P 型色覚）．現実には明度の違いで見分けられているケースも多いと思うが，そうであっても赤と緑が素朴に使われている UI を見ると，「えっ大丈夫なの」とはなる．&lt;/p&gt;</description>
     </item>
     <item>
       <title>ベイズ推定覚書</title>
-      <link>https://ivorypawn.github.io/notes/bayes/</link>
+      <link>http://localhost:1313/notes/bayes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ivorypawn.github.io/notes/bayes/</guid>
+      <guid>http://localhost:1313/notes/bayes/</guid>
       <description></description>
     </item>
     <item>
       <title>最適輸送問題覚書</title>
-      <link>https://ivorypawn.github.io/notes/optimal-transport/</link>
+      <link>http://localhost:1313/notes/optimal-transport/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ivorypawn.github.io/notes/optimal-transport/</guid>
-      <description>資料 基本的なところは佐藤竜馬先生の『最適輸送の理論とアルゴリズム』で勉強している．読んだ資料や活用事例，参加したオンライン勉強会へのリンクな</description>
+      <guid>http://localhost:1313/notes/optimal-transport/</guid>
+      <description>&lt;h2 id=&#34;資料&#34;&gt;資料&lt;/h2&gt;
+&lt;p&gt;基本的なところは佐藤竜馬先生の『最適輸送の理論とアルゴリズム』で勉強している．読んだ資料や活用事例，参加したオンライン勉強会へのリンクなど．&lt;/p&gt;</description>
     </item>
     <item>
       <title>将棋関連対訳例文仮安置所</title>
-      <link>https://ivorypawn.github.io/notes/translation/</link>
+      <link>http://localhost:1313/notes/translation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ivorypawn.github.io/notes/translation/</guid>
-      <description>原稿作成時の備忘録．後述のツールで文法や表現をチェックしているが，私個人の英語能力が高くないため，おかしな表現を含んでいる可能性は高い． 英文</description>
+      <guid>http://localhost:1313/notes/translation/</guid>
+      <description>&lt;p&gt;原稿作成時の備忘録．後述のツールで文法や表現をチェックしているが，私個人の英語能力が高くないため，おかしな表現を含んでいる可能性は高い．&lt;/p&gt;
+&lt;p&gt;英文上の棋譜の記法は &lt;a href=&#34;https://en.wikipedia.org/wiki/Shogi_notation#Kitao%E2%80%93Kawasaki_notation&#34;&gt;Kitao–Kawasaki notation&lt;/a&gt; を採用する．&lt;/p&gt;</description>
     </item>
     <item>
       <title>発音に関する覚書</title>
-      <link>https://ivorypawn.github.io/notes/phonetics/</link>
+      <link>http://localhost:1313/notes/phonetics/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ivorypawn.github.io/notes/phonetics/</guid>
-      <description>前置き 将棋の動画を収録する前から，英語の発音を矯正したいとは思っていた．最近引っ越した結果，近所で海外の旅行客を助ける機会が増えて，想像以上</description>
+      <guid>http://localhost:1313/notes/phonetics/</guid>
+      <description>&lt;h2 id=&#34;前置き&#34;&gt;前置き&lt;/h2&gt;
+&lt;p&gt;将棋の動画を収録する前から，英語の発音を矯正したいとは思っていた．最近引っ越した結果，近所で海外の旅行客を助ける機会が増えて，想像以上にいまの自分がダメなことに危機感を覚えたのもある．発音への自信のなさは，会話への消極性にもつながる．&lt;/p&gt;</description>
     </item>
     <item>
       <title>連想コンテナ覚書 (C&#43;&#43;)</title>
-      <link>https://ivorypawn.github.io/notes/map/</link>
+      <link>http://localhost:1313/notes/map/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ivorypawn.github.io/notes/map/</guid>
-      <description>std::unordered_map や boost::flat_map などのハッシュマップはほぼ $O(1)$ で探索でき，赤黒木の std::map に比べて探索も走査も速いとされている． [C++] STLの型の使い分け std::mapを線形探</description>
+      <guid>http://localhost:1313/notes/map/</guid>
+      <description>&lt;p&gt;&lt;code&gt;std::unordered_map&lt;/code&gt; や &lt;code&gt;boost::flat_map&lt;/code&gt; などのハッシュマップはほぼ $O(1)$ で探索でき，赤黒木の &lt;code&gt;std::map&lt;/code&gt; に比べて探索も走査も速いとされている．&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://qiita.com/h_hiro_/items/a83a8fd2391d4a3f0e1c&#34;&gt;[C++] STLの型の使い分け&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.slideshare.net/kikairoya/map-17091504&#34;&gt;std::mapを線形探索してはいけない100の理由&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://sleepy-yoshi.hatenablog.com/entry/20121111/p1&#34;&gt;mapとunordered_mapのアイテム全走査の比較とmapの存在意義について考える&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;また &lt;code&gt;unordered_map&lt;/code&gt; と &lt;code&gt;map&lt;/code&gt; の使用は似ており，置換すること自体はさほど難しくない．&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

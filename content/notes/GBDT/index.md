@@ -4,11 +4,13 @@ draft: false
 tags: ["論文読み", "Machine Learning"]
 ---
 ## 概要
+
 GBDT(Gradient Boosting Decision Tree; 勾配ブースティング決定木) は，決定木によるアンサンブル学習の一種．Kaggle で頻用されている．
 
 GBDT は決定木の列の推定を統合（boosting）することで高精度な予測を行う．決定木の列は，既存の列のアンサンブルから生じる誤差を予測する決定木を新たに生成するということを繰り返して，逐次的に生成される．
 
 ## 資料
+
 - [XGBoost](https://github.com/dmlc/xgboost)
 - [LightGBM](https://github.com/Microsoft/LightGBM)
 
@@ -21,10 +23,12 @@ GBDT は決定木の列の推定を統合（boosting）することで高精度�
 - [手を動かして GBDT を理解してみる](https://techblog.nhn-techorus.com/archives/14801)
 
 ## GBDT をちゃんと理解しようと思ったきっかけ
+
 {{<tweet user="mamas16k" id="1508001575603949568">}}
 {{<tweet user="yoshimasaizaki" id="1508047490095857667">}}
 
 ## 内容
+
 $m$ 次元特徴量データ $\mathbf{x}_i\in\mathbb{R}^m$ とそのラベル $y_i\in\mathbb{R}$ の組の集合 $\mathcal{D}=\{(\mathbf{x}_i, y_i)\}$ を訓練データセットとする．サンプル数を $n=|\mathcal{D}|$ とする．
 
 GBDT を $\phi:\mathbb{R}^m\rightarrow \mathbb{R}$ とおき，$K$ 個の決定木からなるとする．
@@ -36,6 +40,7 @@ $\mathcal{F}$ はとりうる弱学習器全体の集合であり（ここでは
 まとめると，入力 $\mathbf{x}$ から各決定木の index $q(\mathbf{x})$ が決まり，決定木ごとの重み $w$ が定まる．この総和が出力 $\hat{y}$ であり，学習時にはラベル $y$ との誤差が測られる．
 
 ### 損失関数と勾配
+
 $\phi$ の損失関数 $\mathcal{L}(\phi)$ を以下で定義する．
 $$
 \mathcal{L}(\phi)=\sum\_{i} l\left(\hat{y}\_{i}, y\_{i}\right)+\sum\_{k} \Omega\left(f\_{k}\right)
@@ -48,7 +53,9 @@ $$
 \end{aligned}
 $$
 ここで $T$ は木 $f$ の葉の数．
+
 ### 勾配木ブースティング
+
 概要で述べたように，GBDT $\phi$ の決定木は逐次的に生成される．
 
 いま決定木 $f_1,\ldots,f_{t-1}$ が生成されており，新たに $f_t$ を生成するとする．生成ずみの決定木による出力を $\hat{y}^{(t-1)}$ とおくと，このときの損失関数 $\mathcal{L}^{(t)}$ は
@@ -82,12 +89,14 @@ w\_{j}^{*}=-\frac{\sum\_{i \in I\_{j}} g\_{i}}{\sum\_{i \in I\_{j}} h\_{i}+\lamb
 $$
 
 #### e.g. $\mathcal{L}$ が平均二乗誤差 (MSE) のとき
+
 損失関数 $\mathcal{L}:=\displaystyle\frac{1}{n}\sum\_{i=1}^n(y_i-\hat{y}_i)^2$ のときを考える．$g_i=2(y_i-\hat{y}_i^{(t-1)}),h_i=-2$ であるから，
 $$
 w\_j^{*}=\frac{\sum\_{i\in I_j}(y_i-\hat{y}_i^{(t-1)})}{|I_j|+\frac{1}{2}\lambda}.
 $$
 
 ### 木構造の更新
+
 木の深さや葉の数を制限していたとしても，木構造の数は膨大ですべて調べることは現実的でない．代えて 1 枚の葉から始めて繰り返し枝を追加していく貪欲アルゴリズムが採用される．
 
 ある葉ノードを分割して 2 つの葉 $L,R$ を接続することを考える．分割前後の損失関数の差分を $\mathcal{L}\_\text{split}$ とおく．また $\mathcal{L}\_{L},\mathcal{L}\_{R}$ は$L,R$ それぞれに関する損失の増分である．

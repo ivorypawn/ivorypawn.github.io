@@ -1,23 +1,45 @@
 <!DOCTYPE html>
 <html lang="ja" dir="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="noindex, nofollow">
 <title>Wavelet Matrix | HideOut</title>
 <meta name="keywords" content="Data Sturucture">
-<meta name="description" content="概要 ～数十億の大規模データ上で、特定範囲の極値や頻度などが高速に求められる構造。 多次元への拡張も可能。 読んだやつ Francisco Claude and Gonzalo Navarro. The Wavelet Matrix. Proc. SPIRE&#39;12, pages 167-179. LNCS 7608">
+<meta name="description" content="概要
+～数十億の大規模データ上で、特定範囲の極値や頻度などが高速に求められる構造。
+多次元への拡張も可能。
+読んだやつ
+
+Francisco Claude and Gonzalo Navarro. The Wavelet Matrix. Proc. SPIRE&#39;12, pages 167-179. LNCS 7608
+ウェーブレット木の世界
+人工知能学会 私のブックマーク Vol.26 No.6 (2011/11) 簡潔データ構造
+簡潔ビットベクトル(完備辞書)
+ウェーブレット行列最速攻略
+Eating Your Own Cat Food
+
+コード
+ウェーブレット行列(wavelet matrix)
+ウェーブレット行列で競プロの問題を解く
+動的ウェーブレット行列(dynamic wavelet matrix)
+
+
+3 次元空間のクエリを処理する Wavelet Matrix
+SIGGRAPH Asia の最優秀賞論文を解説してみた（2D Wavelet 行列を用いた定数時間メディアンフィルタ）
+
+ウェーブレット行列の構造についてはすでに分かりやすい資料がある（とくに 2., 6., 8. がおすすめ）。">
 <meta name="author" content="">
-<link rel="canonical" href="https://ivorypawn.github.io/notes/wavelet-matrix/">
-<link crossorigin="anonymous" href="https://ivorypawn.github.io/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://ivorypawn.github.io/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://ivorypawn.github.io/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://ivorypawn.github.io/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://ivorypawn.github.io/apple-touch-icon.png">
-<link rel="mask-icon" href="https://ivorypawn.github.io/safari-pinned-tab.svg">
+<link rel="canonical" href="http://localhost:1313/notes/wavelet-matrix/">
+<link crossorigin="anonymous" href="http://localhost:1313/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="ja" href="http://localhost:1313/notes/wavelet-matrix/">
 <noscript>
     <style>
         #theme-toggle,
@@ -71,67 +93,7 @@
 
 
 <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
-<meta property="og:title" content="Wavelet Matrix" />
-<meta property="og:description" content="概要 ～数十億の大規模データ上で、特定範囲の極値や頻度などが高速に求められる構造。 多次元への拡張も可能。 読んだやつ Francisco Claude and Gonzalo Navarro. The Wavelet Matrix. Proc. SPIRE&#39;12, pages 167-179. LNCS 7608" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://ivorypawn.github.io/notes/wavelet-matrix/" /><meta property="article:section" content="notes" />
 
-
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Wavelet Matrix"/>
-<meta name="twitter:description" content="概要 ～数十億の大規模データ上で、特定範囲の極値や頻度などが高速に求められる構造。 多次元への拡張も可能。 読んだやつ Francisco Claude and Gonzalo Navarro. The Wavelet Matrix. Proc. SPIRE&#39;12, pages 167-179. LNCS 7608"/>
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Notes",
-      "item": "https://ivorypawn.github.io/notes/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "Wavelet Matrix",
-      "item": "https://ivorypawn.github.io/notes/wavelet-matrix/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Wavelet Matrix",
-  "name": "Wavelet Matrix",
-  "description": "概要 ～数十億の大規模データ上で、特定範囲の極値や頻度などが高速に求められる構造。 多次元への拡張も可能。 読んだやつ Francisco Claude and Gonzalo Navarro. The Wavelet Matrix. Proc. SPIRE'12, pages 167-179. LNCS 7608",
-  "keywords": [
-    "Data Sturucture"
-  ],
-  "articleBody": "概要 ～数十億の大規模データ上で、特定範囲の極値や頻度などが高速に求められる構造。\n多次元への拡張も可能。\n読んだやつ Francisco Claude and Gonzalo Navarro. The Wavelet Matrix. Proc. SPIRE'12, pages 167-179. LNCS 7608 ウェーブレット木の世界 人工知能学会 私のブックマーク Vol.26 No.6 (2011/11) 簡潔データ構造 簡潔ビットベクトル(完備辞書) ウェーブレット行列最速攻略 Eating Your Own Cat Food コード ウェーブレット行列(wavelet matrix) ウェーブレット行列で競プロの問題を解く 動的ウェーブレット行列(dynamic wavelet matrix) 3 次元空間のクエリを処理する Wavelet Matrix SIGGRAPH Asia の最優秀賞論文を解説してみた（2D Wavelet 行列を用いた定数時間メディアンフィルタ） ウェーブレット行列の構造についてはすでに分かりやすい資料がある（とくに 2., 6., 8. がおすすめ）。\nここでは基本的な部分は取り上げない。以下は個人的なメモ。\n（余談） 上に載せていないが、ウェーブレット行列の名をもつとあるライブラリが、節点情報をアルファベット数分保持する実装になっていた。\n資料 2. p.51 の通り、前身のウェーブレット木に対するウェーブレット行列のアドは、各ビット列の $1$ の開始位置だけ保持すればよいことにある。したがってこのライブラリの実装は誤り。\n表記 文字列データを $T[0,n),\\;0\\leq T[i]",
-  "wordCount" : "2422",
-  "inLanguage": "ja",
-  "datePublished": "0001-01-01T00:00:00Z",
-  "dateModified": "0001-01-01T00:00:00Z",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://ivorypawn.github.io/notes/wavelet-matrix/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "HideOut",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://ivorypawn.github.io/favicon.ico"
-    }
-  }
-}
-</script>
 </head>
 
 <body class=" dark" id="top">
@@ -145,7 +107,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://ivorypawn.github.io/" accesskey="h" title="HideOut (Alt + H)">HideOut</a>
+            <a href="http://localhost:1313/" accesskey="h" title="HideOut (Alt + H)">HideOut</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -167,21 +129,23 @@
                         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                     </svg>
                 </button>
+                <ul class="lang-switch"><li>|</li>
+                </ul>
             </div>
         </div>
         <ul id="menu">
             <li>
-                <a href="https://ivorypawn.github.io/posts/" title="posts">
+                <a href="http://localhost:1313/posts/" title="posts">
                     <span>posts</span>
                 </a>
             </li>
             <li>
-                <a href="https://ivorypawn.github.io/notes/" title="notes">
+                <a href="http://localhost:1313/notes/" title="notes">
                     <span>notes</span>
                 </a>
             </li>
             <li>
-                <a href="https://ivorypawn.github.io/tags/" title="tags">
+                <a href="http://localhost:1313/tags/" title="tags">
                     <span>tags</span>
                 </a>
             </li>
@@ -502,15 +466,15 @@
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://ivorypawn.github.io/tags/data-sturucture/">Data Sturucture</a></li>
+      <li><a href="http://localhost:1313/tags/data-sturucture/">Data Sturucture</a></li>
     </ul>
 <nav class="paginav">
-  <a class="prev" href="https://ivorypawn.github.io/notes/wordtour/">
+  <a class="prev" href="http://localhost:1313/notes/wordtour/">
     <span class="title">« Prev</span>
     <br>
     <span>Word Tour</span>
   </a>
-  <a class="next" href="https://ivorypawn.github.io/notes/unity/">
+  <a class="next" href="http://localhost:1313/notes/unity/">
     <span class="title">Next »</span>
     <br>
     <span>Unity 覚書</span>
@@ -522,7 +486,7 @@
     </main>
     
 <footer class="footer">
-    <span>&copy; 2024 <a href="https://ivorypawn.github.io/">HideOut</a></span>
+    <span>&copy; 2025 <a href="http://localhost:1313/">HideOut</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/">Hugo</a> &

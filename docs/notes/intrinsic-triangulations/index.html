@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html lang="ja" dir="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="noindex, nofollow">
 <title>Intrinsic Triangulations | HideOut</title>
 <meta name="keywords" content="論文読み, Geometry Processing">
-<meta name="description" content="概要 離散微分幾何学者 Keenan Crane 先生のメッシュ 内在表現 関連論文を読んだまとめ。 3D モデルの（位相的）三角形分割 $T$ を、メッシュの頂点、エッジ、フェースの">
+<meta name="description" content="
+      
+    
+
+概要
+離散微分幾何学者 Keenan Crane 先生のメッシュ 内在表現 関連論文を読んだまとめ。
+3D モデルの（位相的）三角形分割 $T$ を、メッシュの頂点、エッジ、フェースの組 $(V,E,F)$ で表記する。各頂点をインデックス $i\in V$ で表し、エッジとフェースはそれぞれ $ij\in E, ijk\in F$ などと表すことにする。通常、メッシュのデータ表現は、おもに頂点座標 $\mathbf{f}: V \rightarrow \mathbb{R}^{3}$ と頂点間の接続を表すリストを用いる（e.g. Halfedge, Signed incidence matrices, Gluing map）。以下この表現を 外在表現 と呼ぶ。">
 <meta name="author" content="">
-<link rel="canonical" href="https://ivorypawn.github.io/notes/intrinsic-triangulations/">
-<link crossorigin="anonymous" href="https://ivorypawn.github.io/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://ivorypawn.github.io/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://ivorypawn.github.io/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://ivorypawn.github.io/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://ivorypawn.github.io/apple-touch-icon.png">
-<link rel="mask-icon" href="https://ivorypawn.github.io/safari-pinned-tab.svg">
+<link rel="canonical" href="http://localhost:1313/notes/intrinsic-triangulations/">
+<link crossorigin="anonymous" href="http://localhost:1313/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="ja" href="http://localhost:1313/notes/intrinsic-triangulations/">
 <noscript>
     <style>
         #theme-toggle,
@@ -71,67 +78,7 @@
 
 
 <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
-<meta property="og:title" content="Intrinsic Triangulations" />
-<meta property="og:description" content="概要 離散微分幾何学者 Keenan Crane 先生のメッシュ 内在表現 関連論文を読んだまとめ。 3D モデルの（位相的）三角形分割 $T$ を、メッシュの頂点、エッジ、フェースの" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://ivorypawn.github.io/notes/intrinsic-triangulations/" /><meta property="article:section" content="notes" />
 
-
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Intrinsic Triangulations"/>
-<meta name="twitter:description" content="概要 離散微分幾何学者 Keenan Crane 先生のメッシュ 内在表現 関連論文を読んだまとめ。 3D モデルの（位相的）三角形分割 $T$ を、メッシュの頂点、エッジ、フェースの"/>
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Notes",
-      "item": "https://ivorypawn.github.io/notes/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "Intrinsic Triangulations",
-      "item": "https://ivorypawn.github.io/notes/intrinsic-triangulations/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Intrinsic Triangulations",
-  "name": "Intrinsic Triangulations",
-  "description": "概要 離散微分幾何学者 Keenan Crane 先生のメッシュ 内在表現 関連論文を読んだまとめ。 3D モデルの（位相的）三角形分割 $T$ を、メッシュの頂点、エッジ、フェースの",
-  "keywords": [
-    "論文読み", "Geometry Processing"
-  ],
-  "articleBody": " 概要 離散微分幾何学者 Keenan Crane 先生のメッシュ 内在表現 関連論文を読んだまとめ。\n3D モデルの（位相的）三角形分割 $T$ を、メッシュの頂点、エッジ、フェースの組 $(V,E,F)$ で表記する。各頂点をインデックス $i\\in V$ で表し、エッジとフェースはそれぞれ $ij\\in E, ijk\\in F$ などと表すことにする。通常、メッシュのデータ表現は、おもに頂点座標 $\\mathbf{f}: V \\rightarrow \\mathbb{R}^{3}$ と頂点間の接続を表すリストを用いる（e.g. Halfedge, Signed incidence matrices, Gluing map）。以下この表現を 外在表現 と呼ぶ。\n内在表現 は、エッジ長 $\\ell: E \\rightarrow \\mathbb{R}_{\u003e0}$ と接続関係を用いる。ただし任意の $ijk\\in F$ について $\\ell$ の像は三角不等式をつねに満たす、つまり 2 次元的に展開可能であるものとする。$\\ell_{ij}$ は外在表現によって定まるメッシュの $i,j$ 間の測地線長である。\nメッシュの外在／内在表現は、連続的な曲面の埋め込み写像による表現と多様体としての表現の対比になぞらえられる。\n内在表現は剛体変換などに関する自由度があり、また本来のジオメトリももはや明らかではないが、ジオメトリを保持したままメッシュを最適化できる特性がある。また外在表現における既知のアルゴリズムの多くがそのまま適用できる。\n読んだやつ Nicholas Sharp, Yousuf Soliman, \u0026 Keenan Crane (2019). Navigating Intrinsic Triangulations. ACM Trans. Graph., 38(4). (SIGGRAPH 2019 / ACM Transactions on Graphics 2019) Sharp, N., Gillespie, M., \u0026 Crane, K. (2021). Geometry Processing with Intrinsic Triangulations. Liu, H.T., Zhang, J., Ben-Chen, M., \u0026 Jacobson, A. (2021). Surface Multigrid via Intrinsic Prolongation. ACM Trans. Graph., 40(4). Nicholas Sharp, \u0026 Keenan Crane (2020). A Laplacian for Nonmanifold Triangle Meshes. Computer Graphics Forum (SGP), 39(5). Gillespie, M., Sharp, N., \u0026 Crane, K. (2021). Integer Coordinates for Intrinsic Geometry Processing. ACM Trans. Graph., 40(6). Sharp, N., \u0026 Crane, K. (2020). You Can Find Geodesic Paths in Triangle Meshes by Just Flipping Edges. ACM Trans. Graph., 39(6). Allen Hatcher. 2002. Algebraic Topology. J. Cao, A. Tagliasacchi, M. Olson, H. Zhang and Z. Su, “Point Cloud Skeletons via Laplacian Based Contraction,” 2010 Shape Modeling International Conference, 2010, pp. 187-197, doi: 10.1109/SMI.2010.25. ライブラリ Geometry Central (C++) Geometry Processing with Intrinsic Triangulations (python) SIGGRAPH 2021, IMR 2021 tutorial Connectivity 三角形分割 $T=(V,E,F)$ が以下を満たすとき、$T$ を manifold と呼ぶ（数学の『多様体』と紛らわしいが、とりあえずこう表記する）：\n任意のエッジ $ij \\in E$ を含むフェースは $1$ 個か $2$ 個 ほかのフェースに含まれないエッジをもつフェースを境界 $\\partial E$ と呼ぶ 任意の頂点 $i\\in V$ を含むフェース全体がエッジ連結している $T$ の任意のエッジの向きが consistent のとき（i.e. halfedge で整合的に表現できる）、$T$ は 向きづけ可能 という。 以下しばらく、メッシュは manifold かつ向きづけ可能と仮定する。後ほど non-manifold なメッシュや向きづけ不可能なメッシュ、点群に対して、いくつかの手法が拡張できることを見る。\nΔ-複体 Δ-複体 は単体複体を拡張した概念で、各要素は重複した頂点をもつことができる。定義は 資料 7. Section 2.1 など。 Δ-複体の頂点の次数を、接続するエッジ数で定義する。頂点に接続するエッジの集合を走査し、エッジの両端点が異なるときはそれぞれに $+1$、同じときは $+2$ する。展開図上では単一のエッジが複数回描かれる可能性があることに注意する。 隣接行列でΔ-複体を表現すると、トポロジーはもはや一意に定まらない。そのほか、単体複体のときは直感的には自明であったいくつかの性質が、Δ-複体において非自明となることがある。\nIntrinsic Geometry, Edge Flip (Under construction)\n",
-  "wordCount" : "1153",
-  "inLanguage": "ja",
-  "datePublished": "0001-01-01T00:00:00Z",
-  "dateModified": "0001-01-01T00:00:00Z",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://ivorypawn.github.io/notes/intrinsic-triangulations/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "HideOut",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://ivorypawn.github.io/favicon.ico"
-    }
-  }
-}
-</script>
 </head>
 
 <body class=" dark" id="top">
@@ -145,7 +92,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://ivorypawn.github.io/" accesskey="h" title="HideOut (Alt + H)">HideOut</a>
+            <a href="http://localhost:1313/" accesskey="h" title="HideOut (Alt + H)">HideOut</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -167,21 +114,23 @@
                         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                     </svg>
                 </button>
+                <ul class="lang-switch"><li>|</li>
+                </ul>
             </div>
         </div>
         <ul id="menu">
             <li>
-                <a href="https://ivorypawn.github.io/posts/" title="posts">
+                <a href="http://localhost:1313/posts/" title="posts">
                     <span>posts</span>
                 </a>
             </li>
             <li>
-                <a href="https://ivorypawn.github.io/notes/" title="notes">
+                <a href="http://localhost:1313/notes/" title="notes">
                     <span>notes</span>
                 </a>
             </li>
             <li>
-                <a href="https://ivorypawn.github.io/tags/" title="tags">
+                <a href="http://localhost:1313/tags/" title="tags">
                     <span>tags</span>
                 </a>
             </li>
@@ -230,9 +179,12 @@
 
  
   <div class="post-content">
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/gcRDdYrgOhg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/gcRDdYrgOhg?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <h2 id="概要">概要<a hidden class="anchor" aria-hidden="true" href="#概要">#</a></h2>
 <p>離散微分幾何学者 <a href="https://www.cs.cmu.edu/~kmcrane/">Keenan Crane</a> 先生のメッシュ <strong>内在表現</strong> 関連論文を読んだまとめ。</p>
@@ -368,16 +320,16 @@
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://ivorypawn.github.io/tags/%E8%AB%96%E6%96%87%E8%AA%AD%E3%81%BF/">論文読み</a></li>
-      <li><a href="https://ivorypawn.github.io/tags/geometry-processing/">Geometry Processing</a></li>
+      <li><a href="http://localhost:1313/tags/%E8%AB%96%E6%96%87%E8%AA%AD%E3%81%BF/">論文読み</a></li>
+      <li><a href="http://localhost:1313/tags/geometry-processing/">Geometry Processing</a></li>
     </ul>
 <nav class="paginav">
-  <a class="prev" href="https://ivorypawn.github.io/notes/monte-carlo-geometry-processing/">
+  <a class="prev" href="http://localhost:1313/notes/monte-carlo-geometry-processing/">
     <span class="title">« Prev</span>
     <br>
     <span>Monte Carlo Geometry Processing</span>
   </a>
-  <a class="next" href="https://ivorypawn.github.io/notes/gbdt/">
+  <a class="next" href="http://localhost:1313/notes/gbdt/">
     <span class="title">Next »</span>
     <br>
     <span>GBDT</span>
@@ -389,7 +341,7 @@
     </main>
     
 <footer class="footer">
-    <span>&copy; 2024 <a href="https://ivorypawn.github.io/">HideOut</a></span>
+    <span>&copy; 2025 <a href="http://localhost:1313/">HideOut</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/">Hugo</a> &

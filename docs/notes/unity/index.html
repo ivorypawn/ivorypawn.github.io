@@ -1,23 +1,55 @@
 <!DOCTYPE html>
 <html lang="ja" dir="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="noindex, nofollow">
 <title>Unity 覚書 | HideOut</title>
 <meta name="keywords" content="Unity">
-<meta name="description" content="Unity 備忘録を集約．初歩的な内容が中心．環境は Windows 10 &#43; Visual Studio 2022． 資料 適宜追加． オンライン Unity ユーザーマニュアル（日本語） C# プログラミング ガイド Unity">
+<meta name="description" content="Unity 備忘録を集約．初歩的な内容が中心．環境は Windows 10 &#43; Visual Studio 2022．
+資料
+適宜追加．
+オンライン
+
+Unity ユーザーマニュアル（日本語）
+C# プログラミング ガイド
+Unity 入門の森
+入門 Unity @KINDAI Info-Tech HUB
+Unity 開発に関する 50 の Tips 〜ベストプラクティス〜 (2016 Edition)
+(非公式和訳）Unity - level up your code with game programming patterns
+Unity「2Dゲーム開発全般をカバーする本（英語）」を日本語で読む
+
+書籍
+
+Harrison Ferrone / 吉川 邦夫 訳 (2021)『Unity 3D ゲーム開発ではじめる C# プログラミング』
+北村 愛実 (2016)『Unity 5 の教科書』
+赤坂 玲音 (2015)『エンジニアのための Unity 実践リファレンス』
+岩井 雅幸 (2015)『uGUI ではじめる Unity UI デザインの教科書』
+
+導入
+
+Unity Hub インストール
+
+2019 年からバージョン管理ソフトになった．Hub から適宜旧バージョンを入れられる
+
+
+Unity 2022 インストール
+歯車 &gt; Add modules
+
+Unity Editor
+おもな GUI 構成要素：">
 <meta name="author" content="">
-<link rel="canonical" href="https://ivorypawn.github.io/notes/unity/">
-<link crossorigin="anonymous" href="https://ivorypawn.github.io/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://ivorypawn.github.io/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://ivorypawn.github.io/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://ivorypawn.github.io/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://ivorypawn.github.io/apple-touch-icon.png">
-<link rel="mask-icon" href="https://ivorypawn.github.io/safari-pinned-tab.svg">
+<link rel="canonical" href="http://localhost:1313/notes/unity/">
+<link crossorigin="anonymous" href="http://localhost:1313/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="ja" href="http://localhost:1313/notes/unity/">
 <noscript>
     <style>
         #theme-toggle,
@@ -71,67 +103,7 @@
 
 
 <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
-<meta property="og:title" content="Unity 覚書" />
-<meta property="og:description" content="Unity 備忘録を集約．初歩的な内容が中心．環境は Windows 10 &#43; Visual Studio 2022． 資料 適宜追加． オンライン Unity ユーザーマニュアル（日本語） C# プログラミング ガイド Unity" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://ivorypawn.github.io/notes/unity/" /><meta property="article:section" content="notes" />
 
-
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Unity 覚書"/>
-<meta name="twitter:description" content="Unity 備忘録を集約．初歩的な内容が中心．環境は Windows 10 &#43; Visual Studio 2022． 資料 適宜追加． オンライン Unity ユーザーマニュアル（日本語） C# プログラミング ガイド Unity"/>
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Notes",
-      "item": "https://ivorypawn.github.io/notes/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "Unity 覚書",
-      "item": "https://ivorypawn.github.io/notes/unity/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Unity 覚書",
-  "name": "Unity 覚書",
-  "description": "Unity 備忘録を集約．初歩的な内容が中心．環境は Windows 10 + Visual Studio 2022． 資料 適宜追加． オンライン Unity ユーザーマニュアル（日本語） C# プログラミング ガイド Unity",
-  "keywords": [
-    "Unity"
-  ],
-  "articleBody": "Unity 備忘録を集約．初歩的な内容が中心．環境は Windows 10 + Visual Studio 2022．\n資料 適宜追加．\nオンライン Unity ユーザーマニュアル（日本語） C# プログラミング ガイド Unity 入門の森 入門 Unity @KINDAI Info-Tech HUB Unity 開発に関する 50 の Tips 〜ベストプラクティス〜 (2016 Edition) (非公式和訳）Unity - level up your code with game programming patterns Unity「2Dゲーム開発全般をカバーする本（英語）」を日本語で読む 書籍 Harrison Ferrone / 吉川 邦夫 訳 (2021)『Unity 3D ゲーム開発ではじめる C# プログラミング』 北村 愛実 (2016)『Unity 5 の教科書』 赤坂 玲音 (2015)『エンジニアのための Unity 実践リファレンス』 岩井 雅幸 (2015)『uGUI ではじめる Unity UI デザインの教科書』 導入 Unity Hub インストール 2019 年からバージョン管理ソフトになった．Hub から適宜旧バージョンを入れられる Unity 2022 インストール 歯車 \u003e Add modules Unity Editor おもな GUI 構成要素：\nToolbar（上段のリボン状のパネル） Hierarchy（左カラム） Scene, Game（中央） Inspector（右カラム） Project, Console（下段） レベル構築 アウトドア環境 Terrain インドア環境 shape, geometry インポート（Blender など） Material 任意の GameObject はマテリアルとシェーダーをもつ．\nマテリアルは，GameObject がどうレンダリングされるかを決定する．シェーダーはライティングとテクスチャデータの組み合わせからなり，マテリアルを制御する．\n(Misc) 原則 Unity エディタ以外からファイル操作するとバグる可能性があるのでやらない\nプロジェクトを zip 圧縮しない\nmeta が壊れる 7z ならオーケーらしい Inspector のコンポーネント横の情報アイコンからマニュアルに飛べる\nコンポーネントの public 変数は Inspector で一時変更できる（private 変数は無理）．この変更はスクリプトを書き換えない．再生中の変更は停止するともとに戻る\nInspector 上でスクリプトの初期値に戻すこともできる(Reset) 同じディレクトリで定義したクラスは，アタッチや using なしに参照される．これらのクラスと同様，デフォルトで入っている Transform, Camera などのコンポーネントは，再生時，メンバやメソッドをもつオブジェクトとしてメモリ上に展開される\nUnity の 2D は 3D シーンを平面に投影したもの．エディタの基本操作はほぼ共通\n3D で Y 軸が上向きなのはそのため シーンビューに配置した画像は スプライト と呼ばれる\n最初にスケールを決定して，すべて同じスケールになるようにビルドする\n3D なら $1\\,\\mathrm{unity\\ unit} = 1\\,\\mathrm{m}$，2D なら $1\\,\\mathrm{unity\\ unit} = 1\\,\\mathrm{pixel}$ など（参照） Visual Studio エディタで適当に C# スクリプトを作ってダブルクリックし Visual Studio で開く．何も起こらなければ Edit \u003e Preference \u003e External Tools \u003e External Script Editor から設定（これを忘れると入力補完が使えなかったりした）．\n(Misc) ファイル名とクラス名は一致させる．VS で勝手に変えるとたぶんバグる 変更は Project から 基底の MonoBehaviour は「シーン中のオブジェクトにアタッチできるクラス」の謂 エディタと VS が同期しない Project から当該ファイルを Refresh Edit \u003e Preference \u003e Asset Pipeline から Auto Refresh にすることもできる エディタのフォーカス時に自動コンパイルが走る メソッドの真上の行で /// を入力すると タグの枠が自動補完される アタッチしたオブジェクトの確認 途中から参加するプロジェクトなど，どのコンポーネントがどのオブジェクトにアタッチされているのかわからないとき，調べる方法はおもに二つ．\nProject のスクリプトを右クリック \u003e Find Reference In Scene で，Hierarchy がアタッチされているシーンに絞り込まれる ヒエラルキーの検索欄をクリアするともとに戻る オブジェクトの検索はできないので，インデックスを作成して検索するを導入するか，調べたいリソースの meta ファイル内の guid でプロジェクト全体を find する（Linux の grep） Start() に Debug.Log($\"{name}\") を挿入して実行 C++ との違い C++ との違いを適宜メモしていく．\nクラスと構造体 class は参照型，struct は値型になる．また string などが参照型になる．\npublic class Character { public string name; public Character(string name) { this.name = name; } public void print() { Debug.LogFormat(\"name: {0}\", name); } } void Start() { var taro = new Character(\"taro\"); taro.print(); // taro var jiro = taro; jiro.name = \"jiro\"; taro.print(); // jiro } 雑に作る もろもろを『Unity 5 の教科書』のゲームを作りながら覚える．\n一般的なフロー 登場するオブジェクトを列挙する 動かすオブジェクトの コントローラスクリプト を書く オブジェクトを自動生成する ジェネレータスクリプト を書く UI を更新する 監督スクリプト を書く スクリプトを作る流れを考える Roulette ルーレットを作る．フロー 3., 4. は不要．\nコントローラスクリプトに，タップ（クリック）すると回転を始めて，徐々に減速する動作を記述する．\nInput.GetMouseButtonDown(0) 引数 0 が左クリック，1 が右クリック，2 が中央クリックに対応 transform.Rotate(x, y, z) 引数が X, Y, Z 軸の回転量に対応 SwipeCar フラグに車を寸止めするゲーム．監督スクリプトを作成する．\nスワイプ距離の取得，オブジェクト速度への適用 Input.GetMouseButtonUp(0) Input.mousePosition.x transform.Translate(x, 0, 0) 元位置を原点とするローカル座標 uGUI using UnityEngine.UI using UnityEngine とは別に必要 (GameObject).GetComponent() などが使えるようになる GameObject.Find() AudioSource コンポーネント UIText を追加すると UI 設計画面が作成される．UI 設計画面はゲームの設計画面よりはるかに大きいが，実行時はゲーム画面に対応する．\nEventSystem はユーザの入力を UI 部品に中継する．入力の割り当て，無効化，キーやマウスの設定変更などが可能．\n監督スクリプトは空のオブジェクトに渡す．\nGetComponent コンポーネントは GameObject の一つの性質，あるいは GameObject という箱に追加して機能実現する「設定資料」のようなもの．コンポーネントへのアクセスは，原則テンプレート関数 GetComponent を用いる．\n座標・回転：GetComponent() 物理挙動：GetComponent() 効果音：GetComponent() UI テキスト：GetComponent() スクリプト：car.GetComponent() etc. ただし座標取得などでよく使う Transform に限り，簡易的な car.transform.position.x のような書き方ができる．\nCatEscape 避けゲー．ジェネレータスクリプトで Prefab を生成する．\nInput.GetKeyDown(KeyCode.LeftArrow) etc. Vector2.magnitude Destroy(gameObject) gameObject は自身を指す 一時停止してヒエラルキービューを見ると実際にオブジェクトが消えている キャスト e.g. Instantiate(Prefab) as GameObject アンカーポイントによる画像配置 Play Mode 中でも編集が適用された (Misc) サンプルコードは干渉時に毎回 Find() を呼んでいるが，たぶん Start() で初期化するほうが効率がよい 旧 ver. Unity Editor で作業中，設定等に問題がないのに UnityEngine.UI の画像生成で MissingComponentException が出る不具合に遭遇した．旧 ver. でたまに起きるらしい．最新 ver. では普通に動いた．再インストールで直った報告も見かけた Destroy の挙動 サンプルコードは Update() のなかで Destroy(gameObject) を呼んだあと自身のメンバを参照する可能性があり，一見して危険に思えた．しかし Destroy(gameObject) の一行後に Debug.Log(gameObject.transform.position) としても，普通に直前の座標が返ってきた．\nObject.Destroy（公式ドキュメント） Unityにおけるnullチェック(1) - AがnullでなくともA == nullがtrueになる Unityにおけるnullチェック(2) - Destroyが何をしているか 上記によると，Destroy によってオブジェクトが破棄されるのは Update ループのあと．yield return して 1 フレーム待つと例外が返ってくる．\nなお即座に破棄する DestroyImmediate メソッドもあるが，ランタイムでの使用が推奨されていないらしい．\nPrefab $\\fallingdotseq$ 設計図 ヒエラルキービュー上のオブジェクトをプロジェクトビューにドラッグ \u0026 ドロップすると Prefab ができる．一度 Prefab を作れば，シーン中のオブジェクトは削除しても構わない．\nシーン中のプレハブは 1 つ 1 つが別個のインスタンスになる．\nブレハブに新しいオブジェクトを追加するときは，同じヒエラルキーにそのオブジェクトを作成し，右クリックから Added GameObject \u003e プレハブ'xxx'に適用．\nアウトレット接続 スクリプトにアウトレットを用意し，Inspector からアウトレットを経由してオブジェクトを代入することをアウトレット接続という．なお Outlet = コンセント（米英語）．\nこの例では ArrowGenerator のメンバに public GameObject arrowPrefab を用意し，インスペクタ上で Prefab をドラッグ \u0026 ドロップして紐づけしている．\nClimbCloud Jump King 的な．Physics チュートリアル．\n剛体：Add Component \u003e Physics 2D \u003e Rigidbody 2D デフォルトで重力や外力の影響を受ける．Body Type \u003e static でビューに固定 当たり判定：Add Component \u003e Physics 2D \u003e xxx Collider 2D 複数コライダでカプセル形状を作成 下部が球状なので Rigidbody 2D \u003e Constraint \u003e Freeze Rotation で転倒防止 (Under Construction)\n.meta について (Under Construction)\n",
-  "wordCount" : "3346",
-  "inLanguage": "ja",
-  "datePublished": "0001-01-01T00:00:00Z",
-  "dateModified": "0001-01-01T00:00:00Z",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://ivorypawn.github.io/notes/unity/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "HideOut",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://ivorypawn.github.io/favicon.ico"
-    }
-  }
-}
-</script>
 </head>
 
 <body class=" dark" id="top">
@@ -145,7 +117,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://ivorypawn.github.io/" accesskey="h" title="HideOut (Alt + H)">HideOut</a>
+            <a href="http://localhost:1313/" accesskey="h" title="HideOut (Alt + H)">HideOut</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -167,21 +139,23 @@
                         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                     </svg>
                 </button>
+                <ul class="lang-switch"><li>|</li>
+                </ul>
             </div>
         </div>
         <ul id="menu">
             <li>
-                <a href="https://ivorypawn.github.io/posts/" title="posts">
+                <a href="http://localhost:1313/posts/" title="posts">
                     <span>posts</span>
                 </a>
             </li>
             <li>
-                <a href="https://ivorypawn.github.io/notes/" title="notes">
+                <a href="http://localhost:1313/notes/" title="notes">
                     <span>notes</span>
                 </a>
             </li>
             <li>
-                <a href="https://ivorypawn.github.io/tags/" title="tags">
+                <a href="http://localhost:1313/tags/" title="tags">
                     <span>tags</span>
                 </a>
             </li>
@@ -542,15 +516,15 @@
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://ivorypawn.github.io/tags/unity/">Unity</a></li>
+      <li><a href="http://localhost:1313/tags/unity/">Unity</a></li>
     </ul>
 <nav class="paginav">
-  <a class="prev" href="https://ivorypawn.github.io/notes/wavelet-matrix/">
+  <a class="prev" href="http://localhost:1313/notes/wavelet-matrix/">
     <span class="title">« Prev</span>
     <br>
     <span>Wavelet Matrix</span>
   </a>
-  <a class="next" href="https://ivorypawn.github.io/notes/stochastic-poisson-surface-reconstruction/">
+  <a class="next" href="http://localhost:1313/notes/stochastic-poisson-surface-reconstruction/">
     <span class="title">Next »</span>
     <br>
     <span>Stochastic Poisson Surface Reconstruction</span>
@@ -562,7 +536,7 @@
     </main>
     
 <footer class="footer">
-    <span>&copy; 2024 <a href="https://ivorypawn.github.io/">HideOut</a></span>
+    <span>&copy; 2025 <a href="http://localhost:1313/">HideOut</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/">Hugo</a> &

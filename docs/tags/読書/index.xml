@@ -1,19 +1,38 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>読書 on HideOut</title>
-    <link>https://ivorypawn.github.io/tags/%E8%AA%AD%E6%9B%B8/</link>
+    <link>http://localhost:1313/tags/%E8%AA%AD%E6%9B%B8/</link>
     <description>Recent content in 読書 on HideOut</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.138.0</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sat, 27 Jan 2024 15:28:18 +0900</lastBuildDate>
-    <atom:link href="https://ivorypawn.github.io/tags/%E8%AA%AD%E6%9B%B8/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 20 Mar 2025 00:32:34 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E8%AA%AD%E6%9B%B8/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>國分「暇と退屈の倫理学」に関するメモ</title>
-      <link>https://ivorypawn.github.io/posts/2024-01-27/</link>
+      <title>國分功一郎の著書に関するツイートに関する所感</title>
+      <link>http://localhost:1313/posts/2025-03-20/</link>
+      <pubDate>Thu, 20 Mar 2025 00:32:34 +0900</pubDate>
+      <guid>http://localhost:1313/posts/2025-03-20/</guid>
+      <description>&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;國分功一郎『原子力時代における哲学』読んでるけど、全然理解してなくてクラクラする…&lt;br&gt;「原子核の崩壊というのは、生態圏では起こらず太陽圏で起こる現象だといいます。」&lt;br&gt;放射性崩壊なんてありふれた現象ですし、天然原子炉の話もズレすぎでしょ&lt;br&gt;哲学やる前に物理学の教科書読めや &lt;a href=&#34;https://t.co/a7daBI95Kj&#34;&gt;pic.twitter.com/a7daBI95Kj&lt;/a&gt;&lt;/p&gt;&amp;mdash; ヴォルヴィーノ＠読書垢 (@dokushoa) &lt;a href=&#34;https://twitter.com/dokushoa/status/1900844794433466516?ref_src=twsrc%5Etfw&#34;&gt;March 15, 2025&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;著者は中沢新一の独自用語に依拠してる感じですね&lt;br&gt;こんな感じの思想&lt;a href=&#34;https://t.co/kIFAweLCv6&#34;&gt;https://t.co/kIFAweLCv6&lt;/a&gt; &lt;a href=&#34;https://t.co/EVh9oiGuBW&#34;&gt;https://t.co/EVh9oiGuBW&lt;/a&gt; &lt;a href=&#34;https://t.co/prs7yVv60m&#34;&gt;pic.twitter.com/prs7yVv60m&lt;/a&gt;&lt;/p&gt;&amp;mdash; ヴォルヴィーノ＠読書垢 (@dokushoa) &lt;a href=&#34;https://twitter.com/dokushoa/status/1900917050115325956?ref_src=twsrc%5Etfw&#34;&gt;March 15, 2025&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>國分『暇と退屈の倫理学』に関するメモ</title>
+      <link>http://localhost:1313/posts/2024-01-27/</link>
       <pubDate>Sat, 27 Jan 2024 15:28:18 +0900</pubDate>
-      <guid>https://ivorypawn.github.io/posts/2024-01-27/</guid>
-      <description>（底本：國分功一郎『暇と退屈の倫理学』初版第五刷，朝日出版社） 本書に登場する引用を時系列順に整理する． 序章 「好きなこと」とは何か 18th; Kant 人間は世</description>
+      <guid>http://localhost:1313/posts/2024-01-27/</guid>
+      <description>&lt;p&gt;（底本：國分功一郎『暇と退屈の倫理学』初版第五刷，朝日出版社）&lt;/p&gt;
+&lt;p&gt;本書に登場する引用を時系列順に整理する．&lt;/p&gt;
+&lt;h2 id=&#34;序章-好きなこととは何か&#34;&gt;序章 「好きなこと」とは何か&lt;/h2&gt;
+&lt;h3 id=&#34;18th-kant&#34;&gt;18th; Kant&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;人間は世界を受け取るだけでない．それらを自分なりの型にあてはめて，主体的にまとめ上げる．[&amp;hellip;] そして，人間にはそのような主体性が当然期待できるのだと，カントはそう考えていた．&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

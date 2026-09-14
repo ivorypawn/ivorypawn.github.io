@@ -8,7 +8,9 @@ defaultContentLanguage: "ja"
 hasCJKLanguage: true
 
 title: "HideOut"
-paginate: 8
+
+pagination:
+  pagerSize: 8
 
 taxonomies:
   tag: "tags"
@@ -87,3 +89,8 @@ markup:
     noHl: false
     # style: nord
     tabWidth: 4
+
+  goldmark:
+    renderer:
+      # hardWraps: false
+      unsafe: true

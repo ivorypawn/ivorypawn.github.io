@@ -1,18 +1,49 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Unity on HideOut</title>
-    <link>https://ivorypawn.github.io/tags/unity/</link>
+    <link>http://localhost:1313/tags/unity/</link>
     <description>Recent content in Unity on HideOut</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.138.0</generator>
     <language>ja-jp</language>
-    <atom:link href="https://ivorypawn.github.io/tags/unity/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/unity/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Unity 覚書</title>
-      <link>https://ivorypawn.github.io/notes/unity/</link>
+      <link>http://localhost:1313/notes/unity/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ivorypawn.github.io/notes/unity/</guid>
-      <description>Unity 備忘録を集約．初歩的な内容が中心．環境は Windows 10 + Visual Studio 2022． 資料 適宜追加． オンライン Unity ユーザーマニュアル（日本語） C# プログラミング ガイド Unity</description>
+      <guid>http://localhost:1313/notes/unity/</guid>
+      <description>&lt;p&gt;Unity 備忘録を集約．初歩的な内容が中心．環境は Windows 10 + Visual Studio 2022．&lt;/p&gt;
+&lt;h2 id=&#34;資料&#34;&gt;資料&lt;/h2&gt;
+&lt;p&gt;適宜追加．&lt;/p&gt;
+&lt;h3 id=&#34;オンライン&#34;&gt;オンライン&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.unity3d.com/ja/current/Manual/index.html&#34;&gt;Unity ユーザーマニュアル（日本語）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://learn.microsoft.com/ja-jp/dotnet/csharp/programming-guide/&#34;&gt;C# プログラミング ガイド&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://3dunity.org/&#34;&gt;Unity 入門の森&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://zenn.dev/sane21/books/b42ecebc457eb6/viewer/cf8cdb&#34;&gt;入門 Unity @KINDAI Info-Tech HUB&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://zenn.dev/sh1ch/books/4f49e00cfd92be082e1c/viewer/8a5619780235f1bc3f74&#34;&gt;Unity 開発に関する 50 の Tips 〜ベストプラクティス〜 (2016 Edition)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://zenn.dev/twugo/books/21cb3a6515e7b8&#34;&gt;(非公式和訳）Unity - level up your code with game programming patterns&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://zenn.dev/sh1ch/books/35fbffce89f26b&#34;&gt;Unity「2Dゲーム開発全般をカバーする本（英語）」を日本語で読む&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;書籍&#34;&gt;書籍&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Harrison Ferrone / 吉川 邦夫 訳 (2021)『&lt;a href=&#34;https://book.impress.co.jp/books/1120101145&#34;&gt;Unity 3D ゲーム開発ではじめる C# プログラミング&lt;/a&gt;』&lt;/li&gt;
+&lt;li&gt;北村 愛実 (2016)『&lt;a href=&#34;https://www.sbcr.jp/product/4797386790/&#34;&gt;Unity 5 の教科書&lt;/a&gt;』&lt;/li&gt;
+&lt;li&gt;赤坂 玲音 (2015)『&lt;a href=&#34;https://gihyo.jp/book/2015/978-4-7741-7303-0&#34;&gt;エンジニアのための Unity 実践リファレンス&lt;/a&gt;』&lt;/li&gt;
+&lt;li&gt;岩井 雅幸 (2015)『&lt;a href=&#34;https://book.mynavi.jp/supportsite/detail/9784839956400.html&#34;&gt;uGUI ではじめる Unity UI デザインの教科書&lt;/a&gt;』&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;導入&#34;&gt;導入&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://unity.com/ja/download&#34;&gt;Unity Hub&lt;/a&gt; インストール
+&lt;ul&gt;
+&lt;li&gt;2019 年からバージョン管理ソフトになった．Hub から適宜旧バージョンを入れられる&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Unity 2022 インストール&lt;/li&gt;
+&lt;li&gt;歯車 &amp;gt; &lt;code&gt;Add modules&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;unity-editor&#34;&gt;Unity Editor&lt;/h2&gt;
+&lt;p&gt;おもな GUI 構成要素：&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

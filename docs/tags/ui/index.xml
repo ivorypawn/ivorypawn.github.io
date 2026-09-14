@@ -1,18 +1,30 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>UI on HideOut</title>
-    <link>https://ivorypawn.github.io/tags/ui/</link>
+    <link>http://localhost:1313/tags/ui/</link>
     <description>Recent content in UI on HideOut</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.138.0</generator>
     <language>ja-jp</language>
-    <atom:link href="https://ivorypawn.github.io/tags/ui/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/ui/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>デザインに関する覚書</title>
-      <link>https://ivorypawn.github.io/notes/design/</link>
+      <link>http://localhost:1313/notes/design/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ivorypawn.github.io/notes/design/</guid>
-      <description>UI/UX，資料づくり，プレゼン本番で心がけることなどの個人用まとめ． UI 制作 これだけ守れば見やすくなるデザインの基礎 1 / 2 / 3 神資料．とくに</description>
+      <guid>http://localhost:1313/notes/design/</guid>
+      <description>&lt;p&gt;UI/UX，資料づくり，プレゼン本番で心がけることなどの個人用まとめ．&lt;/p&gt;
+&lt;h2 id=&#34;ui-制作&#34;&gt;UI 制作&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;これだけ守れば見やすくなるデザインの基礎&lt;/strong&gt; &lt;a href=&#34;https://speakerdeck.com/kinakobooster/koredakeshou-rebajian-yasukunarudezainfalseji-chu&#34;&gt;1&lt;/a&gt; / &lt;a href=&#34;https://speakerdeck.com/kinakobooster/uidezainwohazimeyou&#34;&gt;2&lt;/a&gt; / &lt;a href=&#34;https://speakerdeck.com/kinakobooster/jin-ri-karadekiruuxdezain&#34;&gt;3&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;神資料．とくに 1 の RGB に関する解説は蒙が啓かれた&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://qiita.com/aiandrox/items/4196c8f5b564d29fdce7&#34;&gt;【個人開発・ポートフォリオに】簡単にいい感じのデザインにできるサービスまとめ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.sociomedia.co.jp/category/shig&#34;&gt;Sociomedia ヒューマンインターフェース ガイドライン&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;色覚多様性&#34;&gt;色覚多様性&lt;/h3&gt;
+&lt;p&gt;統計上，男性の 5% と女性の ~1% は同輝度の赤と緑の見分けがつかない（P 型色覚）．現実には明度の違いで見分けられているケースも多いと思うが，そうであっても赤と緑が素朴に使われている UI を見ると，「えっ大丈夫なの」とはなる．&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

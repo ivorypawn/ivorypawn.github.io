@@ -1,25 +1,52 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Data Sturucture on HideOut</title>
-    <link>https://ivorypawn.github.io/tags/data-sturucture/</link>
+    <link>http://localhost:1313/tags/data-sturucture/</link>
     <description>Recent content in Data Sturucture on HideOut</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.138.0</generator>
     <language>ja-jp</language>
-    <atom:link href="https://ivorypawn.github.io/tags/data-sturucture/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/data-sturucture/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Wavelet Matrix</title>
-      <link>https://ivorypawn.github.io/notes/wavelet-matrix/</link>
+      <link>http://localhost:1313/notes/wavelet-matrix/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ivorypawn.github.io/notes/wavelet-matrix/</guid>
-      <description>概要 ～数十億の大規模データ上で、特定範囲の極値や頻度などが高速に求められる構造。 多次元への拡張も可能。 読んだやつ Francisco Claude and Gonzalo Navarro. The Wavelet Matrix. Proc. SPIRE&#39;12, pages 167-179. LNCS 7608</description>
+      <guid>http://localhost:1313/notes/wavelet-matrix/</guid>
+      <description>&lt;h2 id=&#34;概要&#34;&gt;概要&lt;/h2&gt;
+&lt;p&gt;～数十億の大規模データ上で、特定範囲の極値や頻度などが高速に求められる構造。&lt;/p&gt;
+&lt;p&gt;多次元への拡張も可能。&lt;/p&gt;
+&lt;h2 id=&#34;読んだやつ&#34;&gt;読んだやつ&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Francisco Claude and Gonzalo Navarro. &lt;a href=&#34;https://users.dcc.uchile.cl/~gnavarro/ps/spire12.4.pdf&#34;&gt;The Wavelet Matrix&lt;/a&gt;. Proc. SPIRE&#39;12, pages 167-179. LNCS 7608&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://tech.preferred.jp/ja/blog/wavelettree_world/&#34;&gt;ウェーブレット木の世界&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.ai-gakkai.or.jp/resource/my-bookmark/my-bookmark_vol26-no6/&#34;&gt;人工知能学会 私のブックマーク Vol.26 No.6 (2011/11) 簡潔データ構造&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://tiramister.net/blog/posts/bitvector/&#34;&gt;簡潔ビットベクトル(完備辞書)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.scribd.com/doc/102636443/Wavelet-Matrix&#34;&gt;ウェーブレット行列最速攻略&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Eating Your Own Cat Food
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/MitI-7/WaveletMatrix&#34;&gt;コード&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://miti-7.hatenablog.com/entry/2018/04/28/152259&#34;&gt;ウェーブレット行列(wavelet matrix)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://miti-7.hatenablog.com/entry/2019/02/01/152131&#34;&gt;ウェーブレット行列で競プロの問題を解く&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://miti-7.hatenablog.com/entry/2019/02/01/143655&#34;&gt;動的ウェーブレット行列(dynamic wavelet matrix)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://noshi91.hatenablog.com/entry/2021/06/02/165408&#34;&gt;3 次元空間のクエリを処理する Wavelet Matrix&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://qiita.com/TumoiYorozu/items/a8193e5ecd957a1b9b0d&#34;&gt;SIGGRAPH Asia の最優秀賞論文を解説してみた（2D Wavelet 行列を用いた定数時間メディアンフィルタ）&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;ウェーブレット行列の構造についてはすでに分かりやすい資料がある（とくに 2., 6., 8. がおすすめ）。&lt;/p&gt;</description>
     </item>
     <item>
       <title>連想コンテナ覚書 (C&#43;&#43;)</title>
-      <link>https://ivorypawn.github.io/notes/map/</link>
+      <link>http://localhost:1313/notes/map/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ivorypawn.github.io/notes/map/</guid>
-      <description>std::unordered_map や boost::flat_map などのハッシュマップはほぼ $O(1)$ で探索でき，赤黒木の std::map に比べて探索も走査も速いとされている． [C++] STLの型の使い分け std::mapを線形探</description>
+      <guid>http://localhost:1313/notes/map/</guid>
+      <description>&lt;p&gt;&lt;code&gt;std::unordered_map&lt;/code&gt; や &lt;code&gt;boost::flat_map&lt;/code&gt; などのハッシュマップはほぼ $O(1)$ で探索でき，赤黒木の &lt;code&gt;std::map&lt;/code&gt; に比べて探索も走査も速いとされている．&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://qiita.com/h_hiro_/items/a83a8fd2391d4a3f0e1c&#34;&gt;[C++] STLの型の使い分け&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.slideshare.net/kikairoya/map-17091504&#34;&gt;std::mapを線形探索してはいけない100の理由&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://sleepy-yoshi.hatenablog.com/entry/20121111/p1&#34;&gt;mapとunordered_mapのアイテム全走査の比較とmapの存在意義について考える&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;また &lt;code&gt;unordered_map&lt;/code&gt; と &lt;code&gt;map&lt;/code&gt; の使用は似ており，置換すること自体はさほど難しくない．&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
