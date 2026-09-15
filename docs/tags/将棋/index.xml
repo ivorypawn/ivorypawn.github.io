@@ -6,46 +6,7 @@
     <description>Recent content in 将棋 on HideOut</description>
     <generator>Hugo -- 0.138.0</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Tue, 07 Nov 2023 16:15:15 +0900</lastBuildDate>
     <atom:link href="https://ivorypawn.github.io/tags/%E5%B0%86%E6%A3%8B/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>将棋 AI を利用した学習に関する雑感</title>
-      <link>https://ivorypawn.github.io/blog/2023-11-07/</link>
-      <pubDate>Tue, 07 Nov 2023 16:15:15 +0900</pubDate>
-      <guid>https://ivorypawn.github.io/blog/2023-11-07/</guid>
-      <description>&lt;p&gt;自身の敗局を並べるのは，有効な棋力向上の手段である．そこには主に 2 つの観点が存在する．&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;どれが悪手で何が最善だったのか（&lt;strong&gt;客観的・演繹的&lt;/strong&gt;）&lt;/li&gt;
-&lt;li&gt;なぜ最善を選べなかったのか（&lt;strong&gt;主観的・帰納的&lt;/strong&gt;）&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;実際には『このあたりで間違えたな．何が正解だったんだろう．こうか．なるほど』の段階で反省が終わり，なぜ最善手が見つけられなかったのか，あるいはなぜ見つけていながらほかの手を選んでしまったかという分析までは行わないことが多い．それが悪いわけではない．たとえば単なる技術不足が敗因なら，1. までに留めて反省のサイクルを早く回すほうがよい．また意識的な 2. の実施は自らの欠点を直視しなければならず，辛い作業かもしれない．&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>アマ王将北陸予選レポート</title>
-      <link>https://ivorypawn.github.io/blog/2023-09-11/</link>
-      <pubDate>Mon, 11 Sep 2023 18:36:55 +0900</pubDate>
-      <guid>https://ivorypawn.github.io/blog/2023-09-11/</guid>
-      <description>&lt;p&gt;2023-09-10 に行われたアマ王将北陸予選を振り返る。&lt;/p&gt;
-&lt;h2 id=&#34;本戦-2-回戦&#34;&gt;本戦 2 回戦&lt;/h2&gt;
-&lt;p&gt;私が後手。&lt;/p&gt;
-&lt;h3 id=&#34;18-手目&#34;&gt;18 手目&lt;/h3&gt;
-&lt;p&gt;
-
-
-
-
-    
-    &lt;input type=&#34;checkbox&#34; id=&#34;zoomCheck-fe07e&#34; hidden&gt;
-    &lt;label for=&#34;zoomCheck-fe07e&#34;&gt;
-        &lt;img class=&#34;zoomCheck&#34; loading=&#34;lazy&#34; decoding=&#34;async&#34;
-            src=&#34;https://ivorypawn.github.io/blog/2023-09-11/01.png&#34; alt=&#34;&#34;
-            style=&#34;width: 400px; max-width: 100%; height: auto; display: block; margin: 1rem 0; margin-inline: auto;&#34;
-             /&gt;
-    &lt;/label&gt;
-
-&lt;/p&gt;
-&lt;p&gt;直前に並べていた &lt;a href=&#34;https://shogidb2.com/games/96ccddc8b48ae34e76b3a520fe9a8c09da1609e7#l2gkg1nl%2F1r1s2s2%2F2npp1bpp%2Fp1p2pp2%2F1p5P1%2FP1P3P2%2F1PBPPPS1P%2F1S1K3R1%2FLN1G1G1NL%20b%20-%2021&#34;&gt;2021-02-12 竜王戦 斎藤慎太郎-佐藤和俊&lt;/a&gt; の類型になったため、興味本位で誘導してみたが、&lt;strong&gt;☗５８金右&lt;/strong&gt; でいきなりよく分からなくなった。&lt;/p&gt;</description>
-    </item>
     <item>
       <title>将棋関連対訳例文仮安置所</title>
       <link>https://ivorypawn.github.io/notes/translation/</link>
