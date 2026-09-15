@@ -279,22 +279,6 @@ $$
 &lt;p&gt;符号つき距離関数（signed distance functions; SDFs）$f: \mathbb{R}^{3} \rightarrow \mathbb{R}$ は，オブジェクト $\mathcal{M}$ の境界 $\mathcal{S}=\partial\mathcal{M}$ からの符号つき距離を表す 3D 表現の一種．&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Python 仮想環境に関する覚書</title>
-      <link>https://ivorypawn.github.io/notes/python/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ivorypawn.github.io/notes/python/</guid>
-      <description>&lt;p&gt;しばらく使わないと忘れがち．&lt;/p&gt;
-&lt;h2 id=&#34;ryehttpsrye-upcom&#34;&gt;&lt;a href=&#34;https://rye-up.com/&#34;&gt;Rye&lt;/a&gt;&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;MacOS Ventura 13.4.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;導入&#34;&gt;導入&lt;/h3&gt;
-&lt;p&gt;手順通りやるだけだが手もとでエラーが出たのでメモ．&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl: (6) Could not resolve host: rye-up.com
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;DNS を &lt;code&gt;8.8.8.8&lt;/code&gt; と &lt;code&gt;8.8.4.4&lt;/code&gt; にしたら解決した．&lt;/p&gt;
-&lt;p&gt;zsh にパスも通しておく．&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>Sandbox</title>
       <link>https://ivorypawn.github.io/blog/sandbox/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
